@@ -24,7 +24,7 @@ jobs:
     - name: SSH login and deploy
       uses: appleboy/ssh-action@v0.1.5
       with:
-        host: ${{ secrects.REMOTE_HOST }}
+        host: ${{ secrets.REMOTE_HOST }}
         username: ${{ secrets.REMOTE_USERNAME }}
         key: ${{ secrets.PRIVATE_LOGIN_TOKEN }}
         port: 22
@@ -38,5 +38,5 @@ jobs:
           git pull
           docker build -t jefferson .
           docker run -d --restart always jefferson
-  
+
     
