@@ -27,6 +27,7 @@ jobs:
         host: ${{ secrets.REMOTE_HOST }}
         username: ${{ secrets.REMOTE_USERNAME }}
         key: ${{ secrets.PRIVATE_LOGIN_TOKEN }}
+        password: ${{ secrets.REMOTE_PASS }}
         port: 22
         script: |
           if [ $( docker ps -a -f "ancestor=jefferson" | wc -l ) -gt 0 ]; then
