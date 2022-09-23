@@ -36,7 +36,8 @@ def dispo(num:int):
 async def pricecheck(name:str, rank:int):
     if not (name.lower().endswith('prime blueprint') or name.lower().endswith('collar blueprint')):
         name = name.lower().replace(' blueprint','')
-    
+    if '-' in name:
+        name = ' '.join(name.split('-'))
     prime = '_'.join(name.lower().split(' '))
     res = get(f'https://api.warframe.market/v1/items/{prime}/orders')
     data = json.loads(res.text)
