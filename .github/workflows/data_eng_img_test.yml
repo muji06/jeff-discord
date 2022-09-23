@@ -56,9 +56,14 @@ jobs:
         shell: bash
         run: |
           echo "FILES INSIDE THE ECR_REPOS"
+          declare -A tags
           counter=1
           for file in $ECR_REPOS;do
-            echo "ECR_REPO$counter=$file"
-            echo "ENV_PATH$counter=$IMAGE_DIR/$file/$file.env"
+            tags+=( ["$file"]="$counter")
             let "counter+=1"
           done
+
+          for file in $ECR_REPOS;do
+            echo "$file -> ${tags[$file]}"
+          done
+
