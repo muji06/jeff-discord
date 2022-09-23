@@ -72,6 +72,8 @@ jobs:
       - name: Testing we get back the hashmap
         shell: bash
         run: |
-         for file in $ECR_REPOS;do
-            echo "$file -> ${IMAGE_TAGS[$file]}"
+          counter=1
+          for file in $ECR_REPOS;do
+            echo "$file -> ${IMAGE_TAGS[$counter]}"
+            let "counter+=1"
           done
