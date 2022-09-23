@@ -30,7 +30,7 @@ jobs:
 
               if [[ $file =~ ^images/* ]];then
                   echo $file
-                  IMAGE_DIR=$(cut -d '/' -f 1 <<< $file)
+                  echo "IMAGE_DIR=$(cut -d '/' -f 1 <<< $file)" >> $GITHUB_ENV
                   array+=($(cut -d '/' -f 2 <<< $file))
               fi
           done
