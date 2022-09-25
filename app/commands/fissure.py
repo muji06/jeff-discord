@@ -2,6 +2,7 @@ from discord.ext import commands
 import discord
 import json
 from requests import get
+import time
 
 class fissure(commands.Cog):
     def __init__(self, bot):
@@ -13,6 +14,7 @@ class fissure(commands.Cog):
         Usage: !fissure <type> \n
         Default language is en (english)\n
         """
+        start = time.time()
         if type == 'sp':
             f_type = 'Steel Path'
         elif type == 'rj':
@@ -33,7 +35,7 @@ class fissure(commands.Cog):
                 if not x['isStorm'] and not x['isHard']:
 
                     embed.add_field(name=f"{x['tier']} - {x['missionType']} - {x['enemy']}",
-                    value=f"{x['node']}{chr(10)}{x['eta']}",
+                    value=f"{x['node']}{chr(10)}Ends in {x['eta']}",
                     inline=False)
 
         elif f_type == 'Steel Path':
@@ -41,7 +43,7 @@ class fissure(commands.Cog):
                 if x['isHard']:
 
                     embed.add_field(name=f"{x['tier']} - {x['missionType']} - {x['enemy']}",
-                    value=f"{x['node']}{chr(10)}{x['eta']}",
+                    value=f"{x['node']}{chr(10)}Ends in {x['eta']}",
                     inline=False)
 
         elif f_type == 'Railjack':
@@ -49,10 +51,10 @@ class fissure(commands.Cog):
                 if x['isStorm']:
 
                     embed.add_field(name=f"{x['tier']} - {x['missionType']} - {x['enemy']}",
-                    value=f"{x['node']}{chr(10)}{x['eta']}",
+                    value=f"{x['node']}{chr(10)}Ends in {x['eta']}",
                     inline=False)    
 
-        embed.set_footer(text=f"Ends in {data['eta']}\nValid fissure types are: rj (Railjack), sp (Steel Path), <empty> (Normal)")
+        embed.set_footer(text=f"Valid fissure types are: rj (Railjack), sp (Steel Path), <empty> (Normal)"+"\n"+f"Latency: {round((time.time() - start)*1000)}ms")
         await ctx.send(embed=embed)
 
 async def setup(bot):
