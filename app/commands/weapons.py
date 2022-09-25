@@ -37,7 +37,8 @@ class weapon(commands.Cog):
                 description +=(f"Class: {snekw['Slot']}{chr(10)}"+
                 f"Type: {snekw['Class']}{chr(10)}"+
                 f"Mastery: {snekw['Mastery']}{chr(10)}"+
-                f"Ammo: {snekw['MaxAmmo'] if 'MaxAmmo' in snekw else '∞'}{chr(10)}"+
+                f"Ammo: {snekw['AmmoMax'] if 'AmmoMax' in snekw else '∞'}{chr(10)}"+
+                f"Ammo Pickup: {snekw['AmmoPickup'] if 'AmmoPickup' in snekw else ''}{chr(10) if 'AmmoPickup' in snekw else ''}" +
                 f"Magazine: {snekw['Magazine']}{chr(10)}"+
                 f"Reload: {snekw['Reload']}{chr(10)}"+
                 f"Trigger: {snekw['Trigger']}{chr(10)}"
