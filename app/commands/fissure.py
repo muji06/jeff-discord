@@ -50,7 +50,7 @@ class fissure(commands.Cog):
     
         fissures_sorted = sorted(fissure_list, key=lambda x: x[0])
         
-        for fissure in fissure_list:
+        for fissure in fissures_sorted:
             embed.add_field(
                 name=fissure[1],
                 value=fissure[2],
