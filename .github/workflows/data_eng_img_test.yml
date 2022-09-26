@@ -59,7 +59,7 @@ jobs:
           array=()
           counter=1
           for file in $ECR_REPOS;do
-            array+=( "$file:v$counter" )
+            array+=( "${file}:${counter}" )
             let "counter+=1"
           done
 
