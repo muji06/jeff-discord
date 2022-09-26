@@ -27,7 +27,7 @@ class sortie(commands.Cog):
 
         for x in range(len(data["variants"])):
             mission = data["variants"][x]
-            embed.add_field(name=f"{x+1} {mission['missionType']}",
+            embed.add_field(name=f"({x+1}) {mission['missionType']}",
             value=f"{mission['node']}\nCondition: {mission['modifier']}\nEffect: {mission['modifierDescription']}",
             inline=False)
 
