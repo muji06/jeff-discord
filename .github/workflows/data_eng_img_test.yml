@@ -56,24 +56,22 @@ jobs:
         shell: bash
         run: |
           echo "FILES INSIDE THE ECR_REPOS"
-          declare -A tags
+          array=()
           counter=1
           for file in $ECR_REPOS;do
-            tags+=( ["$file"]="$counter")
+            array+=( "${file}:${counter}" )
             let "counter+=1"
           done
 
           for file in $ECR_REPOS;do
-            echo "$file -> ${tags[$file]}"
+            echo "$file"
           done
 
-          echo "IMAGE_TAGS=${tags[@]}" >> $GITHUB_ENV
+          echo "ECR_REPOS_AND_TAGS=${array[@]}" >> $GITHUB_ENV
 
       - name: Testing we get back the hashmap
         shell: bash
         run: |
-          counter=1
-          for file in $ECR_REPOS;do
-            echo "$file -> ${IMAGE_TAGS[$counter]}"
-            let "counter+=1"
+          for file in $ECR_REPOS_AND_TAGS;do
+            echo "$file"
           done
