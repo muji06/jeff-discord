@@ -25,7 +25,7 @@ class arcane(commands.Cog):
             await ctx.send(embed=error)
             return
 
-        arcane = arcane.capitalize()
+        arcane = arcane.title()
         
         
         res_snekw = get('https://wf.snekw.com/arcane-wiki')
