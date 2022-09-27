@@ -95,8 +95,6 @@ jobs:
       matrix:
         # ECR_REPOS_AND_TAGS: ${{ needs.build.outputs.MATRIX_REPOS }}
         ECR_REPOS_AND_TAGS: [db_acess:1,test_2:2]
-
-
     steps:
       - name: "Checking how data we get back is structured"
         shell: bash
