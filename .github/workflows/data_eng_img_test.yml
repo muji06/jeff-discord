@@ -69,16 +69,22 @@ jobs:
 
           echo "ECR_REPOS_AND_TAGS=${array[@]}" >> $GITHUB_ENV
 
-      - name: Testing we get back the hashmap
+      - name: Creating a comma-serapated string from array
         shell: bash
         run: |
+          delim=""
+          joined=""
           for file in $ECR_REPOS_AND_TAGS;do
-            echo "$file"
+            joined="$joined$delim$file"
+            delim=","
           done
+          echo "New variable to pass on next job: $joined"
+          echo "$MATRIX_REPOS=$joined" >> $GITHUB_ENV
 
     outputs:
       REPOS: ${{ env.ECR_REPOS }}
       REPOS_AND_TAGS: ${{ env.ECR_REPOS_AND_TAGS }}
+      MATRIX_REPOS: ${{ env.MATRIX_REPOS }}
 
   
   test:
@@ -86,7 +92,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ECR_REPOS_AND_TAGS: ${{ needs.build.outputs.REPOS_AND_TAGS }}
+        ECR_REPOS_AND_TAGS: ${{ needs.build.outputs.MATRIX_REPOS }}
 
     steps:
       - name: "Checking how data we get back is structured"
