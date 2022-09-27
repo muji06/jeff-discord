@@ -70,33 +70,33 @@ jobs:
       #     echo "ECR_REPOS_AND_TAGS=${array[@]}" >> $GITHUB_ENV
 
       - name: Creating a comma-serapated string from array
+        id: format
         shell: bash
         run: |
-          delim=""
-          joined="["
-          for file in $ECR_REPOS;do
-            joined="$joined$delim$file"
-            delim=","
+          json_file="{\"include\":["
+          for x in $ECR_REPOS;do
+              echo  "{\"repo\":\"$x\"},"   
+              json_file+="{\"repo\":\"$x\"},"
+
           done
-          joined="$joined]"
-          echo "New variable to pass on next job: $joined"
-          echo "MATRIX_REPOS=$joined" >> $GITHUB_ENV
+          json_file="${json_file:0:${#json_file}-1}]}"
+          echo "::set-output name=MATRIX_REPOS::$json_file"
+                    
 
     outputs:
       REPOS: ${{ env.ECR_REPOS }}
-      MATRIX_REPOS: ${{ env.MATRIX_REPOS }}
+      MATRIX_REPOS: ${{ steps.format.outputs.MATRIX_REPOS }}
 
   
   test:
     needs: build
     runs-on: ubuntu-latest
     strategy:
-      matrix:
-        ECR_REPOS_AND_TAGS: ${{ needs.build.outputs.MATRIX_REPOS }}
+      matrix: ${{ needs.build.outputs.MATRIX_REPOS }}
     steps:
       - name: "Checking how data we get back is structured"
         shell: bash
         run: |
           echo "REPO:"
-          echo "${{ matrix.ECR_REPOS_AND_TAGS }}"
+          echo "${{ matrix.repo }}"
       
