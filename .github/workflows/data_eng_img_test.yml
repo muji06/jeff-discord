@@ -79,7 +79,7 @@ jobs:
             delim=","
           done
           echo "New variable to pass on next job: $joined"
-          echo "$MATRIX_REPOS=$joined" >> $GITHUB_ENV
+          echo "MATRIX_REPOS=$joined" >> $GITHUB_ENV
 
     outputs:
       REPOS: ${{ env.ECR_REPOS }}
