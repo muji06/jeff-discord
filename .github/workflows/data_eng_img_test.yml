@@ -92,7 +92,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     strategy:
-      matrix: ${{ needs.build.outputs.MATRIX_REPOS }}
+      matrix: ${{ fromJson(needs.build.outputs.MATRIX_REPOS) }}
     steps:
       - name: "Checking how data we get back is structured"
         shell: bash
