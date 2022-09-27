@@ -52,29 +52,29 @@ jobs:
 
           echo "ECR_REPOS=${sorted_array[@]}" >> $GITHUB_ENV
               
-      - name: Testing if we get back the array
-        shell: bash
-        run: |
-          echo "FILES INSIDE THE ECR_REPOS"
-          array=()
-          counter=1
-          for file in $ECR_REPOS;do
-            array+=( "${file}:${counter}" )
-            let "counter+=1"
-          done
+      # - name: Testing if we get back the array
+      #   shell: bash
+      #   run: |
+      #     echo "FILES INSIDE THE ECR_REPOS"
+      #     array=()
+      #     counter=1
+      #     for file in $ECR_REPOS;do
+      #       array+=( "${file}:${counter}" )
+      #       let "counter+=1"
+      #     done
 
-          for file in $ECR_REPOS;do
-            echo "$file"
-          done
+      #     for file in $ECR_REPOS;do
+      #       echo "$file"
+      #     done
 
-          echo "ECR_REPOS_AND_TAGS=${array[@]}" >> $GITHUB_ENV
+      #     echo "ECR_REPOS_AND_TAGS=${array[@]}" >> $GITHUB_ENV
 
       - name: Creating a comma-serapated string from array
         shell: bash
         run: |
           delim=""
           joined="["
-          for file in $ECR_REPOS_AND_TAGS;do
+          for file in $ECR_REPOS;do
             joined="$joined$delim$file"
             delim=","
           done
@@ -84,7 +84,6 @@ jobs:
 
     outputs:
       REPOS: ${{ env.ECR_REPOS }}
-      REPOS_AND_TAGS: ${{ env.ECR_REPOS_AND_TAGS }}
       MATRIX_REPOS: ${{ env.MATRIX_REPOS }}
 
   
@@ -93,7 +92,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ECR_REPOS_AND_TAGS: [db_acess:1,test_2:2]
+        ECR_REPOS_AND_TAGS: ${{ needs.build.outputs.MATRIX_REPOS }}
     steps:
       - name: "Checking how data we get back is structured"
         shell: bash
