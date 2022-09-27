@@ -84,12 +84,14 @@ jobs:
   test:
     needs: build
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ECR_REPOS_AND_TAGS: ${{ needs.build.outputs.REPOS_AND_TAGS }}
+
     steps:
       - name: "Checking how data we get back is structured"
         shell: bash
         run: |
-          echo "REPOS:"
-          echo "${{ needs.build.outputs.REPOS }}"
-          echo ""
-          echo "REPOS WITH TAGS:"
-          echo "${{ needs.build.outputs.REPOS_AND_TAGS }}"
+          echo "REPO:"
+          echo "${{ matrix.ECR_REPOS_AND_TAGS }}"
+      
