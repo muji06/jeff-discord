@@ -75,3 +75,21 @@ jobs:
           for file in $ECR_REPOS_AND_TAGS;do
             echo "$file"
           done
+
+    outputs:
+      REPOS: ${{ env.ECR_REPOS }}
+      REPOS_AND_TAGS: ${{ env.ECR_REPOS_AND_TAGS }}
+
+  
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checking how data we get back is structured"
+        shell: bash
+        run: |
+          echo "REPOS:"
+          echo "${{ needs.build.outputs.REPOS }}"
+          echo ""
+          echo "REPOS WITH TAGS:"
+          echo "${{ nneds.build.outputs.REPOS_AND_TAGS }}"
