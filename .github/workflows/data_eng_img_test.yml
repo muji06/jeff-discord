@@ -73,11 +73,12 @@ jobs:
         shell: bash
         run: |
           delim=""
-          joined=""
+          joined="["
           for file in $ECR_REPOS_AND_TAGS;do
             joined="$joined$delim$file"
             delim=","
           done
+          joined="$joined]"
           echo "New variable to pass on next job: $joined"
           echo "MATRIX_REPOS=$joined" >> $GITHUB_ENV
 
