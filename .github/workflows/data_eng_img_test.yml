@@ -52,29 +52,29 @@ jobs:
 
           echo "ECR_REPOS=${sorted_array[@]}" >> $GITHUB_ENV
               
-      # - name: Testing if we get back the array
-      #   shell: bash
-      #   run: |
-      #     echo "FILES INSIDE THE ECR_REPOS"
-      #     array=()
-      #     counter=1
-      #     for file in $ECR_REPOS;do
-      #       array+=( "${file}:${counter}" )
-      #       let "counter+=1"
-      #     done
+      - name: Testing if we get back the array
+        shell: bash
+        run: |
+          echo "FILES INSIDE THE ECR_REPOS"
+          array=()
+          counter=1
+          for file in $ECR_REPOS;do
+            array+=( "${file}:${counter}" )
+            let "counter+=1"
+          done
 
-      #     for file in $ECR_REPOS;do
-      #       echo "$file"
-      #     done
+          for file in $ECR_REPOS;do
+            echo "$file"
+          done
 
-      #     echo "ECR_REPOS_AND_TAGS=${array[@]}" >> $GITHUB_ENV
+          echo "ECR_REPOS_AND_TAGS=${array[@]}" >> $GITHUB_ENV
 
       - name: Creating a comma-serapated string from array
         id: format
         shell: bash
         run: |
           json_file="{\"include\":["
-          for x in $ECR_REPOS;do
+          for x in $ECR_REPOS_AND_TAGS;do
               echo  "{\"repo\":\"$x\"},"   
               json_file+="{\"repo\":\"$x\"},"
 
