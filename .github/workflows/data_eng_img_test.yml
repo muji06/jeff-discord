@@ -92,4 +92,4 @@ jobs:
           echo "${{ needs.build.outputs.REPOS }}"
           echo ""
           echo "REPOS WITH TAGS:"
-          echo "${{ nneds.build.outputs.REPOS_AND_TAGS }}"
+          echo "${{ needs.build.outputs.REPOS_AND_TAGS }}"
