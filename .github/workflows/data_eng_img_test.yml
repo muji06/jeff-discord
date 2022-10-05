@@ -72,7 +72,12 @@ jobs:
       - name: Validating Data
         shell: bash
         run: |
-          exit "Exiting gracefully cuz of issues"
+          tag="v1"
+          echo "Tag length is ${#tag}"
+          if [ ${#tag} -lt 1 ];then
+              exit "Exiting gracefully cuz of issues"
+          fi
+          
 
       - name: Creating a comma-serapated string from array
         id: format
