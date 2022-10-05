@@ -72,8 +72,7 @@ jobs:
       - name: Validating Data
         shell: bash
         run: |
-          echo "Exiting gracefully cuz of issues"
-          exit 1
+          exit "Exiting gracefully cuz of issues"
 
       - name: Creating a comma-serapated string from array
         id: format
