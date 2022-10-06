@@ -60,7 +60,6 @@ class prime(commands.Cog):
                     text += f"{info} {x['place']} - {x['rarity']}{chr(10)}"
                     count += 1
                 
-
         if count == 0:
             error = discord.Embed(
                 description="No relic drop found!"

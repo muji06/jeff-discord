@@ -12,6 +12,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix='-', intents=intents)
 
+
 async def load():
     for file in os.listdir('./commands'):
         if file.endswith('.py'):
