@@ -38,9 +38,15 @@ async def pricecheck(name:str, rank:int):
         name = name.lower().replace(' blueprint','')
     if '-' in name:
         name = ' '.join(name.split('-'))
+    if '&' in name:
+        name = name.replace('&','and')
     prime = '_'.join(name.lower().split(' '))
     res = get(f'https://api.warframe.market/v1/items/{prime}/orders')
     data = json.loads(res.text)
+    if "error" in data:
+        prime+="_blueprint"
+        res = get(f'https://api.warframe.market/v1/items/{prime}/orders')
+        data = json.loads(res.text)
     trades = data['payload']['orders']
 
     lowest = [10000, 10000, 10000]
