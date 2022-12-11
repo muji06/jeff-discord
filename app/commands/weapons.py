@@ -82,7 +82,7 @@ class weapon(commands.Cog):
             f"Disposition: {snekw['Disposition']}  ({dispo(float(snekw['Disposition']))}){chr(10)}{chr(10)}"
             )
 
-        if res.status_code == 404:
+        if 'wikiaUrl' not in data:
             wepembed = discord.Embed(
                 title=snekw['Name'],
                 description=description,
@@ -123,7 +123,7 @@ class weapon(commands.Cog):
                     f"{'Punchthrough: '+str(x['PunchThrough'])+chr(10) if 'PunchThrough' in x else ''}"+
                     f"**Damage**:{chr(10)}"+
                     damagestring + chr(10)+
-                    f"{'Total: '+'{0:.2f} ({1:.2f}%{2})'.format(total * x['Multishot'],percentmax*100/total,max)}",
+                    f"{'Total: '+'{0:.2f} ({1:.2f}%{2})'.format(total * x.get('Multishot',1),percentmax*100/total,max)}",
                     inline=True
                 )
             else:
@@ -141,7 +141,7 @@ class weapon(commands.Cog):
                     # f"{'Punchthrough: '+x['PunchThrough']+'{chr(10)}' if 'PunchThrough' in x else ''}"+
                     f"**Damage**:{chr(10)}"+
                     damagestring + chr(10)+
-                    f"{'Total: '+'{0:.2f} ({1:.2f}%{2})'.format(total * (x['Multishot'] if 'Multishot' in x else 1),percentmax*100/total,max)}",
+                    f"{'Total: '+'{0:.2f} ({1:.2f}%{2})'.format(total * x.get('Multishot',1),percentmax*100/total,max)}",
                     inline=True
                 )
 
