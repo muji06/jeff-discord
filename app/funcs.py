@@ -114,31 +114,45 @@ async def relic_finder(string: str):
 
 
 # func for mod polarity emotes
-async def polarity(name:str):
+def polarity(name:str):
     text = name.lower()
-    if name == "vazarin":
+    if text == "vazarin":
         return "<:vazarin:1006594423620124812>"
     
-    elif name == "madurai":
+    elif text == "madurai":
         return "<:madurai:1006594433422204989>"
     
-    elif name == "naramon":
+    elif text == "naramon":
         return "<:naramon:1006594431782223932>"
     
-    elif name == "zenurik":
+    elif text == "zenurik":
         return "<:zenurik:1006594421262909590>"
     
-    elif name == "unariu":
+    elif text == "unariu":
         return "<:unariu:1006594425595642016>"
     
-    elif name == "penjaga":
+    elif text == "penjaga":
         return "<:penjaga:1006594429651517551>"
     
-    elif name == "umbra":
+    elif text == "umbra":
         return "<:umbra:1006594427772469248>"
     
-    elif name == "aura":
+    elif text == "aura":
         return "<:aura:1006594434718253148>"
     
     else: 
+        return ""
+
+def get_shard(archon: str):
+    archon = archon.lower()
+    if 'amar' in archon:
+        return "<:CrimsonArchonShard:1052215232090620034>"
+
+    elif 'nire' in archon:
+        return "<:AmberArchonShard:1052215210657714327>"
+
+    elif 'boreal' in archon:
+        return "<:AzureArchonShard:1052215162704253030>"
+
+    else:
         return ""

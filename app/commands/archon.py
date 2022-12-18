@@ -2,6 +2,7 @@ from discord.ext import commands
 import discord
 import json
 from requests import get
+from funcs import get_shard
 
 class archon(commands.Cog):
     def __init__(self, bot):
@@ -21,7 +22,7 @@ class archon(commands.Cog):
 
         embed = discord.Embed(
             title="Archon Hunt",
-            description=f"Boss: {data['boss']}\nFaction: {data['faction']}",
+            description=f"Boss: {data['boss']}({get_shard(data['boss'])})\nFaction: {data['faction']}",
             color=discord.Colour.random()
             )
 
