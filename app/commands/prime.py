@@ -1,4 +1,5 @@
 from discord.ext import commands
+from discord import app_commands
 import discord
 import json
 from requests import get
@@ -7,7 +8,8 @@ class prime(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name='prime', description="Find what relics drop certain part.")
+    @commands.hybrid_command(name='prime', with_app_command=True, description="Find what relics drop certain part.")
+    @app_commands.guilds(discord.Object(id=992897664087760979))
     async def sortie(self, ctx,* ,part:str = None):
         """
         Usage: !prime <prime-part-name>\n
@@ -76,4 +78,4 @@ class prime(commands.Cog):
 
 
 async def setup(bot):
-    await bot.add_cog(prime(bot))
+    await bot.add_cog(prime(bot), guild= discord.Object(id=992897664087760979))

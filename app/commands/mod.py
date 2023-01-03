@@ -1,4 +1,5 @@
 from discord.ext import commands
+from discord import app_commands
 import discord
 import json
 from requests import get
@@ -9,7 +10,8 @@ class mod(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name='mod', description="Shows the closest matching mod",alieases=['m'])
+    @commands.hybrid_command(name='mod', with_app_command=True, description="Shows the closest matching mod")
+    @app_commands.guilds(discord.Object(id=992897664087760979))
     async def mod(self, ctx,*, mod:str = None):
         """
         Usage: !mod <mod-name>\n
@@ -86,4 +88,4 @@ class mod(commands.Cog):
 
 
 async def setup(bot):
-    await bot.add_cog(mod(bot))
+    await bot.add_cog(mod(bot), guild= discord.Object(id=992897664087760979))

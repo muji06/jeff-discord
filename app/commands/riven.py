@@ -1,4 +1,5 @@
 from discord.ext import commands
+from discord import app_commands
 import discord
 import json
 from requests import get
@@ -8,7 +9,8 @@ class riven(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name='riven', description="Shows the matching riven prices.",aliases=['riv','r'])
+    @commands.hybrid_command(name='riven', with_app_command=True ,description="Shows the matching riven prices.")
+    @app_commands.guilds(discord.Object(id=992897664087760979))
     async def riven(self, ctx,*, weapon:str = None):
         """
         Usage: !riven <weapon-name>\n
@@ -92,4 +94,4 @@ class riven(commands.Cog):
             await ctx.send("Something went wrong.")
 
 async def setup(bot):
-    await bot.add_cog(riven(bot))
+    await bot.add_cog(riven(bot), guild= discord.Object(id=992897664087760979))
