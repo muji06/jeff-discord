@@ -62,7 +62,7 @@ class fissure(commands.Cog):
         await ctx.send(embed=embed)
 
     @app_commands.command(name="fissures", description="Show the current Fissures")
-    @app_commands.guilds(discord.Object(id=992897664087760979))
+    # @app_commands.guilds(discord.Object(id=992897664087760979))
     @app_commands.choices(type=[
         discord.app_commands.Choice(name="Normal", value=""),
         discord.app_commands.Choice(name="Steel Path", value="sp"),
@@ -117,4 +117,4 @@ class fissure(commands.Cog):
         await interaction.response.send_message(embed=embed)
 
 async def setup(bot):
-    await bot.add_cog(fissure(bot), guild= discord.Object(id=992897664087760979))
+    await bot.add_cog(fissure(bot))

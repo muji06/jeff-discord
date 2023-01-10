@@ -10,7 +10,7 @@ class riven(commands.Cog):
         self.bot = bot
 
     @commands.hybrid_command(name='riven', with_app_command=True ,description="Shows the matching riven prices.")
-    @app_commands.guilds(discord.Object(id=992897664087760979))
+    # @app_commands.guilds(discord.Object(id=992897664087760979))
     async def riven(self, ctx,*, weapon:str = None):
         """
         Usage: !riven <weapon-name>\n
@@ -94,4 +94,4 @@ class riven(commands.Cog):
             await ctx.send("Something went wrong.")
 
 async def setup(bot):
-    await bot.add_cog(riven(bot), guild= discord.Object(id=992897664087760979))
+    await bot.add_cog(riven(bot))

@@ -12,7 +12,7 @@ class arcane(commands.Cog):
         self.bot = bot
 
     @commands.hybrid_command(name='arcane', with_app_command=True, description="Shows the matching arcane")
-    @app_commands.guilds(discord.Object(id=992897664087760979))
+    # @app_commands.guilds(discord.Object(id=992897664087760979))
     async def mod(self, ctx,*, arcane:str = None):
         """
         Usage: !arcane <arcane-name>\n
@@ -60,4 +60,4 @@ class arcane(commands.Cog):
 
 
 async def setup(bot):
-    await bot.add_cog(arcane(bot), guild= discord.Object(id=992897664087760979))
+    await bot.add_cog(arcane(bot))

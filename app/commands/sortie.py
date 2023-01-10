@@ -9,7 +9,7 @@ class sortie(commands.Cog):
         self.bot = bot
 
     @commands.hybrid_command(name='sortie',  with_app_command=True, description="Show the current Sortie Rotation")
-    @app_commands.guilds(discord.Object(id=992897664087760979))
+    # @app_commands.guilds(discord.Object(id=992897664087760979))
     async def sortie(self, ctx, lang:str = None):
         """
         Usage: !sortie <language>\n
@@ -37,4 +37,4 @@ class sortie(commands.Cog):
         await ctx.send(embed=embed)
 
 async def setup(bot):
-    await bot.add_cog(sortie(bot), guild= discord.Object(id=992897664087760979))
+    await bot.add_cog(sortie(bot))

@@ -10,7 +10,7 @@ class ping(commands.Cog):
         self.bot = bot
 
     @commands.hybrid_command(name="ping", with_app_command=True)
-    @app_commands.guilds(discord.Object(id=992897664087760979))
+    # @app_commands.guilds(discord.Object(id=992897664087760979))
     async def ping(self, ctx: commands.Context):
         await ctx.send("Pong")
         
@@ -21,4 +21,4 @@ class ping(commands.Cog):
 
 
 async def setup(bot):
-    await bot.add_cog(ping(bot), guild= discord.Object(id=992897664087760979))
+    await bot.add_cog(ping(bot))

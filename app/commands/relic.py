@@ -11,7 +11,7 @@ class relic(commands.Cog):
         self.bot = bot
 
     @commands.hybrid_command(name='relic', with_app_command=True, description="Find what parts your relic drops")
-    @app_commands.guilds(discord.Object(id=992897664087760979))
+    # @app_commands.guilds(discord.Object(id=992897664087760979))
     async def baro(self, ctx, *,relic:str = None):
         """
         Usage: !relic\n
@@ -84,4 +84,4 @@ class relic(commands.Cog):
 
 
 async def setup(bot):
-    await bot.add_cog(relic(bot), guild= discord.Object(id=992897664087760979))
+    await bot.add_cog(relic(bot))

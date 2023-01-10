@@ -37,7 +37,7 @@ class archon(commands.Cog):
         await ctx.send(embed=embed)
 
     @app_commands.command(name="archon-hunt", description="Show the current Archon Hunt Rotation")
-    @app_commands.guilds(discord.Object(id=992897664087760979))
+    # @app_commands.guilds(discord.Object(id=992897664087760979))
     @app_commands.choices(language=[
         discord.app_commands.Choice(name="English", value="en"),
         discord.app_commands.Choice(name="Spanish", value="es"),
@@ -59,7 +59,7 @@ class archon(commands.Cog):
 
         embed = discord.Embed(
             title="Archon Hunt",
-            description=f"Boss: {data['boss']}\nFaction: {data['faction']}",
+            description=f"Boss: {data['boss']}({get_shard(data['boss'])})\nFaction: {data['faction']}",
             color=discord.Colour.random()
             )
 
@@ -73,4 +73,4 @@ class archon(commands.Cog):
         await interaction.response.send_message(embed=embed)
 
 async def setup(bot):
-    await bot.add_cog(archon(bot), guild= discord.Object(id=992897664087760979))
+    await bot.add_cog(archon(bot))

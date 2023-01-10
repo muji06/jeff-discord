@@ -16,8 +16,10 @@ bot = commands.Bot(command_prefix='-', intents=intents)
 async def startup():
     log.info("Synchronizing commands")
     await bot.wait_until_ready()
-    await bot.tree.sync(guild=discord.Object(id=992897664087760979))
-    log.info("Succesfully synchronized guild with ID 970744489171898458")
+
+   
+    await bot.tree.sync() # guild=discord.Object(id=992897664087760979)
+    log.info("Succesfully synchronized with all guilds")
 
 async def load():
     for file in os.listdir('./commands'):
@@ -28,6 +30,9 @@ async def load():
 
 @bot.event
 async def on_ready():
+    #if we are debugging on 1 server
+    log.info("Deleting locally")
+    bot.tree.clear_commands(guild=discord.Object(id=992897664087760979))
     await load()
     print("Jefferson ready")
 

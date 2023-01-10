@@ -11,7 +11,7 @@ class mod(commands.Cog):
         self.bot = bot
 
     @commands.hybrid_command(name='mod', with_app_command=True, description="Shows the closest matching mod")
-    @app_commands.guilds(discord.Object(id=992897664087760979))
+    # @app_commands.guilds(discord.Object(id=992897664087760979))
     async def mod(self, ctx,*, mod:str = None):
         """
         Usage: !mod <mod-name>\n
@@ -88,4 +88,4 @@ class mod(commands.Cog):
 
 
 async def setup(bot):
-    await bot.add_cog(mod(bot), guild= discord.Object(id=992897664087760979))
+    await bot.add_cog(mod(bot))
