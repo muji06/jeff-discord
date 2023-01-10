@@ -1,5 +1,5 @@
-from email.mime import image
 from discord.ext import commands
+from discord import app_commands
 import discord
 import json
 from requests import get
@@ -11,7 +11,8 @@ class arcane(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name='arcane', description="Shows the matching arcane")
+    @commands.hybrid_command(name='arcane', with_app_command=True, description="Shows the matching arcane")
+    @app_commands.guilds(discord.Object(id=992897664087760979))
     async def mod(self, ctx,*, arcane:str = None):
         """
         Usage: !arcane <arcane-name>\n
@@ -59,4 +60,4 @@ class arcane(commands.Cog):
 
 
 async def setup(bot):
-    await bot.add_cog(arcane(bot))
+    await bot.add_cog(arcane(bot), guild= discord.Object(id=992897664087760979))

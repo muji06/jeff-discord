@@ -1,4 +1,4 @@
-
+import logging as log
 import discord
 from discord.ext import commands
 from discord import app_commands
@@ -14,8 +14,10 @@ intents.message_content = True
 bot = commands.Bot(command_prefix='-', intents=intents)
 
 async def startup():
+    log.info("Synchronizing commands")
     await bot.wait_until_ready()
-    await bot.tree.sync(guild= discord.Object(id=992897664087760979))
+    await bot.tree.sync(guild=discord.Object(id=992897664087760979))
+    log.info("Succesfully synchronized guild with ID 970744489171898458")
 
 async def load():
     for file in os.listdir('./commands'):

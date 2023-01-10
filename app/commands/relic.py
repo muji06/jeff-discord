@@ -1,4 +1,5 @@
 from discord.ext import commands
+from discord import app_commands
 import discord
 import json
 from requests import get
@@ -9,7 +10,8 @@ class relic(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name='relic', description="Find what parts your relic drops")
+    @commands.hybrid_command(name='relic', with_app_command=True, description="Find what parts your relic drops")
+    @app_commands.guilds(discord.Object(id=992897664087760979))
     async def baro(self, ctx, *,relic:str = None):
         """
         Usage: !relic\n
@@ -82,4 +84,4 @@ class relic(commands.Cog):
 
 
 async def setup(bot):
-    await bot.add_cog(relic(bot))
+    await bot.add_cog(relic(bot), guild= discord.Object(id=992897664087760979))
