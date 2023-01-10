@@ -148,7 +148,7 @@ def get_shard(archon: str):
     if 'amar' in archon:
         return "<:CrimsonArchonShard:1052215232090620034>"
 
-    elif 'nire' in archon:
+    elif 'nira' in archon:
         return "<:AmberArchonShard:1052215210657714327>"
 
     elif 'boreal' in archon:

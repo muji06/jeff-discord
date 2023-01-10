@@ -63,7 +63,7 @@ class mod(commands.Cog):
                 )
                 embed.set_image(url=data['wikiaThumbnail'])
                 embed.set_footer(
-                    text=f"{'Transmutable' if snekw_mod['Transmutable'] else 'Not transmutable'}"+"\n"+f"Latency: {round((time.time() - start)*1000)}ms"
+                    text=f"{'Transmutable' if 'Transmutable' in snekw_mod else 'Not transmutable'}"+"\n"+f"Latency: {round((time.time() - start)*1000)}ms"
                 )
                 await ctx.send(embed=embed)
 
@@ -80,7 +80,7 @@ class mod(commands.Cog):
                     +'\n\n'+f"{('**Unranked: **'+str(price_unranked)+chr(10)+'**Maxed: **'+str(price_ranked)) if snekw_mod['Transmutable'] else ''}")
                 )
                 embed.set_footer(
-                    text=f"{'Transmutable' if snekw['Transmutable'] else 'Not transmutable'}"+"\n"+f"Latency: {round((time.time() - start)*1000)}ms"
+                    text=f"{'Transmutable' if 'Transmutable' in snekw else 'Not transmutable'}"+"\n"+f"Latency: {round((time.time() - start)*1000)}ms"
                 )
                 await ctx.send(embed=embed)
 
