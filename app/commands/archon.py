@@ -4,6 +4,7 @@ import discord
 import json
 from requests import get
 from funcs import get_shard
+import time
 
 class archon(commands.Cog):
     def __init__(self, bot):
@@ -16,9 +17,13 @@ class archon(commands.Cog):
         Defualt language is en (english)\n
         Show the current archon Rotation
         """
+        start = time.time()
         if lang is None:
             lang = 'en'
+
+        download_start = time.time()
         response = get(f"https://api.warframestat.us/pc/archonHunt?language={lang}")
+        download_timer = time.time() - download_start
         data = json.loads(response.text)
 
         embed = discord.Embed(
@@ -33,7 +38,7 @@ class archon(commands.Cog):
             value=f"{mission['node']}",
             inline=False)
 
-        embed.set_footer(text=f"Ends in {data['eta']}\nValid Languages: en, es, fr, it, ko, pl, pt, ru, zh")
+        embed.set_footer(text=f"Ends in {data['eta']}\nValid Languages: en, es, fr, it, ko, pl, pt, ru, zh{chr(10)}Total Latency: {round((time.time() - start)*1000)}ms{chr(10)}Download Latency: {round(download_timer*1000)}ms")
         await ctx.send(embed=embed)
 
     @app_commands.command(name="archon-hunt", description="Show the current Archon Hunt Rotation")

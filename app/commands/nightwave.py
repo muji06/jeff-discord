@@ -2,6 +2,7 @@ from discord.ext import commands
 import discord
 import json
 from requests import get
+import time
 
 class nightwave(commands.Cog):
     def __init__(self, bot):
@@ -14,9 +15,13 @@ class nightwave(commands.Cog):
         Defualt language is en (english)\n
         Show the current Nightwave Rotation
         """
+        start = time.time()
         if lang is None:
             lang = 'en'
+        
+        download_start = time.time()
         response = get(f"https://api.warframestat.us/PC/nightwave?language={lang}")
+        download_timer = time.time() - download_start
         data = json.loads(response.text)
 
         embed = discord.Embed(
@@ -39,7 +44,7 @@ class nightwave(commands.Cog):
             )
         
 
-        embed.set_footer(text="Valid Languages: en, es, fr, it, ko, pl, pt, ru, zh")
+        embed.set_footer(text="Valid Languages: en, es, fr, it, ko, pl, pt, ru, zh" + "\n" + f"Total Latency: {round((time.time() - start)*1000)}ms{chr(10)}Download Latency: {round(download_timer*1000)}ms{chr(10)}")
         await ctx.send(embed=embed)
 
 async def setup(bot):

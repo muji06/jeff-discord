@@ -3,6 +3,7 @@ from discord import app_commands
 import discord
 import json
 from requests import get
+import time
 
 class sortie(commands.Cog):
     def __init__(self, bot):
@@ -16,9 +17,13 @@ class sortie(commands.Cog):
         Defualt language is en (english)\n
         Show the current Sortie Rotation
         """
+        start = time.time()
         if lang is None:
             lang = 'en'
+        
+        download_start = time.time()
         response = get(f"https://api.warframestat.us/pc/sortie?language={lang}")
+        download_timer = time.time() - download_start
         data = json.loads(response.text)
 
         embed = discord.Embed(
@@ -33,7 +38,7 @@ class sortie(commands.Cog):
             value=f"{mission['node']}\nCondition: {mission['modifier']}\nEffect: {mission['modifierDescription']}",
             inline=False)
 
-        embed.set_footer(text=f"Ends in {data['eta']}\nValid Languages: en, es, fr, it, ko, pl, pt, ru, zh")
+        embed.set_footer(text=f"Ends in {data['eta']}\nValid Languages: en, es, fr, it, ko, pl, pt, ru, zh"+ "\n" + f"Total Latency: {round((time.time() - start)*1000)}ms{chr(10)}Download Latency: {round(download_timer*1000)}ms")
         await ctx.send(embed=embed)
 
 async def setup(bot):

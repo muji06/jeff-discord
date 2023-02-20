@@ -21,9 +21,12 @@ class weapon(commands.Cog):
             error = discord.Embed(description="Usage: !weapon <weapon-name>")
             await ctx.send(embed=error)
             return
+        download_start = time.time()
         res = get(f"https://api.warframestat.us/weapons/{message}")
         data = json.loads(res.text)
         wiki_res = get('https://wf.snekw.com/weapons-wiki')
+        download_timer = time.time() - download_start
+
         snekw = ""
         if res.status_code == 404:
             # first we test if we have weapon on wiki
@@ -48,7 +51,7 @@ class weapon(commands.Cog):
                 await ctx.send('Something went wrong!')
                 return
 
-
+        calculaton_start = time.time()
         if len(snekw) == 0:
             error = discord.Embed(description="Be sure to write the right weapon name")
             await ctx.send(embed=error)
@@ -144,11 +147,11 @@ class weapon(commands.Cog):
                     f"{'Total: '+'{0:.2f} ({1:.2f}%{2})'.format(total * x.get('Multishot',1),percentmax*100/total,max)}",
                     inline=True
                 )
-
+        calculaton_timer = time.time() - calculaton_start
         if 'wikiaThumbnail' in data:
             wepembed.set_thumbnail(url=data['wikiaThumbnail'])
         wepembed.set_footer(
-            text=f"Latency: {round((time.time() - start)*1000)}ms"
+            text=f"Total Latency: {round((time.time() - start)*1000)}ms{chr(10)}Download Latency: {round(download_timer*1000)}ms{chr(10)}Calculation Latency: {round(calculaton_timer*1000)}ms"
         )
 
         await ctx.send(embed=wepembed)

@@ -28,8 +28,9 @@ class arcane(commands.Cog):
 
         arcane = arcane.title()
         
-        
+        donwload_start = time.time()
         res_snekw = get('https://wf.snekw.com/arcane-wiki')
+        download_timer = time.time() - donwload_start
         snekw = json.loads(res_snekw.text)['data']['Arcanes']
         data = None
         for x in snekw:
@@ -45,16 +46,17 @@ class arcane(commands.Cog):
             )
             await ctx.send(embed=error)
             return
-
+        market_start = time.time()
         price_unranked = await find(data['Name'],0)
         price_ranked = await find(data['Name'],data['MaxRank'])
+        market_timer = time.time() - market_start
         stats = f"{data['Criteria']}:{chr(10)}"+re.sub('<br \/>',chr(10),str(data['Description']))
         arcane_embed = discord.Embed(
             title=f"{data['Name']} | {data['Rarity']}",
             description=f"***At maximum rank ({data['MaxRank']})***{chr(10)}{chr(10)}{stats}{chr(10)}{chr(10)}Unranked: {price_unranked}{chr(10)}Rank {data['MaxRank']}: {price_ranked}"
         )
         arcane_embed.set_footer(
-            text=f"Latency: {round((time.time() - start)*1000)}ms"
+            text=f"Total Latency: {round((time.time() - start)*1000)}ms{chr(10)}Download Latency: {round(download_timer*1000)}ms{chr(10)}Market Price Latency: {round(market_timer*1000)}ms"
         )
         await ctx.send(embed=arcane_embed)
 

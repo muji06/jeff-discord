@@ -25,9 +25,11 @@ class mod(commands.Cog):
             await ctx.send(embed=error)
             return
 
+        download_start = time.time()
         response = get(f"https://api.warframestat.us/mods/{mod}")
+        download_timer = time.time() - download_start
         data = json.loads(response.text)
-        
+
         if 'code' in data and data['code'] == 404:
             error = discord.Embed(
                 description="Be sure to tyoe the correct mod name"
@@ -35,7 +37,10 @@ class mod(commands.Cog):
             await ctx.send(embed=error)
             return
         else:
+            download_start = time.time()
+
             res_snekw = get('https://wf.snekw.com/mods-wiki')
+            download_timer += time.time() - download_start
             snekw = json.loads(res_snekw.text)['data']['Mods']
             snekw_mod = None
             for x in snekw:
@@ -51,10 +56,12 @@ class mod(commands.Cog):
 
             price_ranked = ''
             price_unranked = ''
+            market_start = time.time()
             if snekw_mod['Tradable']:
                 price_ranked = await find(snekw_mod['Name'],snekw_mod['MaxRank'])
                 price_unranked = await find(snekw_mod['Name'],0)
-            
+            market_timer = time.time() - market_start
+
             if 'wikiaThumbnail' in data:
                 
 
@@ -65,7 +72,7 @@ class mod(commands.Cog):
                 )
                 embed.set_image(url=data['wikiaThumbnail'])
                 embed.set_footer(
-                    text=f"{'Transmutable' if 'Transmutable' in snekw_mod else 'Not transmutable'}"+"\n"+f"Latency: {round((time.time() - start)*1000)}ms"
+                    text=f"{'Transmutable' if 'Transmutable' in snekw_mod else 'Not transmutable'}"+"\n"+f"Total Latency: {round((time.time() - start)*1000)}ms{chr(10)}Download Latency: {round(download_timer*1000)}ms{chr(10)}Market Price Latency: {round(market_timer*1000)}ms"
                 )
                 await ctx.send(embed=embed)
 
@@ -82,7 +89,7 @@ class mod(commands.Cog):
                     +'\n\n'+f"{('**Unranked: **'+str(price_unranked)+chr(10)+'**Maxed: **'+str(price_ranked)) if snekw_mod['Transmutable'] else ''}")
                 )
                 embed.set_footer(
-                    text=f"{'Transmutable' if 'Transmutable' in snekw else 'Not transmutable'}"+"\n"+f"Latency: {round((time.time() - start)*1000)}ms"
+                    text=f"{'Transmutable' if 'Transmutable' in snekw else 'Not transmutable'}"+"\n"+f"Total Latency: {round((time.time() - start)*1000)}ms{chr(10)}Download Latency: {round(download_timer*1000)}ms{chr(10)}Market Price Latency: {round(market_timer*1000)}ms"
                 )
                 await ctx.send(embed=embed)
 
