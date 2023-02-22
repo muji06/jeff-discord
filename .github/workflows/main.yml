@@ -32,14 +32,11 @@ jobs:
         password: ${{ secrets.REMOTE_PASS }}
         port: 22
         script: |
-          if [ $( docker ps -a -f "ancestor=jefferson" | wc -l ) -gt 0 ]; then
-              docker stop $( docker ps -aq -f "ancestor=jefferson" )
-              docker rm $( docker ps -aq -f "ancestor=jefferson" )
-          fi
 
           cd /home/pi/apps/jeff-discord
           git pull
-          docker build -t jefferson .
-          docker run -d --restart always jefferson
+          docker compose down
+          docker compose build 
+          docker compose up -d
 
     
