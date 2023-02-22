@@ -1,0 +1,30 @@
+version: '3'
+services:
+  redis:
+    restart: always
+    image: redis:buster
+    container_name: redis_jeff
+    command: redis-server --appendonly yes
+    volumes:
+      - redis-data:/data
+    ports:
+      - "6379:6379"
+    networks:
+      - connect
+
+  jefferson:
+    container_name: jefferson
+    restart: always
+    build:
+      context: .
+    depends_on:
+      - redis
+    networks:
+      - connect
+
+networks:
+  connect:
+    driver: bridge
+
+volumes:
+  redis-data:

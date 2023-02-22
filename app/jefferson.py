@@ -13,10 +13,12 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix='-', intents=intents)
 
-async def startup():
-    await bot.wait_until_ready()
-    # await tree.sync() # guild=discord.Object(id=992897664087760979)
-    log.info("Ready to sync!")
+
+
+# async def startup():
+#     await bot.wait_until_ready()
+#     # await tree.sync() # guild=discord.Object(id=992897664087760979)
+#     log.info("Ready to sync!")
 
 async def load():
     for file in os.listdir('./commands'):
@@ -36,11 +38,11 @@ async def sync(interaction: discord.Interaction):
 @bot.event
 async def on_ready():
     # Due to an unfortunate error ,we have to clear all commands in here
-    log.info("Deleting locally")
-    bot.tree.clear_commands(guild=discord.Object(id=992897664087760979))
-    bot.tree.add_command(sync, guild=discord.Object(id=992897664087760979))
-    await bot.tree.sync(guild=discord.Object(id=992897664087760979))
-    log.info("Done with local deletion")
+    print("Deleting locally")
+    # bot.tree.clear_commands(guild=discord.Object(id=992897664087760979))
+    # bot.tree.add_command(sync, guild=discord.Object(id=992897664087760979))
+    # await bot.tree.sync(guild=discord.Object(id=992897664087760979))
+    print("Done with local deletion")
 
     await load()
     print("Jefferson ready")
