@@ -4,11 +4,11 @@ services:
     restart: always
     image: redis:buster
     container_name: redis_jeff
-    command: redis-server --appendonly yes
+    command: redis-server --port 6378 --appendonly yes
     volumes:
       - redis-data:/data
     ports:
-      - "6379:6378"
+      - "6378:6378"
     networks:
       - connect
 
