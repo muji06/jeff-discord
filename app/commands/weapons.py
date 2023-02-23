@@ -121,7 +121,7 @@ class weapon(commands.Cog):
                     f"{'Status Chance: '+ str(round(x['StatusChance']*100))+'%'+chr(10) if 'StatusChance' in x else '' }"+
                     f"Multishot: {x['Multishot'] if 'Multishot' in x else '1'}{chr(10)}"+
                     f"{'Charge Time: '+ str(x['FireRate'])+'s'+chr(10) if 'ShotType' in x and x['ShotType'] == 'Charged Shot' else 'Firerate: '+str(x['FireRate'])+chr(10) if 'FireRate' in x else ''}"+
-                    f"{'AoE Radius: '+str(x['Radius'])+'m'+chr(10) if 'Radius' in x and x['ShotType'] == 'AoE' else 'AoE Radius: '+str(x['Falloff']['EndRange'])+'m'+chr(10) if 'Falloff' in x and  x['ShotType'] == 'AoE' else '' }"+
+                    f"{'AoE Radius: '+str(x['Radius'])+'m'+chr(10) if 'Radius' in x and 'ShotType' in x and x['ShotType'] == 'AoE' else 'AoE Radius: '+str(x['Falloff']['EndRange'])+'m'+chr(10) if 'Falloff' in x and 'ShotType' in x and x['ShotType'] == 'AoE' else '' }"+
                     f"{'Falloff: '+(str(round(x['Falloff']['Reduction'] * 100))+'%' if 'Reduction'in x['Falloff'] else '')+'('+str(x['Falloff']['StartRange'])+' - '+str(x['Falloff']['EndRange'])+'m)'+chr(10) if 'Falloff' in x else ''}"+
                     f"{'Punchthrough: '+str(x['PunchThrough'])+chr(10) if 'PunchThrough' in x else ''}"+
                     f"**Damage**:{chr(10)}"+
@@ -139,7 +139,7 @@ class weapon(commands.Cog):
                     multishot(x) +
                     # f"{ '' if 'Multishot' not in x else 'Multishot: '+str(x['Multishot'])+chr(10)}"+
                     # f"{'Charge Time: '+ x['ChargeTime']+'{chr(10)}' if 'ChargeTime' in x and 'AttackName' not in x else 'Firerate: '+x['FireRate']+'{chr(10)}' if 'FireRate' in x else ''}"+
-                    f"{'AoE Radius: '+str(x['Radius'])+'m'+chr(10) if 'Radius' in x and x['ShotType'] == 'AoE' else 'AoE Radius: '+str(x['Falloff']['EndRange'])+'m'+chr(10) if 'Falloff' in x else '' }"+
+                    f"{'AoE Radius: '+str(x['Radius'])+'m'+chr(10) if 'Radius' in x and 'ShotType' in x and x['ShotType'] == 'AoE' else 'AoE Radius: '+str(x['Falloff']['EndRange'])+'m'+chr(10) if 'Falloff' in x else '' }"+
                     f"{'Falloff: '+str(round(x['Falloff']['Reduction']) * 100)+'%('+str(x['Falloff']['StartRange'])+' - '+str(x['Falloff']['EndRange'])+'m'+chr(10) if 'Falloff' in x else ''}"+
                     # f"{'Punchthrough: '+x['PunchThrough']+'{chr(10)}' if 'PunchThrough' in x else ''}"+
                     f"**Damage**:{chr(10)}"+
@@ -266,7 +266,7 @@ class weapon(commands.Cog):
                     f"{'Status Chance: '+ str(round(x['StatusChance']*100))+'%'+chr(10) if 'StatusChance' in x else '' }"+
                     f"Multishot: {x['Multishot'] if 'Multishot' in x else '1'}{chr(10)}"+
                     f"{'Charge Time: '+ str(x['FireRate'])+'s'+chr(10) if 'ShotType' in x and x['ShotType'] == 'Charged Shot' else 'Firerate: '+str(x['FireRate'])+chr(10) if 'FireRate' in x else ''}"+
-                    f"{'AoE Radius: '+str(x['Radius'])+'m'+chr(10) if 'Radius' in x and x['ShotType'] == 'AoE' else 'AoE Radius: '+str(x['Falloff']['EndRange'])+'m'+chr(10) if 'Falloff' in x and  x['ShotType'] == 'AoE' else '' }"+
+                    f"{'AoE Radius: '+str(x['Radius'])+'m'+chr(10) if 'Radius' in x and 'ShotType' in x and x['ShotType'] == 'AoE' else 'AoE Radius: '+str(x['Falloff']['EndRange'])+'m'+chr(10) if 'Falloff' in x and 'ShotType' in x and x['ShotType'] == 'AoE' else '' }"+
                     f"{'Falloff: '+(str(round(x['Falloff']['Reduction'] * 100))+'%' if 'Reduction'in x['Falloff'] else '')+'('+str(x['Falloff']['StartRange'])+' - '+str(x['Falloff']['EndRange'])+'m)'+chr(10) if 'Falloff' in x else ''}"+
                     f"{'Punchthrough: '+str(x['PunchThrough'])+chr(10) if 'PunchThrough' in x else ''}"+
                     f"**Damage**:{chr(10)}"+
@@ -284,7 +284,7 @@ class weapon(commands.Cog):
                     multishot(x) +
                     # f"{ '' if 'Multishot' not in x else 'Multishot: '+str(x['Multishot'])+chr(10)}"+
                     # f"{'Charge Time: '+ x['ChargeTime']+'{chr(10)}' if 'ChargeTime' in x and 'AttackName' not in x else 'Firerate: '+x['FireRate']+'{chr(10)}' if 'FireRate' in x else ''}"+
-                    f"{'AoE Radius: '+str(x['Radius'])+'m'+chr(10) if 'Radius' in x and x['ShotType'] == 'AoE' else 'AoE Radius: '+str(x['Falloff']['EndRange'])+'m'+chr(10) if 'Falloff' in x else '' }"+
+                    f"{'AoE Radius: '+str(x['Radius'])+'m'+chr(10) if 'Radius' in x and 'ShotType' in x and x['ShotType'] == 'AoE' else 'AoE Radius: '+str(x['Falloff']['EndRange'])+'m'+chr(10) if 'Falloff' in x else '' }"+
                     f"{'Falloff: '+str(round(x['Falloff']['Reduction']) * 100)+'%('+str(x['Falloff']['StartRange'])+' - '+str(x['Falloff']['EndRange'])+'m'+chr(10) if 'Falloff' in x else ''}"+
                     # f"{'Punchthrough: '+x['PunchThrough']+'{chr(10)}' if 'PunchThrough' in x else ''}"+
                     f"**Damage**:{chr(10)}"+
