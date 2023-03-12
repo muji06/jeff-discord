@@ -21,6 +21,16 @@ services:
       - redis
     networks:
       - connect
+  
+  scheduler:
+    container_name: scheduler_jeff
+    restart: always
+    build:
+      context: ./scheduler
+    depends_on:
+      - redis
+    networks:
+      - connect
 
 networks:
   connect:

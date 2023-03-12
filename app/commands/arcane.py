@@ -6,6 +6,7 @@ from requests import get
 from funcs import find,polarity
 import time
 import re
+from redis_manager import cache
 
 class arcane(commands.Cog):
     def __init__(self, bot):
@@ -29,9 +30,17 @@ class arcane(commands.Cog):
         arcane = arcane.title()
         
         donwload_start = time.time()
-        res_snekw = get('https://wf.snekw.com/arcane-wiki')
+        cached = True
+        # check if we have data cached
+        if cache.cache.exists("arcane:1"):
+            cached_arcanes = json.loads(cache.cache.get("arcane:1"))
+            snekw = cached_arcanes['data']['Arcanes']
+        else:
+            cached = False # recreate it later
+            wiki_res = get('https://wf.snekw.com/arcane-wiki')
+            snekw = json.loads(wiki_res.text)['data']['Arcanes']
+        
         download_timer = time.time() - donwload_start
-        snekw = json.loads(res_snekw.text)['data']['Arcanes']
         data = None
         for x in snekw:
             # print(f"{data['name']} vs {snekw[x]['Name']}")
@@ -55,9 +64,14 @@ class arcane(commands.Cog):
             title=f"{data['Name']} | {data['Rarity']}",
             description=f"***At maximum rank ({data['MaxRank']})***{chr(10)}{chr(10)}{stats}{chr(10)}{chr(10)}Unranked: {price_unranked}{chr(10)}Rank {data['MaxRank']}: {price_ranked}"
         )
-        arcane_embed.set_footer(
-            text=f"Total Latency: {round((time.time() - start)*1000)}ms{chr(10)}Download Latency: {round(download_timer*1000)}ms{chr(10)}Market Price Latency: {round(market_timer*1000)}ms"
-        )
+        if not cached:
+            arcane_embed.set_footer(
+                text=f"Total Latency: {round((time.time() - start)*1000)}ms{chr(10)}Download Latency: {round(download_timer*1000)}ms{chr(10)}Market Price Latency: {round(market_timer*1000)}ms"
+            )
+        else:
+            arcane_embed.set_footer(
+                text=f"Total Latency: {round((time.time() - start)*1000)}ms{chr(10)}Cached Latency: {round(download_timer*1000)}ms{chr(10)}Market Price Latency: {round(market_timer*1000)}ms"
+            )
         await ctx.send(embed=arcane_embed)
 
 

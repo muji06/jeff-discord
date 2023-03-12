@@ -5,7 +5,7 @@ import json
 from requests import get
 from funcs import find,polarity
 import time
-
+from redis_manager import cache
 class mod(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -39,9 +39,17 @@ class mod(commands.Cog):
         else:
             download_start = time.time()
 
-            res_snekw = get('https://wf.snekw.com/mods-wiki')
+            cached = True
+            # check if we have data cached
+            if cache.cache.exists("mod:1"):
+                cached_mods = json.loads(cache.cache.get("mod:1"))
+                snekw = cached_mods['data']['Mods']
+            else:
+                cached = False # recreate it later
+                res_snekw = get('https://wf.snekw.com/mods-wiki')
+                snekw = json.loads(res_snekw.text)['data']['Mods']
+
             download_timer += time.time() - download_start
-            snekw = json.loads(res_snekw.text)['data']['Mods']
             snekw_mod = None
             for x in snekw:
                 # print(f"{data['name']} vs {snekw[x]['Name']}")
@@ -88,9 +96,15 @@ class mod(commands.Cog):
                     +'\n\n'+f"**Effect at rank {snekw_mod['MaxRank']}:**"+'\n'+snekw_mod['Description']
                     +'\n\n'+f"{('**Unranked: **'+str(price_unranked)+chr(10)+'**Maxed: **'+str(price_ranked)) if snekw_mod['Transmutable'] else ''}")
                 )
-                embed.set_footer(
-                    text=f"{'Transmutable' if 'Transmutable' in snekw else 'Not transmutable'}"+"\n"+f"Total Latency: {round((time.time() - start)*1000)}ms{chr(10)}Download Latency: {round(download_timer*1000)}ms{chr(10)}Market Price Latency: {round(market_timer*1000)}ms"
-                )
+                if not cached:
+                    embed.set_footer(
+                        text=f"{'Transmutable' if 'Transmutable' in snekw else 'Not transmutable'}"+"\n"+f"Total Latency: {round((time.time() - start)*1000)}ms{chr(10)}Download Latency: {round(download_timer*1000)}ms{chr(10)}Market Price Latency: {round(market_timer*1000)}ms"
+                    )
+                else:
+                    embed.set_footer(
+                        text=f"{'Transmutable' if 'Transmutable' in snekw else 'Not transmutable'}"+"\n"+f"Total Latency: {round((time.time() - start)*1000)}ms{chr(10)}Cached Latency: {round(download_timer*1000)}ms{chr(10)}Market Price Latency: {round(market_timer*1000)}ms"
+                    )   
+                
                 await ctx.send(embed=embed)
 
 

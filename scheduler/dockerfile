@@ -6,8 +6,6 @@ USER root
 
 RUN python3 -m pip install  -r requirements.txt --user 
 
-COPY ./app ./app
+COPY . .
 
-WORKDIR /app
-
-CMD ["python3","-u","./jefferson.py"]
+CMD ["python3","-u","./download_stuff.py"]
