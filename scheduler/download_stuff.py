@@ -27,7 +27,9 @@ DOWNLOAD_URLS = {
 def refill_wiki_data():
     for key, url in DOWNLOAD_URLS.items():
         ready = False
-        while ready:
+        retries = 0
+        while not ready and retries < 100:
+            retries += 1
             print(f"[{time.ctime()}]:\t[Downloading data for '{key}'...]")
             try:
                 data = requests.get(url=url).json()
