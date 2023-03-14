@@ -6,6 +6,7 @@ import time
 from requests import get
 from redis_manager import cache
 import datetime
+from funcs import find
 # from logging import info as print
 
 class prime(commands.Cog):
@@ -53,7 +54,7 @@ class prime(commands.Cog):
         relics = data['data']['RelicData']
         text = ''
         item = ''
-        
+        price_name = ''
         # testing_needed = False
         
         part = part.lower().replace("bp", "blueprint").split(" ")
@@ -74,6 +75,7 @@ class prime(commands.Cog):
             if item_name in prime_name:
                 prime_dict = primes[prime]
                 item = prime
+                price_name = prime
                 
         # if we didnt not find the correct key, check again by changing item_name
         if not prime_dict and len(part) == 3:
@@ -85,6 +87,8 @@ class prime(commands.Cog):
                 if item_name in prime_name:
                     prime_dict = primes[prime]
                     item = prime
+                    price_name = prime
+                    
                     break
         
         # still no key? then no part found
@@ -104,11 +108,12 @@ class prime(commands.Cog):
             if part_name in partt.lower():
                 part_dict = prime_dict["Parts"][part]
                 item += f" {part}"
+                price_name = f"{price_name} {part if len(part.split(' ')) == 1 else part.replace('blueprint','').strip()}"
                 break      
         
         if not part_dict:
             error = discord.Embed(
-                description=f"Did not find the part for {prime}!"
+                description=f"Did not find the part for {item}!"
             )
             await ctx.send(embed=error)
             return      
@@ -123,10 +128,12 @@ class prime(commands.Cog):
                 info = '(V)'
             text +=f"`{info:3} {relic} - {rarity}`{chr(10)}"
                 
+        # part price
         
+        price = f"Market price: {await find(price_name)}"
 
         prime_part = discord.Embed(
-            description=text,
+            description=price + "\n\n" +text,
             title=item,
         )
         calculaton_timer= time.time() - calculation_start
