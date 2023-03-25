@@ -4,7 +4,8 @@ import discord
 import json
 from requests import get
 import time
-from funcs import find
+from funcs import optimized_find
+from threading import Thread
 
 class relic(commands.Cog):
     def __init__(self, bot):
@@ -38,7 +39,7 @@ class relic(commands.Cog):
             drop = data[relic]['Drops']
 
             info = ''
-            price = ''#await relic_finder(relic)
+            price = ''#relic_finder(relic)
             if 'IsBaro' in relic and relic['IsBaro']:
                 info = '(B)'
             elif 'Valuted' in relic and relic['Valuted']:
@@ -58,21 +59,32 @@ class relic(commands.Cog):
             # print(f"{drop[4]['Item']} {drop[4]['Part']}")
             # print(f"Gold")
             # print(f"{drop[5]['Item']} {drop[5]['Part']}")
-
+            threads = {}
+            returns = {}
+            for x in range(6):
+                returns[f'{x}'] = None
+                name = drop[x]['Item'] + ' ' + drop[x]['Part']
+                threads[x] = Thread(target=optimized_find, args=(name, returns, f'{x}'))
+                threads[x].start()
+                
+            for x in range(6):
+                threads[x].join()
+            
+            print(returns)
             embed.add_field(
                 name="Common/Bronze",
-                value=f"{drop[0]['Item']} {drop[0]['Part']} {await find(drop[0]['Item'] + ' ' + drop[0]['Part'])}{chr(10)}"\
-                        +f"{drop[1]['Item']} {drop[1]['Part']} {await find(drop[1]['Item'] + ' ' + drop[1]['Part'])}{chr(10)}"\
-                        +f"{drop[2]['Item']} {drop[2]['Part']} {await find(drop[2]['Item'] + ' ' + drop[2]['Part'])}"
+                value=f"{drop[0]['Item']} {drop[0]['Part']} {returns['0']}{chr(10)}"\
+                        +f"{drop[1]['Item']} {drop[1]['Part']} {returns['1']}{chr(10)}"\
+                        +f"{drop[2]['Item']} {drop[2]['Part']} {returns['2']}"
             ,inline=False)
             embed.add_field(
                 name="Uncommon/Silver",
-                value=f"{drop[3]['Item']} {drop[3]['Part']} {await find(drop[3]['Item'] + ' ' + drop[3]['Part'])}{chr(10)}"\
-                        +f"{drop[4]['Item']} {drop[4]['Part']} {await find(drop[4]['Item'] + ' ' + drop[4]['Part'])}"
+                value=f"{drop[3]['Item']} {drop[3]['Part']} {returns['3']}{chr(10)}"\
+                        +f"{drop[4]['Item']} {drop[4]['Part']} {returns['4']}"
             ,inline=False)
             embed.add_field(
                 name="Rare/Gold",
-                value=f"{drop[5]['Item']} {drop[5]['Part']} {await find(drop[5]['Item'] + ' ' + drop[5]['Part'])}"
+                value=f"{drop[5]['Item']} {drop[5]['Part']} {returns['5']}"
             ,inline=False)
         
 

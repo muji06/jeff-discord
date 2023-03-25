@@ -130,7 +130,7 @@ class prime(commands.Cog):
                 
         # part price
         
-        price = f"Market price: {await find(price_name)}"
+        price = f"Market price: {find(price_name)}"
 
         prime_part = discord.Embed(
             description=price + "\n\n" +text,

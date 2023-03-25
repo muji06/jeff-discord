@@ -56,8 +56,8 @@ class arcane(commands.Cog):
             await ctx.send(embed=error)
             return
         market_start = time.time()
-        price_unranked = await find(data['Name'],0)
-        price_ranked = await find(data['Name'],data['MaxRank'])
+        price_unranked = find(data['Name'],0)
+        price_ranked = find(data['Name'],data['MaxRank'])
         market_timer = time.time() - market_start
         stats = f"{data['Criteria']}:{chr(10)}"+re.sub('<br \/>',chr(10),str(data['Description']))
         arcane_embed = discord.Embed(
