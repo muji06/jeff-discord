@@ -38,7 +38,7 @@ async def sync(interaction: discord.Interaction):
 @bot.event
 async def on_ready():
     # Due to an unfortunate error ,we have to clear all commands in here
-    print("Deleting locally")
+    bot.remove_command('help')  # unload default help message
     # bot.tree.clear_commands(guild=discord.Object(id=992897664087760979))
     # bot.tree.add_command(sync, guild=discord.Object(id=992897664087760979))
     # await bot.tree.sync(guild=discord.Object(id=992897664087760979))
