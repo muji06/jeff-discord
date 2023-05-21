@@ -16,7 +16,7 @@ cache = RedisManager()
 tl = Timeloop()
 
 DOWNLOAD_URLS = {
-    "void:1": "https://wf.snekw.com/void-wiki'",
+    "void:1": "https://wf.snekw.com/void-wiki",
     "weapon:1": "https://wf.snekw.com/weapons-wiki",
     "arcane:1": "https://wf.snekw.com/arcane-wiki",
     "mod:1": "https://wf.snekw.com/mods-wiki",
