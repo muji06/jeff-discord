@@ -1,7 +1,7 @@
 version: '3'
 services:
   redis:
-    restart: always
+    restart: unless-stopped
     image: redis:buster
     container_name: redis_jeff
     command: redis-server --port 6378 --appendonly yes
@@ -14,7 +14,7 @@ services:
 
   jefferson:
     container_name: jefferson
-    restart: always
+    restart: unless-stopped
     build:
       context: .
     depends_on:
@@ -24,7 +24,7 @@ services:
   
   scheduler:
     container_name: scheduler_jeff
-    restart: always
+    restart: unless-stopped
     build:
       context: ./scheduler
     depends_on:

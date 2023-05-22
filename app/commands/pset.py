@@ -5,7 +5,9 @@ import json
 import time
 from requests import get
 from redis_manager import cache
-from funcs import find
+from funcs import optimized_find
+from threading import Thread
+
 
 class pset(commands.Cog):
     def __init__(self, bot):
@@ -62,13 +64,27 @@ class pset(commands.Cog):
             await ctx.send(embed=error)
             return
         
+        # download the stuff
+        threads = {}
+        returns = {}
         for part in prime_dict["Parts"]:
             trade_name = f"{item} {part if len(part.split(' ')) == 1 else part.replace('blueprint','').strip()}"
-            text += f"{part}: {await find(trade_name)}{chr(10)}"
+            threads[part] = Thread(target=optimized_find, args=(trade_name, returns, part))
+            threads[part].start()
+            # text += f"{part}: {find(trade_name)}{chr(10)}"
         
-        # set price
+        # download set price on separate thread
         set_name = f"{item} set"
-        set_price = f"Full set: {await find(set_name)}"
+        set_thread = Thread(target=optimized_find, args=(set_name, returns, 'set'))
+        set_thread.start()
+        # now we join 1 by 1
+        for part in prime_dict["Parts"]:
+            threads[part].join()
+            text += f"{part}: {returns[part]}{chr(10)}"
+        print(returns)
+        
+        set_thread.join()
+        set_price = f"Full set: {returns['set']}"
         
         download_timer = time.time() - download_start
         

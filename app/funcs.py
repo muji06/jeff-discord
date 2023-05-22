@@ -33,7 +33,7 @@ def dispo(num:int):
 #     return lowest
 
 # same function for both 
-async def pricecheck(name:str, rank:int):
+def pricecheck(name:str, rank:int = None):
     if not (name.lower().endswith('prime blueprint') or name.lower().endswith('collar blueprint')):
         name = name.lower().replace(' blueprint','')
     if '-' in name:
@@ -64,14 +64,28 @@ async def pricecheck(name:str, rank:int):
     
     return lowest
 
+def optimized_find(string: str, output_dict: dict, output_key):
+    if 'forma' in string.lower():
+        output_dict[output_key] = ''
+        return
+        
+    arr = pricecheck(string)
+    for i,x in enumerate(arr):
+        if x == 10000:
+            arr[i] = "N/A"
+            
+    text = f"({arr[2]} , {arr[1]} , {arr[0]})<:Platinum:992917150358589550>"
+    output_dict[output_key] = text
+    return
+
 # call function above to create the final string
-async def find(string: str, rank: int = None):
+def find(string: str, rank: int = None):
     if('forma' in string.lower()):
         return ''
     if int is None:
-        arr = await pricecheck(string)
+        arr = pricecheck(string)
     else:
-        arr = await pricecheck(string,rank)
+        arr = pricecheck(string,rank)
 
     for i,x in enumerate(arr):
         if x == 10000:
@@ -80,7 +94,7 @@ async def find(string: str, rank: int = None):
 
 
 
-async def relic_pricecheck(string: str):
+def relic_pricecheck(string: str):
     
     relic = '_'.join(string.lower().split(' '))+'_relic'
     res = get(f'https://api.warframe.market/v1/items/{relic}/orders')
@@ -96,9 +110,9 @@ async def relic_pricecheck(string: str):
     return lowest
 
 # special call for relics
-async def relic_finder(string: str):
+def relic_finder(string: str):
 
-    arr = await relic_pricecheck(string)
+    arr = relic_pricecheck(string)
     text = 'Price (Quantity): '
     for x in arr:
         if x[0] == 10000:

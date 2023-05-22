@@ -66,8 +66,8 @@ class mod(commands.Cog):
             price_unranked = ''
             market_start = time.time()
             if snekw_mod['Tradable']:
-                price_ranked = await find(snekw_mod['Name'],snekw_mod['MaxRank'])
-                price_unranked = await find(snekw_mod['Name'],0)
+                price_ranked = find(snekw_mod['Name'],snekw_mod['MaxRank'])
+                price_unranked = find(snekw_mod['Name'],0)
             market_timer = time.time() - market_start
 
             if 'wikiaThumbnail' in data:

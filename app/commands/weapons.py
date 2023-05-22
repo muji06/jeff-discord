@@ -156,7 +156,7 @@ class weapon(commands.Cog):
 
     #     await ctx.send(embed=wepembed)
 
-    @commands.command(name='weapon', description="Find the stats of certain weapon",aliases=['wep','weap'])
+    @commands.command(name='weapon', description="Find the stats of certain weapon",aliases=['w','wep','weap'])
     async def weapon_alt(self, ctx, *,message:str = None):
         """
         Usage: !weapon <weapon-name>\n
@@ -187,10 +187,18 @@ class weapon(commands.Cog):
         # first we test if we have weapon on wiki
         message = message.lower()
         wiki_wep = ""
+        # test with full text first
         for x in wiki_data:
-            if message in x.lower():
+            if message == x.lower():
                 wiki_wep = x
                 break
+            
+        # if not full word then partial    
+        if wiki_wep == "":
+            for x in wiki_data:
+                if message in x.lower():
+                    wiki_wep = x
+                    break
 
         if len(wiki_wep) == 0:
             error = discord.Embed(description="Be sure to write the right weapon name")
