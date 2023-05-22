@@ -30,7 +30,7 @@ class circuit(commands.Cog):
 
         weapons = current_rotation.split(",")
         
-        text = "*Weapons*:\n"
+        text = "**Weapons**:\n"
         for weapon in weapons:
             text += f"- {weapon}\n"
 
@@ -43,7 +43,7 @@ class circuit(commands.Cog):
             color=discord.Colour.random()
             )
 
-        embed.set_footer(text=f"*Rotation ends in*:{days}d, {hours}h, {minutes}m, {seconds}s\n")
+        embed.set_footer(text=f"Rotation ends in:{days}d, {hours}h, {minutes}m, {seconds}s\n")
         await ctx.send(embed=embed)
 
 async def setup(bot):

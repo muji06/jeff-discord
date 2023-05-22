@@ -18,6 +18,7 @@ class help(commands.Cog):
         "**-weapon** <weapon-name>: Shows weapon stats\n\n"+\
         "**-arcane** <arcane-name>: Shows arcane stats and market price\n\n"+\
         "**-archon** (optional)<language>: Shows current archon rotation\n\n"+\
+        "**-circus**: List the current rotation of incarnon genesis\n\n"+\
         "**-fissure** (optional)<rj|sp>: Shows the current fissures\n\n"+\
         "**-mod** <mod-name>: Shows the mod stats and market price\n\n"+\
         "**-nightwave**: Shows current nightwave quests\n\n"+\
