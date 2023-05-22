@@ -5,16 +5,16 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-t = os.getenv('TOKEN')
+token = os.getenv('TOKEN')
 
-i = discord.Intents.default()
-i.message_content = True
-bot = commands.Bot(command_prefix='-', intents=i)
+intents = discord.Intents.default()
+intents.message_content = True
+bot = commands.Bot(command_prefix='-', intents=intents)
 
 async def load():
-    for f in os.listdir('./comms'):
-        if f.endswith('.py'):
-            await bot.load_extension(f'comms.{f[:-3]}') 
+    for file in os.listdir('./commands'):
+        if file.endswith('.py'):
+            await bot.load_extension(f'comms.{file[:-3]}') 
 
 @bot.tree.command(name="sync")
 async def func(interaction: discord.Interaction):
@@ -29,4 +29,4 @@ async def on_ready():
     await bot.tree.sync()
 
 
-bot.run(t)
+bot.run(token)
