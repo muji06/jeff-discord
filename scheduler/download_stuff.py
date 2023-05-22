@@ -1,11 +1,12 @@
 import time
 import requests
 import json
+import redis
 
 from timeloop import Timeloop
-from datetime import timedelta
+from datetime import timedelta, datetime
 
-import redis
+from config import DOWNLOAD_URLS, ROTATIONS, FIRST_WEEK
 
 class RedisManager(object):
     def __init__(self):
@@ -15,13 +16,16 @@ class RedisManager(object):
 cache = RedisManager()
 tl = Timeloop()
 
-DOWNLOAD_URLS = {
-    "void:1": "https://wf.snekw.com/void-wiki'",
-    "weapon:1": "https://wf.snekw.com/weapons-wiki",
-    "arcane:1": "https://wf.snekw.com/arcane-wiki",
-    "mod:1": "https://wf.snekw.com/mods-wiki",
-}
-
+@tl.job(interval=timedelta(hours=2))
+def calculate_incarnation_week():
+    res = requests.get("http://worldtimeapi.org/api/timezone/Europe/Paris")
+    current_timestamp = datetime.fromtimestamp(res.json()["unixtime"])
+    week1_timestamp = datetime.fromtimestamp(FIRST_WEEK)
+    weeks_passed = (current_timestamp - week1_timestamp).days // 7
+    current_rotation = weeks_passed % len(ROTATIONS) # get index
+    rotation = ",".join(ROTATIONS[current_rotation])
+    cache.cache.set("circuit:1",rotation)
+    print(f"[calculate_incarnation_week][{time.ctime()}]:\t[New week calculated for circuit rotations]")
 
 @tl.job(interval=timedelta(seconds=3600))
 def refill_wiki_data():
@@ -30,21 +34,21 @@ def refill_wiki_data():
         retries = 0
         while not ready and retries < 100:
             retries += 1
-            print(f"[{time.ctime()}]:\t[Downloading data for '{key}'...]")
+            print(f"[refill_wiki_data][{time.ctime()}]:\t[Downloading data for '{key}'...]")
             try:
                 data = requests.get(url=url).json()
             except:
-                print(f"[{time.ctime()}]:\t[Downloading failed '{key}'{chr(10)}]")
+                print(f"[refill_wiki_data][{time.ctime()}]:\t[Downloading failed '{key}'{chr(10)}]")
                 continue
                 
             if 'data' in data:
                 ready = True
                 text = json.dumps(data)
                 cache.cache.set(key, text)
-                print(f"[{time.ctime()}]:\t[{key} data ready on redis!']")
+                print(f"[refill_wiki_data][{time.ctime()}]:\t[{key} data ready on redis!']")
                 break
             else:
-                print(f"[{time.ctime()}]:\t[Downloading not succesful for '{key}'data retrieved: {data}. Retrying...]")
+                print(f"[refill_wiki_data][{time.ctime()}]:\t[Downloading not succesful for '{key}'data retrieved: {data}. Retrying...]")
                 
         
 

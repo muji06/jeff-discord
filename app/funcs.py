@@ -156,3 +156,15 @@ def get_shard(archon: str):
 
     else:
         return ""
+    
+
+FIRST_WEEK = 1682294400
+
+ROTATIONS = [
+    ["Braton", "Lato", "Skana", "Paris", "Kunai"],
+    ["Bo", "Latron", "Furis", "Furax", "Strun"],
+    ["Lex", "Magistar", "Boltor", "Bronco", "Ceramic Dagger"],
+    ["Torid", "Dual Toxocyst", "Dual Ichor", "Miter", "Atomos"],
+    ["Arc & Brunt", "Soma", "Vasto", "Nami Solo", "Burston"],
+    ["Zylok", "Sibear", "Dread", "Despair", "Hate"]
+]
