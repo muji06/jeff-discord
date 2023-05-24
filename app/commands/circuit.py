@@ -28,7 +28,7 @@ class circuit(commands.Cog):
             index = weeks_passed % len(ROTATIONS) # get index
             current_rotation = ",".join(ROTATIONS[index])
 
-        weapons = current_rotation.split(",")
+        weapons = str(current_rotation).split(",")
         
         text = "**Weapons**:\n"
         for weapon in weapons:
