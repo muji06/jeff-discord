@@ -56,7 +56,7 @@ def calculate_time_remaining(current_time: datetime):
     # check how much time passed
     time_passed = current_time - week1_timestamp
     # get the number of weeks
-    weeks_passed = time_passed.days/7
+    weeks_passed = time_passed.days//7
     # get the timestamp for next reset
     next_reset = week1_timestamp + timedelta(weeks=weeks_passed + 1)
 
