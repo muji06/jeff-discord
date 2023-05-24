@@ -20,7 +20,6 @@ tl = Timeloop()
 def calculate_incarnation_week():
     print(f"[calculate_incarnation_week][{time.ctime()}]:\t[Checking time for update]")
 
-    # trick website into thinking we are a browser
     response = requests.get("https://timezone.abstractapi.com/v1/current_time/?api_key=23368da787414c17b1e67f510447f287&location=Paris, France")
     current_timestamp = datetime.strptime(response.json()["datetime"], "%Y-%m-%d %H:%M:%S")
     

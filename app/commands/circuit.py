@@ -17,7 +17,6 @@ class circuit(commands.Cog):
     async def circuit(self, ctx):
 
         # time reference
-        # trick website into thinking we are a browser
         response = get("https://timezone.abstractapi.com/v1/current_time/?api_key=23368da787414c17b1e67f510447f287&location=Paris, France")
 
         current_timestamp = datetime.strptime(response.json()["datetime"], "%Y-%m-%d %H:%M:%S")
@@ -52,10 +51,16 @@ async def setup(bot):
     await bot.add_cog(circuit(bot))
 
 def calculate_time_remaining(current_time: datetime):
-    reset_time = current_time.replace(hour=2, minute=0, second=0, microsecond=0)
-    if current_time >= reset_time:
-        reset_time += timedelta(weeks=1)
-    time_remaining = reset_time - current_time
+    # get first week time
+    week1_timestamp = datetime.fromtimestamp(FIRST_WEEK)
+    # check how much time passed
+    time_passed = current_time - week1_timestamp
+    # get the number of weeks
+    weeks_passed = time_passed.days/7
+    # get the timestamp for next reset
+    next_reset = week1_timestamp + timedelta(weeks=weeks_passed + 1)
+
+    time_remaining = next_reset - current_time
 
     # now parse it into different periods
     days = time_remaining.days
