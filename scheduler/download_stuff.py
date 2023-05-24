@@ -19,7 +19,10 @@ tl = Timeloop()
 @tl.job(interval=timedelta(hours=2))
 def calculate_incarnation_week():
     print(f"[calculate_incarnation_week][{time.ctime()}]:\t[Checking time for update]")
-    res = requests.get("http://worldtimeapi.org/api/timezone/Europe/Paris")
+
+    # trick website into thinking we are a browser
+    headers = {"User-Agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"}
+    res = requests.get("http://worldtimeapi.org/api/timezone/Europe/Paris", headers=headers)
     current_timestamp = datetime.fromtimestamp(res.json()["unixtime"])
     week1_timestamp = datetime.fromtimestamp(FIRST_WEEK)
     weeks_passed = (current_timestamp - week1_timestamp).days // 7
