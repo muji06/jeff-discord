@@ -19,11 +19,11 @@ class circuit(commands.Cog):
         # time reference
         # trick website into thinking we are a browser
         response = get("https://timezone.abstractapi.com/v1/current_time/?api_key=23368da787414c17b1e67f510447f287&location=Paris, France")
-        
+
         current_timestamp = datetime.strptime(response.json()["datetime"], "%Y-%m-%d %H:%M:%S")
 
         if cache.cache.exists("circuit:1"):
-            current_rotation = cache.cache.get("circuit:1")
+            current_rotation = cache.cache.get("circuit:1").decode("utf-8")
         else:
             week1_timestamp = datetime.fromtimestamp(FIRST_WEEK)
             weeks_passed = (current_timestamp - week1_timestamp).days // 7
