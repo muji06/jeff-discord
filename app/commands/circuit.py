@@ -18,9 +18,9 @@ class circuit(commands.Cog):
 
         # time reference
         # trick website into thinking we are a browser
-        headers = {"User-Agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0"}
-        res = get("http://worldtimeapi.org/api/timezone/Europe/Paris", headers=headers)
-        current_timestamp = datetime.fromtimestamp(res.json()["unixtime"])
+        response = get("https://timezone.abstractapi.com/v1/current_time/?api_key=23368da787414c17b1e67f510447f287&location=Paris, France")
+        
+        current_timestamp = datetime.strptime(response.json()["datetime"], "%Y-%m-%d %H:%M:%S")
 
         if cache.cache.exists("circuit:1"):
             current_rotation = cache.cache.get("circuit:1")
