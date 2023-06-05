@@ -1,5 +1,5 @@
 
-FIRST_WEEK = 1682294400
+FIRST_WEEK = 1682899200
 
 ROTATIONS = [
     ["Braton", "Lato", "Skana", "Paris", "Kunai"],
