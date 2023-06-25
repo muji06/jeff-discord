@@ -17,16 +17,22 @@ async def load():
             await bot.load_extension(f'commands.{file[:-3]}') 
 
 @bot.tree.command(name="sync")
+@commands.is_owner()
 async def func(interaction: discord.Interaction):
-    if interaction.user.id == "336563297648246785":
+    try:
         await bot.tree.sync()
+        await interaction.channel.send("Done.")
+        
+    except: 
+        await interaction.channel.send("Something went wrong!")
+        
 
 
 @bot.event
 async def on_ready():
     bot.remove_command('help')
     await load()
-    await bot.tree.sync()
+    # await bot.tree.sync()
 
 
 bot.run(token)
