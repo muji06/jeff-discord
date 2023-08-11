@@ -94,7 +94,7 @@ class mod(commands.Cog):
                     title=f"{snekw_mod['Name']}{pol} ({data['rarity']}){chr(10)}{snekw_mod['Type']} Mod",
                     description=(f"Drain cost: {snekw_mod['BaseDrain']} - {snekw_mod['BaseDrain'] + snekw_mod['MaxRank']} (Ranks 0 - {snekw_mod['MaxRank']})"
                     +'\n\n'+f"**Effect at rank {snekw_mod['MaxRank']}:**"+'\n'+snekw_mod['Description']
-                    +'\n\n'+f"{('**Unranked: **'+str(price_unranked)+chr(10)+'**Maxed: **'+str(price_ranked)) if snekw_mod['Transmutable'] else ''}")
+                    +'\n\n'+f"{('**Unranked: **'+str(price_unranked)+chr(10)+'**Maxed: **'+str(price_ranked)) if snekw_mod['Tradable'] else ''}")
                 )
                 if not cached:
                     embed.set_footer(
