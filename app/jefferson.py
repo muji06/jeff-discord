@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import os
 from dotenv import load_dotenv
+import logging
 
 load_dotenv()
 
@@ -17,16 +18,18 @@ async def load():
             await bot.load_extension(f'commands.{file[:-3]}') 
 
 @bot.tree.command(name="sync")
-@commands.is_owner()
 async def func(interaction: discord.Interaction):
-    try:
-        await bot.tree.sync()
-        await interaction.channel.send("Done.")
-        
-    except: 
-        await interaction.channel.send("Something went wrong!")
-        
-
+    await interaction.response.defer(ephemeral=True)
+    if interaction.user.id == 336563297648246785:
+        try:
+            await bot.tree.sync()
+            await interaction.followup.send("Done.", ephemeral=True)
+        except: 
+            await interaction.followup.send("Something went wrong!", ephemeral=True)
+    else:
+        file = discord.File("silicate.jpg")
+        logging.info(f"Sync command used by {interaction.user}")
+        await interaction.followup.send("blehhhh",file=file, ephemeral=True)
 
 @bot.event
 async def on_ready():
