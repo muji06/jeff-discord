@@ -6,8 +6,8 @@ from discord.ext import commands
 from redis_manager import cache
 from funcs import FIRST_WEEK, ROTATIONS
 
+import re
 from requests import get
-from math import floor
 
 class circuit(commands.Cog):
     def __init__(self, bot):
@@ -20,17 +20,10 @@ class circuit(commands.Cog):
         response = get("https://timezone.abstractapi.com/v1/current_time/?api_key=23368da787414c17b1e67f510447f287&location=Paris, France")
 
         current_timestamp = datetime.strptime(response.json()["datetime"], "%Y-%m-%d %H:%M:%S")
-
-        if cache.cache.exists("circuit:1"):
-            current_rotation = cache.cache.get("circuit:1").decode("utf-8")
-        else:
-            week1_timestamp = datetime.fromtimestamp(FIRST_WEEK)
-            weeks_passed = (current_timestamp - week1_timestamp).days // 7
-            index = weeks_passed % len(ROTATIONS) # get index
-            current_rotation = ",".join(ROTATIONS[index])
-
-        weapons = str(current_rotation).split(",")
-        
+        res = get("https://content.warframe.com/dynamic/worldState.php")
+        data = res.json()
+        weapons = [re.sub(r'([a-z])([A-Z])', r'\1 \2', wep) for wep in data["EndlessXpChoices"][1]["Choices"]]
+            
         text = "**Weapons**:\n"
         for weapon in weapons:
             text += f"- {weapon}\n"
