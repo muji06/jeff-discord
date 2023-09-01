@@ -1,67 +1,92 @@
-# from discord.ext import commands
-# from discord import app_commands
-# import discord
-# import json
-# import requests
-
-# CYCLES = [
-#     # name       kullervo?      POI
-#     ("Sorrow"   ,True       ,["Archarbor", "Kullervo's Hold"]   ),
-#     ("Fear"     ,True       ,["Amphitheater", "Kullervo's Hold"]),
-#     ("Joy"      ,False      ,["Archarbor", "Amphitheater"]      ),
-#     ("Anger"    ,True       ,["Amphitheater", "Kullervo's Hold"]),
-#     ("Envy"     ,False      ,["Archarbor", "Amphitheater"]      ),
-# ]
-
-# url = "https://api.warframestat.us/pc/duviriCycle/"
+from discord.ext import commands
+from datetime import datetime, timedelta
+import discord
+import json
+import requests
 
 
-# class duviri(commands.Cog):
-#     def __init__(self, bot):
-#         self.bot = bot
+CYCLES = [
+    # name       kullervo?      POI
+    ("Sorrow"   ,True       ,["Archarbor", "Kullervo's Hold"]   ),
+    ("Fear"     ,True       ,["Amphitheater", "Kullervo's Hold"]),
+    ("Joy"      ,False      ,["Archarbor", "Amphitheater"]      ),
+    ("Anger"    ,True       ,["Amphitheater", "Kullervo's Hold"]),
+    ("Envy"     ,False      ,["Archarbor", "Amphitheater"]      ),
+]
 
-#     @commands.hybrid_command(name="duviri", with_app_command=True)
-#     # @app_commands.guilds(discord.Object(id=992897664087760979))
-#     async def duviri(self, ctx: commands.Context):
-#         response = requests.get("https://api.warframestat.us/PC/dailyDeals?language=en")
-#         data = json.loads(response.text)[0]
-#         set_embed = discord.Embed(
-#             description=f"## {data['item']}\n### {data['total']-data['sold']}/{data['total']} left\nPrice: ~~{data['originalPrice']}~~ {data['salePrice']}<:Platinum:992917150358589550> ({data['discount']}% off)",
-#             title="Darvo's Daily Deal"
-#         )
-#         set_embed.set_footer(text=f"Ends in {data['eta']}")
+url = "https://api.warframestat.us/pc/duviriCycle/"
+
+def find_next_cycle(current_cycle: str) -> str:
+    index = [cycle[0] for cycle in CYCLES].index(current_cycle)
+    next_index = (index + 1) % len(CYCLES)
+    return CYCLES[next_index][0]
+
+
+
+class duviri(commands.Cog):
+    def __init__(self, bot):
+        self.bot = bot
+
+    @commands.hybrid_command(name="duviri", with_app_command=True)
+    # @app_commands.guilds(discord.Object(id=992897664087760979))
+    async def duviri(self, ctx: commands.Context):
+        duviri_api = requests.get("https://api.warframestat.us/pc/duviriCycle/").json()
+
+        expiry = duviri_api['expiry']
+        state = duviri_api['state']
+        target_timestamp = datetime.strptime(expiry, "%Y-%m-%dT%H:%M:%S.%fZ")
+
+
+        time_api = requests.get("https://timezone.abstractapi.com/v1/current_time/?api_key=23368da787414c17b1e67f510447f287&location=London").json()
+        current_timestamp = datetime.strptime(time_api["datetime"], "%Y-%m-%d %H:%M:%S")
+        if time_api["is_dst"]: # COMMUNITY DEVS DONT KNOW TIMEZONES
+            current_timestamp = current_timestamp - timedelta(hours=1)
         
-#         await ctx.send(embed=set_embed)
+        time_left = target_timestamp - current_timestamp
+
+        negative = False
+        if time_left.total_seconds() < 0: # check for 
+            time_left = abs(time_left)
+            negative = True
+
+        hours, remainder = divmod(time_left.seconds, 3600)
+        minutes, seconds = divmod(remainder, 60)
+
+        timing = ""
+        if negative:
+            timing += "- "
+        if hours:
+            timing += f"{hours} hour "
+        if minutes > 1:
+            timing += f"{minutes} minutes "
+        elif minutes:
+            timing += f"{minutes} minute "
+        if seconds > 1:
+            timing += f"{seconds} seconds "
+        elif seconds:
+            timing += f"{seconds} second"
+
+        current_cycle = state.capitalize()
+        current_name, current_kullervo, current_poi = [cycle for cycle in CYCLES if cycle[0]==current_cycle][0]
+
+        next_cycle = find_next_cycle(current_cycle)
+        next_name, next_kullervo, _ = [cycle for cycle in CYCLES if cycle[0]==next_cycle][0]
+
+        poi = "**Points of Interest**:\n"
+        for point in current_poi:
+            poi += f"- {point}\n"
+
+        embed = discord.Embed(
+            title=f"Duviri Cycles",
+            description=f"# {current_name} \n{'*Kullervo can spawn here*' if current_kullervo else ''}\n\n{poi}\n",
+            color=discord.Colour.random()
+        )
+        embed.set_footer(
+            text=f"{next_name} {'(kullervo)' if next_kullervo else ''} in {timing}"
+        )
+
+        await ctx.send(embed=embed)
 
 
-# async def setup(bot):
-#     await bot.add_cog(duviri(bot))
-
-
-# from datetime import datetime
-
-# target_timestamp = datetime.strptime(expire, "%Y-%m-%dT%H:%M:%S.%fZ")
-
-# response = requests.get("https://timezone.abstractapi.com/v1/current_time/?api_key=23368da787414c17b1e67f510447f287&location=London, England")
-
-# current_timestamp = datetime.strptime(response.json()["datetime"], "%Y-%m-%d %H:%M:%S")
-# time_left = current_timestamp - target_timestamp
-
-# hours, remainder = divmod(time_left.seconds, 3600)
-# minutes, seconds = divmod(remainder, 60)
-
-# timing = ""
-
-# if hours:
-#     timing += f"{hours} hour "
-# if minutes > 1:
-#     timing += f"{minutes} minutes "
-# elif minutes:
-#     timing += f"{minutes} minute "
-# if seconds > 1:
-#     timing += f"{seconds} seconds "
-# elif seconds:
-#     timing += f"{seconds} second"
-
-
-# print(f"{timing}")
+async def setup(bot: discord):
+    await bot.add_cog(duviri(bot))
