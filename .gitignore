@@ -30,3 +30,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# leave the test notebook empty
+*.ipynb
