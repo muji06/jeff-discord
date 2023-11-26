@@ -54,7 +54,7 @@ class riven(commands.Cog):
                 name = weapon
                 emb_title = weapon
                 emb_description = f"Median price unrolled N/A (DE broke it again)"
-                
+
             riven_embed = discord.Embed(
                 title=emb_title,
                 description=emb_description)
@@ -108,3 +108,4 @@ class riven(commands.Cog):
 
 async def setup(bot):
     await bot.add_cog(riven(bot))
+    
