@@ -26,6 +26,11 @@ class riven(commands.Cog):
         weapon = weapon.capitalize()
         try:
             response = get("https://n9e5v4d8.ssl.hwcdn.net/repos/weeklyRivensPC.json")
+            shits_fucked = False # not yet
+            if response.status_code == "404":
+                response = get("https://www.warframe.com/repos/weeklyRivensPC.json")
+                shits_fucked = True
+
             rivens = json.loads(response.text)
 
             name = ''
@@ -38,10 +43,18 @@ class riven(commands.Cog):
                 if weapon in riven['compatibility'] and riven['rerolled'] == False:
                     name = riven['compatibility']
                     emb_title = riven['compatibility']
-                    emb_description = f"Median price unrolled {riven['median']}<:Platinum:992917150358589550>"
+
+                    if shits_fucked:
+                        emb_description = f"Median price unrolled N/A (DE broke it again)"
+                    else:
+                        emb_description = f"Median price unrolled {riven['median']}<:Platinum:992917150358589550>"
                     break
 
-
+            if len(name) == 0 and shits_fucked:
+                name = weapon
+                emb_title = weapon
+                emb_description = f"Median price unrolled N/A (DE broke it again)"
+                
             riven_embed = discord.Embed(
                 title=emb_title,
                 description=emb_description)
