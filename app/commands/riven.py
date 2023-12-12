@@ -25,7 +25,7 @@ class riven(commands.Cog):
         
         weapon = weapon.capitalize()
         try:
-            response = get("https://n9e5v4d8.ssl.hwcdn.net/repos/weeklyRivensPC.json")
+            response = get("https://www-static.warframe.com/repos/weeklyRivensPC.json")
             shits_fucked = False # not yet
             if response.status_code == "404":
                 response = get("https://www.warframe.com/repos/weeklyRivensPC.json")
