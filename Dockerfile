@@ -11,3 +11,4 @@ COPY ./app ./app
 WORKDIR /app
 
 CMD ["python3","-u","./jefferson.py"]
+
