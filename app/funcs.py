@@ -40,6 +40,8 @@ def pricecheck(name:str, rank:int = None):
         name = ' '.join(name.split('-'))
     if '&' in name:
         name = name.replace('&','and')
+    if '\'' in name:
+        name = name.replace('\'','')
     prime = '_'.join(name.lower().split(' '))
     res = get(f'https://api.warframe.market/v1/items/{prime}/orders')
     data = json.loads(res.text)
