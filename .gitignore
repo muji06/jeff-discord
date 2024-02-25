@@ -1,39 +1,5 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-
-# pycharm stuff
-.idea
-
-# jupyter stuff
-**.ipynb
-
-# Environments
+env
 .env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-
-# leave the test notebook empty
+__pycache__/
 *.ipynb
+*.ipynb_checkpoints
