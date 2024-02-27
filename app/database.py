@@ -40,7 +40,7 @@ class Listeners(Base):
     __tablename__ = "listeners"
 
     listener_name = mapped_column(String(30), primary_key=True)
-    current_id = mapped_column(String(30), nullable=True)
+    rotation_metadata = mapped_column(JSON, default=lambda: {"id": None, "ends_in": None})
     send_to = mapped_column(JSON, default=lambda: [])
     # [
     #     {

@@ -1,11 +1,14 @@
-import discord
-from discord.ext import commands
 import os
-from dotenv import load_dotenv
 import logging
+import discord
+
+from discord.ext import commands
+from dotenv import load_dotenv
+from database import  init_db
+
+logger = logging.getLogger(__name__)
 
 load_dotenv()
-
 token = os.getenv('TOKEN')
 
 intents = discord.Intents.default()
@@ -16,6 +19,10 @@ async def load():
     for file in os.listdir('./commands'):
         if file.endswith('.py'):
             await bot.load_extension(f'commands.{file[:-3]}') 
+
+    logger.info("Loading database")
+    init_db() 
+
 
 @bot.tree.command(name="sync")
 async def func(interaction: discord.Interaction):
@@ -38,4 +45,4 @@ async def on_ready():
     # await bot.tree.sync()
 
 
-bot.run(token)
+bot.run(token, root_logger=True)
