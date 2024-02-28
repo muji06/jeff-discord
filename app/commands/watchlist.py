@@ -8,6 +8,14 @@ from database import Session, Watchlists
 
 logger = getLogger(__name__)
 
+watchlist_events = {
+    "darvo": "darvo:<item-on-sale>:<price*>",
+    "fissure": "fissure:<relic-tier>:<mission-type>",
+    "arbitration": "arbitration:<mission-type>",
+    "market": "market:<item-name>:<price>",
+}
+
+
 class watchlist(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
@@ -29,7 +37,17 @@ class watchlist(commands.Cog):
     @watchlist.command(name="add")
     async def add(self, ctx: commands.Context, *, params: str = None):
         if not params:
-            return await ctx.send("Provide the information you want to add.")
+            help_embed = discord.Embed(
+                title="Watchlist add",
+                color=discord.Color.random(),
+                description="The proper command format is as following:\n"+\
+                            "`watchlist add <event>:<target>:<option>`\n\n"+\
+                            "**Events**:\n"+\
+                            "*Fields marked with \* are optional*"
+            )
+            for event, cmd in watchlist_events.items():
+                help_embed.add_field(name=event, value=cmd, inline=False)
+            return await ctx.send(embed=help_embed)
 
         try:
             data = json.loads(params)

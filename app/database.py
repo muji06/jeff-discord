@@ -1,7 +1,7 @@
 from os import path
 import logging
 from sqlalchemy import create_engine
-from sqlalchemy import String, ForeignKey, Integer, JSON
+from sqlalchemy import String, JSON
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import mapped_column, relationship
 from sqlalchemy.orm import sessionmaker, scoped_session
@@ -19,7 +19,7 @@ Session = scoped_session(session_factory)
 class Base(DeclarativeBase):
     pass
 
-# separate list for each user
+# Users can subscribe to get DMs from the bot when certain event happens
 class Watchlists(Base):
     __tablename__ = "watchlists"
 
@@ -28,27 +28,41 @@ class Watchlists(Base):
     # example watch list
     # [
     #     {
-    #         "from": "darvo",
-    #         "waiting_for": "Kohm",
-    #         "send_to": "dm",# or channel
-    #         "server": "1234567890",
-    #         "channel": "1234567890",
-    #     }
+    #         "type": "darvo",
+    #         "target": "Kohm",
+    #     },
+    #     {
+    #         "type": "darvo",
+    #         "target": "Kohm",
+    #         "price": 40
+    #      },
+    #     {
+    #         "type": "fissure",
+    #         "target": "axi",
+    #         "mode": "capture",
+    #      }
     # ]
 
+# Each server admin can set up events to be shown server-wide on specific channel
 class Listeners(Base):
     __tablename__ = "listeners"
-
-    listener_name = mapped_column(String(30), primary_key=True)
-    rotation_metadata = mapped_column(JSON, default=lambda: {"id": None, "ends_in": None})
-    send_to = mapped_column(JSON, default=lambda: [])
+    
+    server_id = mapped_column(String(30), primary_key=True)
+    listeners = mapped_column(JSON, default=lambda: [])
     # [
     #     {
+    #         
     #         "server": "1234567890",
     #         "channel": "1234567890",
     #         "ping": "<@1234567890>"
     #     }
     # ]
+
+class Events(Base):
+    __tablename__ = "events"
+
+    event = mapped_column(String(30), primary_key=True)
+    rotation_metadata = mapped_column(JSON, default=lambda: {"id": None, "ends_at": None})
 
 def init_db():
     with engine.connect(): # just to start it
