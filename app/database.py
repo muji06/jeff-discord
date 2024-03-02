@@ -51,7 +51,7 @@ class Listeners(Base):
     listeners = mapped_column(JSON, default=lambda: [])
     # [
     #     {
-    #         
+    #         "event": "alert"
     #         "server": "1234567890",
     #         "channel": "1234567890",
     #         "ping": "<@1234567890>"

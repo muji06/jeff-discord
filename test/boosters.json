@@ -1,0 +1,24 @@
+{    
+    "GlobalUpgrades": [
+        {
+            "_id": {
+                "$oid": "65e0c75e41d248fde507269e"
+            },
+            "Activation": {
+                "$date": {
+                    "$numberLong": "1709319600000"
+                }
+            },
+            "ExpiryDate": {
+                "$date": {
+                    "$numberLong": "1709406000000"
+                }
+            },
+            "UpgradeType": "GAMEPLAY_KILL_XP_AMOUNT",
+            "OperationType": "MULTIPLY",
+            "Value": 2,
+            "LocalizeTag": "",
+            "LocalizeDescTag": ""
+        }
+    ]
+}

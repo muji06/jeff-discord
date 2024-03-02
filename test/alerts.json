@@ -1,0 +1,110 @@
+{
+    "Alerts": [
+        {
+            "_id": {
+                "$oid": "65aecd65e614281f660f7d8a"
+            },
+            "Activation": {
+                "$date": {
+                    "$numberLong": "1709308800000"
+                }
+            },
+            "Expiry": {
+                "$date": {
+                    "$numberLong": "1709568000000"
+                }
+            },
+            "MissionInfo": {
+                "location": "SolNode128",
+                "missionType": "MT_EXTERMINATION",
+                "faction": "FC_CORPUS",
+                "difficulty": 2,
+                "missionReward": {
+                    "credits": 30000,
+                    "items": [
+                        "/Lotus/StoreItems/Types/StoreItems/AvatarImages/AvatarImageTeshinVed"
+                    ]
+                },
+                "levelOverride": "/Lotus/Levels/Proc/Corpus/CorpusOutpostExterminate",
+                "enemySpec": "/Lotus/Types/Game/EnemySpecs/CorpusExterminateRobots",
+                "minEnemyLevel": 20,
+                "maxEnemyLevel": 25
+            }
+        },
+        {
+            "_id": {
+                "$oid": "65e0c68e774fcdff220ed115"
+            },
+            "Activation": {
+                "$date": {
+                    "$numberLong": "1709319600000"
+                }
+            },
+            "Expiry": {
+                "$date": {
+                    "$numberLong": "1709578800000"
+                }
+            },
+            "MissionInfo": {
+                "location": "SolNode85",
+                "missionType": "MT_MOBILE_DEFENSE",
+                "faction": "FC_GRINEER",
+                "difficulty": 1,
+                "missionReward": {
+                    "credits": 10000,
+                    "countedItems": [
+                        {
+                            "ItemType": "/Lotus/Types/Items/MiscItems/Forma",
+                            "ItemCount": 1
+                        }
+                    ]
+                },
+                "levelOverride": "/Lotus/Levels/Proc/Grineer/GrineerForestMobileDefense",
+                "enemySpec": "/Lotus/Types/Game/EnemySpecs/ForestGrineerSquadOne",
+                "minEnemyLevel": 10,
+                "maxEnemyLevel": 15,
+                "descText": "/Lotus/Language/Alerts/TennoUnitedAlert"
+            },
+            "Tag": "LotusGift",
+            "ForceUnlock": true
+        },
+        {
+            "_id": {
+                "$oid": "65e0c7046be361a248050baa"
+            },
+            "Activation": {
+                "$date": {
+                    "$numberLong": "1709319600000"
+                }
+            },
+            "Expiry": {
+                "$date": {
+                    "$numberLong": "1709578800000"
+                }
+            },
+            "MissionInfo": {
+                "location": "SolNode181",
+                "missionType": "MT_EXTERMINATION",
+                "faction": "FC_GRINEER",
+                "difficulty": 1,
+                "missionReward": {
+                    "credits": 10000,
+                    "countedItems": [
+                        {
+                            "ItemType": "/Lotus/Types/Items/SyndicateDogTags/UniversalSyndicateDogTag",
+                            "ItemCount": 5
+                        }
+                    ]
+                },
+                "levelOverride": "/Lotus/Levels/Proc/Grineer/GrineerAsteroidExterminate",
+                "enemySpec": "/Lotus/Types/Game/EnemySpecs/GrineerExterminateFire",
+                "minEnemyLevel": 10,
+                "maxEnemyLevel": 15,
+                "descText": "/Lotus/Language/Alerts/TennoUnitedAlert",
+                "maxWaveNum": 135
+            },
+            "Tag": "LotusGift",
+            "ForceUnlock": true
+        }
+    ]
+}

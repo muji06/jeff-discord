@@ -1,0 +1,22 @@
+{	
+    "DailyDeals": [
+		{
+			"StoreItem": "/Lotus/StoreItems/Weapons/Grineer/GrineerPistol/GrineerLightPistol",
+			"Activation": {
+				"$date": {
+					"$numberLong": "1709254800000"
+				}
+			},
+			"Expiry": {
+				"$date": {
+					"$numberLong": "1709348400000"
+				}
+			},
+			"Discount": 20,
+			"OriginalPrice": 75,
+			"SalePrice": 60,
+			"AmountTotal": 100,
+			"AmountSold": 33
+		}
+	]
+}

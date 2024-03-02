@@ -184,3 +184,14 @@ ROTATIONS = [
     ["Arc & Brunt", "Soma", "Vasto", "Nami Solo", "Burston"],
     ["Zylok", "Sibear", "Dread", "Despair", "Hate"]
 ]
+
+
+def get_global_booster_name(default: str) -> str:
+    if default == "Mission Kill XP":
+        return "Event Affinity Booster"
+    
+    return default
+
+
+def discord_timestamp(timestamp: int) -> str:
+    return f"<t:{timestamp}:R>'"
