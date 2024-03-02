@@ -20,27 +20,34 @@ class ListenerListView(View):
         self.build()
 
     async def build(self):
-        self.clear_items()
-        for i, listener in enumerate(self.listeners[self.current_page * 5:(self.current_page + 1) * 5]):
-            button = Button(label=f"{listener['event']} - {listener['channel']}", style=discord.ButtonStyle.red)
-            button.custom_id = f"remove_listener_{i}"  # Unique ID for each button
-            button.callback = self.remove_listener_button
-            self.add_item(button)
+        listener = self.listeners[self.current_page]
+        embed = discord.Embed(
+            title=f"Listener #{self.current_page + 1}",
+            description=f"Event: {listener['event']}\nChannel: {listener['channel']}\nPinged Role: {listener['ping']}",
+            color=discord.Color.blue(),
+        )
 
-        # Add pagination buttons (if applicable)
-        if len(self.listeners) > 5:
+        if len(self.listeners) > 1:
             if self.current_page > 0:
                 prev_button = Button(label="Previous", style=discord.ButtonStyle.gray)
                 prev_button.callback = self.prev_page_button
                 self.add_item(prev_button)
-            if self.current_page < (len(self.listeners) // 5):
+            if self.current_page < (len(self.listeners) - 1):
                 next_button = Button(label="Next", style=discord.ButtonStyle.gray)
                 next_button.callback = self.next_page_button
                 self.add_item(next_button)
+        else:
+            remove_button = Button(label="Remove Listener", style=discord.ButtonStyle.red)
+            remove_button.custom_id = f"remove_listener_{self.current_page}"
+            remove_button.callback = self.remove_listener_button
+            self.add_item(remove_button)
+
+        await self.message.edit(embed=embed, view=self)  # Update message with new embed and view
+
 
     async def remove_listener_button(self, interaction: discord.Interaction, button: Button):
         listener_index = int(button.custom_id.split("_")[-1])
-        removed_listener = self.listeners.pop(listener_index + self.current_page * 5)
+        removed_listener = self.listeners.pop(listener_index + self.current_page)
         await self.remove_listener_callback(interaction.guild, removed_listener) 
         await self.build() 
 
@@ -50,7 +57,7 @@ class ListenerListView(View):
             await self.build()
 
     async def next_page_button(self, interaction: discord.Interaction, button: Button):
-        if self.current_page < (len(self.listeners) // 5):
+        if self.current_page < (len(self.listeners) - 1):
             self.current_page += 1
             await self.build()
 
@@ -130,9 +137,10 @@ class listen(commands.Cog):
             if not current_listeners:
                 await interaction.response.send_message("No listeners found for this server.")
                 return
+            
             listener_view = ListenerListView(current_listeners.listeners, remove_listener)
-            await interaction.response.send_message(view=listener_view)
-
+            message = await interaction.response.send_message(embed=None, view=listener_view)
+            listener_view.message = message
         else:
             await interaction.message.send("Invalid subcommand.")
 
