@@ -26,8 +26,8 @@ class help(commands.Cog):
         "**-pset** <prime-name>: Finds market prices for all parts\n\n"+\
         "**-relic** <relic-name>: Lists all parts dropping from a relic and their market prices\n\n"+\
         "**-riven** <weapon-name>: Shows matching riven prices\n\n"+\
-        "**-eda**: Get the currently running Elite Deep Archimedea\n"+\
         "**-sortie** (optional)<language>: Shows daily sortie\n\n"
+        # "**-eda**: Get the currently running Elite Deep Archimedea\n"+\
         embed = discord.Embed(
             title="Commands",
             description=cog_desc
