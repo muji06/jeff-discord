@@ -34,24 +34,24 @@ class ProfileView(discord.ui.View):
         super().__init__(timeout=30)
 
     @discord.ui.button(label="Main",style=discord.ButtonStyle.gray)
-    async def main_button(self,button:discord.ui.Button,interaction:discord.Interaction):
+    async def main_button(self,interaction:discord.Interaction,button:discord.ui.Button):
         page_embed = self.profile_data.generate_main_embed()
-        await interaction.message.edit(embed=page_embed)
+        await interaction.response.edit_message(embed=page_embed)
 
     @discord.ui.button(label="Enemy Stats",style=discord.ButtonStyle.gray)
-    async def enemy_button(self,button:discord.ui.Button,interaction:discord.Interaction):
+    async def enemy_button(self,interaction:discord.Interaction,button:discord.ui.Button):
         page_embed = self.profile_data.generate_enemy_embed()
-        await interaction.message.edit(embed=page_embed)
+        await interaction.response.edit_message(embed=page_embed)
 
     @discord.ui.button(label="Ability stats",style=discord.ButtonStyle.gray)
-    async def ability_button(self,button:discord.ui.Button,interaction:discord.Interaction):
+    async def ability_button(self,interaction:discord.Interaction,button:discord.ui.Button):
         page_embed = self.profile_data.generate_ability_embed()
-        await interaction.message.edit(embed=page_embed)
+        await interaction.response.edit_message(embed=page_embed)
 
     @discord.ui.button(label="Warframe stats",style=discord.ButtonStyle.gray)
-    async def warframe_button(self,button:discord.ui.Button,interaction:discord.Interaction):
+    async def warframe_button(self,interaction:discord.Interaction,button:discord.ui.Button):
         page_embed = self.profile_data.generate_warframe_embed()
-        await interaction.message.edit(embed=page_embed)
+        await interaction.response.edit_message(embed=page_embed)
 
     async def interaction_check(self, interaction: discord.Interaction):
         if interaction.user.id == self.author.id:
@@ -203,7 +203,7 @@ class ProfileData():
         frames_top_by_time = [
             {
             "type": frame['type'],
-            f"{type}": frame[f"{type}"]
+            f"{type}": frame.get(type,0)
             } 
             for frame in sorted(warframes, key=lambda x: x.get(type, 0), reverse=True)][:top_n]
         return frames_top_by_time
@@ -261,13 +261,13 @@ class ProfileData():
         fashion_parts = ""
         for part in fashion_data['fashion_parts']:
             fashion_parts += f"- {part}\n"
-        embed.add_field("Fashion parts", fashion_parts)
+        embed.add_field(name="Fashion parts", value=fashion_parts, inline=False)
 
         for color_part,color_types in fashion_data.items():
             # they are in the same dictionary so eh...
             if color_part!= "name" and color_part!= "fashion_parts":
 
-                embed.add_field(color_part, "- " + "\n- ".join(color_types))
+                embed.add_field(name=color_part, value="- " + "\n- ".join(color_types), inline=False)
 
         return embed
 
@@ -289,7 +289,7 @@ class ProfileData():
             kills = enemy.get("kills", 0)
             top_kills +=f"{rank}. {enemy_type}: {kills}\n"
 
-        embed.add_field(name="Top Kills", value=top_kills)
+        embed.add_field(name="Top Kills", value=top_kills, inline=False)
         return embed
 
     def generate_ability_embed(self):
@@ -306,14 +306,14 @@ class ProfileData():
             ability_name = ability["type"]
             usage = ability["used"]
             top_abilities +=f"{rank}. {ability_name}: {usage}\n"
-        embed.add_field(name="Top Abilities Used", value=top_abilities)
+        embed.add_field(name="Top Abilities Used", value=top_abilities, inline=False)
 
         bottom_abilities= ""
         for rank, ability in enumerate(self.ability_bottom_used(), start=1):
             ability_name = ability["type"]
             usage = ability["used"]
             top_abilities +=f"{rank}. {ability_name}: {usage}\n"
-        embed.add_field(name="Least Abilities Used", value=bottom_abilities)
+        embed.add_field(name="Least Abilities Used", value=bottom_abilities, inline=False)
 
         return embed
 
@@ -334,10 +334,10 @@ class ProfileData():
             top_names = ""
             for rank, warframe in enumerate(self.warframe_top_used_by_type(key), start=1):
                 top_names +=f"{rank}. {warframe['type']}: {warframe[key]}\n"
-            embed.add_field(name=f"Top by {name}", value=top_names)
+            embed.add_field(name=f"Top by {name}", value=top_names, inline=False)
 
             for rank, warframe in enumerate(self.warframe_bottom_used_by_type(key), start=1):
                 top_names +=f"{rank}. {warframe['type']}: {warframe[key]}\n"
-            embed.add_field(name=f"Bottom by {name}", value=top_names)
+            embed.add_field(name=f"Bottom by {name}", value=top_names, inline=False)
 
         return embed
