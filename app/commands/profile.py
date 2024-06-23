@@ -303,16 +303,16 @@ class ProfileData():
 
         top_abilities= ""
         for rank, ability in enumerate(self.ability_top_used(), start=1):
-            ability_name = ability["type"]
+            ability_name = ability["type"].split("/")[-1]
             usage = ability["used"]
             top_abilities +=f"{rank}. {ability_name}: {usage}\n"
         embed.add_field(name="Top Abilities Used", value=top_abilities, inline=False)
 
         bottom_abilities= ""
         for rank, ability in enumerate(self.ability_bottom_used(), start=1):
-            ability_name = ability["type"]
+            ability_name = ability["type"].split("/")[-1]
             usage = ability["used"]
-            top_abilities +=f"{rank}. {ability_name}: {usage}\n"
+            bottom_abilities +=f"{rank}. {ability_name}: {usage}\n"
         embed.add_field(name="Least Abilities Used", value=bottom_abilities, inline=False)
 
         return embed
