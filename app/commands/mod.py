@@ -32,7 +32,7 @@ class mod(commands.Cog):
 
         if 'code' in data and data['code'] == 404:
             error = discord.Embed(
-                description="Be sure to tyoe the correct mod name"
+                description="Be sure to type the correct mod name"
             )
             await ctx.send(embed=error)
             return

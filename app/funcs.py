@@ -118,11 +118,11 @@ def relic_finder(string: str):
     text = 'Price (Quantity): '
     for x in arr:
         if x[0] == 10000:
-            text +='N/A '
+            text +=' N/A |'
         else:
-            text +=f"{x[0]}<:Platinum:992917150358589550> ({x[1]}) "
+            text +=f" {x[0]}<:Platinum:992917150358589550> ({x[1]}) |"
     
-    return text
+    return text[:-1]
 
 
 

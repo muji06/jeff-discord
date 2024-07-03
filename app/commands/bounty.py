@@ -10,6 +10,8 @@ MAPPINGS = {
     "Ostrons":("plains", "poe", "cetus", "ostron", "earth"),
     "Solaris United":("venus", "fortuna", "4tuna", "solaris", "vallis"),
     "Entrati":("deimos", "necralisk", "cambion", "entrati"),
+    "The Holdfasts":("zariman","holdfast","holdfasts","zariman"),
+    "Cavia": ("cavia","loid","sanctum"),
 }
 
 
@@ -36,7 +38,7 @@ class bounty(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.hybrid_command(name="bounty", with_app_command=True)
+    @commands.hybrid_command(name="bounty", with_app_command=True,description="Data about currently running bounties")
     async def bounty(self, ctx: commands.Context, place = None):
         if not place:
             err_embed = discord.Embed(
@@ -45,7 +47,6 @@ class bounty(commands.Cog):
             await ctx.send(embed=err_embed)
             return
         syndicate = list(filter(lambda x: f"{place}" in MAPPINGS[x], MAPPINGS ))
-        print(f"{syndicate=}")
         if not syndicate:
             err_embed = discord.Embed(
                     description="Be sure to type the correct planet/syndicate/node"

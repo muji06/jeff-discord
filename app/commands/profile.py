@@ -8,7 +8,7 @@ class profile(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.hybrid_command(name="profile", with_app_command=True)
+    @commands.hybrid_command(name="profile", with_app_command=True, description="Get warframe user profile stats")
     # @app_commands.guilds(discord.Object(id=992897664087760979))
     async def profile(self, ctx: commands.Context, profile_name: str=None): 
         if not profile_name:

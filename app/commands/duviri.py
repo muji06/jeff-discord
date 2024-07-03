@@ -27,7 +27,7 @@ class duviri(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.hybrid_command(name="duviri", with_app_command=True)
+    @commands.hybrid_command(name="duviri", with_app_command=True, description="Current Duviri rotation")
     # @app_commands.guilds(discord.Object(id=992897664087760979))
     async def duviri(self, ctx: commands.Context):
         duviri_api = requests.get("https://api.warframestat.us/pc/duviriCycle/").json()
@@ -37,11 +37,15 @@ class duviri(commands.Cog):
         target_timestamp = datetime.strptime(expiry, "%Y-%m-%dT%H:%M:%S.%fZ")
 
 
-        time_api = requests.get("https://timezone.abstractapi.com/v1/current_time/?api_key=23368da787414c17b1e67f510447f287&location=London").json()
-        current_timestamp = datetime.strptime(time_api["datetime"], "%Y-%m-%d %H:%M:%S")
-        if time_api["is_dst"]: # COMMUNITY DEVS DONT KNOW TIMEZONES
+        # time_api = requests.get("https://timezone.abstractapi.com/v1/current_time/?api_key=23368da787414c17b1e67f510447f287&location=London").json()
+        # current_timestamp = datetime.strptime(time_api["datetime"], "%Y-%m-%d %H:%M:%S")
+        current_timestamp = datetime.now(tz=None)
+        
+        if current_timestamp.dst(): # COMMUNITY DEVS DONT KNOW TIMEZONES
             current_timestamp = current_timestamp - timedelta(hours=1)
         
+        current_timestamp_string = current_timestamp.strftime("%Y-%m-%dT%H:%M:%S")
+
         time_left = target_timestamp - current_timestamp
 
         negative = False
@@ -82,7 +86,7 @@ class duviri(commands.Cog):
             color=discord.Colour.random()
         )
         embed.set_footer(
-            text=f"{next_name} {'(kullervo)' if next_kullervo else ''} in {timing}"
+            text=f"{next_name} {'(kullervo)' if next_kullervo else ''} in {timing}\nCurrent time: {current_timestamp_string}"
         )
 
         await ctx.send(embed=embed)

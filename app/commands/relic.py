@@ -4,7 +4,7 @@ import discord
 import json
 from requests import get
 import time
-from funcs import optimized_find
+from funcs import optimized_find, relic_finder
 from threading import Thread
 
 class relic(commands.Cog):
@@ -39,16 +39,16 @@ class relic(commands.Cog):
             drop = data[relic]['Drops']
 
             info = ''
-            price = ''#relic_finder(relic)
+            price = relic_finder(relic) or "-"
             if 'IsBaro' in relic and relic['IsBaro']:
                 info = '(B)'
             elif 'Valuted' in relic and relic['Valuted']:
                 info = '(V)'
             
             embed = discord.Embed(
-                title=f"{info} {relic}{chr(10)}{price}",
+                title=f"{info} {relic}{chr(10)}",
                 color=discord.Colour.random(),
-                description=f"Also showing the 3 lowest warframe.market prices."
+                description=f"{price}\nAlso showing the 3 lowest warframe.market prices."
             )
             # print(f"Bronze:")
             # print(f"{drop[0]['Item']} {drop[0]['Part']}")
@@ -70,7 +70,6 @@ class relic(commands.Cog):
             for x in range(6):
                 threads[x].join()
             
-            print(returns)
             embed.add_field(
                 name="Common/Bronze",
                 value=f"{drop[0]['Item']} {drop[0]['Part']} {returns['0']}{chr(10)}"\

@@ -9,7 +9,7 @@ class darvo(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.hybrid_command(name="darvo", with_app_command=True)
+    @commands.hybrid_command(name="darvo", with_app_command=True, description="Daily Darvo deal")
     # @app_commands.guilds(discord.Object(id=992897664087760979))
     async def darvo(self, ctx: commands.Context):
         response = requests.get("https://api.warframestat.us/PC/dailyDeals?language=en")

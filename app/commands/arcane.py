@@ -38,8 +38,15 @@ class arcane(commands.Cog):
         else:
             cached = False # recreate it later
             wiki_res = get('https://wf.snekw.com/arcane-wiki')
-            snekw = json.loads(wiki_res.text)['data']['Arcanes']
-        
+            try:
+                snekw = json.loads(wiki_res.text)['data']['Arcanes']
+            except KeyError:
+                error = discord.Embed(
+                    description="[BROKEN FOR NOW] Arcane names could not be pulled from warframe wiki"
+                )
+                await ctx.send(embed=error)
+                return
+                
         download_timer = time.time() - donwload_start
         data = None
         for x in snekw:
@@ -51,7 +58,7 @@ class arcane(commands.Cog):
 
         if data is None:
             error = discord.Embed(
-                description="Be sure to type the correct arcane name."
+                description="Be sure to type the correct arcane name. [BROKEN] new arcane names could not be pulled from warframe wiki"
             )
             await ctx.send(embed=error)
             return
