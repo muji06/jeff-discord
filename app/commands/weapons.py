@@ -156,7 +156,7 @@ class weapon(commands.Cog):
 
     #     await ctx.send(embed=wepembed)
 
-    @commands.command(name='wep', description="Find the stats of certain weapon",aliases=['w','wep','weap',"weapon"])
+    @commands.command(name='wep', description="Find the stats of certain weapon",aliases=['w','weap',"weapon"])
     async def weapon_alt(self, ctx, *,message:str = None):
         """
         Usage: !weapon <weapon-name>\n
