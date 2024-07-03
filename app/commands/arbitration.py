@@ -10,7 +10,7 @@ class arbitration(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name='arbitration', description="Data about current arbitration.",aliases=['arbie','arbi','arb'])
+    @commands.command(name='arbie', description="Data about current arbitration.",aliases=['arbitration','arbi','arb'])
     async def arbitration(self, ctx):
         """
         Usage: !arbitration\n
@@ -36,7 +36,7 @@ class arbitration(commands.Cog):
         )
         await ctx.send(embed=embed)
 
-    @discord.app_commands.command(name='arbie', description="Data about current arbitration.")
+    @discord.app_commands.command(name='arbitration', description="Data about current arbitration.")
     async def arbitration_slash(self, interaction: discord.Interaction):
         """
         Usage: !arbitration\n
