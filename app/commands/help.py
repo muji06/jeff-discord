@@ -12,9 +12,9 @@ class help(commands.Cog):
         Usage: -help
         """
         initial_text = "Flags:\n"+\
-                    "- **[ALPHA]**: Commands may work but data will not be complete (e.g. Unique names are not parsed)"+\
-                    "- **[BETA]**: Commands will work but they are not finalized yet (e.g. Discord embed is not finalized)"+\
-                    "- **[BROKEN]**: Due to updates on endpoints (wiki, warframe-status, worldstate), code rework is required"+\
+                    "- **[ALPHA]**: Commands may work but data will not be complete (e.g. Unique names are not parsed)\n"+\
+                    "- **[BETA]**: Commands will work but they are not finalized yet (e.g. Discord embed is not finalized)\n"+\
+                    "- **[BROKEN]**: Due to updates on endpoints (wiki, warframe-status, worldstate), code rework is required\n"+\
                     "\n\n"
         cog_desc = initial_text+\
         "**[BROKEN]-arcane** <arcane-name>: Shows arcane stats and market price\n\n"+\
