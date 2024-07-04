@@ -15,7 +15,7 @@ class pset(commands.Cog):
 
     @commands.hybrid_command(name="pset", with_app_command=True)
     # @app_commands.guilds(discord.Object(id=992897664087760979))
-    async def ping(self, ctx,*, prime_set):
+    async def ping(self, ctx,*, prime_set=None):
         start = time.time()
         if prime_set is None:
             error = discord.Embed(

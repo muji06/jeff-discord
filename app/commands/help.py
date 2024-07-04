@@ -14,8 +14,9 @@ class help(commands.Cog):
         initial_text = "Flags:\n"+\
                     "- **[ALPHA]**: Commands may work but data will not be complete (e.g. Unique names are not parsed)"+\
                     "- **[BETA]**: Commands will work but they are not finalized yet (e.g. Discord embed is not finalized)"+\
-                    "- **[BROKEN]**: Due to updates on endpoints (wiki, warframe-status, worldstate), code rework is required"
-        cog_desc = ""+\
+                    "- **[BROKEN]**: Due to updates on endpoints (wiki, warframe-status, worldstate), code rework is required"+\
+                    "\n\n"
+        cog_desc = initial_text+\
         "**[BROKEN]-arcane** <arcane-name>: Shows arcane stats and market price\n\n"+\
         "**-archon** (optional)<language>: Shows current archon rotation\n\n"+\
         "**-arbie**: Data about current arbitration\n\n"+\
