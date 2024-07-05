@@ -1,5 +1,10 @@
 from requests import get
 import json
+import time
+from redis_manager import RedisManager
+import requests
+import hashlib
+import luadata
 
 def dispo(num:int):
     """
@@ -184,3 +189,71 @@ ROTATIONS = [
     ["Arc & Brunt", "Soma", "Vasto", "Nami Solo", "Burston"],
     ["Zylok", "Sibear", "Dread", "Despair", "Hate"]
 ]
+
+NEW_DOWNLOAD_URLS = {
+    "arcane:2": "https://warframe.fandom.com/api.php?action=scribunto-console&format=json&title=Module%3AArcane&content=return%20require(%27Module%3ALuaSerializer%27)._serialize(%27Arcane%2Fdata%27)&question=%3Dp&clear=1",
+    "weapon:2": "https://warframe.fandom.com/api.php?action=scribunto-console&format=json&title=Module%3AWeapons&content=return%20require(%27Module%3ALuaSerializer%27)._serialize(%27Weapons%2Fdata%27)&question=%3Dp&clear=1",
+    "void:2":  "https://warframe.fandom.com/api.php?action=scribunto-console&format=json&title=Module%3AVoid&content=return%20require(%27Module%3ALuaSerializer%27)._serialize(%27Void%2Fdata%27)&question=%3Dp&clear=1",
+    "mod:2":   "https://warframe.fandom.com/api.php?action=scribunto-console&format=json&title=Module%3AMods&content=return%20require(%27Module%3ALuaSerializer%27)._serialize(%27Mods%2Fdata%27)&question=%3Dp&clear=1",
+}  
+
+CHECKSUMS = {
+    "arcane:2": "arcane:checksum:1",
+    "weapon:2": "weapon:checksum:1",
+    "mod:2": "mod:checksum:1",
+    "void:2": "void:checksum:1",
+}
+
+def unserialize_lua_table(lua_table: str)-> dict:
+    start_idx = lua_table.find('{')
+    end_idx = lua_table.rfind('}') + 1
+    lua_table = lua_table[start_idx:end_idx]
+    return luadata.unserialize(lua_table)
+
+def update_cache(data_key:str, redis_cache: RedisManager):
+    ready = False
+    retries = 0
+    while not ready and retries < 100:
+        retries += 1
+        print(f"[refill_wiki_data][{time.ctime()}]:\t[Downloading data for '{data_key}'...]")
+        try:
+            res = requests.get(url=NEW_DOWNLOAD_URLS[data_key])
+        except:
+            print(f"[refill_wiki_data][{time.ctime()}]:\t[Downloading failed '{data_key}'{chr(10)}]")
+            continue
+        
+        return_data = res.json().get('return')
+
+        if return_data:
+            # get valid lua table result
+            unserialized_data = unserialize_lua_table(return_data)
+
+            checksum = hashlib.md5(bytes("".join(json.dumps(unserialized_data)),encoding="utf-8")).hexdigest()
+            cached = False
+            # check if we have data cached
+            old_checksum = ""
+            if redis_cache.cache.exists(CHECKSUMS[data_key]):
+                cached = True
+                old_checksum = redis_cache.cache.get(CHECKSUMS[data_key])
+
+            ready = True
+            if checksum == old_checksum:
+                # create a new checksum
+                if not cached:
+                    text = json.dumps(unserialized_data)
+                    # save data
+                    redis_cache.cache.set(data_key, text)
+                    # save checksum
+                    redis_cache.cache.set(CHECKSUMS[data_key],checksum)
+                    print(f"[refill_wiki_data][{time.ctime()}]:\t[{data_key} data ready on redis!']")
+                else:
+                    print(f"[refill_wiki_data][{time.ctime()}]:\t[No new data for {data_key}! Skipping']")
+            else:
+                text = json.dumps(unserialized_data)
+                redis_cache.cache.set(data_key, text)
+                redis_cache.cache.set(CHECKSUMS[data_key],checksum)
+                print(f"[refill_wiki_data][{time.ctime()}]:\t[{data_key} data ready on redis!']")
+
+            break
+        else:
+            print(f"[refill_wiki_data][{time.ctime()}]:\t[Downloading not succesful for '{data_key}'data retrieved: {data_key}. Retrying...({retries})]")

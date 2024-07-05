@@ -6,7 +6,7 @@ import time
 from requests import get
 from redis_manager import cache
 import datetime
-from funcs import find
+from funcs import find, update_cache
 # from logging import info as print
 
 class prime(commands.Cog):
@@ -36,22 +36,21 @@ class prime(commands.Cog):
             return
         
         download_start = time.time()
-        # metadata = get('https://wf.snekw.com/void-wiki/meta').json()
-        
-        cached = True
         # check if we have data cached
-        if cache.cache.exists("void:1"):
-            cached_void = json.loads(cache.cache.get("void:1"))
+        cached = True
+        if cache.cache.exists("void:2"):
+            cached_void = json.loads(cache.cache.get("void:2"))
             data = cached_void
         else:
-            cached = False # recreate it later
-            res = get('https://wf.snekw.com/void-wiki')
-            data = json.loads(res.text)
+            cached = False
+            update_cache("void:2",cache)
+            cached_void = json.loads(cache.cache.get("void:2"))
+            data = cached_void
             
         download_timer = time.time() - download_start
         calculation_start = time.time()
-        primes = data['data']['PrimeData']
-        relics = data['data']['RelicData']
+        primes = data['PrimeData']
+        relics = data['RelicData']
         text = ''
         item = ''
         price_name = ''

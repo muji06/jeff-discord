@@ -2,7 +2,7 @@ from discord.ext import commands
 import discord
 import json
 from requests import get
-from funcs import dispo
+from funcs import dispo, update_cache
 import time
 from redis_manager import cache
 
@@ -168,21 +168,21 @@ class weapon(commands.Cog):
             await ctx.send(embed=error)
             return
         download_start = time.time()
-        # metadata = get('https://wf.snekw.com/weapons-wiki/meta').json()
 
-        cached = True
         # check if we have data cached
-        if cache.cache.exists("weapon:1"):
-            cached_weapons = json.loads(cache.cache.get("weapon:1"))
+        cached = True
+        if cache.cache.exists("weapon:2"):
+            cached_weapons = json.loads(cache.cache.get("weapon:2"))
             data = cached_weapons
         else:
-            cached = False # recreate it later
-            wiki_res = get('https://wf.snekw.com/weapons-wiki')
-            data = json.loads(wiki_res.text)
+            cached = False
+            update_cache("void:2",cache)
+            cached_weapons = json.loads(cache.cache.get("weapon:2"))
+            data = cached_weapons
 
         download_timer = time.time() - download_start
 
-        wiki_data = data['data']
+        wiki_data = data
         snekw = ""
         # first we test if we have weapon on wiki
         message = message.lower()
@@ -324,21 +324,21 @@ class weapon(commands.Cog):
             await interaction.response.send_message(embed=error)
             return
         download_start = time.time()
-        # metadata = get('https://wf.snekw.com/weapons-wiki/meta').json()
-
-        cached = True
+        
         # check if we have data cached
-        if cache.cache.exists("weapon:1"):
-            cached_weapons = json.loads(cache.cache.get("weapon:1"))
+        cached = True
+        if cache.cache.exists("weapon:2"):
+            cached_weapons = json.loads(cache.cache.get("weapon:2"))
             data = cached_weapons
         else:
-            cached = False # recreate it later
-            wiki_res = get('https://wf.snekw.com/weapons-wiki')
-            data = json.loads(wiki_res.text)
+            cached = False
+            update_cache("void:2",cache)
+            cached_weapons = json.loads(cache.cache.get("weapon:2"))
+            data = cached_weapons
 
         download_timer = time.time() - download_start
 
-        wiki_data = data['data']
+        wiki_data = data
         snekw = ""
         # first we test if we have weapon on wiki
         message = message.lower()

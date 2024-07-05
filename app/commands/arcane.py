@@ -1,9 +1,8 @@
 from discord.ext import commands
-from discord import app_commands
 import discord
 import json
 from requests import get
-from funcs import find,polarity
+from funcs import find, update_cache
 import time
 import re
 from redis_manager import cache
@@ -14,7 +13,7 @@ class arcane(commands.Cog):
 
     @commands.hybrid_command(name='arcane', with_app_command=True, description="Shows the matching arcane")
     # @app_commands.guilds(discord.Object(id=992897664087760979))
-    async def mod(self, ctx,*, arcane:str = None):
+    async def arcane(self, ctx,*, arcane:str = None):
         """
         Usage: !arcane <arcane-name>\n
         Shows the closest matching arcane and its market price
@@ -32,14 +31,15 @@ class arcane(commands.Cog):
         donwload_start = time.time()
         cached = True
         # check if we have data cached
-        if cache.cache.exists("arcane:1"):
-            cached_arcanes = json.loads(cache.cache.get("arcane:1"))
-            snekw = cached_arcanes['data']['Arcanes']
+        if cache.cache.exists("arcane:2"):
+            cached_arcanes = json.loads(cache.cache.get("arcane:2"))
+            snekw = cached_arcanes['Arcanes']
         else:
-            cached = False # recreate it later
-            wiki_res = get('https://wf.snekw.com/arcane-wiki')
+            cached = False
+            update_cache("arcane:2",cache)
             try:
-                snekw = json.loads(wiki_res.text)['data']['Arcanes']
+                cached_arcanes = json.loads(cache.cache.get("arcane:2"))
+                snekw = cached_arcanes['Arcanes']
             except KeyError:
                 error = discord.Embed(
                     description="[BROKEN FOR NOW] Arcane names could not be pulled from warframe wiki"
@@ -66,7 +66,10 @@ class arcane(commands.Cog):
         price_unranked = find(data['Name'],0)
         price_ranked = find(data['Name'],data['MaxRank'])
         market_timer = time.time() - market_start
-        stats = f"{data['Criteria']}:{chr(10)}"+re.sub('<br \/>',chr(10),str(data['Description']))
+        criteria = ""
+        if data['Criteria']:
+            criteria = f"{data['Criteria']}:{chr(10)}"
+        stats = f"{criteria}"+re.sub('<br \/>',chr(10),str(data['Description']))
         arcane_embed = discord.Embed(
             title=f"{data['Name']} | {data['Rarity']}",
             description=f"***At maximum rank ({data['MaxRank']})***{chr(10)}{chr(10)}{stats}{chr(10)}{chr(10)}Unranked: {price_unranked}{chr(10)}Rank {data['MaxRank']}: {price_ranked}"

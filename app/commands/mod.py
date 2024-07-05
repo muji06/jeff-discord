@@ -3,7 +3,7 @@ from discord import app_commands
 import discord
 import json
 from requests import get
-from funcs import find,polarity
+from funcs import find,polarity, update_cache
 import time
 from redis_manager import cache
 class mod(commands.Cog):
@@ -38,16 +38,15 @@ class mod(commands.Cog):
             return
         else:
             download_start = time.time()
-
-            cached = True
-            # check if we have data cached
-            if cache.cache.exists("mod:1"):
-                cached_mods = json.loads(cache.cache.get("mod:1"))
-                snekw = cached_mods['data']['Mods']
+             # check if we have data cached
+            if cache.cache.exists("mod:2"):
+                cached_mods = json.loads(cache.cache.get("mod:2"))
+                snekw = cached_mods['Mods']
             else:
-                cached = False # recreate it later
-                res_snekw = get('https://wf.snekw.com/mods-wiki')
-                snekw = json.loads(res_snekw.text)['data']['Mods']
+                cached = False
+                update_cache("mod:2",cache)
+                cached_mods = json.loads(cache.cache.get("mod:2"))
+                snekw = cached_mods['Mods']
 
             download_timer += time.time() - download_start
             snekw_mod = None
