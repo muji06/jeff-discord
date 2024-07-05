@@ -17,7 +17,7 @@ class help(commands.Cog):
                     "- **[BROKEN]**: Due to updates on endpoints (wiki, warframe-status, worldstate), code rework is required\n"+\
                     "\n\n"
         cog_desc = initial_text+\
-        "**[BROKEN]-arcane** <arcane-name>: Shows arcane stats and market price\n\n"+\
+        "**-arcane** <arcane-name>: Shows arcane stats and market price\n\n"+\
         "**-archon** (optional)<language>: Shows current archon rotation\n\n"+\
         "**-arbie**: Data about current arbitration\n\n"+\
         "**[ALPHA]-baro**: Show current baro status and his inventory\n\n"+\
