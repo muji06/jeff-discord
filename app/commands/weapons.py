@@ -176,7 +176,7 @@ class weapon(commands.Cog):
             data = cached_weapons
         else:
             cached = False
-            update_cache("void:2",cache)
+            update_cache("weapon:2",cache)
             cached_weapons = json.loads(cache.cache.get("weapon:2"))
             data = cached_weapons
 
@@ -324,7 +324,7 @@ class weapon(commands.Cog):
             await interaction.response.send_message(embed=error)
             return
         download_start = time.time()
-        
+
         # check if we have data cached
         cached = True
         if cache.cache.exists("weapon:2"):
@@ -332,7 +332,7 @@ class weapon(commands.Cog):
             data = cached_weapons
         else:
             cached = False
-            update_cache("void:2",cache)
+            update_cache("weapon:2",cache)
             cached_weapons = json.loads(cache.cache.get("weapon:2"))
             data = cached_weapons
 
