@@ -3,38 +3,6 @@ from datetime import datetime
 import discord
 import requests
 import asyncio
-from threading import Timer
-
-# class NameParser(object):
-#     _instance = None
-#     _data = None
-#     _update_timer = None
-#     _url = "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/json/All.json"
-#     def __new__(cls, *args, **kwargs):
-#         if not cls._instance:
-#             cls._instance = super(NameParser, cls).__new__(cls, *args, **kwargs)
-#         return cls._instance
-
-#     def __init__(self):
-#         self.update_data()
-
-#     @property
-#     def data(self):
-#         return self._data
-
-#     def update_data(self):
-#         # Update data logic here
-#         self._data ="" # Your update logic (e.g., read from file, API call)
-#         self.schedule_next_update()
-
-#     def schedule_next_update(self):
-#         # Schedule update for 24 hours from now
-#         self._update_timer = Timer(24 * 60 * 60, self.update_data)
-#         self._update_timer.start()
-    
-#     def parse(unique_name:str)-> str:
-#         return ""
-
 
 class profile(commands.Cog):
     def __init__(self, bot):
@@ -48,9 +16,6 @@ class profile(commands.Cog):
             return
         
         profile_data = ProfileData(profile_name)
-        if profile_data.stats_code != 200:
-            await ctx.send("Profile not found.")
-            return
 
         view = ProfileView(profile_data=profile_data, author=ctx.author)
         initial_embed = profile_data.generate_main_embed()
@@ -100,22 +65,10 @@ class ProfileView(discord.ui.View):
 class ProfileData():
     wf_status_url = "https://api.warframestat.us/profile/"
     wf_official_url = "https://content.warframe.com/dynamic/getProfileViewingData.php"
-    cache = None
     def __init__(self, username):
         # self.wf_status = requests.get(f"{self.wf_status_url}{username}").json()
-        
-        self.response = requests.get(f"{self.wf_official_url}?n={username}")
+        self.wf_official = requests.get(f"{self.wf_official_url}?n={username}").json()
 
-    @property
-    def stats_code(self) -> int:
-        return self.response.status_code
-    
-    @property
-    def wf_official(self) -> dict:
-        if self.cache is None:
-            self.cache = self.response.json()
-        return self.cache
-    
     @property
     def username(self) -> str:
         return self.wf_official['Results'][0]["DisplayName"]
