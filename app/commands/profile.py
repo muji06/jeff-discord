@@ -355,7 +355,7 @@ class ProfileData():
             embed.add_field(name=f"Top by {name}", value=top_names, inline=True)
 
             bottom_names = ""
-            for rank, warframe in enumerate(self.warframe_bottom_used_by_type(key), start=1):30
+            for rank, warframe in enumerate(self.warframe_bottom_used_by_type(key), start=1):
                 bottom_names +=f"{rank}. {warframe['type']}: {warframe[key]}\n"
             embed.add_field(name=f"Bottom by {name}", value=bottom_names, inline=True)
 
