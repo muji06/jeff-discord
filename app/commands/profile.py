@@ -3,6 +3,38 @@ from datetime import datetime
 import discord
 import requests
 import asyncio
+from threading import Timer
+
+# class NameParser(object):
+#     _instance = None
+#     _data = None
+#     _update_timer = None
+#     _url = "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/json/All.json"
+#     def __new__(cls, *args, **kwargs):
+#         if not cls._instance:
+#             cls._instance = super(NameParser, cls).__new__(cls, *args, **kwargs)
+#         return cls._instance
+
+#     def __init__(self):
+#         self.update_data()
+
+#     @property
+#     def data(self):
+#         return self._data
+
+#     def update_data(self):
+#         # Update data logic here
+#         self._data ="" # Your update logic (e.g., read from file, API call)
+#         self.schedule_next_update()
+
+#     def schedule_next_update(self):
+#         # Schedule update for 24 hours from now
+#         self._update_timer = Timer(24 * 60 * 60, self.update_data)
+#         self._update_timer.start()
+    
+#     def parse(unique_name:str)-> str:
+#         return ""
+
 
 class profile(commands.Cog):
     def __init__(self, bot):
@@ -16,6 +48,9 @@ class profile(commands.Cog):
             return
         
         profile_data = ProfileData(profile_name)
+        if profile_data.stats_code != 200:
+            await ctx.send("Profile not found.")
+            return
 
         view = ProfileView(profile_data=profile_data, author=ctx.author)
         initial_embed = profile_data.generate_main_embed()
@@ -65,10 +100,22 @@ class ProfileView(discord.ui.View):
 class ProfileData():
     wf_status_url = "https://api.warframestat.us/profile/"
     wf_official_url = "https://content.warframe.com/dynamic/getProfileViewingData.php"
+    cache = None
     def __init__(self, username):
         # self.wf_status = requests.get(f"{self.wf_status_url}{username}").json()
-        self.wf_official = requests.get(f"{self.wf_official_url}?n={username}").json()
+        
+        self.response = requests.get(f"{self.wf_official_url}?n={username}")
 
+    @property
+    def stats_code(self) -> int:
+        return self.response.status_code
+    
+    @property
+    def wf_official(self) -> dict:
+        if self.cache is None:
+            self.cache = self.response.json()
+        return self.cache
+    
     @property
     def username(self) -> str:
         return self.wf_official['Results'][0]["DisplayName"]
@@ -175,8 +222,14 @@ class ProfileData():
     
     def enemy_top_kills(self, top_n: int = 5) -> list:
         stats = self.wf_official["Stats"]
-        return [enemy for enemy in sorted(stats["Enemies"], key=lambda enemy: enemy.get("kills", 0), reverse=True) if "kills" in enemy ][:top_n]
-    
+        data = [
+            {
+                "type" : enemy["type"],#.split("/")[-1],
+                "kills" : enemy.get("kills",0)
+            }
+            for enemy in sorted(stats["Enemies"], key=lambda enemy: enemy.get("kills", 0), reverse=True) if "kills" in enemy ][:top_n]
+        return data
+
     #TODO: Parse unique names
     #TODO: Filter operator abilities out
     @property
@@ -189,12 +242,24 @@ class ProfileData():
     #TODO: Parse unique names
     def ability_top_used(self, top_n: int = 5) -> list:
         stats = self.wf_official["Stats"]
-        return [ability for ability in sorted(stats["Abilities"], key=lambda ability: ability.get("used", 0), reverse=True)][:top_n]
+        data = [
+            {
+                "type" : ability["type"],#.split("/")[-1],
+                "used" : ability["used"]
+            }
+            for ability in sorted(stats["Abilities"], key=lambda ability: ability.get("used", 0), reverse=True)][:top_n]
+        return data
     
     #TODO: Parse unique names
     def ability_bottom_used(self, bottom_n: int = 5) -> list:
         stats = self.wf_official["Stats"]
-        return [ability for ability in sorted(stats["Abilities"], key=lambda ability: ability.get("used", 0), reverse=True)][-bottom_n:]
+        data = [
+            {
+                "type" : ability["type"],#.split("/")[-1],
+                "used" : ability["used"]
+            }
+            for ability in sorted(stats["Abilities"], key=lambda ability: ability.get("used", 0), reverse=True)][-bottom_n:]
+        return data
     
     #TODO: Parse unique names
     def warframe_top_used_by_type(self, type:str = "equipTime", top_n: int = 5)-> list:
@@ -202,8 +267,8 @@ class ProfileData():
         warframes = filter(lambda x: x["type"].startswith("/Lotus/Powersuits"), stats['Weapons'])
         frames_top_by_time = [
             {
-            "type": frame['type'],
-            f"{type}": frame.get(type,0)
+                "type": frame['type'], #.split('/')[-1],
+                f"{type}": int(frame.get(type,0))
             } 
             for frame in sorted(warframes, key=lambda x: x.get(type, 0), reverse=True)][:top_n]
         return frames_top_by_time
@@ -212,13 +277,13 @@ class ProfileData():
     def warframe_bottom_used_by_type(self, type:str = "equipTime", bottom_n: int = 5)-> list:
         stats = self.wf_official["Stats"]
         warframes = filter(lambda x: x["type"].startswith("/Lotus/Powersuits"), stats['Weapons'])
-        frames_top_by_time = [
+        frames_bottom_by_time = [
             {
-            "type": frame['type'],
-            f"{type}": frame[f"{type}"]
+                "type": frame['type'],#.split('/')[-1],
+                f"{type}": int(frame.get(type,0))
             } 
             for frame in sorted(warframes, key=lambda x: x.get(type, 0), reverse=True)][-bottom_n:]
-        return frames_top_by_time
+        return frames_bottom_by_time
     
     # Embed methods
     def generate_main_embed(self):
@@ -303,14 +368,14 @@ class ProfileData():
 
         top_abilities= ""
         for rank, ability in enumerate(self.ability_top_used(), start=1):
-            ability_name = ability["type"].split("/")[-1]
+            ability_name = ability["type"]
             usage = ability["used"]
             top_abilities +=f"{rank}. {ability_name}: {usage}\n"
         embed.add_field(name="Top Abilities Used", value=top_abilities, inline=False)
 
         bottom_abilities= ""
         for rank, ability in enumerate(self.ability_bottom_used(), start=1):
-            ability_name = ability["type"].split("/")[-1]
+            ability_name = ability["type"]
             usage = ability["used"]
             bottom_abilities +=f"{rank}. {ability_name}: {usage}\n"
         embed.add_field(name="Least Abilities Used", value=bottom_abilities, inline=False)
@@ -334,10 +399,17 @@ class ProfileData():
             top_names = ""
             for rank, warframe in enumerate(self.warframe_top_used_by_type(key), start=1):
                 top_names +=f"{rank}. {warframe['type']}: {warframe[key]}\n"
-            embed.add_field(name=f"Top by {name}", value=top_names, inline=False)
+            embed.add_field(name=f"Top by {name}", value=top_names, inline=True)
 
+            bottom_names = ""
             for rank, warframe in enumerate(self.warframe_bottom_used_by_type(key), start=1):
-                top_names +=f"{rank}. {warframe['type']}: {warframe[key]}\n"
-            embed.add_field(name=f"Bottom by {name}", value=top_names, inline=False)
+                bottom_names +=f"{rank}. {warframe['type']}: {warframe[key]}\n"
+            embed.add_field(name=f"Bottom by {name}", value=bottom_names, inline=True)
+
+            # empty field hack
+            embed.add_field(name="\u200B", value="\u200B", inline=True)
+
+
 
         return embed
+    
