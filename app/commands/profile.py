@@ -306,7 +306,21 @@ class ProfileData():
             enemy_type = enemy["type"]
             kills = enemy.get("kills", 0)
             top_kills +=f"{rank}. {enemy_type}: {kills}\n"
-30
+
+        embed.add_field(name="Top Kills", value=top_kills, inline=False)
+        return embed
+
+    def generate_ability_embed(self):
+        embed = discord.Embed(
+            title=f"({self.username}) - Abilities",
+            colour=discord.Colour.blue()
+        )
+        text = f"**Total Ability Casts**: {self.ability_total_stats}\n"
+
+        embed.description = text
+
+        top_abilities= ""
+        for rank, ability in enumerate(self.ability_top_used(), start=1):
             ability_name = ability["type"]
             usage = ability["used"]
             top_abilities +=f"{rank}. {ability_name}: {usage}\n"
