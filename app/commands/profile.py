@@ -31,7 +31,7 @@ class ProfileView(discord.ui.View):
     def __init__(self, *, profile_data, author):
         self.profile_data = profile_data
         self.author = author
-        super().__init__(timeout=30)
+        super().__init__(timeout=120)
 
     @discord.ui.button(label="Main",style=discord.ButtonStyle.gray)
     async def main_button(self,interaction:discord.Interaction,button:discord.ui.Button):
@@ -306,21 +306,7 @@ class ProfileData():
             enemy_type = enemy["type"]
             kills = enemy.get("kills", 0)
             top_kills +=f"{rank}. {enemy_type}: {kills}\n"
-
-        embed.add_field(name="Top Kills", value=top_kills, inline=False)
-        return embed
-
-    def generate_ability_embed(self):
-        embed = discord.Embed(
-            title=f"({self.username}) - Abilities",
-            colour=discord.Colour.blue()
-        )
-        text = f"**Total Ability Casts**: {self.ability_total_stats}\n"
-
-        embed.description = text
-
-        top_abilities= ""
-        for rank, ability in enumerate(self.ability_top_used(), start=1):
+30
             ability_name = ability["type"]
             usage = ability["used"]
             top_abilities +=f"{rank}. {ability_name}: {usage}\n"
@@ -355,7 +341,7 @@ class ProfileData():
             embed.add_field(name=f"Top by {name}", value=top_names, inline=True)
 
             bottom_names = ""
-            for rank, warframe in enumerate(self.warframe_bottom_used_by_type(key), start=1):
+            for rank, warframe in enumerate(self.warframe_bottom_used_by_type(key), start=1):30
                 bottom_names +=f"{rank}. {warframe['type']}: {warframe[key]}\n"
             embed.add_field(name=f"Bottom by {name}", value=bottom_names, inline=True)
 
