@@ -3,6 +3,8 @@ from datetime import datetime
 import discord
 import requests
 import asyncio
+from funcs import find_internal_companion_name, find_internal_skin_name, find_internal_warframe_name, find_internal_ability_name
+from redis_manager import cache
 
 class profile(commands.Cog):
     def __init__(self, bot):
@@ -15,8 +17,12 @@ class profile(commands.Cog):
             await ctx.send("Please enter a profile name.")
             return
         
-        profile_data = ProfileData(profile_name)
-
+        try:
+            profile_data = ProfileData(profile_name)
+        except Exception as e:
+            await ctx.send(f"No profile found")
+            return
+        
         view = ProfileView(profile_data=profile_data, author=ctx.author)
         initial_embed = profile_data.generate_main_embed()
 
@@ -195,47 +201,51 @@ class ProfileData():
     #TODO: Parse unique names
     def ability_top_used(self, top_n: int = 5) -> list:
         stats = self.wf_official["Stats"]
+        abilities = filter(lambda x: find_internal_ability_name(x["type"], cache) and "OperatorTransferenceAbility" not in x["type"], stats['Abilities'])
         data = [
             {
                 "type" : ability["type"],#.split("/")[-1],
                 "used" : ability["used"]
             }
-            for ability in sorted(stats["Abilities"], key=lambda ability: ability.get("used", 0), reverse=True)][:top_n]
+            for ability in sorted(abilities, key=lambda ability: ability.get("used", 0), reverse=True)][:top_n]
         return data
     
     #TODO: Parse unique names
     def ability_bottom_used(self, bottom_n: int = 5) -> list:
         stats = self.wf_official["Stats"]
+        abilities = filter(lambda x: find_internal_ability_name(x["type"], cache) and "OperatorTransferenceAbility" not in x["type"], stats['Abilities'])
         data = [
             {
                 "type" : ability["type"],#.split("/")[-1],
                 "used" : ability["used"]
             }
-            for ability in sorted(stats["Abilities"], key=lambda ability: ability.get("used", 0), reverse=True)][-bottom_n:]
+            for ability in sorted(abilities, key=lambda ability: ability.get("used", 0), reverse=True)][-bottom_n:]
         return data
     
     #TODO: Parse unique names
     def warframe_top_used_by_type(self, type:str = "equipTime", top_n: int = 5)-> list:
         stats = self.wf_official["Stats"]
-        warframes = filter(lambda x: x["type"].startswith("/Lotus/Powersuits"), stats['Weapons'])
+        warframes = filter(lambda x: find_internal_warframe_name(x["type"], cache) and "Wraith/Reaper" not in x["type"], stats['Weapons'])
         frames_top_by_time = [
             {
                 "type": frame['type'], #.split('/')[-1],
                 f"{type}": int(frame.get(type,0))
             } 
             for frame in sorted(warframes, key=lambda x: x.get(type, 0), reverse=True)][:top_n]
+
         return frames_top_by_time
     
     #TODO: Parse unique names
     def warframe_bottom_used_by_type(self, type:str = "equipTime", bottom_n: int = 5)-> list:
         stats = self.wf_official["Stats"]
-        warframes = filter(lambda x: x["type"].startswith("/Lotus/Powersuits"), stats['Weapons'])
+        warframes = filter(lambda x: find_internal_warframe_name(x["type"], cache) and "Wraith/Reaper" not in x["type"], stats['Weapons'])
         frames_bottom_by_time = [
             {
                 "type": frame['type'],#.split('/')[-1],
                 f"{type}": int(frame.get(type,0))
             } 
             for frame in sorted(warframes, key=lambda x: x.get(type, 0), reverse=True)][-bottom_n:]
+        
         return frames_bottom_by_time
     
     # Embed methods
@@ -321,14 +331,14 @@ class ProfileData():
 
         top_abilities= ""
         for rank, ability in enumerate(self.ability_top_used(), start=1):
-            ability_name = ability["type"]
+            ability_name = find_internal_ability_name(ability["type"], cache)
             usage = ability["used"]
             top_abilities +=f"{rank}. {ability_name}: {usage}\n"
         embed.add_field(name="Top Abilities Used", value=top_abilities, inline=False)
 
         bottom_abilities= ""
         for rank, ability in enumerate(self.ability_bottom_used(), start=1):
-            ability_name = ability["type"]
+            ability_name = find_internal_ability_name(ability["type"], cache)
             usage = ability["used"]
             bottom_abilities +=f"{rank}. {ability_name}: {usage}\n"
         embed.add_field(name="Least Abilities Used", value=bottom_abilities, inline=False)
@@ -351,12 +361,14 @@ class ProfileData():
         for key, name in sort_types.items():
             top_names = ""
             for rank, warframe in enumerate(self.warframe_top_used_by_type(key), start=1):
-                top_names +=f"{rank}. {warframe['type']}: {warframe[key]}\n"
+                wf_name = find_internal_warframe_name(warframe['type'], cache)
+                top_names +=f"{rank}. {wf_name}: {warframe[key]}\n"
             embed.add_field(name=f"Top by {name}", value=top_names, inline=True)
 
             bottom_names = ""
             for rank, warframe in enumerate(self.warframe_bottom_used_by_type(key), start=1):
-                bottom_names +=f"{rank}. {warframe['type']}: {warframe[key]}\n"
+                wf_name = find_internal_warframe_name(warframe['type'], cache)
+                bottom_names +=f"{rank}. {wf_name}: {warframe[key]}\n"
             embed.add_field(name=f"Bottom by {name}", value=bottom_names, inline=True)
 
             # empty field hack

@@ -1,0 +1,5600 @@
+{
+  "Ak-Sura Syandana": {
+    "Artists": [
+      "malaya",
+      "Cobalt"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRTwelveAk-SuraScarf.png",
+    "Link": "Ak-Sura Syandana",
+    "Name": "Ak-Sura Syandana",
+    "PcPrice": "$5.99",
+    "Round": "12",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1266378613",
+    "Type": "Syandana"
+  },
+  "Akmagnus Dakila Skin": {
+    "Artists": [
+      "MaaYuu"
+    ],
+    "ConsolePrice": "40",
+    "Image": "AkmagnusDakilaSkin.png",
+    "Link": "Akmagnus Dakila Skin",
+    "Name": "Akmagnus Dakila Skin",
+    "PcPrice": "40",
+    "Round": "Weapons Skin Contest",
+    "SteamLink": "https://forums.warframe.com/topic/313983-weapon-skins-contest-final-results/",
+    "Type": "Weapon"
+  },
+  "Akmagnus Hivelight Skin": {
+    "Artists": [
+      "Verifitas"
+    ],
+    "ConsolePrice": "40",
+    "Image": "AkmagnusHivelightSkin.png",
+    "Link": "Akmagnus Hivelight Skin",
+    "Name": "Akmagnus Hivelight Skin",
+    "PcPrice": "40",
+    "Round": "Weapons Skin Contest",
+    "SteamLink": "https://forums.warframe.com/topic/313983-weapon-skins-contest-final-results/",
+    "Type": "Weapon"
+  },
+  "Alchemist Chemtank Syandana": {
+    "Artists": [
+      "Erneix"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWAlchemistChemtankSyandana.png",
+    "Link": "Alchemist Chemtank Syandana",
+    "Name": "Alchemist Chemtank Syandana",
+    "PcPrice": "$5.99",
+    "Round": "22 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2763822731",
+    "Type": "Syandana"
+  },
+  "Aquiros Syandana": {
+    "Artists": [
+      "led2012"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRTwoAquirosScarf.png",
+    "Link": "Aquiros Syandana",
+    "Name": "Aquiros Syandana",
+    "PcPrice": "$5.99",
+    "Round": "2",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=616760969",
+    "Type": "Syandana"
+  },
+  "Arashi Heavy Blade Skin": {
+    "Artists": [
+      "Lubox",
+      "ValentinaPaz"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWArashiHeavyBladeSkin.png",
+    "Link": "Arashi Heavy Blade Skin",
+    "Name": "Arashi Heavy Blade Skin",
+    "PcPrice": "$5.99",
+    "Round": "21 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2593701929",
+    "Type": "Weapon"
+  },
+  "Arashi Rapier Skin": {
+    "Artists": [
+      "Lubox"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWArashiRapierSkin.png",
+    "Link": "Arashi Rapier Skin",
+    "Name": "Arashi Rapier Skin",
+    "PcPrice": "$5.99",
+    "Round": "19 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2159817565",
+    "Type": "Weapon"
+  },
+  "Arcturus Syandana": {
+    "Artists": [
+      "FrellingHazmot"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRSevenArcturusScarf.png",
+    "Link": "Arcturus Syandana",
+    "Name": "Arcturus Syandana",
+    "PcPrice": "$5.99",
+    "Round": "7",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=839641825",
+    "Type": "Syandana"
+  },
+  "Armalyst Syandana": {
+    "Artists": [
+      "Faven",
+      "Debbysheen"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWR18ArmalystSyandana.png",
+    "Link": "Armalyst Syandana",
+    "Name": "Armalyst Syandana",
+    "PcPrice": "$5.99",
+    "Round": "18",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1835807920",
+    "Type": "Syandana"
+  },
+  "Aropanex Syandana": {
+    "Artists": [
+      "kakarrot2812"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWAropanexSyandana.png",
+    "Link": "Aropanex Syandana",
+    "Name": "Aropanex Syandana",
+    "PcPrice": "$5.99",
+    "Round": "20 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2106249846",
+    "Type": "Syandana"
+  },
+  "Asakage Blade of the Lotus Shoulder Armor": {
+    "Artists": [
+      "BeastBuster"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWAsakageBladeoftheLotusShoulderArmor.png",
+    "Link": "Asakage Blade of the Lotus Shoulder Armor",
+    "Name": "Asakage Blade of the Lotus Shoulder Armor",
+    "PcPrice": "$2.99",
+    "Round": "20 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2396103963",
+    "Type": "Armor"
+  },
+  "Ash Bai Hu Skin": {
+    "Artists": [
+      "Hitsu San"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRSevenAshBaiHuSkin.png",
+    "Link": "Ash Bai Hu Skin",
+    "Name": "Ash Bai Hu Skin",
+    "PcPrice": "$6.99",
+    "Round": "7",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=770606387",
+    "Type": "Deluxe"
+  },
+  "Ash Carabid Helmet": {
+    "Artists": [
+      "artarrwen"
+    ],
+    "ConsolePrice": "75",
+    "Image": "SWRSixAshCarabidHelmet.png",
+    "Link": "Ash Carabid Helmet",
+    "Name": "Ash Carabid Helmet",
+    "PcPrice": "$5.99",
+    "Round": "6",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=764959221",
+    "Type": "Helmet"
+  },
+  "Ash Ichneumon Skin": {
+    "Artists": [
+      "Vulbjorn"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWR19AshIchneumonSkin.png",
+    "Link": "Ash Ichneumon Skin",
+    "Name": "Ash Ichneumon Skin",
+    "PcPrice": "$6.99",
+    "Round": "19 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2128408238",
+    "Type": "Deluxe"
+  },
+  "Ash Ryuga Skin": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWAshRyugaSkin.png",
+    "Link": "Ash Ryuga Skin",
+    "Name": "Ash Ryuga Skin",
+    "PcPrice": "$6.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1835445270",
+    "Type": "Deluxe"
+  },
+  "Ash Tsukuyomi Skin": {
+    "Artists": [
+      "Yatus"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRNineAshTsukuyomiSkin.png",
+    "Link": "Ash Tsukuyomi Skin",
+    "Name": "Ash Tsukuyomi Skin",
+    "PcPrice": "$6.99",
+    "Round": "9",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=935399710",
+    "Type": "Deluxe"
+  },
+  "Asteria Chest Armor": {
+    "Artists": [
+      "led2012"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWAsteriaChestArmor.png",
+    "Link": "Asteria Chest Armor",
+    "Name": "Asteria Chest Armor",
+    "PcPrice": "$5.99",
+    "Round": "22 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2773584411",
+    "Type": "Armor"
+  },
+  "Atlas Arhat Helmet": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRFiveAtlasArhatHelmet.png",
+    "Link": "Atlas Arhat Helmet",
+    "Name": "Atlas Arhat Helmet",
+    "PcPrice": "$5.99",
+    "Round": "5",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=759498343",
+    "Type": "Helmet"
+  },
+  "Atlas Blade of the Lotus Skin": {
+    "Artists": [
+      "BeastBuster"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWAtlasBladeoftheLotusSkin.png",
+    "Link": "Atlas Blade of the Lotus Skin",
+    "Name": "Atlas Blade of the Lotus Skin",
+    "PcPrice": "$6.99",
+    "Round": "20 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2396199993",
+    "Type": "Deluxe"
+  },
+  "Atlas Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRTenAtlasGraxxSkin.png",
+    "Link": "Atlas Graxx Skin",
+    "Name": "Atlas Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "10",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1113079910",
+    "Type": "Deluxe"
+  },
+  "Atlas Monolith Skin": {
+    "Artists": [
+      "Stenchfury"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRNineAtlasMonolithSkin.png",
+    "Link": "Atlas Monolith Skin",
+    "Name": "Atlas Monolith Skin",
+    "PcPrice": "$6.99",
+    "Round": "9",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=931059338",
+    "Type": "Deluxe"
+  },
+  "Atlas Telamon Helmet": {
+    "Artists": [
+      "artarrwen"
+    ],
+    "ConsolePrice": "75",
+    "Image": "SWRSixAtlasTelamonHelmet.png",
+    "Link": "Atlas Telamon Helmet",
+    "Name": "Atlas Telamon Helmet",
+    "PcPrice": "$5.99",
+    "Round": "6",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=775833354",
+    "Type": "Helmet"
+  },
+  "Aures Diadem": {
+    "Artists": [
+      "lukinu_u",
+      "HariPear"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWAuresFace.png",
+    "Link": "Aures Diadem",
+    "Name": "Aures Diadem",
+    "PcPrice": "$1.99",
+    "Round": "15",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1535304359",
+    "Type": "Operator"
+  },
+  "Aures Earpiece": {
+    "Artists": [
+      "lukinu_u",
+      "HariPear"
+    ],
+    "ConsolePrice": "35",
+    "Image": "SWAuresEarpiece.png",
+    "Link": "Aures Earpiece",
+    "Name": "Aures Earpiece",
+    "PcPrice": "$1.99",
+    "Round": "16",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1504352519",
+    "Type": "Operator"
+  },
+  "Avyrdi Shoulder Armor": {
+    "Artists": [
+      "led2012",
+      "lex182"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWAvyrdiShoulderArmor.png",
+    "Link": "Avyrdi Shoulder Armor",
+    "Name": "Avyrdi Shoulder Armor",
+    "PcPrice": "$2.49",
+    "Round": "21 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2591666569",
+    "Type": "Armor"
+  },
+  "Axonnak Hammer Skin": {
+    "Artists": [
+      "Erneix"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWAxonnakHammerSkin.png",
+    "Link": "Axonnak Hammer Skin",
+    "Name": "Axonnak Hammer Skin",
+    "PcPrice": "$5.99",
+    "Round": "21 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2594274397",
+    "Type": "Weapon"
+  },
+  "Ayla Syandana": {
+    "Artists": [
+      "Cobalt",
+      "malaya"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRFourAylaScarf.png",
+    "Link": "Ayla Syandana",
+    "Name": "Ayla Syandana",
+    "PcPrice": "$5.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=727826440",
+    "Type": "Syandana"
+  },
+  "Banshee Blade of the Lotus Skin": {
+    "Artists": [
+      "BeastBuster"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRThirteenBansheeBladeoftheLotusSkin.png",
+    "Link": "Banshee Blade of the Lotus Skin",
+    "Name": "Banshee Blade of the Lotus Skin",
+    "PcPrice": "$6.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1194217647",
+    "Type": "Deluxe"
+  },
+  "Banshee Dominia Helmet": {
+    "Artists": [
+      "led2012"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRTenBansheeDominiaHelmet.png",
+    "Link": "Banshee Dominia Helmet",
+    "Name": "Banshee Dominia Helmet",
+    "PcPrice": "$5.99",
+    "Round": "10",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1112559237",
+    "Type": "Helmet"
+  },
+  "Banshee Echo Helmet": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "75",
+    "Image": "SWRSixBansheeEchoHelmet.png",
+    "Link": "Banshee Echo Helmet",
+    "Name": "Banshee Echo Helmet",
+    "PcPrice": "$5.99",
+    "Round": "6",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=786870120",
+    "Type": "Helmet"
+  },
+  "Banshee Sonority Skin": {
+    "Artists": [
+      "prosetisen"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRElevenBansheeSonoritySkin.png",
+    "Link": "Banshee Sonority Skin",
+    "Name": "Banshee Sonority Skin",
+    "PcPrice": "$6.99",
+    "Round": "11 [Batch 3]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1194802271",
+    "Type": "Deluxe"
+  },
+  "Baruuk Bedouin Skin": {
+    "Artists": [
+      "Erneix",
+      "karu"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWR18BaruukBedouinSkin.png",
+    "Link": "Baruuk Bedouin Skin",
+    "Name": "Baruuk Bedouin Skin",
+    "PcPrice": "$6.99",
+    "Round": "18",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1964300973",
+    "Type": "Deluxe"
+  },
+  "Baruuk Blade of the Lotus Skin": {
+    "Artists": [
+      "BeastBuster"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWBaruukBladeoftheLotusSkin.png",
+    "Link": "Baruuk Blade of the Lotus Skin",
+    "Name": "Baruuk Blade of the Lotus Skin",
+    "PcPrice": "$6.99",
+    "Round": "20 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2396203449",
+    "Type": "Deluxe"
+  },
+  "Baruuk Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWBaruukGraxxSkin.png",
+    "Link": "Baruuk Graxx Skin",
+    "Name": "Baruuk Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1824768158",
+    "Type": "Deluxe"
+  },
+  "Baruuk Shiraan Skin": {
+    "Artists": [
+      "Lubox"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWBaruukShiraanSkin.png",
+    "Link": "Baruuk Shiraan Skin",
+    "Name": "Baruuk Shiraan Skin",
+    "PcPrice": "$6.99",
+    "Round": "20 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2171447250",
+    "Type": "Deluxe"
+  },
+  "Baruuk Zamariu Skin": {
+    "Artists": [
+      "led2012",
+      "daemonstar"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWBaruukZamariuSkin.png",
+    "Link": "Baruuk Zamariu Skin",
+    "Name": "Baruuk Zamariu Skin",
+    "PcPrice": "$6.99",
+    "Round": "20 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2384828375",
+    "Type": "Deluxe"
+  },
+  "Blaze Oculus": {
+    "Artists": [
+      "blazingcobalt"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWBlazeOculus.png",
+    "Link": "Blaze Oculus",
+    "Name": "Blaze Oculus",
+    "PcPrice": "$1.99",
+    "Round": "19 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2132901223",
+    "Type": "Operator"
+  },
+  "Bodo Syandana": {
+    "Artists": [
+      "luchafurel"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRSevenBodoScarf.png",
+    "Link": "Bodo Syandana",
+    "Name": "Bodo Syandana",
+    "PcPrice": "$5.99",
+    "Round": "7",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=816335327",
+    "Type": "Syandana"
+  },
+  "Boltara Syandana": {
+    "Artists": [
+      "Faven",
+      "Scharkie"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRFiveBoltaraScarf.png",
+    "Link": "Boltara Syandana",
+    "Name": "Boltara Syandana",
+    "PcPrice": "$5.99",
+    "Round": "5",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=759305634",
+    "Type": "Syandana"
+  },
+  "Caerulea Oculus": {
+    "Artists": [
+      "Awk'Q-Luz",
+      "blazingcobalt"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWCaeruleaOculus.png",
+    "Link": "Caerulea Oculus",
+    "Name": "Caerulea Oculus",
+    "PcPrice": "$2.99",
+    "Round": "22 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2651582567",
+    "Type": "Operator"
+  },
+  "Chroma Drevni Skin": {
+    "Artists": [
+      "Volkovyi"
+    ],
+    "ConsolePrice": "90",
+    "Image": "SWRFiveChromaDrevniSkin.png",
+    "Link": "Chroma Drevni Skin",
+    "Name": "Chroma Drevni Skin",
+    "PcPrice": "$4.99",
+    "Round": "5",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=759374533",
+    "Type": "Warframe"
+  },
+  "Chroma Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRTwelveChromaGraxxSkin.png",
+    "Link": "Chroma Graxx Skin",
+    "Name": "Chroma Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "12",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1307968380",
+    "Type": "Deluxe"
+  },
+  "Chroma Kaiju Helmet": {
+    "Artists": [
+      "[k a z]"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRTwoChromaKaijuHelmet.png",
+    "Link": "Chroma Kaiju Helmet",
+    "Name": "Chroma Kaiju Helmet",
+    "PcPrice": "$5.99",
+    "Round": "2",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=619969541",
+    "Type": "Helmet"
+  },
+  "Chroma Morkai Skin": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRFourteenChromaMorkaiSkin.png",
+    "Link": "Chroma Morkai Skin",
+    "Name": "Chroma Morkai Skin",
+    "PcPrice": "$6.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1389682852",
+    "Type": "Deluxe"
+  },
+  "Chroma Tarrasque Helmet": {
+    "Artists": [
+      "artarrwen"
+    ],
+    "ConsolePrice": "75",
+    "Image": "SWRTwoChromaTarrasqueHelmet.png",
+    "Link": "Chroma Tarrasque Helmet",
+    "Name": "Chroma Tarrasque Helmet",
+    "PcPrice": "$5.99",
+    "Round": "2",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=619296731",
+    "Type": "Helmet"
+  },
+  "Chroma Thyrus Skin": {
+    "Artists": [
+      "Stenchfury"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRTwelveChromaThyrusSkin.png",
+    "Link": "Chroma Thyrus Skin",
+    "Name": "Chroma Thyrus Skin",
+    "PcPrice": "$6.99",
+    "Round": "12",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1334300436",
+    "Type": "Deluxe"
+  },
+  "Chroma Vojnik Skin": {
+    "Artists": [
+      "Volkovyi"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRSixChromaVojnikSkin.png",
+    "Link": "Chroma Vojnik Skin",
+    "Name": "Chroma Vojnik Skin",
+    "PcPrice": "$4.99",
+    "Round": "6",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=735868453",
+    "Type": "Warframe"
+  },
+  "Corail Diadem": {
+    "Artists": [
+      "HariPear",
+      "lukinu_u"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWCorailDiadem.png",
+    "Link": "Corail Diadem",
+    "Name": "Corail Diadem",
+    "PcPrice": "$2.99",
+    "Round": "21 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2595381436",
+    "Type": "Operator"
+  },
+  "Corona Syandana": {
+    "Artists": [
+      "Hitsu San"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRElevenCoronaScarf.png",
+    "Link": "Corona Syandana",
+    "Name": "Corona Syandana",
+    "PcPrice": "$5.99",
+    "Round": "11 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1194837467",
+    "Type": "Syandana"
+  },
+  "Covenant Syandana": {
+    "Artists": [
+      "FrellingHazmot"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWREightCovenantScarf.png",
+    "Link": "Covenant Syandana",
+    "Name": "Covenant Syandana",
+    "PcPrice": "$5.99",
+    "Round": "8",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=891464944",
+    "Type": "Syandana"
+  },
+  "Cryona Syandana": {
+    "Artists": [
+      "led2012"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRElevenCryonaScarf.png",
+    "Link": "Cryona Syandana",
+    "Name": "Cryona Syandana",
+    "PcPrice": "$5.99",
+    "Round": "11 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=860937578",
+    "Type": "Syandana"
+  },
+  "Dagger Crubbak Skin": {
+    "Artists": [
+      "Lubox",
+      "Scharkie"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRFourteenCrubbakDaggerSkin.png",
+    "Link": "Dagger Crubbak Skin",
+    "Name": "Dagger Crubbak Skin",
+    "PcPrice": "$5.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1493669632",
+    "Type": "Weapon"
+  },
+  "Deru Syandana": {
+    "Artists": [
+      "malaya"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRFiveDeruScarf.png",
+    "Link": "Deru Syandana",
+    "Name": "Deru Syandana",
+    "PcPrice": "$5.99",
+    "Round": "5",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=757237861",
+    "Type": "Syandana"
+  },
+  "Despot Cape Syandana": {
+    "Artists": [
+      "Volkovyi",
+      "Sab531"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRTwelveDespotScarf.png",
+    "Link": "Despot Cape Syandana",
+    "Name": "Despot Cape Syandana",
+    "PcPrice": "$5.99",
+    "Round": "12",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1335644908",
+    "Type": "Syandana"
+  },
+  "Diablillo Syandana": {
+    "Artists": [
+      "Volkovyi",
+      "SabtheRobot"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWDiablilloScarf.png",
+    "Link": "Diablillo Syandana",
+    "Name": "Diablillo Syandana",
+    "PcPrice": "$5.99",
+    "Round": "16",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1617361399",
+    "Type": "Syandana"
+  },
+  "Disconnect Syandana": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRFourDisconnectScarf.png",
+    "Link": "Disconnect Syandana",
+    "Name": "Disconnect Syandana",
+    "PcPrice": "$5.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=700564195",
+    "Type": "Syandana"
+  },
+  "Diva Chest Plate": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "45",
+    "Image": "SWDivaChestPlate.png",
+    "Link": "Diva Chest Plate",
+    "Name": "Diva Chest Plate",
+    "PcPrice": "$2.49",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1843075078",
+    "Type": "Armor"
+  },
+  "Dogma Two-Handed Nikana Skin": {
+    "Artists": [
+      "Felix Leonhart"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWDogmaTwo-HandedNikanaSkin.png",
+    "Link": "Dogma Two-Handed Nikana Skin",
+    "Name": "Dogma Two-Handed Nikana Skin",
+    "PcPrice": "$5.99",
+    "Round": "20 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2394233895",
+    "Type": "Weapon"
+  },
+  "Dominus Syandana": {
+    "Artists": [
+      "led2012",
+      "jaeon009"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWDominusSyandana.png",
+    "Link": "Dominus Syandana",
+    "Name": "Dominus Syandana",
+    "PcPrice": "$5.99",
+    "Round": "15",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1616333967",
+    "Type": "Syandana"
+  },
+  "Draugen Syandana": {
+    "Artists": [
+      "Goosmo"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWDraugenSyandana.png",
+    "Link": "Draugen Syandana",
+    "Name": "Draugen Syandana",
+    "PcPrice": "$5.99",
+    "Round": "21 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2396418848",
+    "Type": "Syandana"
+  },
+  "Dual Zoren Combustion Skin": {
+    "Artists": [
+      "ming1345"
+    ],
+    "ConsolePrice": "40",
+    "Image": "CombustionDualZoren.png",
+    "Link": "Dual Zoren Combustion Skin",
+    "Name": "Dual Zoren Combustion Skin",
+    "PcPrice": "40",
+    "Round": "Weapons Skin Contest",
+    "SteamLink": "https://forums.warframe.com/topic/313983-weapon-skins-contest-final-results/",
+    "Type": "Weapon"
+  },
+  "Dual Zoren Kuberus Skin": {
+    "Artists": [
+      "ZeroJackdaw"
+    ],
+    "ConsolePrice": "40",
+    "Image": "KuberusDualZoren.png",
+    "Link": "Dual Zoren Kuberus Skin",
+    "Name": "Dual Zoren Kuberus Skin",
+    "PcPrice": "40",
+    "Round": "Weapons Skin Contest",
+    "SteamLink": "https://forums.warframe.com/topic/313983-weapon-skins-contest-final-results/",
+    "Type": "Weapon"
+  },
+  "Due Volpi Syandana": {
+    "Artists": [
+      "Volkovyi",
+      "led2012"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRTwelveDueVolpiScarf.png",
+    "Link": "Due Volpi Syandana",
+    "Name": "Due Volpi Syandana",
+    "PcPrice": "$5.99",
+    "Round": "12",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1282112343",
+    "Type": "Syandana"
+  },
+  "Eklis Syandana": {
+    "Artists": [
+      "Goosmo"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWEklisSyandana.png",
+    "Link": "Eklis Syandana",
+    "Name": "Eklis Syandana",
+    "PcPrice": "$5.99",
+    "Round": "21 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2257745097",
+    "Type": "Syandana"
+  },
+  "Eklypsa Staff Skin": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWR19EklypsaStaffSkin.png",
+    "Link": "Eklypsa Staff Skin",
+    "Name": "Eklypsa Staff Skin",
+    "PcPrice": "$5.99",
+    "Round": "19 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2171913232",
+    "Type": "Weapon"
+  },
+  "Ember Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRSixEmberGraxxSkin.png",
+    "Link": "Ember Graxx Skin",
+    "Name": "Ember Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "6",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=771866750",
+    "Type": "Deluxe"
+  },
+  "Ember Ignition Skin": {
+    "Artists": [
+      "Kaiceps"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWREightEmberIgnitionSkin.png",
+    "Link": "Ember Ignition Skin",
+    "Name": "Ember Ignition Skin",
+    "PcPrice": "$6.99",
+    "Round": "8",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=878893922",
+    "Type": "Deluxe"
+  },
+  "Ember Magesty Skin": {
+    "Artists": [
+      "prosetisen",
+      "Cheshire"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWREightEmberMagestySkin.png",
+    "Link": "Ember Magesty Skin",
+    "Name": "Ember Magesty Skin",
+    "PcPrice": "$6.99",
+    "Round": "8",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=891894398",
+    "Type": "Deluxe"
+  },
+  "Equinox Divisa Skin": {
+    "Artists": [
+      "Hitsu San"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRFourteenDivisaSkin.png",
+    "Link": "Equinox Divisa Skin",
+    "Name": "Equinox Divisa Skin",
+    "PcPrice": "$6.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1489475843",
+    "Type": "Deluxe"
+  },
+  "Equinox Insomnia Skin": {
+    "Artists": [
+      "prosetisen"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRNineEquinoxInsomniaSkin.png",
+    "Link": "Equinox Insomnia Skin",
+    "Name": "Equinox Insomnia Skin",
+    "PcPrice": "$6.99",
+    "Round": "9",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=950871547",
+    "Type": "Deluxe"
+  },
+  "Equinox Megaera Skin": {
+    "Artists": [
+      "Vulbjorn"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRFourteenMegaeraSkin.png",
+    "Link": "Equinox Megaera Skin",
+    "Name": "Equinox Megaera Skin",
+    "PcPrice": "$6.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1503279452",
+    "Type": "Deluxe"
+  },
+  "Eucyon Chest Plate": {
+    "Artists": [
+      "malaya",
+      "Jadie",
+      "Awk'Q-Luz"
+    ],
+    "ConsolePrice": "45",
+    "Image": "SWR18EucyonArmorC.png",
+    "Link": "Eucyon Chest Plate",
+    "Name": "Eucyon Chest Plate",
+    "PcPrice": "$2.49",
+    "Round": "18",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1973347538",
+    "Type": "Armor"
+  },
+  "Excalibur Apex Skin": {
+    "Artists": [
+      "A-p-o-l-l-y-o-n"
+    ],
+    "ConsolePrice": "90",
+    "Image": "SWRFourExcaliburApexSkin.png",
+    "Link": "Excalibur Apex Skin",
+    "Name": "Excalibur Apex Skin",
+    "PcPrice": "$4.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=705011721",
+    "Type": "Warframe"
+  },
+  "Excalibur Arturius Helmet": {
+    "Artists": [
+      "[k a z]"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRPolyExcaliburArturiusHelmet.png",
+    "Link": "Excalibur Arturius Helmet",
+    "Name": "Excalibur Arturius Helmet",
+    "PcPrice": "$5.99",
+    "Round": "Polycount",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=564035039",
+    "Type": "Helmet"
+  },
+  "Excalibur Blade of the Lotus Skin": {
+    "Artists": [
+      "BeastBuster"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWR19ExcaliburBotLSkin.png",
+    "Link": "Excalibur Blade of the Lotus Skin",
+    "Name": "Excalibur Blade of the Lotus Skin",
+    "PcPrice": "$6.99",
+    "Round": "19 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1972908267",
+    "Type": "Deluxe"
+  },
+  "Excalibur Caduto Skin": {
+    "Artists": [
+      "Hitsu San"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRFourExcaliburCadutoSkin.png",
+    "Link": "Excalibur Caduto Skin",
+    "Name": "Excalibur Caduto Skin",
+    "PcPrice": "$6.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=700038065",
+    "Type": "Deluxe"
+  },
+  "Excalibur Corpra Skin": {
+    "Artists": [
+      "FrellingHazmot"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRElevenExcaliburCorpraSkin.png",
+    "Link": "Excalibur Corpra Skin",
+    "Name": "Excalibur Corpra Skin",
+    "PcPrice": "$6.99",
+    "Round": "11 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1193024927",
+    "Type": "Deluxe"
+  },
+  "Excalibur Exaltation Skin": {
+    "Artists": [
+      "Cheshire"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRThirteenExcaliburExaltationSkin.png",
+    "Link": "Excalibur Exaltation Skin",
+    "Name": "Excalibur Exaltation Skin",
+    "PcPrice": "$6.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=951099563",
+    "Type": "Deluxe"
+  },
+  "Excalibur Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRFourExcaliburGraxxSkin.png",
+    "Link": "Excalibur Graxx Skin",
+    "Name": "Excalibur Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=684165198",
+    "Type": "Deluxe"
+  },
+  "Excalibur Ion Skin": {
+    "Artists": [
+      "Yatus"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWExcaliburIonSkin.png",
+    "Link": "Excalibur Ion Skin",
+    "Name": "Excalibur Ion Skin",
+    "PcPrice": "$6.99",
+    "Round": "15",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1452420758",
+    "Type": "Deluxe"
+  },
+  "Excalibur Isurus Helmet": {
+    "Artists": [
+      "Coridium"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRPolyExcaliburIsurusHelmet.png",
+    "Link": "Excalibur Isurus Helmet",
+    "Name": "Excalibur Isurus Helmet",
+    "PcPrice": "$5.99",
+    "Round": "Polycount",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=566805069",
+    "Type": "Helmet"
+  },
+  "Excalibur Ogrant Helmet": {
+    "Artists": [
+      "lokimonkeye"
+    ],
+    "ConsolePrice": "75",
+    "Image": "SWRPolyExcaliburOgrantHelmet.png",
+    "Link": "Excalibur Ogrant Helmet",
+    "Name": "Excalibur Ogrant Helmet",
+    "PcPrice": "$5.99",
+    "Round": "Polycount",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=565801927",
+    "Type": "Helmet"
+  },
+  "Excalibur Ronin Skin": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRThirteenExcaliburRoninSkin.png",
+    "Link": "Excalibur Ronin Skin",
+    "Name": "Excalibur Ronin Skin",
+    "PcPrice": "$6.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1276820730",
+    "Type": "Deluxe"
+  },
+  "Excalibur Sentient Slayer Skin": {
+    "Artists": [
+      "CommanderApocalypse"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRTwoExcaliburSentientSlayerSkin.png",
+    "Link": "Excalibur Sentient Slayer Skin",
+    "Name": "Excalibur Sentient Slayer Skin",
+    "PcPrice": "$4.99",
+    "Round": "2",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=557791900",
+    "Type": "Warframe"
+  },
+  "Excalibur Vespula Skin": {
+    "Artists": [
+      "Polygonmonster"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWROneExcaliburVespulaSkin.png",
+    "Link": "Excalibur Vespula Skin",
+    "Name": "Excalibur Vespula Skin",
+    "PcPrice": "$4.99",
+    "Round": "1",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=542663464",
+    "Type": "Warframe"
+  },
+  "Fei Syandana": {
+    "Artists": [
+      "malaya",
+      "Jadie"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWFeiSyandana.png",
+    "Link": "Fei Syandana",
+    "Name": "Fei Syandana",
+    "PcPrice": "$5.99",
+    "Round": "21 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2487600066",
+    "Type": "Syandana"
+  },
+  "Fhan'Epak Chest Plate": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "45",
+    "Image": "SWFhan'EpakChestPlate.png",
+    "Link": "Fhan'Epak Chest Plate",
+    "Name": "Fhan'Epak Chest Plate",
+    "PcPrice": "$2.49",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1840271987",
+    "Type": "Armor"
+  },
+  "Frost Emperor Skin": {
+    "Artists": [
+      "Hitsu San"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRSixFrostEmperorSkin.png",
+    "Link": "Frost Emperor Skin",
+    "Name": "Frost Emperor Skin",
+    "PcPrice": "$6.99",
+    "Round": "6",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=727935543",
+    "Type": "Deluxe"
+  },
+  "Frost Grost Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRThreeFrostGraxxSkin.png",
+    "Link": "Frost Grost Skin",
+    "Name": "Frost Grost Skin",
+    "PcPrice": "$4.99",
+    "Round": "3",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=657212084",
+    "Type": "Warframe"
+  },
+  "Frost Hailstorm Skin": {
+    "Artists": [
+      "Arsenal"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRThreeFrostHailstormSkin.png",
+    "Link": "Frost Hailstorm Skin",
+    "Name": "Frost Hailstorm Skin",
+    "PcPrice": "$4.99",
+    "Round": "3",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=590630820",
+    "Type": "Warframe"
+  },
+  "Frost Himavat Helmet": {
+    "Artists": [
+      "VoidPunch"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRTenFrostHimavatHelmet.png",
+    "Link": "Frost Himavat Helmet",
+    "Name": "Frost Himavat Helmet",
+    "PcPrice": "$5.99",
+    "Round": "10",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1123277509",
+    "Type": "Helmet"
+  },
+  "Frost Hisame Skin": {
+    "Artists": [
+      "malaya",
+      "AMO_017"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWFrostHisameSkin.png",
+    "Link": "Frost Hisame Skin",
+    "Name": "Frost Hisame Skin",
+    "PcPrice": "$6.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1802551758",
+    "Type": "Deluxe"
+  },
+  "Frost Ion Skin": {
+    "Artists": [
+      "Yatus"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWIonFrostSkin.png",
+    "Link": "Frost Ion Skin",
+    "Name": "Frost Ion Skin",
+    "PcPrice": "$6.99",
+    "Round": "16",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1392432715",
+    "Type": "Deluxe"
+  },
+  "Frost Jotun Helmet": {
+    "Artists": [
+      "malaya",
+      "Stenchfury"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRFourFrostJotunHelmet.png",
+    "Link": "Frost Jotun Helmet",
+    "Name": "Frost Jotun Helmet",
+    "PcPrice": "$5.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=715598237",
+    "Type": "Helmet"
+  },
+  "Frost Manta-Z Helmet": {
+    "Artists": [
+      "jocz"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWMantaZHelmet.png",
+    "Link": "Frost Manta-Z Helmet",
+    "Name": "Frost Manta-Z Helmet",
+    "PcPrice": "$5.99",
+    "Round": "16",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1545234418",
+    "Type": "Helmet"
+  },
+  "Frost Strigid Skin": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWFrostStrigidSkin.png",
+    "Link": "Frost Strigid Skin",
+    "Name": "Frost Strigid Skin",
+    "PcPrice": "$6.99",
+    "Round": "20 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2171275613",
+    "Type": "Deluxe"
+  },
+  "Frost Summit Helmet": {
+    "Artists": [
+      "artarrwen"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRThreeFrostSummitHelmet.png",
+    "Link": "Frost Summit Helmet",
+    "Name": "Frost Summit Helmet",
+    "PcPrice": "$5.99",
+    "Round": "3",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=625288203",
+    "Type": "Helmet"
+  },
+  "Frost Vojnik Skin": {
+    "Artists": [
+      "Volkovyi"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRThreeFrostVojnikSkin.png",
+    "Link": "Frost Vojnik Skin",
+    "Name": "Frost Vojnik Skin",
+    "PcPrice": "$4.99",
+    "Round": "3",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=665327123",
+    "Type": "Warframe"
+  },
+  "Frost Zastruga Helmet": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "75",
+    "Image": "SWRThreeFrostZastrugaHelmet.png",
+    "Link": "Frost Zastruga Helmet",
+    "Name": "Frost Zastruga Helmet",
+    "PcPrice": "$5.99",
+    "Round": "3",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=657002153",
+    "Type": "Helmet"
+  },
+  "Galatine Claymire Skin": {
+    "Artists": [
+      "novadragon01"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRPolyClaymireGalatine.png",
+    "Link": "Galatine Claymire Skin",
+    "Name": "Galatine Claymire Skin",
+    "PcPrice": "$5.99",
+    "Round": "Polycount",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=565165703",
+    "Type": "Weapon"
+  },
+  "Galatine Magesty Skin": {
+    "Artists": [
+      "prosetisen"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRElevenMagestyGalatine.png",
+    "Link": "Galatine Magesty Skin",
+    "Name": "Galatine Magesty Skin",
+    "PcPrice": "$5.99",
+    "Round": "11 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1194800565",
+    "Type": "Weapon"
+  },
+  "Gara Adora Helmet": {
+    "Artists": [
+      "That1Cactus",
+      "blazingcobalt"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWGaraAdoraHelmet.png",
+    "Link": "Gara Adora Helmet",
+    "Name": "Gara Adora Helmet",
+    "PcPrice": "$5.99",
+    "Round": "22 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2788726296",
+    "Type": "Helmet"
+  },
+  "Gara Rouen Helmet": {
+    "Artists": [
+      "Hydroxate"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWGaraRouenHelmet.png",
+    "Link": "Gara Rouen Helmet",
+    "Name": "Gara Rouen Helmet",
+    "PcPrice": "$5.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1809140963",
+    "Type": "Helmet"
+  },
+  "Gara Silica Helmet": {
+    "Artists": [
+      "Arsenal"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRTwelveGaraSilicaHelmet.png",
+    "Link": "Gara Silica Helmet",
+    "Name": "Gara Silica Helmet",
+    "PcPrice": "$5.99",
+    "Round": "12",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1335701043",
+    "Type": "Helmet"
+  },
+  "Gara Zamariu Skin": {
+    "Artists": [
+      "led2012",
+      "daemonstar"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRFourteenZamariuSkin.png",
+    "Link": "Gara Zamariu Skin",
+    "Name": "Gara Zamariu Skin",
+    "PcPrice": "$6.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1470139066",
+    "Type": "Deluxe"
+  },
+  "Garasu Diadem": {
+    "Artists": [
+      "Ixe",
+      "lukinu_u"
+    ],
+    "ConsolePrice": "35",
+    "Image": "SWGarasuFace.png",
+    "Link": "Garasu Diadem",
+    "Name": "Garasu Diadem",
+    "PcPrice": "$1.99",
+    "Round": "16",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1713539991",
+    "Type": "Operator"
+  },
+  "Garasu Earpiece": {
+    "Artists": [
+      "Ixe",
+      "lukinu_u"
+    ],
+    "ConsolePrice": "35",
+    "Image": "SWGarasuEarpiece.png",
+    "Link": "Garasu Earpiece",
+    "Name": "Garasu Earpiece",
+    "PcPrice": "$1.99",
+    "Round": "16",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1713536953",
+    "Type": "Operator"
+  },
+  "Garasu Oculus": {
+    "Artists": [
+      "Ixe",
+      "lukinu_u"
+    ],
+    "ConsolePrice": "35",
+    "Image": "SWRFourteenGarasuEyepiece.png",
+    "Link": "Garasu Oculus",
+    "Name": "Garasu Oculus",
+    "PcPrice": "$1.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1502550278",
+    "Type": "Operator"
+  },
+  "Garuda Sakhura Helmet": {
+    "Artists": [
+      "kakarrot2812"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWR18GarudaSakhuraHelmet.png",
+    "Link": "Garuda Sakhura Helmet",
+    "Name": "Garuda Sakhura Helmet",
+    "PcPrice": "$5.99",
+    "Round": "18",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1974004508",
+    "Type": "Helmet"
+  },
+  "Garuda Successor Skin": {
+    "Artists": [
+      "prosetisen"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWGarudaSuccessorSkin.png",
+    "Link": "Garuda Successor Skin",
+    "Name": "Garuda Successor Skin",
+    "PcPrice": "$6.99",
+    "Round": "15",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1616792573",
+    "Type": "Deluxe"
+  },
+  "Garuda Tengushin Skin": {
+    "Artists": [
+      "Lubox"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWR19GarudaTengushinSkin.png",
+    "Link": "Garuda Tengushin Skin",
+    "Name": "Garuda Tengushin Skin",
+    "PcPrice": "$6.99",
+    "Round": "19 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2097100860",
+    "Type": "Deluxe"
+  },
+  "Garuda Tiamat Skin": {
+    "Artists": [
+      "Vulbjorn"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWR18GarudaTiamatSkin.png",
+    "Link": "Garuda Tiamat Skin",
+    "Name": "Garuda Tiamat Skin",
+    "PcPrice": "$6.99",
+    "Round": "18",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1973543755",
+    "Type": "Deluxe"
+  },
+  "Gauss Agito Skin": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWGaussAgitoSkin.png",
+    "Link": "Gauss Agito Skin",
+    "Name": "Gauss Agito Skin",
+    "PcPrice": "$6.99",
+    "Round": "19 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1973149960",
+    "Type": "Deluxe"
+  },
+  "Gauss Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWGaussGraxxSkin.png",
+    "Link": "Gauss Graxx Skin",
+    "Name": "Gauss Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "19 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2028544239",
+    "Type": "Deluxe"
+  },
+  "Graxx Spitefire Syandana": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRSixSpitefireScarf.png",
+    "Link": "Graxx Spitefire Syandana",
+    "Name": "Graxx Spitefire Syandana",
+    "PcPrice": "$5.99",
+    "Round": "6",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=773024183",
+    "Type": "Syandana"
+  },
+  "Grendel Moloch Skin": {
+    "Artists": [
+      "Vulbjorn"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWGrendelMolochSkin.png",
+    "Link": "Grendel Moloch Skin",
+    "Name": "Grendel Moloch Skin",
+    "PcPrice": "$6.99",
+    "Round": "20 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2086311664",
+    "Type": "Deluxe"
+  },
+  "Hammer Ogun Skin": {
+    "Artists": [
+      "Stenchfury"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRThirteenHammerOgun.png",
+    "Link": "Hammer Ogun Skin",
+    "Name": "Hammer Ogun Skin",
+    "PcPrice": "$5.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1335038499",
+    "Type": "Weapon"
+  },
+  "Harrow Algalyst Skin": {
+    "Artists": [
+      "Goosmo"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWHarrowAlgalystSkin.png",
+    "Link": "Harrow Algalyst Skin",
+    "Name": "Harrow Algalyst Skin",
+    "PcPrice": "$6.99",
+    "Round": "21 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2257731063",
+    "Type": "Deluxe"
+  },
+  "Harrow Graxx Skin": {
+    "Artists": [
+      "Faven",
+      "Faven_LTD"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRElevenHarrowGraxxSkin.png",
+    "Link": "Harrow Graxx Skin",
+    "Name": "Harrow Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "11 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1183636450",
+    "Type": "Deluxe"
+  },
+  "Harrow Hieropha Helmet": {
+    "Artists": [
+      "led2012"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRElevenHarrowHierophaHelmet.png",
+    "Link": "Harrow Hieropha Helmet",
+    "Name": "Harrow Hieropha Helmet",
+    "PcPrice": "$5.99",
+    "Round": "11 [Batch 3]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1120164958",
+    "Type": "Helmet"
+  },
+  "Harrow Veles Skin": {
+    "Artists": [
+      "Vulbjorn"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWHarrowVelesSkin.png",
+    "Link": "Harrow Veles Skin",
+    "Name": "Harrow Veles Skin",
+    "PcPrice": "$6.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1844198623",
+    "Type": "Deluxe"
+  },
+  "Heavy Blade Dogma Skin": {
+    "Artists": [
+      "Felix Leonhart"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWHeavyBladeDogmaSkin.png",
+    "Link": "Heavy Blade Dogma Skin",
+    "Name": "Heavy Blade Dogma Skin",
+    "PcPrice": "$5.99",
+    "Round": "22 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2595150555",
+    "Type": "Weapon"
+  },
+  "Heavy Blade Grimstone Cleaver Skin": {
+    "Artists": [
+      "Vulbjorn"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWHeavyBladeGrimstoneCleaverSkin.png",
+    "Link": "Heavy Blade Grimstone Cleaver Skin",
+    "Name": "Heavy Blade Grimstone Cleaver Skin",
+    "PcPrice": "$5.99",
+    "Round": "19 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2087399352",
+    "Type": "Weapon"
+  },
+  "Heavy Blade Ion Skin": {
+    "Artists": [
+      "Yatus",
+      "IgnusDei"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRFourteenIonGreatswordSkin.png",
+    "Link": "Heavy Blade Ion Skin",
+    "Name": "Heavy Blade Ion Skin",
+    "PcPrice": "$5.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1530474819",
+    "Type": "Weapon"
+  },
+  "Heavy Blade Karv'r Skin": {
+    "Artists": [
+      "Faven",
+      "Scharkie"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRFourteenKarvrGreatswordSkin.png",
+    "Link": "Heavy Blade Karv'r Skin",
+    "Name": "Heavy Blade Karv'r Skin",
+    "PcPrice": "$5.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1446787169",
+    "Type": "Weapon"
+  },
+  "Heavy Blade Kilzorath Skin": {
+    "Artists": [
+      "Arsenal"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRElevenKilzorathHeavyBlade.png",
+    "Link": "Heavy Blade Kilzorath Skin",
+    "Name": "Heavy Blade Kilzorath Skin",
+    "PcPrice": "$5.99",
+    "Round": "11 [Batch 3]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1191419789",
+    "Type": "Weapon"
+  },
+  "Heavy Blade Mithra Skin": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRElevenMithraHeavyBlade.png",
+    "Link": "Heavy Blade Mithra Skin",
+    "Name": "Heavy Blade Mithra Skin",
+    "PcPrice": "$5.99",
+    "Round": "11 [Batch 3]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1120051045",
+    "Type": "Weapon"
+  },
+  "Heavy Blade Mizar Skin": {
+    "Artists": [
+      "Girtan"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWR18HeavyBladeMizarSkin.png",
+    "Link": "Heavy Blade Mizar Skin",
+    "Name": "Heavy Blade Mizar Skin",
+    "PcPrice": "$5.99",
+    "Round": "18",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1973995846",
+    "Type": "Weapon"
+  },
+  "Heavy Blade Obanakk Skin": {
+    "Artists": [
+      "VoidPunch"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWHeavyBladeObanakkSkin.png",
+    "Link": "Heavy Blade Obanakk Skin",
+    "Name": "Heavy Blade Obanakk Skin",
+    "PcPrice": "$5.99",
+    "Round": "19 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2171856580",
+    "Type": "Weapon"
+  },
+  "Heavy Blade Suprema Skin": {
+    "Artists": [
+      "Hitsu San",
+      "Reil"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWR18HeavyBladeSupremaSkin.png",
+    "Link": "Heavy Blade Suprema Skin",
+    "Name": "Heavy Blade Suprema Skin",
+    "PcPrice": "$5.99",
+    "Round": "18",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1896664300",
+    "Type": "Weapon"
+  },
+  "Heavy Blade Tengoken Skin": {
+    "Artists": [
+      "BeastBuster"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRElevenTengokenHeavyBlade.png",
+    "Link": "Heavy Blade Tengoken Skin",
+    "Name": "Heavy Blade Tengoken Skin",
+    "PcPrice": "$5.99",
+    "Round": "11 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1194272521",
+    "Type": "Weapon"
+  },
+  "Hildryn Sigrun Skin": {
+    "Artists": [
+      "malaya",
+      "Jadie",
+      "Awk'Q-Luz"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWHildrynSigrunSkin.png",
+    "Link": "Hildryn Sigrun Skin",
+    "Name": "Hildryn Sigrun Skin",
+    "PcPrice": "$6.99",
+    "Round": "19 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2025059434",
+    "Type": "Deluxe"
+  },
+  "Hydroid Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRNineHydroidGraxxSkin.png",
+    "Link": "Hydroid Graxx Skin",
+    "Name": "Hydroid Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "9",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=939775413",
+    "Type": "Deluxe"
+  },
+  "Hydroid Karkinos Helmet": {
+    "Artists": [
+      "Crackle2012",
+      "Vulbjorn"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWKarkinosHelmet.png",
+    "Link": "Hydroid Karkinos Helmet",
+    "Name": "Hydroid Karkinos Helmet",
+    "PcPrice": "$5.99",
+    "Round": "16",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1620316780",
+    "Type": "Helmet"
+  },
+  "Hydroid Poseidon Skin": {
+    "Artists": [
+      "Stenchfury"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRElevenHydroidPoseidonSkin.png",
+    "Link": "Hydroid Poseidon Skin",
+    "Name": "Hydroid Poseidon Skin",
+    "PcPrice": "$6.99",
+    "Round": "11 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1188456944",
+    "Type": "Deluxe"
+  },
+  "Hydroid Rorqual Helmet": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "75",
+    "Image": "SWRSevenHydroidRorqualHelmet.png",
+    "Link": "Hydroid Rorqual Helmet",
+    "Name": "Hydroid Rorqual Helmet",
+    "PcPrice": "$5.99",
+    "Round": "7",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=803753173",
+    "Type": "Helmet"
+  },
+  "Icarius Syandana": {
+    "Artists": [
+      "malaya",
+      "Scharkie",
+      "Jadie"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRThirteenIcariusScarf.png",
+    "Link": "Icarius Syandana",
+    "Name": "Icarius Syandana",
+    "PcPrice": "$5.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1346542404",
+    "Type": "Syandana"
+  },
+  "Inaros Horus Skin": {
+    "Artists": [
+      "....A"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRElevenInarosHorusSkin.png",
+    "Link": "Inaros Horus Skin",
+    "Name": "Inaros Horus Skin",
+    "PcPrice": "$6.99",
+    "Round": "11 [Batch 3]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1185454865",
+    "Type": "Deluxe"
+  },
+  "Inaros Kephri Helmet": {
+    "Artists": [
+      "led2012"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRElevenInarosKephriHelmet.png",
+    "Link": "Inaros Kephri Helmet",
+    "Name": "Inaros Kephri Helmet",
+    "PcPrice": "$5.99",
+    "Round": "11 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1122658693",
+    "Type": "Helmet"
+  },
+  "Inaros Ozymandias Skin": {
+    "Artists": [
+      "matzan481"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWInarosOzymandiasSkin.png",
+    "Link": "Inaros Ozymandias Skin",
+    "Name": "Inaros Ozymandias Skin",
+    "PcPrice": "$6.99",
+    "Round": "20 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2079578690",
+    "Type": "Deluxe"
+  },
+  "Incognito Oculus": {
+    "Artists": [
+      "prosetisen"
+    ],
+    "ConsolePrice": "35",
+    "Image": "SWRFourteenIncognitoEyepiece.png",
+    "Link": "Incognito Oculus",
+    "Name": "Incognito Oculus",
+    "PcPrice": "$1.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1484318505",
+    "Type": "Operator"
+  },
+  "Incubus Ribbon Syandana": {
+    "Artists": [
+      "Volkovyi"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWREightIncubusRibbon.png",
+    "Link": "Incubus Ribbon Syandana",
+    "Name": "Incubus Ribbon Syandana",
+    "PcPrice": "$5.99",
+    "Round": "8",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=839762184",
+    "Type": "Syandana"
+  },
+  "Inflatable Shoulder Armor": {
+    "Artists": [
+      "CERF"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWInflatableShoulderArmor.png",
+    "Link": "Inflatable Shoulder Armor",
+    "Name": "Inflatable Shoulder Armor",
+    "PcPrice": "$5.99",
+    "Round": "21 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2542585784",
+    "Type": "Armor"
+  },
+  "Ion Shoulder Armor": {
+    "Artists": [
+      "Yatus",
+      "HugoPolo"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWIonShoulderArmor.png",
+    "Link": "Ion Shoulder Armor",
+    "Name": "Ion Shoulder Armor",
+    "PcPrice": "$2.99",
+    "Round": "20 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2362054333",
+    "Type": "Armor"
+  },
+  "Ion Sword Skin": {
+    "Artists": [
+      "Yatus",
+      "HugoPolo"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWIonSwordSkin.png",
+    "Link": "Ion Sword Skin",
+    "Name": "Ion Sword Skin",
+    "PcPrice": "$5.99",
+    "Round": "20 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2362055028",
+    "Type": "Weapon"
+  },
+  "Irya Oculus": {
+    "Artists": [
+      "kakarrot2812"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWR19IryaOculus.png",
+    "Link": "Irya Oculus",
+    "Name": "Irya Oculus",
+    "PcPrice": "$1.99",
+    "Round": "19 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1898005439",
+    "Type": "Operator"
+  },
+  "Ivara Arcuata Skin": {
+    "Artists": [
+      "Stenchfury"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWREightIvaraArcuataSkin.png",
+    "Link": "Ivara Arcuata Skin",
+    "Name": "Ivara Arcuata Skin",
+    "PcPrice": "$6.99",
+    "Round": "8",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1496765280",
+    "Type": "Deluxe"
+  },
+  "Ivara Astrea Skin": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWIvaraAstreaSkin.png",
+    "Link": "Ivara Astrea Skin",
+    "Name": "Ivara Astrea Skin",
+    "PcPrice": "$6.99",
+    "Round": "15",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=856242744",
+    "Type": "Deluxe"
+  },
+  "Ivara Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWR18IvaraGraxxSkin.png",
+    "Link": "Ivara Graxx Skin",
+    "Name": "Ivara Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "18",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1938206311",
+    "Type": "Deluxe"
+  },
+  "Ivara Kuvael Huntress Skin": {
+    "Artists": [
+      "Erneix"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWIvaraKuvaelHuntressSkin.png",
+    "Link": "Ivara Kuvael Huntress Skin",
+    "Name": "Ivara Kuvael Huntress Skin",
+    "PcPrice": "$6.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1843174920",
+    "Type": "Deluxe"
+  },
+  "Ivara Youkai Skin": {
+    "Artists": [
+      "Hitsu San"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWREightIvaraYoukaiSkin.png",
+    "Link": "Ivara Youkai Skin",
+    "Name": "Ivara Youkai Skin",
+    "PcPrice": "$6.99",
+    "Round": "8",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=893248390",
+    "Type": "Deluxe"
+  },
+  "Ivara Zamariu Skin": {
+    "Artists": [
+      "led2012",
+      "daemonstar"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWR18IvaraZamariuSkin.png",
+    "Link": "Ivara Zamariu Skin",
+    "Name": "Ivara Zamariu Skin",
+    "PcPrice": "$6.99",
+    "Round": "18",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1825712913",
+    "Type": "Deluxe"
+  },
+  "Jat Kittag Noxious Hammer Skin": {
+    "Artists": [
+      "Clyptic"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRPolyNoxiousJatKittag.png",
+    "Link": "Jat Kittag Noxious Hammer Skin",
+    "Name": "Jat Kittag Noxious Hammer Skin",
+    "PcPrice": "$5.99",
+    "Round": "Polycount",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=563773487",
+    "Type": "Weapon"
+  },
+  "Jattuk Mantle": {
+    "Artists": [
+      "Master Noob"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRTwoJattukMantle.png",
+    "Link": "Jattuk Mantle",
+    "Name": "Jattuk Mantle",
+    "PcPrice": "$5.99",
+    "Round": "2",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=618955744",
+    "Type": "Syandana"
+  },
+  "Jotunheim Oculus": {
+    "Artists": [
+      "Mz-3"
+    ],
+    "ConsolePrice": "35",
+    "Image": "SWJotunheimEye.png",
+    "Link": "Jotunheim Oculus",
+    "Name": "Jotunheim Oculus",
+    "PcPrice": "$1.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1845132003",
+    "Type": "Operator"
+  },
+  "Jotunheim Syandana": {
+    "Artists": [
+      "Mz-3"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWJotunheimSyandana.png",
+    "Link": "Jotunheim Syandana",
+    "Name": "Jotunheim Syandana",
+    "PcPrice": "$5.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1711328911",
+    "Type": "Syandana"
+  },
+  "Jotunheim\u2019s Music Shoulder Armor": {
+    "Artists": [
+      "Mz-3"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWJotunheim\u2019sMusicShoulderArmor.png",
+    "Link": "Jotunheim\u2019s Music Shoulder Armor",
+    "Name": "Jotunheim\u2019s Music Shoulder Armor",
+    "PcPrice": "$2.99",
+    "Round": "20 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2395066822",
+    "Type": "Armor"
+  },
+  "Jotunheim\u2019s Music Syandana": {
+    "Artists": [
+      "Mz-3"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWJotunheim\u2019sMusicSyandana.png",
+    "Link": "Jotunheim\u2019s Music Syandana",
+    "Name": "Jotunheim\u2019s Music Syandana",
+    "PcPrice": "$5.99",
+    "Round": "20 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2389503649",
+    "Type": "Syandana"
+  },
+  "Kalynex Polearm Skin": {
+    "Artists": [
+      "kakarrot2812"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWKalynexPolearmSkin.png",
+    "Link": "Kalynex Polearm Skin",
+    "Name": "Kalynex Polearm Skin",
+    "PcPrice": "$5.99",
+    "Round": "22 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2707343839",
+    "Type": "Weapon"
+  },
+  "Khora Fiera Helmet": {
+    "Artists": [
+      "Debbysheen",
+      "Crackle2012"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWKhoraFieraHelmet.png",
+    "Link": "Khora Fiera Helmet",
+    "Name": "Khora Fiera Helmet",
+    "PcPrice": "$5.99",
+    "Round": "20 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2299460596",
+    "Type": "Helmet"
+  },
+  "Khora Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWKhoraGraxxSkin.png",
+    "Link": "Khora Graxx Skin",
+    "Name": "Khora Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "20 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2289022506",
+    "Type": "Deluxe"
+  },
+  "Khora Laveau Helmet": {
+    "Artists": [
+      "Volkovyi",
+      "led2012"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWLaveauHelmet.png",
+    "Link": "Khora Laveau Helmet",
+    "Name": "Khora Laveau Helmet",
+    "PcPrice": "$5.99",
+    "Round": "16",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1616272035",
+    "Type": "Helmet"
+  },
+  "Khora Mithra Skin": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWKhoraMithraSkin.png",
+    "Link": "Khora Mithra Skin",
+    "Name": "Khora Mithra Skin",
+    "PcPrice": "$6.99",
+    "Round": "16",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1420061655",
+    "Type": "Deluxe"
+  },
+  "Khora Miyabi Skin": {
+    "Artists": [
+      "malaya",
+      "Awk'Q-Luz"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWR19KhoraMiyabiSkin.png",
+    "Link": "Khora Miyabi Skin",
+    "Name": "Khora Miyabi Skin",
+    "PcPrice": "$6.99",
+    "Round": "19 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2171730758",
+    "Type": "Deluxe"
+  },
+  "Kiritsune Oculus": {
+    "Artists": [
+      "Actionman"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWKiritsuneEye.png",
+    "Link": "Kiritsune Oculus",
+    "Name": "Kiritsune Oculus",
+    "PcPrice": "$1.99",
+    "Round": "15",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1499993022",
+    "Type": "Operator"
+  },
+  "Kishikami Blade of the Lotus Chest Armor": {
+    "Artists": [
+      "BeastBuster"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWKishikamiBladeoftheLotusChestArmor.png",
+    "Link": "Kishikami Blade of the Lotus Chest Armor",
+    "Name": "Kishikami Blade of the Lotus Chest Armor",
+    "PcPrice": "$2.49",
+    "Round": "20 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2395797920",
+    "Type": "Armor"
+  },
+  "Konvalyst Oculus": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "35",
+    "Image": "SWKonvalystEye.png",
+    "Link": "Konvalyst Oculus",
+    "Name": "Konvalyst Oculus",
+    "PcPrice": "$1.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1843095298",
+    "Type": "Operator"
+  },
+  "Kronen Arit Skin": {
+    "Artists": [
+      "Arsenal"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRTwoKronenArit.png",
+    "Link": "Kronen Arit Skin",
+    "Name": "Kronen Arit Skin",
+    "PcPrice": "$5.99",
+    "Round": "2",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=584953114",
+    "Type": "Weapon"
+  },
+  "Ksara Two-Handed Nikana Skin": {
+    "Artists": [
+      "kakarrot2812"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWKsaraTwo-HandedNikanaSkin.png",
+    "Link": "Ksara Two-Handed Nikana Skin",
+    "Name": "Ksara Two-Handed Nikana Skin",
+    "PcPrice": "$5.99",
+    "Round": "21 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2500078680",
+    "Type": "Weapon"
+  },
+  "Kunshu Syandana": {
+    "Artists": [
+      "BeastBuster"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRThirteenKunshuScarf.png",
+    "Link": "Kunshu Syandana",
+    "Name": "Kunshu Syandana",
+    "PcPrice": "$5.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1194262289",
+    "Type": "Syandana"
+  },
+  "Kuther Machete Skin": {
+    "Artists": [
+      "lukinu_u",
+      "HEILAH"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWKutherMacheteSkin.png",
+    "Link": "Kuther Machete Skin",
+    "Name": "Kuther Machete Skin",
+    "PcPrice": "$5.99",
+    "Round": "20 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2396821316",
+    "Type": "Weapon"
+  },
+  "Lamassu Shoulder Armor": {
+    "Artists": [
+      "LostEpoch"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWLamassuShoulderArmor.png",
+    "Link": "Lamassu Shoulder Armor",
+    "Name": "Lamassu Shoulder Armor",
+    "PcPrice": "$5.99",
+    "Round": "22 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2762183874",
+    "Type": "Armor"
+  },
+  "Laprosys Syandana": {
+    "Artists": [
+      "FrellingHazmot"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWLaprosysSyandana.png",
+    "Link": "Laprosys Syandana",
+    "Name": "Laprosys Syandana",
+    "PcPrice": "$5.99",
+    "Round": "21 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2390682469",
+    "Type": "Syandana"
+  },
+  "Lavos Kuvael Alchemist Skin": {
+    "Artists": [
+      "Erneix"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWLavosKuvaelAlchemistSkin.png",
+    "Link": "Lavos Kuvael Alchemist Skin",
+    "Name": "Lavos Kuvael Alchemist Skin",
+    "PcPrice": "$6.99",
+    "Round": "22 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2763804733",
+    "Type": "Deluxe"
+  },
+  "Limbo Aureolus Helmet": {
+    "Artists": [
+      "artarrwen"
+    ],
+    "ConsolePrice": "75",
+    "Image": "SWRSevenLimboAureolusHelmet.png",
+    "Link": "Limbo Aureolus Helmet",
+    "Name": "Limbo Aureolus Helmet",
+    "PcPrice": "$5.99",
+    "Round": "7",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=812269448",
+    "Type": "Helmet"
+  },
+  "Limbo Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRFourteenLimboGraxxSkin.png",
+    "Link": "Limbo Graxx Skin",
+    "Name": "Limbo Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1478822739",
+    "Type": "Deluxe"
+  },
+  "Limbo Vasiona Skin": {
+    "Artists": [
+      "Volkovyi"
+    ],
+    "ConsolePrice": "90",
+    "Image": "SWREightLimboVasionaSkin.png",
+    "Link": "Limbo Vasiona Skin",
+    "Name": "Limbo Vasiona Skin",
+    "PcPrice": "$4.99",
+    "Round": "8",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=888978193",
+    "Type": "Warframe"
+  },
+  "Limbo Venari Helmet": {
+    "Artists": [
+      "Volkovyi",
+      "Sab531"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRTenLimboVenariHelmet.png",
+    "Link": "Limbo Venari Helmet",
+    "Name": "Limbo Venari Helmet",
+    "PcPrice": "$5.99",
+    "Round": "10",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1124234959",
+    "Type": "Helmet"
+  },
+  "Limbo Vistyxio Skin": {
+    "Artists": [
+      "led2012",
+      "Hydroxate"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRTenLimboVistyxioSkin.png",
+    "Link": "Limbo Vistyxio Skin",
+    "Name": "Limbo Vistyxio Skin",
+    "PcPrice": "$6.99",
+    "Round": "10",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=949840128",
+    "Type": "Deluxe"
+  },
+  "Liset Hellkite Skin": {
+    "Artists": [
+      "MaceMadunusus"
+    ],
+    "ConsolePrice": "90",
+    "Image": "LisetHellkiteSkin.png",
+    "Link": "Liset Hellkite Skin",
+    "Name": "Liset Hellkite Skin",
+    "PcPrice": "$4.99",
+    "Round": "1",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=547150985",
+    "Type": "Landing Craft"
+  },
+  "Liset Maltzur Oculus Skin": {
+    "Artists": [
+      "Cobalt"
+    ],
+    "ConsolePrice": "90",
+    "Image": "LisetMaltzurOculusSkin.png",
+    "Link": "Liset Maltzur Oculus Skin",
+    "Name": "Liset Maltzur Oculus Skin",
+    "PcPrice": "$4.99",
+    "Round": "2",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=592362462",
+    "Type": "Landing Craft"
+  },
+  "Liset Mithra Skin": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "LisetMithraSkin.png",
+    "Link": "Liset Mithra Skin",
+    "Name": "Liset Mithra Skin",
+    "PcPrice": "$4.99",
+    "Round": "19 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2171902467",
+    "Type": "Landing Craft"
+  },
+  "Liset Protege Skin": {
+    "Artists": [
+      "MaceMadunusus"
+    ],
+    "ConsolePrice": "90",
+    "Image": "LisetProtegeSkin.png",
+    "Link": "Liset Protege Skin",
+    "Name": "Liset Protege Skin",
+    "PcPrice": "$4.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1335933403",
+    "Type": "Landing Craft"
+  },
+  "Liset Quilate Skin": {
+    "Artists": [
+      "Polygonmonster"
+    ],
+    "ConsolePrice": "90",
+    "Image": "LisetQuilateSkin.png",
+    "Link": "Liset Quilate Skin",
+    "Name": "Liset Quilate Skin",
+    "PcPrice": "$4.99",
+    "Round": "1",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=546468929",
+    "Type": "Landing Craft"
+  },
+  "Liset Vammatar Skin": {
+    "Artists": [
+      "Ventralhound"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "LisetVammatarSkin.png",
+    "Link": "Liset Vammatar Skin",
+    "Name": "Liset Vammatar Skin",
+    "PcPrice": "$4.99",
+    "Round": "22 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2728016393",
+    "Type": "Landing Craft"
+  },
+  "Loki Erebus Skin": {
+    "Artists": [
+      "Vulbjorn"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRTwelveLokiErebusSkin.png",
+    "Link": "Loki Erebus Skin",
+    "Name": "Loki Erebus Skin",
+    "PcPrice": "$6.99",
+    "Round": "12",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1311948853",
+    "Type": "Deluxe"
+  },
+  "Loki Ersatz Helmet": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRFourLokiErsatzHelmet.png",
+    "Link": "Loki Ersatz Helmet",
+    "Name": "Loki Ersatz Helmet",
+    "PcPrice": "$5.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=714112819",
+    "Type": "Helmet"
+  },
+  "Loki Incubus Skin": {
+    "Artists": [
+      "kaz",
+      "Volkovyi"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRSevenLokiIncubusSkin.png",
+    "Link": "Loki Incubus Skin",
+    "Name": "Loki Incubus Skin",
+    "PcPrice": "$6.99",
+    "Round": "7",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=809097861",
+    "Type": "Deluxe"
+  },
+  "Loki Jotunheim Skin": {
+    "Artists": [
+      "Mz-3"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWLokiJotunheimSkin.png",
+    "Link": "Loki Jotunheim Skin",
+    "Name": "Loki Jotunheim Skin",
+    "PcPrice": "$6.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1711318464",
+    "Type": "Deluxe"
+  },
+  "Loki Kodama Skin": {
+    "Artists": [
+      "Hitsu San"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRThirteenLokiKodamaSkin.png",
+    "Link": "Loki Kodama Skin",
+    "Name": "Loki Kodama Skin",
+    "PcPrice": "$6.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1270875131",
+    "Type": "Deluxe"
+  },
+  "Loki Lupu Helmet": {
+    "Artists": [
+      "Lubox"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRFourteenLupuHelmet.png",
+    "Link": "Loki Lupu Helmet",
+    "Name": "Loki Lupu Helmet",
+    "PcPrice": "$5.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1387974742",
+    "Type": "Helmet"
+  },
+  "Loki Rogue Helmet": {
+    "Artists": [
+      "artarrwen"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRFiveLokiRogueHelmet.png",
+    "Link": "Loki Rogue Helmet",
+    "Name": "Loki Rogue Helmet",
+    "PcPrice": "$5.99",
+    "Round": "5",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=759810107",
+    "Type": "Helmet"
+  },
+  "Longsword Arit Skin": {
+    "Artists": [
+      "Arsenal"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWREightSkanaArit.png",
+    "Link": "Longsword Arit Skin",
+    "Name": "Longsword Arit Skin",
+    "PcPrice": "$5.99",
+    "Round": "8",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=888729508",
+    "Type": "Weapon"
+  },
+  "Longsword Dero Skin": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRElevenDeroSword.png",
+    "Link": "Longsword Dero Skin",
+    "Name": "Longsword Dero Skin",
+    "PcPrice": "$5.99",
+    "Round": "11 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1190101192",
+    "Type": "Weapon"
+  },
+  "Longsword Eisen Skin": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRThirteenLongswordEisen.png",
+    "Link": "Longsword Eisen Skin",
+    "Name": "Longsword Eisen Skin",
+    "PcPrice": "$5.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1321987012",
+    "Type": "Weapon"
+  },
+  "Longsword Insidia Skin": {
+    "Artists": [
+      "Hitsu San",
+      "Reil"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWLongswordInsidiaSkin.png",
+    "Link": "Longsword Insidia Skin",
+    "Name": "Longsword Insidia Skin",
+    "PcPrice": "$5.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1819885862",
+    "Type": "Weapon"
+  },
+  "Longsword Tengushen Skin": {
+    "Artists": [
+      "BeastBuster"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRFourteenTengushenSwordSkin.png",
+    "Link": "Longsword Tengushen Skin",
+    "Name": "Longsword Tengushen Skin",
+    "PcPrice": "$5.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1321960465",
+    "Type": "Weapon"
+  },
+  "Lumis Earpiece": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "35",
+    "Image": "SWLumisEar.png",
+    "Link": "Lumis Earpiece",
+    "Name": "Lumis Earpiece",
+    "PcPrice": "$1.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1494935193",
+    "Type": "Operator"
+  },
+  "Lumis Oculus": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWLumisEye.png",
+    "Link": "Lumis Oculus",
+    "Name": "Lumis Oculus",
+    "PcPrice": "$1.99",
+    "Round": "15",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1494952919",
+    "Type": "Operator"
+  },
+  "Mag Alata Skin": {
+    "Artists": [
+      "Hitsu San"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRThreeMagAlataSkin.png",
+    "Link": "Mag Alata Skin",
+    "Name": "Mag Alata Skin",
+    "PcPrice": "$4.99",
+    "Round": "3",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=593971754",
+    "Type": "Deluxe"
+  },
+  "Mag Anthro Helmet": {
+    "Artists": [
+      "Pior"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRPolyMagAnthroHelmet.png",
+    "Link": "Mag Anthro Helmet",
+    "Name": "Mag Anthro Helmet",
+    "PcPrice": "$5.99",
+    "Round": "Polycount",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=562615890",
+    "Type": "Helmet"
+  },
+  "Mag Corpra Skin": {
+    "Artists": [
+      "FrellingHazmot"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWMagCorpraSkin.png",
+    "Link": "Mag Corpra Skin",
+    "Name": "Mag Corpra Skin",
+    "PcPrice": "$6.99",
+    "Round": "19 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1845247834",
+    "Type": "Deluxe"
+  },
+  "Mag Ferro Skin": {
+    "Artists": [
+      "Master Noob"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRTwelveMagFerroSkin.png",
+    "Link": "Mag Ferro Skin",
+    "Name": "Mag Ferro Skin",
+    "PcPrice": "$6.99",
+    "Round": "12",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1328282882",
+    "Type": "Deluxe"
+  },
+  "Mag Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRNineMagGraxxSkin.png",
+    "Link": "Mag Graxx Skin",
+    "Name": "Mag Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "9",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=949823903",
+    "Type": "Deluxe"
+  },
+  "Mag Induction Helmet": {
+    "Artists": [
+      "Pior"
+    ],
+    "ConsolePrice": "75",
+    "Image": "SWRPolyMagInductionHelmet.png",
+    "Link": "Mag Induction Helmet",
+    "Name": "Mag Induction Helmet",
+    "PcPrice": "$5.99",
+    "Round": "Polycount",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=566809319",
+    "Type": "Helmet"
+  },
+  "Mag Knaita Skin": {
+    "Artists": [
+      "prosetisen"
+    ],
+    "ConsolePrice": "90",
+    "Image": "SWROneMagKnaitaSkin.png",
+    "Link": "Mag Knaita Skin",
+    "Name": "Mag Knaita Skin",
+    "PcPrice": "$4.99",
+    "Round": "1",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=548916770",
+    "Type": "Warframe"
+  },
+  "Mag Orbit Skin": {
+    "Artists": [
+      "drawingyourdreams"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRTwoMagOrbitSkin.png",
+    "Link": "Mag Orbit Skin",
+    "Name": "Mag Orbit Skin",
+    "PcPrice": "$6.99",
+    "Round": "2",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=595493362",
+    "Type": "Deluxe"
+  },
+  "Mag Toroidal Helmet": {
+    "Artists": [
+      "prosetisen"
+    ],
+    "ConsolePrice": "75",
+    "Image": "SWRPolyMagToroidalHelmet.png",
+    "Link": "Mag Toroidal Helmet",
+    "Name": "Mag Toroidal Helmet",
+    "PcPrice": "$5.99",
+    "Round": "Polycount",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=566141259",
+    "Type": "Helmet"
+  },
+  "Magnus Dakila Skin": {
+    "Artists": [
+      "MaaYuu"
+    ],
+    "ConsolePrice": "40",
+    "Image": "DakilaMagnus.png",
+    "Link": "Magnus Dakila Skin",
+    "Name": "Magnus Dakila Skin",
+    "PcPrice": "40",
+    "Round": "Weapons Skin Contest",
+    "SteamLink": "https://forums.warframe.com/topic/313983-weapon-skins-contest-final-results/",
+    "Type": "Weapon"
+  },
+  "Magnus Hivelight Skin": {
+    "Artists": [
+      "Verifitas"
+    ],
+    "ConsolePrice": "40",
+    "Image": "MagnusHivelightSkin.png",
+    "Link": "Magnus Hivelight Skin",
+    "Name": "Magnus Hivelight Skin",
+    "PcPrice": "40",
+    "Round": "Weapons Skin Contest",
+    "SteamLink": "https://forums.warframe.com/topic/313983-weapon-skins-contest-final-results/",
+    "Type": "Weapon"
+  },
+  "Maharliqu Syandana": {
+    "Artists": [
+      "led2012"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRFourMaharliqaScarf.png",
+    "Link": "Maharliqu Syandana",
+    "Name": "Maharliqu Syandana",
+    "PcPrice": "$5.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=726034842",
+    "Type": "Syandana"
+  },
+  "Mantis Lilieae Skin": {
+    "Artists": [
+      "MaceMadunusus"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWMantisLilieaeSkin.png",
+    "Link": "Mantis Lilieae Skin",
+    "Name": "Mantis Lilieae Skin",
+    "PcPrice": "$4.99",
+    "Round": "19 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1974391135",
+    "Type": "Landing Craft"
+  },
+  "Mesa Dead Eye Helmet": {
+    "Artists": [
+      "NotYou"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRThreeMesaDeadEyeHelmet.png",
+    "Link": "Mesa Dead Eye Helmet",
+    "Name": "Mesa Dead Eye Helmet",
+    "PcPrice": "$5.99",
+    "Round": "3",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=654460112",
+    "Type": "Helmet"
+  },
+  "Mesa Devil Ranger Skin": {
+    "Artists": [
+      "Mz-3"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRTenMesaDevilRangerSkin.png",
+    "Link": "Mesa Devil Ranger Skin",
+    "Name": "Mesa Devil Ranger Skin",
+    "PcPrice": "$6.99",
+    "Round": "10",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1122269051",
+    "Type": "Deluxe"
+  },
+  "Mesa Falcon Helmet": {
+    "Artists": [
+      "prosetisen"
+    ],
+    "ConsolePrice": "75",
+    "Image": "SWRTwoMesaFalconHelmet.png",
+    "Link": "Mesa Falcon Helmet",
+    "Name": "Mesa Falcon Helmet",
+    "PcPrice": "$5.99",
+    "Round": "2",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=621106478",
+    "Type": "Helmet"
+  },
+  "Mesa Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRSevenMesaGraxxSkin.png",
+    "Link": "Mesa Graxx Skin",
+    "Name": "Mesa Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "7",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=840571139",
+    "Type": "Deluxe"
+  },
+  "Mesa Insomnia Skin": {
+    "Artists": [
+      "Goosmo"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWMesaInsomniaSkin.png",
+    "Link": "Mesa Insomnia Skin",
+    "Name": "Mesa Insomnia Skin",
+    "PcPrice": "$6.99",
+    "Round": "22 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2775138959",
+    "Type": "Deluxe"
+  },
+  "Mesa Kudegra Skin": {
+    "Artists": [
+      "malaya",
+      "Xtygian"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWMesaKudegraSkin.png",
+    "Link": "Mesa Kudegra Skin",
+    "Name": "Mesa Kudegra Skin",
+    "PcPrice": "$6.99",
+    "Round": "15",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1610830980",
+    "Type": "Deluxe"
+  },
+  "Mesa Marlet Skin": {
+    "Artists": [
+      "Cheshire",
+      "prosetisen"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRTwelveMesaMarletSkin.png",
+    "Link": "Mesa Marlet Skin",
+    "Name": "Mesa Marlet Skin",
+    "PcPrice": "$6.99",
+    "Round": "12",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1335287684",
+    "Type": "Deluxe"
+  },
+  "Mesa Mesnificent Skin": {
+    "Artists": [
+      "kakarrot2812"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWMesaMesnificentSkin.png",
+    "Link": "Mesa Mesnificent Skin",
+    "Name": "Mesa Mesnificent Skin",
+    "PcPrice": "$6.99",
+    "Round": "21 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2523005441",
+    "Type": "Deluxe"
+  },
+  "Mirage Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "90",
+    "Image": "SWRFourMirageGraxxSkin.png",
+    "Link": "Mirage Graxx Skin",
+    "Name": "Mirage Graxx Skin",
+    "PcPrice": "$4.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=668259721",
+    "Type": "Warframe"
+  },
+  "Mirage Jolli Helmet": {
+    "Artists": [
+      "Cheshire"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRFourMirageJolliHelmet.png",
+    "Link": "Mirage Jolli Helmet",
+    "Name": "Mirage Jolli Helmet",
+    "PcPrice": "$5.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=707862636",
+    "Type": "Helmet"
+  },
+  "Mirage Kitsune Skin": {
+    "Artists": [
+      "kakarrot2812",
+      "Skyeraikes"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWMirageKitsuneSkin.png",
+    "Link": "Mirage Kitsune Skin",
+    "Name": "Mirage Kitsune Skin",
+    "PcPrice": "$6.99",
+    "Round": "19 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1959181297",
+    "Type": "Deluxe"
+  },
+  "Mirage Kuvael Jester Skin": {
+    "Artists": [
+      "Erneix"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWMirageKuvaelJesterSkin.png",
+    "Link": "Mirage Kuvael Jester Skin",
+    "Name": "Mirage Kuvael Jester Skin",
+    "PcPrice": "$6.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1552756160",
+    "Type": "Deluxe"
+  },
+  "Mirage Mithra Skin": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRElevenMirageMithraSkin.png",
+    "Link": "Mirage Mithra Skin",
+    "Name": "Mirage Mithra Skin",
+    "PcPrice": "$6.99",
+    "Round": "11 [Batch 3]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=901583786",
+    "Type": "Deluxe"
+  },
+  "Mirage Morgaine Skin": {
+    "Artists": [
+      "artarrwen"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRSevenMirageMorgaineSkin.png",
+    "Link": "Mirage Morgaine Skin",
+    "Name": "Mirage Morgaine Skin",
+    "PcPrice": "$6.99",
+    "Round": "7",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=840006948",
+    "Type": "Deluxe"
+  },
+  "Mirage Sigyn Skin": {
+    "Artists": [
+      "novadragon01"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRFourMirageSigynSkin.png",
+    "Link": "Mirage Sigyn Skin",
+    "Name": "Mirage Sigyn Skin",
+    "PcPrice": "$4.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=726038473",
+    "Type": "Warframe"
+  },
+  "Mithra Syandana": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRTwelveMithraScarf.png",
+    "Link": "Mithra Syandana",
+    "Name": "Mithra Syandana",
+    "PcPrice": "$5.99",
+    "Round": "12",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1259052812",
+    "Type": "Syandana"
+  },
+  "Mushussu Syandana": {
+    "Artists": [
+      "Stenchfury"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRTwelveMushussuScarf.png",
+    "Link": "Mushussu Syandana",
+    "Name": "Mushussu Syandana",
+    "PcPrice": "$5.99",
+    "Round": "12",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1334762963",
+    "Type": "Syandana"
+  },
+  "Naru Syandana": {
+    "Artists": [
+      "malaya",
+      "Jadie"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRNineNaruScarf.png",
+    "Link": "Naru Syandana",
+    "Name": "Naru Syandana",
+    "PcPrice": "$5.99",
+    "Round": "9",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=951073654",
+    "Type": "Syandana"
+  },
+  "Nekros Charon Helmet": {
+    "Artists": [
+      "malaya",
+      "Scharkie"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRFourteenCharonHelmet.png",
+    "Link": "Nekros Charon Helmet",
+    "Name": "Nekros Charon Helmet",
+    "PcPrice": "$5.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=603334774",
+    "Type": "Helmet"
+  },
+  "Nekros Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRThirteenNekrosGraxxSkin.png",
+    "Link": "Nekros Graxx Skin",
+    "Name": "Nekros Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1332765500",
+    "Type": "Deluxe"
+  },
+  "Nekros Ion Helmet": {
+    "Artists": [
+      "Yatus"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRThirteenNekrosIonHelmet.png",
+    "Link": "Nekros Ion Helmet",
+    "Name": "Nekros Ion Helmet",
+    "PcPrice": "$5.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1194900696",
+    "Type": "Helmet"
+  },
+  "Nekros Lazarus Helmet": {
+    "Artists": [
+      "[k a z]"
+    ],
+    "ConsolePrice": "75",
+    "Image": "SWRTwoNekrosLazarusHelmet.png",
+    "Link": "Nekros Lazarus Helmet",
+    "Name": "Nekros Lazarus Helmet",
+    "PcPrice": "$5.99",
+    "Round": "2",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1503767380",
+    "Type": "Helmet"
+  },
+  "Nezha Devine Skin": {
+    "Artists": [
+      "Polygonmonster"
+    ],
+    "ConsolePrice": "90",
+    "Image": "SWRNineNezhaDevineSkin.png",
+    "Link": "Nezha Devine Skin",
+    "Name": "Nezha Devine Skin",
+    "PcPrice": "$4.99",
+    "Round": "9",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=885067890",
+    "Type": "Warframe"
+  },
+  "Nezha Dracun Skin": {
+    "Artists": [
+      "Novabjorn"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRElevenNezhaDracunSkin.png",
+    "Link": "Nezha Dracun Skin",
+    "Name": "Nezha Dracun Skin",
+    "PcPrice": "$6.99",
+    "Round": "11 [Batch 3]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1124342482",
+    "Type": "Deluxe"
+  },
+  "Nezha Yaksha Skin": {
+    "Artists": [
+      "Faven",
+      "SilverBones"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRTenNezhaYakshaSkin.png",
+    "Link": "Nezha Yaksha Skin",
+    "Name": "Nezha Yaksha Skin",
+    "PcPrice": "$6.99",
+    "Round": "10",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1115192059",
+    "Type": "Deluxe"
+  },
+  "Nidus Kuvael Scrounger Skin": {
+    "Artists": [
+      "Erneix"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWNidusKuvaelScroungerSkin.png",
+    "Link": "Nidus Kuvael Scrounger Skin",
+    "Name": "Nidus Kuvael Scrounger Skin",
+    "PcPrice": "$6.99",
+    "Round": "20 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2160922960",
+    "Type": "Deluxe"
+  },
+  "Nidus Night Hunter Skin": {
+    "Artists": [
+      "Mz-3"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWNidusNightHunterSkin.png",
+    "Link": "Nidus Night Hunter Skin",
+    "Name": "Nidus Night Hunter Skin",
+    "PcPrice": "$6.99",
+    "Round": "15",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1478708783",
+    "Type": "Deluxe"
+  },
+  "Nidus Technocyst Skin": {
+    "Artists": [
+      "Master Noob"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWNidusTechnocystSkin.png",
+    "Link": "Nidus Technocyst Skin",
+    "Name": "Nidus Technocyst Skin",
+    "PcPrice": "$6.99",
+    "Round": "20 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2382558368",
+    "Type": "Deluxe"
+  },
+  "Night Hunter Syandana": {
+    "Artists": [
+      "Mz-3"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWNightHunterSyandana.png",
+    "Link": "Night Hunter Syandana",
+    "Name": "Night Hunter Syandana",
+    "PcPrice": "$5.99",
+    "Round": "19 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1478716861",
+    "Type": "Syandana"
+  },
+  "Nikana Khatuun Skin": {
+    "Artists": [
+      "VoidPunch"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWNikanaKhatuunSkin.png",
+    "Link": "Nikana Khatuun Skin",
+    "Name": "Nikana Khatuun Skin",
+    "PcPrice": "$5.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1794814744",
+    "Type": "Weapon"
+  },
+  "Nikana Mithra Skin": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWNikanaMithraSkin.png",
+    "Link": "Nikana Mithra Skin",
+    "Name": "Nikana Mithra Skin",
+    "PcPrice": "$5.99",
+    "Round": "15",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1617347738",
+    "Type": "Weapon"
+  },
+  "Nikana Shinigami Skin": {
+    "Artists": [
+      "Hitsu San",
+      "Reil"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWNikanaShinigamiSkin.png",
+    "Link": "Nikana Shinigami Skin",
+    "Name": "Nikana Shinigami Skin",
+    "PcPrice": "$5.99",
+    "Round": "15",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1615576826",
+    "Type": "Weapon"
+  },
+  "Nikana Ungulata Skin": {
+    "Artists": [
+      "Vulbjorn"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWUngulataSkin.png",
+    "Link": "Nikana Ungulata Skin",
+    "Name": "Nikana Ungulata Skin",
+    "PcPrice": "$5.99",
+    "Round": "16",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1687855678",
+    "Type": "Weapon"
+  },
+  "Nova Corpra Skin": {
+    "Artists": [
+      "FrellingHazmot"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRThirteenNovaCorpraSkin.png",
+    "Link": "Nova Corpra Skin",
+    "Name": "Nova Corpra Skin",
+    "PcPrice": "$6.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1336089681",
+    "Type": "Deluxe"
+  },
+  "Nova Cygni Skin": {
+    "Artists": [
+      "Arsenal"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRTwoNovaCygniSkin.png",
+    "Link": "Nova Cygni Skin",
+    "Name": "Nova Cygni Skin",
+    "PcPrice": "$4.99",
+    "Round": "2",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=611832310",
+    "Type": "Warframe"
+  },
+  "Nova Device Skin": {
+    "Artists": [
+      "prosetisen"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRThreeNovaDeviceSkin.png",
+    "Link": "Nova Device Skin",
+    "Name": "Nova Device Skin",
+    "PcPrice": "$4.99",
+    "Round": "3",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=665832288",
+    "Type": "Warframe"
+  },
+  "Nova Fusion Helmet": {
+    "Artists": [
+      "Coridium"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRFourNovaFusionHelmet.png",
+    "Link": "Nova Fusion Helmet",
+    "Name": "Nova Fusion Helmet",
+    "PcPrice": "$5.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=619984194",
+    "Type": "Helmet"
+  },
+  "Nova Gnova Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRThreeNovaGnovaSkin.png",
+    "Link": "Nova Gnova Skin",
+    "Name": "Nova Gnova Skin",
+    "PcPrice": "$4.99",
+    "Round": "3",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=657022855",
+    "Type": "Warframe"
+  },
+  "Nova Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRNineNovaGraxxSkin.png",
+    "Link": "Nova Graxx Skin",
+    "Name": "Nova Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "9",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=940327168",
+    "Type": "Deluxe"
+  },
+  "Nova Lamia Helmet": {
+    "Artists": [
+      "Wei-Zi",
+      "Mz-3"
+    ],
+    "ConsolePrice": "75",
+    "Image": "SWRThreeNovaLamiaHelmet.png",
+    "Link": "Nova Lamia Helmet",
+    "Name": "Nova Lamia Helmet",
+    "PcPrice": "$5.99",
+    "Round": "3",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=633328841",
+    "Type": "Helmet"
+  },
+  "Nova Lamia Skin": {
+    "Artists": [
+      "Mz-3"
+    ],
+    "ConsolePrice": "90",
+    "Image": "SWRThreeNovaLamiaSkin.png",
+    "Link": "Nova Lamia Skin",
+    "Name": "Nova Lamia Skin",
+    "PcPrice": "$4.99",
+    "Round": "3",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=665324732",
+    "Type": "Warframe"
+  },
+  "Nova Mithra Skin": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWR19NovaMithraSkin.png",
+    "Link": "Nova Mithra Skin",
+    "Name": "Nova Mithra Skin",
+    "PcPrice": "$6.99",
+    "Round": "19 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1444451582",
+    "Type": "Deluxe"
+  },
+  "Nova Stinger Skin": {
+    "Artists": [
+      "Cheshire"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRThreeNovaStingerSkin.png",
+    "Link": "Nova Stinger Skin",
+    "Name": "Nova Stinger Skin",
+    "PcPrice": "$4.99",
+    "Round": "3",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=665788330",
+    "Type": "Warframe"
+  },
+  "Nova Tachyon Helmet": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRThreeNovaTachyonHelmet.png",
+    "Link": "Nova Tachyon Helmet",
+    "Name": "Nova Tachyon Helmet",
+    "PcPrice": "$5.99",
+    "Round": "3",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=665215216",
+    "Type": "Helmet"
+  },
+  "Nova Visage Skin": {
+    "Artists": [
+      "Hitsu San"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRThreeNovaVisageSkin.png",
+    "Link": "Nova Visage Skin",
+    "Name": "Nova Visage Skin",
+    "PcPrice": "$6.99",
+    "Round": "3",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=665040825",
+    "Type": "Deluxe"
+  },
+  "Nsaru Syandana": {
+    "Artists": [
+      "Master Noob"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRTwoNsaruScarf.png",
+    "Link": "Nsaru Syandana",
+    "Name": "Nsaru Syandana",
+    "PcPrice": "$5.99",
+    "Round": "2",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=591556001",
+    "Type": "Syandana"
+  },
+  "Nyx Ampulex Helmet": {
+    "Artists": [
+      "Vulbjorn"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWREightNyxAmpulexHelmet.png",
+    "Link": "Nyx Ampulex Helmet",
+    "Name": "Nyx Ampulex Helmet",
+    "PcPrice": "$5.99",
+    "Round": "8",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=880325359",
+    "Type": "Helmet"
+  },
+  "Nyx Ascophilia Skin": {
+    "Artists": [
+      "Erneix"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRFourteenAscophiliaSkin.png",
+    "Link": "Nyx Ascophilia Skin",
+    "Name": "Nyx Ascophilia Skin",
+    "PcPrice": "$6.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1479350181",
+    "Type": "Deluxe"
+  },
+  "Nyx Athena Skin": {
+    "Artists": [
+      "prosetisen"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRFourNyxAthenaSkin.png",
+    "Link": "Nyx Athena Skin",
+    "Name": "Nyx Athena Skin",
+    "PcPrice": "$6.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=725268258",
+    "Type": "Deluxe"
+  },
+  "Nyx Aurelia Skin": {
+    "Artists": [
+      "Hitsu San"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRTwelveNyxAureliaSkin.png",
+    "Link": "Nyx Aurelia Skin",
+    "Name": "Nyx Aurelia Skin",
+    "PcPrice": "$6.99",
+    "Round": "12",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1329001809",
+    "Type": "Deluxe"
+  },
+  "Nyx Aures Skin": {
+    "Artists": [
+      "lukinu_u",
+      "HariPear"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWAuresSkin.png",
+    "Link": "Nyx Aures Skin",
+    "Name": "Nyx Aures Skin",
+    "PcPrice": "$6.99",
+    "Round": "16",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1617367226",
+    "Type": "Deluxe"
+  },
+  "Nyx Carnifex Skin": {
+    "Artists": [
+      "Vulbjorn"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRNineNyxCarnifexSkin.png",
+    "Link": "Nyx Carnifex Skin",
+    "Name": "Nyx Carnifex Skin",
+    "PcPrice": "$6.99",
+    "Round": "9",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=941418087",
+    "Type": "Deluxe"
+  },
+  "Nyx Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRSixNyxGraxxSkin.png",
+    "Link": "Nyx Graxx Skin",
+    "Name": "Nyx Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "6",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=765450169",
+    "Type": "Deluxe"
+  },
+  "Nyx Saikou Skin": {
+    "Artists": [
+      "malaya"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRSevenNyxSaikouSkin.png",
+    "Link": "Nyx Saikou Skin",
+    "Name": "Nyx Saikou Skin",
+    "PcPrice": "$6.99",
+    "Round": "7",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=795693336",
+    "Type": "Deluxe"
+  },
+  "Nyx Technopsyche Skin": {
+    "Artists": [
+      "Master Noob"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWTechnopsycheSkin.png",
+    "Link": "Nyx Technopsyche Skin",
+    "Name": "Nyx Technopsyche Skin",
+    "PcPrice": "$6.99",
+    "Round": "16",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1712960940",
+    "Type": "Deluxe"
+  },
+  "Oberon Blade of the Lotus Skin": {
+    "Artists": [
+      "BeastBuster"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRThirteenOberonBladeoftheLotusSkin.png",
+    "Link": "Oberon Blade of the Lotus Skin",
+    "Name": "Oberon Blade of the Lotus Skin",
+    "PcPrice": "$6.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1194231399",
+    "Type": "Deluxe"
+  },
+  "Oberon Destrier Helmet": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRFiveOberonDestrierHelmet.png",
+    "Link": "Oberon Destrier Helmet",
+    "Name": "Oberon Destrier Helmet",
+    "PcPrice": "$5.99",
+    "Round": "5",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=751322424",
+    "Type": "Helmet"
+  },
+  "Oberon Ferosh Helmet": {
+    "Artists": [
+      "malaya",
+      "The_Grimmrock"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRElevenOberonFeroshHelmet.png",
+    "Link": "Oberon Ferosh Helmet",
+    "Name": "Oberon Ferosh Helmet",
+    "PcPrice": "$5.99",
+    "Round": "11 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1180097255",
+    "Type": "Helmet"
+  },
+  "Oberon Taurus Helmet": {
+    "Artists": [
+      "Master Noob"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRElevenOberonTaurusHelmet.png",
+    "Link": "Oberon Taurus Helmet",
+    "Name": "Oberon Taurus Helmet",
+    "PcPrice": "$5.99",
+    "Round": "11 [Batch 3]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1166007445",
+    "Type": "Helmet"
+  },
+  "Oberon Wendigo Skin": {
+    "Artists": [
+      "Vulbjorn"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRElevenOberonWendigoSkin.png",
+    "Link": "Oberon Wendigo Skin",
+    "Name": "Oberon Wendigo Skin",
+    "PcPrice": "$6.99",
+    "Round": "11 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1192548835",
+    "Type": "Deluxe"
+  },
+  "Oberon Youkai Skin": {
+    "Artists": [
+      "Hitsu San"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWR18OberonYoukaiSkin.png",
+    "Link": "Oberon Youkai Skin",
+    "Name": "Oberon Youkai Skin",
+    "PcPrice": "$6.99",
+    "Round": "18",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1843793574",
+    "Type": "Deluxe"
+  },
+  "Octavia Diva Skin": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRElevenOctaviaDivaSkin.png",
+    "Link": "Octavia Diva Skin",
+    "Name": "Octavia Diva Skin",
+    "PcPrice": "$6.99",
+    "Round": "11 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1162252618",
+    "Type": "Deluxe"
+  },
+  "Octavia Giocoso Helmet": {
+    "Artists": [
+      "blazingcobalt",
+      "Fari"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWOctaviaGiocosoHelmet.png",
+    "Link": "Octavia Giocoso Helmet",
+    "Name": "Octavia Giocoso Helmet",
+    "PcPrice": "$5.99",
+    "Round": "20 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2215918898",
+    "Type": "Helmet"
+  },
+  "Octavia Mandachoralyst Skin": {
+    "Artists": [
+      "kakarrot2812"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWOctaviaMandachoralystSkin.png",
+    "Link": "Octavia Mandachoralyst Skin",
+    "Name": "Octavia Mandachoralyst Skin",
+    "PcPrice": "$6.99",
+    "Round": "22 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2593100067",
+    "Type": "Deluxe"
+  },
+  "Octavia Youkai Skin": {
+    "Artists": [
+      "Hitsu San"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWOctaviaYoukaiSkin.png",
+    "Link": "Octavia Youkai Skin",
+    "Name": "Octavia Youkai Skin",
+    "PcPrice": "$6.99",
+    "Round": "20 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2149504902",
+    "Type": "Deluxe"
+  },
+  "Officium Syandana": {
+    "Artists": [
+      "Hitsu San",
+      "Operative Shift"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRFiveOfficiumScarf.png",
+    "Link": "Officium Syandana",
+    "Name": "Officium Syandana",
+    "PcPrice": "$5.99",
+    "Round": "5",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=735750664",
+    "Type": "Syandana"
+  },
+  "Opticor Mithra Skin": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "50",
+    "Image": "OpticorMithraSkin.png",
+    "Link": "Opticor Mithra Skin",
+    "Name": "Opticor Mithra Skin",
+    "PcPrice": "$5.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1495531927",
+    "Type": "Weapon"
+  },
+  "Optima Oculus": {
+    "Artists": [
+      "DeadNexus_",
+      "Swanky Swaggernaut"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWOptimaEye.png",
+    "Link": "Optima Oculus",
+    "Name": "Optima Oculus",
+    "PcPrice": "$1.99",
+    "Round": "15",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1500717075",
+    "Type": "Operator"
+  },
+  "Orthos Magesty Skin": {
+    "Artists": [
+      "prosetisen"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRFiveMagestyOrthos.png",
+    "Link": "Orthos Magesty Skin",
+    "Name": "Orthos Magesty Skin",
+    "PcPrice": "$5.99",
+    "Round": "5",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=728136853",
+    "Type": "Weapon"
+  },
+  "Papillon Oculus": {
+    "Artists": [
+      "HariPear",
+      "lukinu_u"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWPapillonOculus.png",
+    "Link": "Papillon Oculus",
+    "Name": "Papillon Oculus",
+    "PcPrice": "$2.99",
+    "Round": "21 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2574751544",
+    "Type": "Operator"
+  },
+  "Paxis Chest Plate": {
+    "Artists": [
+      "malaya",
+      "Jadie"
+    ],
+    "ConsolePrice": "45",
+    "Image": "SWPaxisChestPlate.png",
+    "Link": "Paxis Chest Plate",
+    "Name": "Paxis Chest Plate",
+    "PcPrice": "$2.49",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1845166460",
+    "Type": "Armor"
+  },
+  "Paxis Shoulder Armor": {
+    "Artists": [
+      "malaya",
+      "Jadie"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWPaxisShoulderArmor.png",
+    "Link": "Paxis Shoulder Armor",
+    "Name": "Paxis Shoulder Armor",
+    "PcPrice": "$5.99",
+    "Round": "22 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2772749709",
+    "Type": "Armor"
+  },
+  "Paxis Syandana": {
+    "Artists": [
+      "malaya",
+      "Jadie"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWPaxisSyandana.png",
+    "Link": "Paxis Syandana",
+    "Name": "Paxis Syandana",
+    "PcPrice": "$5.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1833615473",
+    "Type": "Syandana"
+  },
+  "Piercing Eye Chest Armor": {
+    "Artists": [
+      "Mz-3",
+      "HAROHARO"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWPiercingEyeChestArmor.png",
+    "Link": "Piercing Eye Chest Armor",
+    "Name": "Piercing Eye Chest Armor",
+    "PcPrice": "$5.99",
+    "Round": "22 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2774888603",
+    "Type": "Armor"
+  },
+  "Piercing Eye Shoulder Armor": {
+    "Artists": [
+      "Mz-3",
+      "HAROHARO"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWPiercingEyeShoulderArmor.png",
+    "Link": "Piercing Eye Shoulder Armor",
+    "Name": "Piercing Eye Shoulder Armor",
+    "PcPrice": "$5.99",
+    "Round": "22 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2774892141",
+    "Type": "Armor"
+  },
+  "Pistris Syandana": {
+    "Artists": [
+      "Stenchfury"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRElevenPistrisScarf.png",
+    "Link": "Pistris Syandana",
+    "Name": "Pistris Syandana",
+    "PcPrice": "$5.99",
+    "Round": "11 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=948291507",
+    "Type": "Syandana"
+  },
+  "Polearm Aphria Skin": {
+    "Artists": [
+      "Arsenal"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRThirteenPolearmAphria.png",
+    "Link": "Polearm Aphria Skin",
+    "Name": "Polearm Aphria Skin",
+    "PcPrice": "$5.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1329854436",
+    "Type": "Weapon"
+  },
+  "Polearm Diva Skin": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRElevenDivaPolearm.png",
+    "Link": "Polearm Diva Skin",
+    "Name": "Polearm Diva Skin",
+    "PcPrice": "$5.99",
+    "Round": "11 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1843075078",
+    "Type": "Weapon"
+  },
+  "Polearm Ion Skin": {
+    "Artists": [
+      "Yatus",
+      "HugoPolo"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWR18PolearmIonSkin.png",
+    "Link": "Polearm Ion Skin",
+    "Name": "Polearm Ion Skin",
+    "PcPrice": "$5.99",
+    "Round": "18",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1973979416",
+    "Type": "Weapon"
+  },
+  "Polearm Jotunheim Skin": {
+    "Artists": [
+      "Mz-3"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWR18PolearmJotunheimSkin.png",
+    "Link": "Polearm Jotunheim Skin",
+    "Name": "Polearm Jotunheim Skin",
+    "PcPrice": "$5.99",
+    "Round": "18",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1843567594",
+    "Type": "Weapon"
+  },
+  "Polearm Lahnss Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWPolearmLahnssSkin.png",
+    "Link": "Polearm Lahnss Skin",
+    "Name": "Polearm Lahnss Skin",
+    "PcPrice": "$5.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1824770631",
+    "Type": "Weapon"
+  },
+  "Polearm Lympharis Skin": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRTwelveLympharisPolearm.png",
+    "Link": "Polearm Lympharis Skin",
+    "Name": "Polearm Lympharis Skin",
+    "PcPrice": "$5.99",
+    "Round": "12",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1238379904",
+    "Type": "Weapon"
+  },
+  "Polearm Osiris Skin": {
+    "Artists": [
+      "Lubox"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWPolearmOsirisSkin.png",
+    "Link": "Polearm Osiris Skin",
+    "Name": "Polearm Osiris Skin",
+    "PcPrice": "$5.99",
+    "Round": "19 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1961891445",
+    "Type": "Weapon"
+  },
+  "Polearm Phorcys Skin": {
+    "Artists": [
+      "Stenchfury"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRElevenPhorcysPolearm.png",
+    "Link": "Polearm Phorcys Skin",
+    "Name": "Polearm Phorcys Skin",
+    "PcPrice": "$5.99",
+    "Round": "11 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1188494609",
+    "Type": "Weapon"
+  },
+  "Polearm Skopos Skin": {
+    "Artists": [
+      "Girtan"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWSkoposPolearmSkin.png",
+    "Link": "Polearm Skopos Skin",
+    "Name": "Polearm Skopos Skin",
+    "PcPrice": "$5.99",
+    "Round": "16",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1685841629",
+    "Type": "Weapon"
+  },
+  "Polearm Ulcerated Skin": {
+    "Artists": [
+      "Vulbjorn"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWPolearmUlceratedSkin.png",
+    "Link": "Polearm Ulcerated Skin",
+    "Name": "Polearm Ulcerated Skin",
+    "PcPrice": "$5.99",
+    "Round": "22 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2774266643",
+    "Type": "Weapon"
+  },
+  "Praesidum Mask": {
+    "Artists": [
+      "HariPear",
+      "lukinu_u"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWPraesidumMask.png",
+    "Link": "Praesidum Mask",
+    "Name": "Praesidum Mask",
+    "PcPrice": "$2.99",
+    "Round": "20 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2396823430",
+    "Type": "Operator"
+  },
+  "Protea Kollapsar Skin": {
+    "Artists": [
+      "led2012"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWProteaKollapsarSkin.png",
+    "Link": "Protea Kollapsar Skin",
+    "Name": "Protea Kollapsar Skin",
+    "PcPrice": "$6.99",
+    "Round": "20 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2385876180",
+    "Type": "Deluxe"
+  },
+  "Protea Technochron Skin": {
+    "Artists": [
+      "Master Noob"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWProteaTechnochronSkin.png",
+    "Link": "Protea Technochron Skin",
+    "Name": "Protea Technochron Skin",
+    "PcPrice": "$6.99",
+    "Round": "21 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2590625920",
+    "Type": "Deluxe"
+  },
+  "Raigo Chest Armor": {
+    "Artists": [
+      "led2012",
+      "lex182"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRaigoChestArmor.png",
+    "Link": "Raigo Chest Armor",
+    "Name": "Raigo Chest Armor",
+    "PcPrice": "$2.49",
+    "Round": "20 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2393715509",
+    "Type": "Armor"
+  },
+  "Raiji Syandana": {
+    "Artists": [
+      "led2012"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWREightRaijiScarf.png",
+    "Link": "Raiji Syandana",
+    "Name": "Raiji Syandana",
+    "PcPrice": "$5.99",
+    "Round": "8",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=858577212",
+    "Type": "Syandana"
+  },
+  "Ranulyst Syandana": {
+    "Artists": [
+      "led2012",
+      "daemonstar"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRanulystSyandana.png",
+    "Link": "Ranulyst Syandana",
+    "Name": "Ranulyst Syandana",
+    "PcPrice": "$5.99",
+    "Round": "19 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2157235904",
+    "Type": "Syandana"
+  },
+  "Rapier Ferita Skin": {
+    "Artists": [
+      "Hitsu San",
+      "Reil"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRFourteenFeritaRapierSkin.png",
+    "Link": "Rapier Ferita Skin",
+    "Name": "Rapier Ferita Skin",
+    "PcPrice": "$5.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1503084865",
+    "Type": "Weapon"
+  },
+  "Rapier Ni'Duhl Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRFourteenNiDuhlRapierSkin.png",
+    "Link": "Rapier Ni'Duhl Skin",
+    "Name": "Rapier Ni'Duhl Skin",
+    "PcPrice": "$5.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1478147348",
+    "Type": "Weapon"
+  },
+  "Repala Syandana": {
+    "Artists": [
+      "Master Noob"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWREightRepalaScarf.png",
+    "Link": "Repala Syandana",
+    "Name": "Repala Syandana",
+    "PcPrice": "$5.99",
+    "Round": "8",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=888942789",
+    "Type": "Syandana"
+  },
+  "Revenant Ahriman Skin": {
+    "Artists": [
+      "Vulbjorn"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRevenantAhrimanSkin.png",
+    "Link": "Revenant Ahriman Skin",
+    "Name": "Revenant Ahriman Skin",
+    "PcPrice": "$6.99",
+    "Round": "22 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2760985117",
+    "Type": "Deluxe"
+  },
+  "Revenant Draugen Skin": {
+    "Artists": [
+      "Goosmo"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRevenantDraugenSkin.png",
+    "Link": "Revenant Draugen Skin",
+    "Name": "Revenant Draugen Skin",
+    "PcPrice": "$6.99",
+    "Round": "20 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2396432431",
+    "Type": "Deluxe"
+  },
+  "Revenant Immortuos Helmet": {
+    "Artists": [
+      "Lubox"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRFifteenImmortuosHelmet.png",
+    "Link": "Revenant Immortuos Helmet",
+    "Name": "Revenant Immortuos Helmet",
+    "PcPrice": "$5.99",
+    "Round": "15",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1554287438",
+    "Type": "Helmet"
+  },
+  "Revenant Tenebrus Helmet": {
+    "Artists": [
+      "Awk'Q-Luz",
+      "malaya"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRevenantTenebrusHelmet.png",
+    "Link": "Revenant Tenebrus Helmet",
+    "Name": "Revenant Tenebrus Helmet",
+    "PcPrice": "$5.99",
+    "Round": "22 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2665289953",
+    "Type": "Helmet"
+  },
+  "Rhino Blade of the Lotus Skin": {
+    "Artists": [
+      "BeastBuster"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRThirteenRhinoBladeoftheLotusSkin.png",
+    "Link": "Rhino Blade of the Lotus Skin",
+    "Name": "Rhino Blade of the Lotus Skin",
+    "PcPrice": "$6.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1194210547",
+    "Type": "Deluxe"
+  },
+  "Rhino Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "90",
+    "Image": "SWRFourRhinoGraxxSkin.png",
+    "Link": "Rhino Graxx Skin",
+    "Name": "Rhino Graxx Skin",
+    "PcPrice": "$4.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=668182548",
+    "Type": "Warframe"
+  },
+  "Rhino Ion Skin": {
+    "Artists": [
+      "Yatus"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRhinoIonSkin.png",
+    "Link": "Rhino Ion Skin",
+    "Name": "Rhino Ion Skin",
+    "PcPrice": "$6.99",
+    "Round": "15",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1552083671",
+    "Type": "Deluxe"
+  },
+  "Rhino Mastodon Skin": {
+    "Artists": [
+      "Vulbjorn"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRElevenRhinoMastodonSkin.png",
+    "Link": "Rhino Mastodon Skin",
+    "Name": "Rhino Mastodon Skin",
+    "PcPrice": "$6.99",
+    "Round": "11 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1193843655",
+    "Type": "Deluxe"
+  },
+  "Rhino Scarab Sect Skin": {
+    "Artists": [
+      "Mz-3"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRTwelveRhinoScarabSectSkin.png",
+    "Link": "Rhino Scarab Sect Skin",
+    "Name": "Rhino Scarab Sect Skin",
+    "PcPrice": "$6.99",
+    "Round": "12",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1334920012",
+    "Type": "Deluxe"
+  },
+  "Rhino Teutonic Helmet": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "75",
+    "Image": "SWRSevenRhinoTeutonicHelmet.png",
+    "Link": "Rhino Teutonic Helmet",
+    "Name": "Rhino Teutonic Helmet",
+    "PcPrice": "$5.99",
+    "Round": "7",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=793996762",
+    "Type": "Helmet"
+  },
+  "Rhino Vojnik Skin": {
+    "Artists": [
+      "Volkovyi"
+    ],
+    "ConsolePrice": "90",
+    "Image": "SWRFourRhinoVojnikSkin.png",
+    "Link": "Rhino Vojnik Skin",
+    "Name": "Rhino Vojnik Skin",
+    "PcPrice": "$4.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=706304997",
+    "Type": "Warframe"
+  },
+  "Rhino Warlust Helmet": {
+    "Artists": [
+      "Stenchfury"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWREightRhinoWarlustHelmet.png",
+    "Link": "Rhino Warlust Helmet",
+    "Name": "Rhino Warlust Helmet",
+    "PcPrice": "$5.99",
+    "Round": "8",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=824149208",
+    "Type": "Helmet"
+  },
+  "Rota Syandana": {
+    "Artists": [
+      "Master Noob"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWROneRotaScarf.png",
+    "Link": "Rota Syandana",
+    "Name": "Rota Syandana",
+    "PcPrice": "$5.99",
+    "Round": "1",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=548723656",
+    "Type": "Syandana"
+  },
+  "Sari Syandana": {
+    "Artists": [
+      "malaya"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRSixSariScarf.png",
+    "Link": "Sari Syandana",
+    "Name": "Sari Syandana",
+    "PcPrice": "$5.99",
+    "Round": "6",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=771585391",
+    "Type": "Syandana"
+  },
+  "Sarva Harness Syandana": {
+    "Artists": [
+      "Master Noob"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRElevenSarvaHarness.png",
+    "Link": "Sarva Harness Syandana",
+    "Name": "Sarva Harness Syandana",
+    "PcPrice": "$5.99",
+    "Round": "11 [Batch 3]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1083532271",
+    "Type": "Syandana"
+  },
+  "Saryn Amalgama Skin": {
+    "Artists": [
+      "prosetisen"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRNineSarynAmalgamaSkin.png",
+    "Link": "Saryn Amalgama Skin",
+    "Name": "Saryn Amalgama Skin",
+    "PcPrice": "$6.99",
+    "Round": "9",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=838241236",
+    "Type": "Deluxe"
+  },
+  "Saryn Belladonna Helmet": {
+    "Artists": [
+      "malaya"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWREightSarynBelladonnaHelmet.png",
+    "Link": "Saryn Belladonna Helmet",
+    "Name": "Saryn Belladonna Helmet",
+    "PcPrice": "$5.99",
+    "Round": "8",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=884388372",
+    "Type": "Helmet"
+  },
+  "Saryn Blade of the Lotus Skin": {
+    "Artists": [
+      "BeastBuster"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWSarynBladeoftheLotusSkin.png",
+    "Link": "Saryn Blade of the Lotus Skin",
+    "Name": "Saryn Blade of the Lotus Skin",
+    "PcPrice": "$6.99",
+    "Round": "15",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1502953820",
+    "Type": "Deluxe"
+  },
+  "Saryn Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRSixSarynGraxxSkin.png",
+    "Link": "Saryn Graxx Skin",
+    "Name": "Saryn Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "6",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=778586481",
+    "Type": "Deluxe"
+  },
+  "Saryn Integra Skin": {
+    "Artists": [
+      "Cheshire"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRSevenSarynIntegraSkin.png",
+    "Link": "Saryn Integra Skin",
+    "Name": "Saryn Integra Skin",
+    "PcPrice": "$6.99",
+    "Round": "7",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=840335854",
+    "Type": "Deluxe"
+  },
+  "Saryn Ion Skin": {
+    "Artists": [
+      "Yatus"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWSarynIonSkin.png",
+    "Link": "Saryn Ion Skin",
+    "Name": "Saryn Ion Skin",
+    "PcPrice": "$6.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1711994225",
+    "Type": "Deluxe"
+  },
+  "Saryn Napellus Skin": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRElevenSarynNapellusSkin.png",
+    "Link": "Saryn Napellus Skin",
+    "Name": "Saryn Napellus Skin",
+    "PcPrice": "$6.99",
+    "Round": "11 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1183411980",
+    "Type": "Deluxe"
+  },
+  "Saryn Night Hunter Skin": {
+    "Artists": [
+      "Mz-3"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWSarynNightHunterSkin.png",
+    "Link": "Saryn Night Hunter Skin",
+    "Name": "Saryn Night Hunter Skin",
+    "PcPrice": "$6.99",
+    "Round": "19 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1973295985",
+    "Type": "Deluxe"
+  },
+  "Saryn Nita's Moda Skin": {
+    "Artists": [
+      "Volkovyi"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRElevenSarynNita'sModaSkin.png",
+    "Link": "Saryn Nita's Moda Skin",
+    "Name": "Saryn Nita's Moda Skin",
+    "PcPrice": "$4.99",
+    "Round": "11 [Batch 3]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1192679413",
+    "Type": "Warframe"
+  },
+  "Saryn Velenosa Skin": {
+    "Artists": [
+      "Hitsu San"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRElevenSarynVelenosaSkin.png",
+    "Link": "Saryn Velenosa Skin",
+    "Name": "Saryn Velenosa Skin",
+    "PcPrice": "$6.99",
+    "Round": "11 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1194891968",
+    "Type": "Deluxe"
+  },
+  "Scapulis Syandana": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRNineScapulisScarf.png",
+    "Link": "Scapulis Syandana",
+    "Name": "Scapulis Syandana",
+    "PcPrice": "$5.99",
+    "Round": "9",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=811501984",
+    "Type": "Syandana"
+  },
+  "Sciathin Syandana": {
+    "Artists": [
+      "Master Noob"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRFourSciathinScarf.png",
+    "Link": "Sciathin Syandana",
+    "Name": "Sciathin Syandana",
+    "PcPrice": "$5.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=727875983",
+    "Type": "Syandana"
+  },
+  "Scindo Combustion Skin": {
+    "Artists": [
+      "ming1345"
+    ],
+    "ConsolePrice": "40",
+    "Image": "CombustionScindo.png",
+    "Link": "Scindo Combustion Skin",
+    "Name": "Scindo Combustion Skin",
+    "PcPrice": "40",
+    "Round": "Weapons Skin Contest",
+    "SteamLink": "https://forums.warframe.com/topic/313983-weapon-skins-contest-final-results/",
+    "Type": "Weapon"
+  },
+  "Scindo Kuberus Skin": {
+    "Artists": [
+      "ZeroJackdaw"
+    ],
+    "ConsolePrice": "40",
+    "Image": "KuberusScindo.png",
+    "Link": "Scindo Kuberus Skin",
+    "Name": "Scindo Kuberus Skin",
+    "PcPrice": "40",
+    "Round": "Weapons Skin Contest",
+    "SteamLink": "https://forums.warframe.com/topic/313983-weapon-skins-contest-final-results/",
+    "Type": "Weapon"
+  },
+  "Sclera Oculus": {
+    "Artists": [
+      "kakarrot2812"
+    ],
+    "ConsolePrice": "35",
+    "Image": "SWR18OperatorScleraOculus.png",
+    "Link": "Sclera Oculus",
+    "Name": "Sclera Oculus",
+    "PcPrice": "$1.99",
+    "Round": "18",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1965915790",
+    "Type": "Operator"
+  },
+  "Scylla Syandana": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWScyllaSyandana.png",
+    "Link": "Scylla Syandana",
+    "Name": "Scylla Syandana",
+    "PcPrice": "$5.99",
+    "Round": "19 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2031465132",
+    "Type": "Syandana"
+  },
+  "Senvictis Syandana": {
+    "Artists": [
+      "Lubox"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWSenvictisScarf.png",
+    "Link": "Senvictis Syandana",
+    "Name": "Senvictis Syandana",
+    "PcPrice": "$5.99",
+    "Round": "16",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1559902487",
+    "Type": "Syandana"
+  },
+  "Seraphim Chest Plate": {
+    "Artists": [
+      "led2012",
+      "jaeon009"
+    ],
+    "ConsolePrice": "45",
+    "Image": "SWR18SeraphimArmorC.png",
+    "Link": "Seraphim Chest Plate",
+    "Name": "Seraphim Chest Plate",
+    "PcPrice": "$2.49",
+    "Round": "18",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1842785937",
+    "Type": "Armor"
+  },
+  "Seraphim Syandana": {
+    "Artists": [
+      "led2012",
+      "jaeon009"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRThirteenSeraphimScarf.png",
+    "Link": "Seraphim Syandana",
+    "Name": "Seraphim Syandana",
+    "PcPrice": "$5.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1391720886",
+    "Type": "Syandana"
+  },
+  "Sethar Syandana": {
+    "Artists": [
+      "led2012",
+      "Kevin Glint"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWR18SetharSyandana.png",
+    "Link": "Sethar Syandana",
+    "Name": "Sethar Syandana",
+    "PcPrice": "$5.99",
+    "Round": "18",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1789861119",
+    "Type": "Syandana"
+  },
+  "Setka Syandana": {
+    "Artists": [
+      "Hitsu San"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRThreeSetkaScarf.png",
+    "Link": "Setka Syandana",
+    "Name": "Setka Syandana",
+    "PcPrice": "$5.99",
+    "Round": "3",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=619687499",
+    "Type": "Syandana"
+  },
+  "Shiroku Blade of the Lotus Syandana": {
+    "Artists": [
+      "BeastBuster"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWShirokuBladeoftheLotusSyandana.png",
+    "Link": "Shiroku Blade of the Lotus Syandana",
+    "Name": "Shiroku Blade of the Lotus Syandana",
+    "PcPrice": "$5.99",
+    "Round": "20 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2396202016",
+    "Type": "Syandana"
+  },
+  "Shurihoshi Syandana": {
+    "Artists": [
+      "led2012",
+      "daemonstar"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRThirteenShurihoshiScarf.png",
+    "Link": "Shurihoshi Syandana",
+    "Name": "Shurihoshi Syandana",
+    "PcPrice": "$5.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1284268152",
+    "Type": "Syandana"
+  },
+  "Sildarg Syandana": {
+    "Artists": [
+      "led2012",
+      "daemonstar"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRThirteenSildargScarf.png",
+    "Link": "Sildarg Syandana",
+    "Name": "Sildarg Syandana",
+    "PcPrice": "$5.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1307198461",
+    "Type": "Syandana"
+  },
+  "Skana Infested Skin": {
+    "Artists": [
+      "Dencio Aggression"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRPolyInfestedSkana.png",
+    "Link": "Skana Infested Skin",
+    "Name": "Skana Infested Skin",
+    "PcPrice": "$5.99",
+    "Round": "Polycount",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=565667639",
+    "Type": "Weapon"
+  },
+  "Solida Syandana": {
+    "Artists": [
+      "Hitsu San"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRElevenSolidaScarf.png",
+    "Link": "Solida Syandana",
+    "Name": "Solida Syandana",
+    "PcPrice": "$5.99",
+    "Round": "11 [Batch 3]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1194751657",
+    "Type": "Syandana"
+  },
+  "Sovereign Syandana": {
+    "Artists": [
+      "BeastBuster"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRTwelveSovereignScarf.png",
+    "Link": "Sovereign Syandana",
+    "Name": "Sovereign Syandana",
+    "PcPrice": "$5.99",
+    "Round": "12",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1194252668",
+    "Type": "Syandana"
+  },
+  "Styx Syandana": {
+    "Artists": [
+      "malaya",
+      "Scharkie",
+      "Jadie"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWStyxSyandana.png",
+    "Link": "Styx Syandana",
+    "Name": "Styx Syandana",
+    "PcPrice": "$5.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1503779007",
+    "Type": "Syandana"
+  },
+  "Sybaris Overload Skin": {
+    "Artists": [
+      "Reisen.Udonge"
+    ],
+    "ConsolePrice": "50",
+    "Image": "SybarisOverloadSkin.png",
+    "Link": "Sybaris Overload Skin",
+    "Name": "Sybaris Overload Skin",
+    "PcPrice": "$5.99",
+    "Round": "1",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=541655548",
+    "Type": "Weapon"
+  },
+  "Sydeko Syandana": {
+    "Artists": [
+      "led2012",
+      "daemonstar"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRThirteenSydekoScarf.png",
+    "Link": "Sydeko Syandana",
+    "Name": "Sydeko Syandana",
+    "PcPrice": "$5.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1332984210",
+    "Type": "Syandana"
+  },
+  "Tenui Syandana": {
+    "Artists": [
+      "led2012",
+      "Justified114"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWTenuiSyanana.png",
+    "Link": "Tenui Syandana",
+    "Name": "Tenui Syandana",
+    "PcPrice": "$5.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1489879938",
+    "Type": "Syandana"
+  },
+  "Teplo Syandana": {
+    "Artists": [
+      "FrellingHazmot"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRFourTeploScarf.png",
+    "Link": "Teplo Syandana",
+    "Name": "Teplo Syandana",
+    "PcPrice": "$5.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=727041133",
+    "Type": "Syandana"
+  },
+  "Titania Lympharis Skin": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRFourteenLympharisSkin.png",
+    "Link": "Titania Lympharis Skin",
+    "Name": "Titania Lympharis Skin",
+    "PcPrice": "$6.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1238386447",
+    "Type": "Deluxe"
+  },
+  "Titania Pixialyst Skin": {
+    "Artists": [
+      "kakarrot2812"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWTitaniaPixialystSkin.png",
+    "Link": "Titania Pixialyst Skin",
+    "Name": "Titania Pixialyst Skin",
+    "PcPrice": "$6.99",
+    "Round": "21 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2343014724",
+    "Type": "Deluxe"
+  },
+  "Titania Unseelie Skin": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRTenTitaniaUnseelieSkin.png",
+    "Link": "Titania Unseelie Skin",
+    "Name": "Titania Unseelie Skin",
+    "PcPrice": "$6.99",
+    "Round": "10",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1107304083",
+    "Type": "Deluxe"
+  },
+  "Titania Viraji Helmet": {
+    "Artists": [
+      "malaya",
+      "blazingcobalt"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWTitaniaVirajiHelmet.png",
+    "Link": "Titania Viraji Helmet",
+    "Name": "Titania Viraji Helmet",
+    "PcPrice": "$5.99",
+    "Round": "19 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1963935162",
+    "Type": "Helmet"
+  },
+  "Tonaca Syandana": {
+    "Artists": [
+      "Master Noob"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRElevenTonacaScarf.png",
+    "Link": "Tonaca Syandana",
+    "Name": "Tonaca Syandana",
+    "PcPrice": "$5.99",
+    "Round": "11 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1095795621",
+    "Type": "Syandana"
+  },
+  "Tonfa Ba'geth Skin": {
+    "Artists": [
+      "Faven",
+      "Scharkie"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRElevenBa'GethTonfa.png",
+    "Link": "Tonfa Ba'geth Skin",
+    "Name": "Tonfa Ba'geth Skin",
+    "PcPrice": "$5.99",
+    "Round": "11 [Batch 3]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1183522931",
+    "Type": "Weapon"
+  },
+  "Tonfa Hades Skin": {
+    "Artists": [
+      "malaya",
+      "Scharkie",
+      "Jadie"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRFourteenHadesTonfaSkin.png",
+    "Link": "Tonfa Hades Skin",
+    "Name": "Tonfa Hades Skin",
+    "PcPrice": "$5.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1503773671",
+    "Type": "Weapon"
+  },
+  "Trinity Ancyra Helmet": {
+    "Artists": [
+      "Arsenal"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWREightTrinityAncyraHelmet.png",
+    "Link": "Trinity Ancyra Helmet",
+    "Name": "Trinity Ancyra Helmet",
+    "PcPrice": "$5.99",
+    "Round": "8",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=858032817",
+    "Type": "Helmet"
+  },
+  "Trinity Blade of the Lotus Skin": {
+    "Artists": [
+      "BeastBuster"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRThirteenTrinityBladeoftheLotusSkin.png",
+    "Link": "Trinity Blade of the Lotus Skin",
+    "Name": "Trinity Blade of the Lotus Skin",
+    "PcPrice": "$6.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1194223859",
+    "Type": "Deluxe"
+  },
+  "Trinity Knightess Skin": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRElevenTrinityKnightessSkin.png",
+    "Link": "Trinity Knightess Skin",
+    "Name": "Trinity Knightess Skin",
+    "PcPrice": "$6.99",
+    "Round": "11 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1194612896",
+    "Type": "Deluxe"
+  },
+  "Trinity Messiah Helmet": {
+    "Artists": [
+      "Cheshire"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRFiveTrinityMessiahHelmet.png",
+    "Link": "Trinity Messiah Helmet",
+    "Name": "Trinity Messiah Helmet",
+    "PcPrice": "$5.99",
+    "Round": "5",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=759777125",
+    "Type": "Helmet"
+  },
+  "Trinity Nightingale Skin": {
+    "Artists": [
+      "matzan481"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWTrinityNightingaleSkin.png",
+    "Link": "Trinity Nightingale Skin",
+    "Name": "Trinity Nightingale Skin",
+    "PcPrice": "$6.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1616477554",
+    "Type": "Deluxe"
+  },
+  "Tsujinasa Syandana": {
+    "Artists": [
+      "BeastBuster"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWTsujinasaSyandana.png",
+    "Link": "Tsujinasa Syandana",
+    "Name": "Tsujinasa Syandana",
+    "PcPrice": "$5.99",
+    "Round": "19 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1973983539",
+    "Type": "Syandana"
+  },
+  "Two-Handed Nikana Arashi Skin": {
+    "Artists": [
+      "Lubox"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWR18TwoHandedNikanaArashiSkin.png",
+    "Link": "Two-Handed Nikana Arashi Skin",
+    "Name": "Two-Handed Nikana Arashi Skin",
+    "PcPrice": "$5.99",
+    "Round": "18",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1972334531",
+    "Type": "Weapon"
+  },
+  "Udjyat's Serpent Machete Skin": {
+    "Artists": [
+      "Vulbjorn"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWUdjyat'sSerpentMacheteSkin.png",
+    "Link": "Udjyat's Serpent Machete Skin",
+    "Name": "Udjyat's Serpent Machete Skin",
+    "PcPrice": "$5.99",
+    "Round": "20 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2221454674",
+    "Type": "Weapon"
+  },
+  "Undercutter Nikana Skin": {
+    "Artists": [
+      "Felix Leonhart"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWR19NikanaUndercutterSkin.png",
+    "Link": "Undercutter Nikana Skin",
+    "Name": "Undercutter Nikana Skin",
+    "PcPrice": "$5.99",
+    "Round": "19 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2170282300",
+    "Type": "Weapon"
+  },
+  "Valesti Syandana": {
+    "Artists": [
+      "led2012",
+      "Xtygian"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWValestiSyandana.png",
+    "Link": "Valesti Syandana",
+    "Name": "Valesti Syandana",
+    "PcPrice": "$5.99",
+    "Round": "19 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2170736183",
+    "Type": "Syandana"
+  },
+  "Valkyr Cheetah Helmet": {
+    "Artists": [
+      "Cheshire"
+    ],
+    "ConsolePrice": "75",
+    "Image": "SWRFiveValkyrCheetahHelmet.png",
+    "Link": "Valkyr Cheetah Helmet",
+    "Name": "Valkyr Cheetah Helmet",
+    "PcPrice": "$5.99",
+    "Round": "5",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=728072721",
+    "Type": "Helmet"
+  },
+  "Valkyr Delusion Skin": {
+    "Artists": [
+      "prosetisen"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRTenValkyrDelusionSkin.png",
+    "Link": "Valkyr Delusion Skin",
+    "Name": "Valkyr Delusion Skin",
+    "PcPrice": "$6.99",
+    "Round": "10",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1124165204",
+    "Type": "Deluxe"
+  },
+  "Valkyr Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRFourValkyrGraxxSkin.png",
+    "Link": "Valkyr Graxx Skin",
+    "Name": "Valkyr Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=714015109",
+    "Type": "Deluxe"
+  },
+  "Valkyr Ion Helmet": {
+    "Artists": [
+      "Yatus"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRTenValkyrIonHelmet.png",
+    "Link": "Valkyr Ion Helmet",
+    "Name": "Valkyr Ion Helmet",
+    "PcPrice": "$5.99",
+    "Round": "10",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1110892377",
+    "Type": "Helmet"
+  },
+  "Valkyr Leonessa Skin": {
+    "Artists": [
+      "Hitsu San"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWLeonessaSkin.png",
+    "Link": "Valkyr Leonessa Skin",
+    "Name": "Valkyr Leonessa Skin",
+    "PcPrice": "$6.99",
+    "Round": "16",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1590544946",
+    "Type": "Deluxe"
+  },
+  "Valkyr Mithra Skin": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWValkyrMithraSkin.png",
+    "Link": "Valkyr Mithra Skin",
+    "Name": "Valkyr Mithra Skin",
+    "PcPrice": "$6.99",
+    "Round": "16",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1617339914",
+    "Type": "Deluxe"
+  },
+  "Vauban Bonaparte Skin": {
+    "Artists": [
+      "Hydroxate",
+      "Debbysheen"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWVaubanBonaparteSkin.png",
+    "Link": "Vauban Bonaparte Skin",
+    "Name": "Vauban Bonaparte Skin",
+    "PcPrice": "$6.99",
+    "Round": "22 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2571611378",
+    "Type": "Deluxe"
+  },
+  "Vauban Chapelon Helmet": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRFourVaubanChapelonHelmet.png",
+    "Link": "Vauban Chapelon Helmet",
+    "Name": "Vauban Chapelon Helmet",
+    "PcPrice": "$5.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=699138660",
+    "Type": "Helmet"
+  },
+  "Vauban Graxx Skin": {
+    "Artists": [
+      "Faven",
+      "Faven_LTD"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRElevenVaubanGraxxSkin.png",
+    "Link": "Vauban Graxx Skin",
+    "Name": "Vauban Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "11 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1183635289",
+    "Type": "Deluxe"
+  },
+  "Vauban Suppressor Skin": {
+    "Artists": [
+      "Cheshire",
+      "prosetisen"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRSevenVaubanSuppressorSkin.png",
+    "Link": "Vauban Suppressor Skin",
+    "Name": "Vauban Suppressor Skin",
+    "PcPrice": "$6.99",
+    "Round": "7",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=786772953",
+    "Type": "Deluxe"
+  },
+  "Vectis Sharpshooter Skin": {
+    "Artists": [
+      "StratoS117"
+    ],
+    "ConsolePrice": "40",
+    "Image": "VectisSharpshooterSkin.png",
+    "Link": "Vectis Sharpshooter Skin",
+    "Name": "Vectis Sharpshooter Skin",
+    "PcPrice": "40",
+    "Round": "Weapons Skin Contest",
+    "SteamLink": "https://forums.warframe.com/topic/313983-weapon-skins-contest-final-results/",
+    "Type": "Weapon"
+  },
+  "Vectis Silferer Skin": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "40",
+    "Image": "VectisSilfererSkin.png",
+    "Link": "Vectis Silferer Skin",
+    "Name": "Vectis Silferer Skin",
+    "PcPrice": "40",
+    "Round": "Weapons Skin Contest",
+    "SteamLink": "https://forums.warframe.com/topic/313983-weapon-skins-contest-final-results/",
+    "Type": "Weapon"
+  },
+  "Vikasa Shoulder Armor": {
+    "Artists": [
+      "blazingcobalt"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWVikasaShoulderArmor.png",
+    "Link": "Vikasa Shoulder Armor",
+    "Name": "Vikasa Shoulder Armor",
+    "PcPrice": "$5.99",
+    "Round": "22 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2729906267",
+    "Type": "Armor"
+  },
+  "Volt Amp Skin": {
+    "Artists": [
+      "Faven_PS"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWROneVoltAMPSkin.png",
+    "Link": "Volt Amp Skin",
+    "Name": "Volt Amp Skin",
+    "PcPrice": "$4.99",
+    "Round": "1",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=544746211",
+    "Type": "Warframe"
+  },
+  "Volt Arrester Helmet": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "75",
+    "Image": "SWRPolyVoltArresterHelmet.png",
+    "Link": "Volt Arrester Helmet",
+    "Name": "Volt Arrester Helmet",
+    "PcPrice": "$5.99",
+    "Round": "Polycount",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=566475141",
+    "Type": "Helmet"
+  },
+  "Volt Capacitor Skin": {
+    "Artists": [
+      "Del"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWREightVoltCapacitorSkin.png",
+    "Link": "Volt Capacitor Skin",
+    "Name": "Volt Capacitor Skin",
+    "PcPrice": "$6.99",
+    "Round": "8",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=878334024",
+    "Type": "Deluxe"
+  },
+  "Volt Fulgursor Skin": {
+    "Artists": [
+      "Vulbjorn"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRTwelveVoltFulgursorSkin.png",
+    "Link": "Volt Fulgursor Skin",
+    "Name": "Volt Fulgursor Skin",
+    "PcPrice": "$6.99",
+    "Round": "12",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1262456931",
+    "Type": "Deluxe"
+  },
+  "Volt Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRFourVoltGraxxSkin.png",
+    "Link": "Volt Graxx Skin",
+    "Name": "Volt Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=699760707",
+    "Type": "Deluxe"
+  },
+  "Volt Relay Helmet": {
+    "Artists": [
+      "DespicableCheese"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRPolyVoltRelayHelmet.png",
+    "Link": "Volt Relay Helmet",
+    "Name": "Volt Relay Helmet",
+    "PcPrice": "$5.99",
+    "Round": "Polycount",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=565180799",
+    "Type": "Helmet"
+  },
+  "Volt Technoshock Skin": {
+    "Artists": [
+      "Master Noob"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWVoltTechnoshockSkin.png",
+    "Link": "Volt Technoshock Skin",
+    "Name": "Volt Technoshock Skin",
+    "PcPrice": "$6.99",
+    "Round": "22 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2773971192",
+    "Type": "Deluxe"
+  },
+  "Volt Thales Helmet": {
+    "Artists": [
+      "Arsenal"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWRPolyVoltThalesHelmet.png",
+    "Link": "Volt Thales Helmet",
+    "Name": "Volt Thales Helmet",
+    "PcPrice": "$5.99",
+    "Round": "Polycount",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=565547113",
+    "Type": "Helmet"
+  },
+  "Volt Zener Skin": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWREightVoltZenerSkin.png",
+    "Link": "Volt Zener Skin",
+    "Name": "Volt Zener Skin",
+    "PcPrice": "$6.99",
+    "Round": "8",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=890868264",
+    "Type": "Deluxe"
+  },
+  "Vuoto Oculus": {
+    "Artists": [
+      "Oh_Shimmy"
+    ],
+    "ConsolePrice": "35",
+    "Image": "SWVuotoEye.png",
+    "Link": "Vuoto Oculus",
+    "Name": "Vuoto Oculus",
+    "PcPrice": "$1.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1845793673",
+    "Type": "Operator"
+  },
+  "Whip Wuush Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWWhipWuushSkin.png",
+    "Link": "Whip Wuush Skin",
+    "Name": "Whip Wuush Skin",
+    "PcPrice": "$5.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1835456310",
+    "Type": "Weapon"
+  },
+  "Wisp Celestist Skin": {
+    "Artists": [
+      "malaya",
+      "Awk'Q-Luz"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWWispCelestistSkin.png",
+    "Link": "Wisp Celestist Skin",
+    "Name": "Wisp Celestist Skin",
+    "PcPrice": "$6.99",
+    "Round": "21 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2471915572",
+    "Type": "Deluxe"
+  },
+  "Wisp Coven Skin": {
+    "Artists": [
+      "malaya",
+      "blazingcobalt"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWWispCovenSkin.png",
+    "Link": "Wisp Coven Skin",
+    "Name": "Wisp Coven Skin",
+    "PcPrice": "$6.99",
+    "Round": "21 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2530124117",
+    "Type": "Deluxe"
+  },
+  "Wisp Damas Helmet": {
+    "Artists": [
+      "FrellingHazmot"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWWispDamasHelmet.png",
+    "Link": "Wisp Damas Helmet",
+    "Name": "Wisp Damas Helmet",
+    "PcPrice": "$5.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1832943485",
+    "Type": "Helmet"
+  },
+  "Wisp Delusion Skin": {
+    "Artists": [
+      "prosetisen"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWR18WispDelusionSkin.png",
+    "Link": "Wisp Delusion Skin",
+    "Name": "Wisp Delusion Skin",
+    "PcPrice": "$6.99",
+    "Round": "18",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1973807926",
+    "Type": "Deluxe"
+  },
+  "Wisp Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWWispGraxxSkin.png",
+    "Link": "Wisp Graxx Skin",
+    "Name": "Wisp Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1824768987",
+    "Type": "Deluxe"
+  },
+  "Wisp Raevus Skin": {
+    "Artists": [
+      "malaya",
+      "Xtygian"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWWispRaevusSkin.png",
+    "Link": "Wisp Raevus Skin",
+    "Name": "Wisp Raevus Skin",
+    "PcPrice": "$6.99",
+    "Round": "22 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2503260348",
+    "Type": "Deluxe"
+  },
+  "Wisp Sycorax Skin": {
+    "Artists": [
+      "Vulbjorn"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWWispSycoraxSkin.png",
+    "Link": "Wisp Sycorax Skin",
+    "Name": "Wisp Sycorax Skin",
+    "PcPrice": "$6.99",
+    "Round": "21 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2580380949",
+    "Type": "Deluxe"
+  },
+  "Wisp Zamariu Skin": {
+    "Artists": [
+      "led2012",
+      "daemonstar"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWWispZamariuSkin.png",
+    "Link": "Wisp Zamariu Skin",
+    "Name": "Wisp Zamariu Skin",
+    "PcPrice": "$6.99",
+    "Round": "21 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2585528267",
+    "Type": "Deluxe"
+  },
+  "Wukong Auman Skin": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRElevenWukongAumanSkin.png",
+    "Link": "Wukong Auman Skin",
+    "Name": "Wukong Auman Skin",
+    "PcPrice": "$6.99",
+    "Round": "11 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1118959551",
+    "Type": "Deluxe"
+  },
+  "Wukong Mithra Skin": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWWukongMithraSkin.png",
+    "Link": "Wukong Mithra Skin",
+    "Name": "Wukong Mithra Skin",
+    "PcPrice": "$6.99",
+    "Round": "16",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1127390225",
+    "Type": "Deluxe"
+  },
+  "Wukong Piercing Eye Skin": {
+    "Artists": [
+      "Mz-3"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWWukongPiercingEyeSkin.png",
+    "Link": "Wukong Piercing Eye Skin",
+    "Name": "Wukong Piercing Eye Skin",
+    "PcPrice": "$6.99",
+    "Round": "21 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2594029119",
+    "Type": "Deluxe"
+  },
+  "Wukong Xingzhe Helmet": {
+    "Artists": [
+      "Rekkou"
+    ],
+    "ConsolePrice": "75",
+    "Image": "SWRFiveWukongXingzheHelmet.png",
+    "Link": "Wukong Xingzhe Helmet",
+    "Name": "Wukong Xingzhe Helmet",
+    "PcPrice": "$5.99",
+    "Round": "5",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=740966643",
+    "Type": "Helmet"
+  },
+  "Xiphos Lilieae Skin": {
+    "Artists": [
+      "MaceMadunusus"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWXiphosLilieaeSkin.png",
+    "Link": "Xiphos Lilieae Skin",
+    "Name": "Xiphos Lilieae Skin",
+    "PcPrice": "$4.99",
+    "Round": "21 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2595993786",
+    "Type": "Landing Craft"
+  },
+  "Xulatu Chest Armor": {
+    "Artists": [
+      "led2012"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWXulatuChestArmor.png",
+    "Link": "Xulatu Chest Armor",
+    "Name": "Xulatu Chest Armor",
+    "PcPrice": "$2.49",
+    "Round": "19 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2167813896",
+    "Type": "Armor"
+  },
+  "Yamex Tonfa Skin": {
+    "Artists": [
+      "kakarrot2812"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWYamexTonfaSkin.png",
+    "Link": "Yamex Tonfa Skin",
+    "Name": "Yamex Tonfa Skin",
+    "PcPrice": "$5.99",
+    "Round": "20 [Batch 2]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=2293658914",
+    "Type": "Weapon"
+  },
+  "Yureilyst Oculus": {
+    "Artists": [
+      "lukinu_u"
+    ],
+    "ConsolePrice": "35",
+    "Image": "SWYureilystEye.png",
+    "Link": "Yureilyst Oculus",
+    "Name": "Yureilyst Oculus",
+    "PcPrice": "$1.99",
+    "Round": "17",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1843081945",
+    "Type": "Operator"
+  },
+  "Zaikhya Syandana": {
+    "Artists": [
+      "malaya",
+      "Cobalt"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWREightZaikhyaScarf.png",
+    "Link": "Zaikhya Syandana",
+    "Name": "Zaikhya Syandana",
+    "PcPrice": "$5.99",
+    "Round": "8",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=873451087",
+    "Type": "Syandana"
+  },
+  "Zamariu Syandana": {
+    "Artists": [
+      "led2012",
+      "daemonstar"
+    ],
+    "ConsolePrice": "105",
+    "Image": "SWR18ZamariuSyandana.png",
+    "Link": "Zamariu Syandana",
+    "Name": "Zamariu Syandana",
+    "PcPrice": "$5.99",
+    "Round": "18",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1832616113",
+    "Type": "Syandana"
+  },
+  "Zenoriu Earpiece": {
+    "Artists": [
+      "led2012",
+      "daemonstar"
+    ],
+    "ConsolePrice": "35",
+    "Image": "SWZenoriuEar.png",
+    "Link": "Zenoriu Earpiece",
+    "Name": "Zenoriu Earpiece",
+    "PcPrice": "$1.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1494797974",
+    "Type": "Operator"
+  },
+  "Zenoriu Mask": {
+    "Artists": [
+      "led2012",
+      "daemonstar"
+    ],
+    "ConsolePrice": "35",
+    "Image": "SWZenoriuMask.png",
+    "Link": "Zenoriu Mask",
+    "Name": "Zenoriu Mask",
+    "PcPrice": "$1.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1494803201",
+    "Type": "Operator"
+  },
+  "Zenoriu Oculus": {
+    "Artists": [
+      "led2012",
+      "daemonstar"
+    ],
+    "ConsolePrice": "35",
+    "Image": "SWZenoriuEye.png",
+    "Link": "Zenoriu Oculus",
+    "Name": "Zenoriu Oculus",
+    "PcPrice": "$1.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1494801018",
+    "Type": "Operator"
+  },
+  "Zephyr Blade of the Lotus Skin": {
+    "Artists": [
+      "BeastBuster"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWZephyrBotLSkin.png",
+    "Link": "Zephyr Blade of the Lotus Skin",
+    "Name": "Zephyr Blade of the Lotus Skin",
+    "PcPrice": "$6.99",
+    "Round": "19 [Batch 1]",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1973982041",
+    "Type": "Deluxe"
+  },
+  "Zephyr Graxx Skin": {
+    "Artists": [
+      "Faven"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRFourteenZephyrGraxxSkin.png",
+    "Link": "Zephyr Graxx Skin",
+    "Name": "Zephyr Graxx Skin",
+    "PcPrice": "$6.99",
+    "Round": "14",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1309153880",
+    "Type": "Deluxe"
+  },
+  "Zephyr Hagoromo Skin": {
+    "Artists": [
+      "Hitsu San"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRTwoZephyrHagoromoSkin.png",
+    "Link": "Zephyr Hagoromo Skin",
+    "Name": "Zephyr Hagoromo Skin",
+    "PcPrice": "$6.99",
+    "Round": "2",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=610659722",
+    "Type": "Deluxe"
+  },
+  "Zephyr Migisi Helmet": {
+    "Artists": [
+      "FrellingHazmot"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRFourZephyrMigisiHelmet.png",
+    "Link": "Zephyr Migisi Helmet",
+    "Name": "Zephyr Migisi Helmet",
+    "PcPrice": "$5.99",
+    "Round": "4",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=709549507",
+    "Type": "Helmet"
+  },
+  "Zephyr Monsoon Helmet": {
+    "Artists": [
+      "artarrwen"
+    ],
+    "ConsolePrice": "N/A",
+    "Image": "SWRTwoZephyrMonsoonHelmet.png",
+    "Link": "Zephyr Monsoon Helmet",
+    "Name": "Zephyr Monsoon Helmet",
+    "PcPrice": "$5.99",
+    "Round": "2",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=605985394",
+    "Type": "Helmet"
+  },
+  "Zephyr Skeiron Skin": {
+    "Artists": [
+      "novadragon01"
+    ],
+    "ConsolePrice": "90",
+    "Image": "SWRTwoZephyrSkeironSkin.png",
+    "Link": "Zephyr Skeiron Skin",
+    "Name": "Zephyr Skeiron Skin",
+    "PcPrice": "$4.99",
+    "Round": "2",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=609371624",
+    "Type": "Warframe"
+  },
+  "Zephyr Strafe Skin": {
+    "Artists": [
+      "prosetisen"
+    ],
+    "ConsolePrice": "165",
+    "Image": "SWRThirteenZephyrStrafeSkin.png",
+    "Link": "Zephyr Strafe Skin",
+    "Name": "Zephyr Strafe Skin",
+    "PcPrice": "$6.99",
+    "Round": "13",
+    "SteamLink": "https://steamcommunity.com/sharedfiles/filedetails/?id=1335057061",
+    "Type": "Deluxe"
+  }
+}

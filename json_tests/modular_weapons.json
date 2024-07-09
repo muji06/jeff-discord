@@ -1,0 +1,1848 @@
+{
+  "Hound": {
+    "Bracket": {
+      "Cela": {
+        "Armor": -0.05,
+        "Health": 0.1,
+        "Name": "Cela",
+        "Precepts": [
+          "Reflex Denial"
+        ],
+        "Shield": 0.15
+      },
+      "Urga": {
+        "Armor": 0.1,
+        "Health": 0.15,
+        "Name": "Urga",
+        "Precepts": [
+          "Diversified Denial"
+        ],
+        "Shield": -0.05
+      },
+      "Zubb": {
+        "Armor": 0.15,
+        "Health": -0.05,
+        "Name": "Zubb",
+        "Precepts": [
+          "Evasive Denial"
+        ],
+        "Shield": 0.1
+      }
+    },
+    "Core": {
+      "Adlet": {
+        "Armor": 350,
+        "Health": 350,
+        "Name": "Adlet",
+        "Shield": 450
+      },
+      "Garmr": {
+        "Armor": 450,
+        "Health": 350,
+        "Name": "Garmr",
+        "Shield": 350
+      },
+      "Raiju": {
+        "Armor": 350,
+        "Health": 450,
+        "Name": "Raiju",
+        "Shield": 350
+      }
+    },
+    "Model": {
+      "Bhaira": {
+        "Name": "Bhaira",
+        "Precepts": [
+          "Null Audit"
+        ],
+        "Weapons": [
+          "Lacerten"
+        ]
+      },
+      "Dorma": {
+        "Name": "Dorma",
+        "Precepts": [
+          "Repo Audit"
+        ],
+        "Weapons": [
+          "Batoten"
+        ]
+      },
+      "Hec": {
+        "Name": "Hec",
+        "Precepts": [
+          "Equilibrium Audit"
+        ],
+        "Weapons": [
+          "Akaten"
+        ]
+      }
+    },
+    "Stabilizer": {
+      "Frak": {
+        "Name": "Frak",
+        "Polarities": [
+          "Vazarin"
+        ],
+        "Precepts": [
+          "Focused Prospectus"
+        ]
+      },
+      "Hinta": {
+        "Name": "Hinta",
+        "Polarities": [
+          "Madurai"
+        ],
+        "Precepts": [
+          "Synergized Prospectus"
+        ]
+      },
+      "Wanz": {
+        "Name": "Wanz",
+        "Polarities": [
+          "Naramon"
+        ],
+        "Precepts": [
+          "Aetial Prospectus"
+        ]
+      }
+    }
+  },
+  "Kitgun": {
+    "Chamber": {
+      "Catchmoon": {
+        "Accuracy": 5.9,
+        "CritChance": 0.21,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Base": {
+            "Heat": 167,
+            "Impact": 89
+          },
+          "Gibber": {
+            "Heat": 119,
+            "Impact": 41
+          },
+          "Haymaker": {
+            "Heat": 269,
+            "Impact": 191
+          },
+          "Lovetap": {
+            "Heat": 218,
+            "Impact": 140
+          },
+          "Ramble": {
+            "Heat": 143,
+            "Impact": 65
+          },
+          "Ulnaris": {
+            "Heat": 184,
+            "Impact": 106
+          }
+        },
+        "Disposition": 0.5,
+        "Falloff": {
+          "long": 40,
+          "short": 20
+        },
+        "FireRate": {
+          "Gibber": 3.17,
+          "Haymaker": 1.17,
+          "Lovetap": 1.5,
+          "Ramble": 2.5,
+          "Ulnaris": 1.83
+        },
+        "Magazine": {
+          "GigaHighest": 39,
+          "High": 11,
+          "Highest": 13,
+          "Low": 7,
+          "Lowest": 5,
+          "Med": 9,
+          "MegaHighest": 23,
+          "SuperHighest": 17
+        },
+        "Name": "Catchmoon",
+        "StatusChance": 0.21,
+        "Trigger": "Semi-Auto",
+        "Type": "Projectile"
+      },
+      "Gaze": {
+        "Accuracy": 100,
+        "CritChance": 0.25,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Base": {
+            "Puncture": 7,
+            "Radiation": 11
+          },
+          "Gibber": {
+            "Puncture": 6,
+            "Radiation": 10
+          },
+          "Haymaker": {
+            "Puncture": 8,
+            "Radiation": 12
+          },
+          "Lovetap": {
+            "Puncture": 7.5,
+            "Radiation": 11.5
+          },
+          "Ramble": {
+            "Puncture": 6.5,
+            "Radiation": 10.5
+          },
+          "Ulnaris": {
+            "Puncture": 7,
+            "Radiation": 11
+          }
+        },
+        "Disposition": 0.9,
+        "FireRate": {
+          "Gibber": 40,
+          "Haymaker": 21,
+          "Lovetap": 24,
+          "Ramble": 37,
+          "Ulnaris": 29
+        },
+        "Magazine": {
+          "GigaHighest": 113,
+          "High": 43,
+          "Highest": 51,
+          "Low": 31,
+          "Lowest": 23,
+          "Med": 37,
+          "MegaHighest": 85,
+          "SuperHighest": 49
+        },
+        "Name": "Gaze",
+        "StatusChance": 0.25,
+        "Trigger": "Held",
+        "Type": "Beam"
+      },
+      "Rattleguts": {
+        "Accuracy": 20,
+        "CritChance": 0.19,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Base": {
+            "Impact": 2,
+            "Puncture": 10,
+            "Radiation": 13,
+            "Slash": 8
+          },
+          "Gibber": {
+            "Impact": 0,
+            "Puncture": 7,
+            "Radiation": 10,
+            "Slash": 5
+          },
+          "Haymaker": {
+            "Impact": 11.5,
+            "Puncture": 19.5,
+            "Radiation": 22.5,
+            "Slash": 17.5
+          },
+          "Lovetap": {
+            "Impact": 6.75,
+            "Puncture": 14.75,
+            "Radiation": 17.75,
+            "Slash": 12.75
+          },
+          "Ramble": {
+            "Impact": 0.5,
+            "Puncture": 8.5,
+            "Radiation": 11.5,
+            "Slash": 6.5
+          },
+          "Ulnaris": {
+            "Impact": 3.5,
+            "Puncture": 11.5,
+            "Radiation": 14.5,
+            "Slash": 9.5
+          }
+        },
+        "Disposition": 0.75,
+        "FireRate": {
+          "Gibber": 11,
+          "Haymaker": 3.67,
+          "Lovetap": 5.17,
+          "Ramble": 8.83,
+          "Ulnaris": 6.67
+        },
+        "Magazine": {
+          "GigaHighest": 153,
+          "High": 64,
+          "Highest": 83,
+          "Low": 45,
+          "Lowest": 29,
+          "Med": 57,
+          "MegaHighest": 111,
+          "SuperHighest": 75
+        },
+        "Name": "Rattleguts",
+        "StatusChance": 0.19,
+        "Trigger": "Auto",
+        "Type": "Hitscan"
+      },
+      "Sporelacer": {
+        "Accuracy": 5.9,
+        "CritChance": 0.21,
+        "CritMultiplier": 3,
+        "Damage": {
+          "Base": {
+            "Impact": 21,
+            "Toxin": 69
+          },
+          "Gibber": {
+            "Toxin": 103
+          },
+          "Haymaker": {
+            "Impact": 261,
+            "Toxin": 403
+          },
+          "Lovetap": {
+            "Impact": 159,
+            "Toxin": 301
+          },
+          "Ramble": {
+            "Impact": 9,
+            "Toxin": 151
+          },
+          "Ulnaris": {
+            "Impact": 91,
+            "Toxin": 233
+          }
+        },
+        "Disposition": 0.55,
+        "Falloff": {
+          "long": 26,
+          "short": 13
+        },
+        "FireRate": {
+          "Gibber": 3.17,
+          "Haymaker": 1.17,
+          "Lovetap": 1.5,
+          "Ramble": 2.5,
+          "Ulnaris": 1.83
+        },
+        "Magazine": {
+          "GigaHighest": 39,
+          "High": 11,
+          "Highest": 13,
+          "Low": 7,
+          "Lowest": 5,
+          "Med": 9,
+          "MegaHighest": 23,
+          "SuperHighest": 17
+        },
+        "Name": "Sporelacer",
+        "StatusChance": 0.21,
+        "Trigger": "Semi-Auto",
+        "Type": "Projectile"
+      },
+      "Tombfinger": {
+        "Accuracy": 50,
+        "CritChance": 0.24,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Base": {
+            "Impact": 16,
+            "Puncture": 9,
+            "Radiation": 59
+          },
+          "Gibber": {
+            "Impact": 8,
+            "Puncture": 1,
+            "Radiation": 27
+          },
+          "Haymaker": {
+            "Impact": 32,
+            "Puncture": 25,
+            "Radiation": 123
+          },
+          "Lovetap": {
+            "Impact": 24,
+            "Puncture": 17,
+            "Radiation": 91
+          },
+          "Ramble": {
+            "Impact": 12,
+            "Puncture": 5,
+            "Radiation": 43
+          },
+          "Ulnaris": {
+            "Impact": 18.7,
+            "Puncture": 11.7,
+            "Radiation": 69.7
+          }
+        },
+        "Disposition": 0.7,
+        "FireRate": {
+          "Gibber": 4.5,
+          "Haymaker": 2.17,
+          "Lovetap": 2.5,
+          "Ramble": 3.67,
+          "Ulnaris": 2.83
+        },
+        "Magazine": {
+          "GigaHighest": 49,
+          "High": 23,
+          "Highest": 29,
+          "Low": 15,
+          "Lowest": 9,
+          "Med": 19,
+          "MegaHighest": 35,
+          "SuperHighest": 31
+        },
+        "Name": "Tombfinger",
+        "StatusChance": 0.24,
+        "Trigger": "Semi-Auto",
+        "Type": "Projectile"
+      },
+      "Vermisplicer": {
+        "Accuracy": 80,
+        "CritChance": 0.25,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Base": {
+            "Impact": 1.5,
+            "Puncture": 3.5,
+            "Slash": 4.5,
+            "Toxin": 4.5
+          },
+          "Gibber": {
+            "Impact": 1.5,
+            "Puncture": 3.5,
+            "Slash": 4.5,
+            "Toxin": 4.5
+          },
+          "Haymaker": {
+            "Impact": 2.5,
+            "Puncture": 4.5,
+            "Slash": 5.5,
+            "Toxin": 5.5
+          },
+          "Lovetap": {
+            "Impact": 2.3,
+            "Puncture": 4.3,
+            "Slash": 5.3,
+            "Toxin": 5.3
+          },
+          "Ramble": {
+            "Impact": 1.8,
+            "Puncture": 3.8,
+            "Slash": 4.8,
+            "Toxin": 4.8
+          },
+          "Ulnaris": {
+            "Impact": 2,
+            "Puncture": 4,
+            "Slash": 5,
+            "Toxin": 5
+          }
+        },
+        "Disposition": 1,
+        "FireRate": {
+          "Gibber": 31,
+          "Haymaker": 12,
+          "Lovetap": 15,
+          "Ramble": 28,
+          "Ulnaris": 21
+        },
+        "Magazine": {
+          "GigaHighest": 113,
+          "High": 43,
+          "Highest": 51,
+          "Low": 31,
+          "Lowest": 23,
+          "Med": 37,
+          "MegaHighest": 85,
+          "SuperHighest": 49
+        },
+        "Name": "Vermisplicer",
+        "StatusChance": 0.25,
+        "Trigger": "Held",
+        "Type": "Beam"
+      }
+    },
+    "Grip": {
+      "Gibber": {
+        "Name": "Gibber",
+        "Recoil": -0.5
+      },
+      "Haymaker": {
+        "Name": "Haymaker",
+        "Recoil": 1
+      },
+      "Lovetap": {
+        "Name": "Lovetap",
+        "Recoil": 0.5
+      },
+      "Ramble": {
+        "Name": "Ramble",
+        "Recoil": 0
+      },
+      "Ulnaris": {
+        "Name": "Ulnaris",
+        "Recoil": 0
+      }
+    },
+    "Loader": {
+      "Arcroid": {
+        "CritChance": 0.03,
+        "CritMultiplier": 0,
+        "Magazine": "Med",
+        "Name": "Arcroid",
+        "Reload": 2.1,
+        "StatusChance": 0.03
+      },
+      "Bashrack": {
+        "CritChance": 0.07,
+        "CritMultiplier": 0.1,
+        "Magazine": "High",
+        "Name": "Bashrack",
+        "Reload": 1.7,
+        "StatusChance": -0.04
+      },
+      "Bellows": {
+        "CritChance": 0,
+        "CritMultiplier": 0,
+        "Magazine": "Highest",
+        "Name": "Bellows",
+        "Reload": 2.1,
+        "StatusChance": 0
+      },
+      "Deepbreath": {
+        "CritChance": 0,
+        "CritMultiplier": 0,
+        "Magazine": "High",
+        "Name": "Deepbreath",
+        "Reload": 1.7,
+        "StatusChance": 0
+      },
+      "Flutterfire": {
+        "CritChance": -0.08,
+        "CritMultiplier": -0.3,
+        "Magazine": "Low",
+        "Name": "Flutterfire",
+        "Reload": 1.3,
+        "StatusChance": 0.14
+      },
+      "Killstream": {
+        "CritChance": 0.14,
+        "CritMultiplier": 0.3,
+        "Magazine": "Low",
+        "Name": "Killstream",
+        "Reload": 1.3,
+        "StatusChance": -0.08
+      },
+      "Macro Arcroid": {
+        "CritChance": 0,
+        "CritMultiplier": 0,
+        "Magazine": "GigaHighest",
+        "Name": "Macro Arcroid",
+        "Reload": 3.1,
+        "StatusChance": 0
+      },
+      "Macro Thymoid": {
+        "CritChance": 0.03,
+        "CritMultiplier": 0,
+        "Magazine": "MegaHighest",
+        "Name": "Macro Thymoid",
+        "Reload": 2.9,
+        "StatusChance": 0.03
+      },
+      "Ramflare": {
+        "CritChance": -0.08,
+        "CritMultiplier": -0.3,
+        "Magazine": "High",
+        "Name": "Ramflare",
+        "Reload": 1.7,
+        "StatusChance": 0.14
+      },
+      "Slap": {
+        "CritChance": 0,
+        "CritMultiplier": 0,
+        "Magazine": "Low",
+        "Name": "Slap",
+        "Reload": 1.3,
+        "StatusChance": 0
+      },
+      "Slapneedle": {
+        "CritChance": 0.07,
+        "CritMultiplier": 0.1,
+        "Magazine": "Low",
+        "Name": "Slapneedle",
+        "Reload": 1.3,
+        "StatusChance": -0.04
+      },
+      "Sparkfire": {
+        "CritChance": -0.04,
+        "CritMultiplier": -0.1,
+        "Magazine": "High",
+        "Name": "Sparkfire",
+        "Reload": 1.7,
+        "StatusChance": 0.07
+      },
+      "Splat": {
+        "CritChance": 0.14,
+        "CritMultiplier": 0.3,
+        "Magazine": "High",
+        "Name": "Splat",
+        "Reload": 1.7,
+        "StatusChance": -0.08
+      },
+      "Stitch": {
+        "CritChance": 0.07,
+        "CritMultiplier": 0.1,
+        "Magazine": "Highest",
+        "Name": "Stitch",
+        "Reload": 2.1,
+        "StatusChance": -0.04
+      },
+      "Swiftfire": {
+        "CritChance": -0.04,
+        "CritMultiplier": -0.1,
+        "Magazine": "Low",
+        "Name": "Swiftfire",
+        "Reload": 1.3,
+        "StatusChance": 0.07
+      },
+      "Thunderdrum": {
+        "CritChance": -0.04,
+        "CritMultiplier": -0.1,
+        "Magazine": "Highest",
+        "Name": "Thunderdrum",
+        "Reload": 2.1,
+        "StatusChance": 0.07
+      },
+      "Thymoid": {
+        "CritChance": 0,
+        "CritMultiplier": 0,
+        "Magazine": "SuperHighest",
+        "Name": "Thymoid",
+        "Reload": 2.3,
+        "StatusChance": 0
+      },
+      "Zip": {
+        "CritChance": 0,
+        "CritMultiplier": 0,
+        "Magazine": "Lowest",
+        "Name": "Zip",
+        "Reload": 0.9,
+        "StatusChance": 0
+      },
+      "Zipfire": {
+        "CritChance": -0.04,
+        "CritMultiplier": -0.1,
+        "Magazine": "Lowest",
+        "Name": "Zipfire",
+        "Reload": 0.9,
+        "StatusChance": 0.07
+      },
+      "Zipneedle": {
+        "CritChance": 0.07,
+        "CritMultiplier": 0.1,
+        "Magazine": "Lowest",
+        "Name": "Zipneedle",
+        "Reload": 0.9,
+        "StatusChance": -0.04
+      }
+    }
+  },
+  "KitgunPrimary": {
+    "Chamber": {
+      "Catchmoon": {
+        "Accuracy": 5.9,
+        "CritChance": 0.21,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Base": {
+            "Heat": 167,
+            "Impact": 89
+          },
+          "Brash": {
+            "Heat": 73,
+            "Impact": 37
+          },
+          "Palmaris": {
+            "Heat": 76,
+            "Impact": 40
+          },
+          "Shrewd": {
+            "Heat": 79,
+            "Impact": 43
+          },
+          "Steadyslam": {
+            "Heat": 105.5,
+            "Impact": 69.5
+          },
+          "Tremor": {
+            "Heat": 126,
+            "Impact": 90
+          }
+        },
+        "Disposition": 1.05,
+        "Falloff": {
+          "long": 24,
+          "short": 12
+        },
+        "FireRate": {
+          "Brash": 5.67,
+          "Palmaris": 5.17,
+          "Shrewd": 4.67,
+          "Steadyslam": 3.33,
+          "Tremor": 3
+        },
+        "Magazine": {
+          "GigaHighest": 39,
+          "High": 11,
+          "Highest": 13,
+          "Low": 7,
+          "Lowest": 5,
+          "Med": 9,
+          "MegaHighest": 23,
+          "SuperHighest": 17
+        },
+        "Name": "Catchmoon",
+        "StatusChance": 0.21,
+        "Trigger": "Auto",
+        "Type": "Projectile"
+      },
+      "Gaze": {
+        "Accuracy": 100,
+        "CritChance": 0.25,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Base": {
+            "Radiation": 11
+          },
+          "Brash": {
+            "Radiation": 29
+          },
+          "Palmaris": {
+            "Radiation": 30
+          },
+          "Shrewd": {
+            "Radiation": 31
+          },
+          "Steadyslam": {
+            "Radiation": 35
+          },
+          "Tremor": {
+            "Radiation": 37
+          }
+        },
+        "Disposition": 1,
+        "FireRate": {
+          "Brash": 30,
+          "Palmaris": 28,
+          "Shrewd": 26,
+          "Steadyslam": 20,
+          "Tremor": 16
+        },
+        "Magazine": {
+          "GigaHighest": 113,
+          "High": 43,
+          "Highest": 51,
+          "Low": 31,
+          "Lowest": 23,
+          "Med": 37,
+          "MegaHighest": 85,
+          "SuperHighest": 49
+        },
+        "Name": "Gaze",
+        "StatusChance": 0.25,
+        "Trigger": "Held",
+        "Type": "Beam"
+      },
+      "Rattleguts": {
+        "Accuracy": 20,
+        "CritChance": 0.19,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Base": {
+            "Impact": 2,
+            "Puncture": 10,
+            "Radiation": 13,
+            "Slash": 8
+          },
+          "Brash": {
+            "Impact": 1.5,
+            "Puncture": 4.5,
+            "Radiation": 8.5,
+            "Slash": 2.5
+          },
+          "Palmaris": {
+            "Impact": 1.7,
+            "Puncture": 4.8,
+            "Radiation": 8.9,
+            "Slash": 2.7
+          },
+          "Shrewd": {
+            "Impact": 1.8,
+            "Puncture": 4.8,
+            "Radiation": 8.8,
+            "Slash": 2.8
+          },
+          "Steadyslam": {
+            "Impact": 4.3,
+            "Puncture": 7.3,
+            "Radiation": 11.3,
+            "Slash": 5.3
+          },
+          "Tremor": {
+            "Impact": 6.5,
+            "Puncture": 9.5,
+            "Radiation": 13.5,
+            "Slash": 7.5
+          }
+        },
+        "Disposition": 1,
+        "FireRate": {
+          "Brash": 17,
+          "Palmaris": 15.5,
+          "Shrewd": 14,
+          "Steadyslam": 10,
+          "Tremor": 9
+        },
+        "Magazine": {
+          "GigaHighest": 153,
+          "High": 64,
+          "Highest": 83,
+          "Low": 45,
+          "Lowest": 29,
+          "Med": 57,
+          "MegaHighest": 111,
+          "SuperHighest": 75
+        },
+        "Name": "Rattleguts",
+        "StatusChance": 0.19,
+        "Trigger": "Auto",
+        "Type": "Hitscan"
+      },
+      "Sporelacer": {
+        "Accuracy": 5.9,
+        "CritChance": 0.21,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Base": {
+            "Impact": 21,
+            "Toxin": 69
+          },
+          "Brash": {
+            "Impact": 21,
+            "Toxin": 69
+          },
+          "Palmaris": {
+            "Impact": 27,
+            "Toxin": 75
+          },
+          "Shrewd": {
+            "Impact": 33,
+            "Toxin": 81
+          },
+          "Steadyslam": {
+            "Impact": 86,
+            "Toxin": 134
+          },
+          "Tremor": {
+            "Impact": 127,
+            "Toxin": 175
+          }
+        },
+        "Disposition": 1,
+        "Falloff": {
+          "long": 16,
+          "short": 8
+        },
+        "FireRate": {
+          "Brash": 5.67,
+          "Palmaris": 5.17,
+          "Shrewd": 4.67,
+          "Steadyslam": 3.33,
+          "Tremor": 3
+        },
+        "Magazine": {
+          "GigaHighest": 39,
+          "High": 11,
+          "Highest": 13,
+          "Low": 7,
+          "Lowest": 5,
+          "Med": 9,
+          "MegaHighest": 23,
+          "SuperHighest": 17
+        },
+        "Name": "Sporelacer",
+        "StatusChance": 0.21,
+        "Trigger": "Auto",
+        "Type": "Projectile"
+      },
+      "Tombfinger": {
+        "Accuracy": 50,
+        "CritChance": 0.24,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Base": {
+            "Impact": 40,
+            "Radiation": 18
+          },
+          "Brash": {
+            "Impact": 30,
+            "Radiation": 8
+          },
+          "Palmaris": {
+            "Impact": 32.5,
+            "Radiation": 10.5
+          },
+          "Shrewd": {
+            "Impact": 35,
+            "Radiation": 13
+          },
+          "Steadyslam": {
+            "Impact": 54.5,
+            "Radiation": 32.5
+          },
+          "Tremor": {
+            "Impact": 69,
+            "Radiation": 47
+          }
+        },
+        "Disposition": 1,
+        "FireRate": {
+          "Brash": 3.77,
+          "Palmaris": 3.45,
+          "Shrewd": 3.13,
+          "Steadyslam": 2.32,
+          "Tremor": 2.13
+        },
+        "Magazine": {
+          "GigaHighest": 49,
+          "High": 23,
+          "Highest": 29,
+          "Low": 15,
+          "Lowest": 9,
+          "Med": 19,
+          "MegaHighest": 35,
+          "SuperHighest": 31
+        },
+        "Name": "Tombfinger",
+        "StatusChance": 0.24,
+        "Trigger": "Charge",
+        "Type": "Projectile"
+      },
+      "Vermisplicer": {
+        "Accuracy": 80,
+        "CritChance": 0.25,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Base": {
+            "Impact": 5,
+            "Puncture": 6,
+            "Slash": 10,
+            "Toxin": 12
+          },
+          "Brash": {
+            "Impact": 5,
+            "Puncture": 6,
+            "Slash": 10,
+            "Toxin": 12
+          },
+          "Palmaris": {
+            "Impact": 5.3,
+            "Puncture": 6.3,
+            "Slash": 10.3,
+            "Toxin": 12.3
+          },
+          "Shrewd": {
+            "Impact": 5.5,
+            "Puncture": 6.5,
+            "Slash": 10.5,
+            "Toxin": 12.5
+          },
+          "Steadyslam": {
+            "Impact": 5,
+            "Puncture": 6,
+            "Slash": 10,
+            "Toxin": 12
+          },
+          "Tremor": {
+            "Impact": 6.5,
+            "Puncture": 7.5,
+            "Slash": 11.5,
+            "Toxin": 13.5
+          }
+        },
+        "Disposition": 0.9,
+        "FireRate": {
+          "Brash": 30,
+          "Palmaris": 28,
+          "Shrewd": 26,
+          "Steadyslam": 20,
+          "Tremor": 16
+        },
+        "Magazine": {
+          "GigaHighest": 113,
+          "High": 43,
+          "Highest": 51,
+          "Low": 31,
+          "Lowest": 23,
+          "Med": 37,
+          "MegaHighest": 85,
+          "SuperHighest": 49
+        },
+        "Name": "Vermisplicer",
+        "StatusChance": 0.25,
+        "Trigger": "Held",
+        "Type": "Beam"
+      }
+    },
+    "Grip": {
+      "Brash": {
+        "Name": "Brash",
+        "Recoil": -0.5
+      },
+      "Palmaris": {
+        "Name": "Palmaris",
+        "Recoil": 0
+      },
+      "Shrewd": {
+        "Name": "Shrewd",
+        "Recoil": 0
+      },
+      "Steadyslam": {
+        "Name": "Steadyslam",
+        "Recoil": 0.5
+      },
+      "Tremor": {
+        "Name": "Tremor",
+        "Recoil": 1
+      }
+    },
+    "Loader": {
+      "Arcroid": {
+        "CritChance": 0.03,
+        "CritMultiplier": 0,
+        "Magazine": "Med",
+        "Name": "Arcroid",
+        "Reload": 2.1,
+        "StatusChance": 0.03
+      },
+      "Bashrack": {
+        "CritChance": 0.07,
+        "CritMultiplier": 0.1,
+        "Magazine": "High",
+        "Name": "Bashrack",
+        "Reload": 1.7,
+        "StatusChance": -0.04
+      },
+      "Bellows": {
+        "CritChance": 0,
+        "CritMultiplier": 0,
+        "Magazine": "Highest",
+        "Name": "Bellows",
+        "Reload": 2.1,
+        "StatusChance": 0
+      },
+      "Deepbreath": {
+        "CritChance": 0,
+        "CritMultiplier": 0,
+        "Magazine": "High",
+        "Name": "Deepbreath",
+        "Reload": 1.7,
+        "StatusChance": 0
+      },
+      "Flutterfire": {
+        "CritChance": -0.08,
+        "CritMultiplier": -0.3,
+        "Magazine": "Low",
+        "Name": "Flutterfire",
+        "Reload": 1.3,
+        "StatusChance": 0.14
+      },
+      "Killstream": {
+        "CritChance": 0.14,
+        "CritMultiplier": 0.3,
+        "Magazine": "Low",
+        "Name": "Killstream",
+        "Reload": 1.3,
+        "StatusChance": -0.08
+      },
+      "Macro Arcroid": {
+        "CritChance": 0,
+        "CritMultiplier": 0,
+        "Magazine": "GigaHighest",
+        "Name": "Macro Arcroid",
+        "Reload": 3.1,
+        "StatusChance": 0
+      },
+      "Macro Thymoid": {
+        "CritChance": 0.03,
+        "CritMultiplier": 0,
+        "Magazine": "MegaHighest",
+        "Name": "Macro Thymoid",
+        "Reload": 2.9,
+        "StatusChance": 0.03
+      },
+      "Ramflare": {
+        "CritChance": -0.08,
+        "CritMultiplier": -0.3,
+        "Magazine": "High",
+        "Name": "Ramflare",
+        "Reload": 1.7,
+        "StatusChance": 0.14
+      },
+      "Slap": {
+        "CritChance": 0,
+        "CritMultiplier": 0,
+        "Magazine": "Low",
+        "Name": "Slap",
+        "Reload": 1.3,
+        "StatusChance": 0
+      },
+      "Slapneedle": {
+        "CritChance": 0.07,
+        "CritMultiplier": 0.1,
+        "Magazine": "Low",
+        "Name": "Slapneedle",
+        "Reload": 1.3,
+        "StatusChance": -0.04
+      },
+      "Sparkfire": {
+        "CritChance": -0.04,
+        "CritMultiplier": -0.1,
+        "Magazine": "High",
+        "Name": "Sparkfire",
+        "Reload": 1.7,
+        "StatusChance": 0.07
+      },
+      "Splat": {
+        "CritChance": 0.14,
+        "CritMultiplier": 0.3,
+        "Magazine": "High",
+        "Name": "Splat",
+        "Reload": 1.7,
+        "StatusChance": -0.08
+      },
+      "Stitch": {
+        "CritChance": 0.07,
+        "CritMultiplier": 0.1,
+        "Magazine": "Highest",
+        "Name": "Stitch",
+        "Reload": 2.1,
+        "StatusChance": -0.04
+      },
+      "Swiftfire": {
+        "CritChance": -0.04,
+        "CritMultiplier": -0.1,
+        "Magazine": "Low",
+        "Name": "Swiftfire",
+        "Reload": 1.3,
+        "StatusChance": 0.07
+      },
+      "Thunderdrum": {
+        "CritChance": -0.04,
+        "CritMultiplier": -0.1,
+        "Magazine": "Highest",
+        "Name": "Thunderdrum",
+        "Reload": 2.1,
+        "StatusChance": 0.07
+      },
+      "Thymoid": {
+        "CritChance": 0,
+        "CritMultiplier": 0,
+        "Magazine": "SuperHighest",
+        "Name": "Thymoid",
+        "Reload": 2.3,
+        "StatusChance": 0
+      },
+      "Zip": {
+        "CritChance": 0,
+        "CritMultiplier": 0,
+        "Magazine": "Lowest",
+        "Name": "Zip",
+        "Reload": 0.9,
+        "StatusChance": 0
+      },
+      "Zipfire": {
+        "CritChance": -0.04,
+        "CritMultiplier": -0.1,
+        "Magazine": "Lowest",
+        "Name": "Zipfire",
+        "Reload": 0.9,
+        "StatusChance": 0.07
+      },
+      "Zipneedle": {
+        "CritChance": 0.07,
+        "CritMultiplier": 0.1,
+        "Magazine": "Lowest",
+        "Name": "Zipneedle",
+        "Reload": 0.9,
+        "StatusChance": -0.04
+      }
+    }
+  },
+  "MOA": {
+    "Bracket": {
+      "Drimper": {
+        "Name": "Drimper",
+        "Polarities": [
+          "None"
+        ]
+      },
+      "Gauth": {
+        "Name": "Gauth",
+        "Polarities": [
+          "Naramon"
+        ]
+      },
+      "Hona": {
+        "Name": "Hona",
+        "Polarities": [
+          "Naramon"
+        ]
+      },
+      "Jonsin": {
+        "Name": "Jonsin",
+        "Polarities": [
+          "Madurai"
+        ]
+      },
+      "Tian": {
+        "Name": "Tian",
+        "Polarities": [
+          "Vazarin"
+        ]
+      }
+    },
+    "Core": {
+      "Alcrom": {
+        "Armor": 0.05,
+        "Health": 0.05,
+        "Name": "Alcrom",
+        "Shield": 0.05
+      },
+      "Drex": {
+        "Armor": 0.025,
+        "Health": 0.05,
+        "Name": "Drex",
+        "Shield": 0.075
+      },
+      "Krisys": {
+        "Armor": 0.075,
+        "Health": 0.05,
+        "Name": "Krisys",
+        "Shield": 0.025
+      },
+      "Lehan": {
+        "Armor": 0.075,
+        "Health": 0.075,
+        "Name": "Lehan",
+        "Shield": 0
+      }
+    },
+    "Gyro": {
+      "Aegron": {
+        "Armor": 0.05,
+        "Health": -0.025,
+        "Name": "Aegron",
+        "Shield": 0.025
+      },
+      "Atheca": {
+        "Armor": -0.025,
+        "Health": 0.1,
+        "Name": "Atheca",
+        "Shield": -0.025
+      },
+      "Harpen": {
+        "Armor": -0.025,
+        "Health": 0.025,
+        "Name": "Harpen",
+        "Shield": 0.05
+      },
+      "Hextra": {
+        "Armor": -0.025,
+        "Health": 0.05,
+        "Name": "Hextra",
+        "Shield": 0.025
+      },
+      "Munit": {
+        "Armor": 0.025,
+        "Health": 0.05,
+        "Name": "Munit",
+        "Shield": -0.025
+      },
+      "Phazor": {
+        "Armor": 0.025,
+        "Health": -0.025,
+        "Name": "Phazor",
+        "Shield": 0.05
+      },
+      "Trux": {
+        "Armor": 0.05,
+        "Health": 0.025,
+        "Name": "Trux",
+        "Shield": -0.025
+      },
+      "Tyli": {
+        "Armor": 0.05,
+        "Health": 0.05,
+        "Name": "Tyli",
+        "Shield": -0.05
+      }
+    },
+    "Model": {
+      "Lambeo": {
+        "Name": "Lambeo",
+        "Precepts": [
+          "Stasis Field",
+          "Shockwave Actuators"
+        ]
+      },
+      "Nychus": {
+        "Name": "Nychus",
+        "Precepts": [
+          "Blast Shield",
+          "Hard Engage"
+        ]
+      },
+      "Oloro": {
+        "Name": "Oloro",
+        "Precepts": [
+          "Tractor Beam",
+          "Security Override"
+        ]
+      },
+      "Para": {
+        "Name": "Para",
+        "Precepts": [
+          "Whiplash Mine",
+          "Anti-Grav Grenade"
+        ]
+      }
+    }
+  },
+  "Zaw": {
+    "Grip": {
+      "Jayap": {
+        "Damage": 0,
+        "Name": "Jayap",
+        "Speed": 0.917,
+        "Type": "TwoHanded"
+      },
+      "Korb": {
+        "Damage": 28,
+        "Name": "Korb",
+        "Speed": 0.783,
+        "Type": "OneHanded"
+      },
+      "Kroostra": {
+        "Damage": 14,
+        "Name": "Kroostra",
+        "Speed": 0.85,
+        "Type": "TwoHanded"
+      },
+      "Kwath": {
+        "Damage": 14,
+        "Name": "Kwath",
+        "Speed": 0.85,
+        "Type": "OneHanded"
+      },
+      "Laka": {
+        "Damage": 0,
+        "Name": "Laka",
+        "Speed": 0.917,
+        "Type": "OneHanded"
+      },
+      "Peye": {
+        "Damage": -4,
+        "Name": "Peye",
+        "Speed": 1,
+        "Type": "OneHanded"
+      },
+      "Plague Akwin": {
+        "Damage": -2,
+        "Name": "Plague Akwin",
+        "Speed": 0.95,
+        "Type": "OneHanded"
+      },
+      "Plague Bokwin": {
+        "Damage": 7,
+        "Name": "Plague Bokwin",
+        "Speed": 0.883,
+        "Type": "TwoHanded"
+      },
+      "Seekalla": {
+        "Damage": -4,
+        "Name": "Seekalla",
+        "Speed": 1,
+        "Type": "TwoHanded"
+      },
+      "Shtung": {
+        "Damage": 28,
+        "Name": "Shtung",
+        "Speed": 0.783,
+        "Type": "TwoHanded"
+      }
+    },
+    "Link": {
+      "Ekwana II Jai": {
+        "CritChance": -0.08,
+        "Damage": -4,
+        "Name": "Ekwana II Jai",
+        "Speed": 0.083,
+        "StatusChance": 0.14
+      },
+      "Ekwana II Ruhang": {
+        "CritChance": -0.08,
+        "Damage": 14,
+        "Name": "Ekwana II Ruhang",
+        "Speed": -0.067,
+        "StatusChance": 0.14
+      },
+      "Ekwana Jai": {
+        "CritChance": -0.04,
+        "Damage": -4,
+        "Name": "Ekwana Jai",
+        "Speed": 0.083,
+        "StatusChance": 0.07
+      },
+      "Ekwana Jai II": {
+        "CritChance": -0.04,
+        "Damage": -8,
+        "Name": "Ekwana Jai II",
+        "Speed": 0.167,
+        "StatusChance": 0.07
+      },
+      "Ekwana Ruhang": {
+        "CritChance": -0.04,
+        "Damage": 14,
+        "Name": "Ekwana Ruhang",
+        "Speed": -0.067,
+        "StatusChance": 0.07
+      },
+      "Ekwana Ruhang II": {
+        "CritChance": -0.04,
+        "Damage": 28,
+        "Name": "Ekwana Ruhang II",
+        "Speed": -0.133,
+        "StatusChance": 0.07
+      },
+      "Jai": {
+        "CritChance": 0,
+        "Damage": -4,
+        "Name": "Jai",
+        "Speed": 0.083,
+        "StatusChance": 0
+      },
+      "Jai II": {
+        "CritChance": 0,
+        "Damage": -8,
+        "Name": "Jai II",
+        "Speed": 0.167,
+        "StatusChance": 0
+      },
+      "Ruhang": {
+        "CritChance": 0,
+        "Damage": 14,
+        "Name": "Ruhang",
+        "Speed": -0.067,
+        "StatusChance": 0
+      },
+      "Ruhang II": {
+        "CritChance": 0,
+        "Damage": 28,
+        "Name": "Ruhang II",
+        "Speed": -0.133,
+        "StatusChance": 0
+      },
+      "Vargeet II Jai": {
+        "CritChance": 0.14,
+        "Damage": -4,
+        "Name": "Vargeet II Jai",
+        "Speed": 0.083,
+        "StatusChance": -0.08
+      },
+      "Vargeet II Ruhang": {
+        "CritChance": 0.14,
+        "Damage": 14,
+        "Name": "Vargeet II Ruhang",
+        "Speed": -0.067,
+        "StatusChance": -0.08
+      },
+      "Vargeet Jai": {
+        "CritChance": 0.07,
+        "Damage": -4,
+        "Name": "Vargeet Jai",
+        "Speed": 0.083,
+        "StatusChance": -0.04
+      },
+      "Vargeet Jai II": {
+        "CritChance": 0.07,
+        "Damage": -8,
+        "Name": "Vargeet Jai II",
+        "Speed": 0.167,
+        "StatusChance": -0.04
+      },
+      "Vargeet Ruhang": {
+        "CritChance": 0.07,
+        "Damage": 14,
+        "Name": "Vargeet Ruhang",
+        "Speed": -0.067,
+        "StatusChance": -0.04
+      },
+      "Vargeet Ruhang II": {
+        "CritChance": 0.07,
+        "Damage": 28,
+        "Name": "Vargeet Ruhang II",
+        "Speed": -0.133,
+        "StatusChance": -0.04
+      }
+    },
+    "Strike": {
+      "Balla": {
+        "CritChance": 0.18,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Impact": 11.2,
+          "Puncture": 134.4,
+          "Slash": 78.4
+        },
+        "Disposition": 0.9,
+        "Multi": {
+          "OneHanded": {
+            "Base": 1,
+            "Leap": 2,
+            "Slide": 2.142857,
+            "Wall": 3
+          },
+          "TwoHanded": {
+            "Base": 1,
+            "Leap": 2,
+            "Slide": 2.142857,
+            "Wall": 1.666667
+          }
+        },
+        "Name": "Balla",
+        "Speed": 0.083,
+        "StatusChance": 0.18,
+        "Type": {
+          "OneHanded": "Dagger",
+          "TwoHanded": "Staff"
+        }
+      },
+      "Cyath": {
+        "CritChance": 0.18,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Impact": 46,
+          "Puncture": 11.5,
+          "Slash": 172.5
+        },
+        "Disposition": 0.95,
+        "Multi": {
+          "OneHanded": {
+            "Base": 1,
+            "Leap": 2,
+            "Slide": 3,
+            "Wall": 4
+          },
+          "TwoHanded": {
+            "Base": 1.08,
+            "Leap": 2,
+            "Slide": 2.222222,
+            "Wall": 1.666667
+          }
+        },
+        "Name": "Cyath",
+        "Speed": 0,
+        "StatusChance": 0.18,
+        "Type": {
+          "OneHanded": "Machete",
+          "TwoHanded": "Polearm"
+        }
+      },
+      "Dehtat": {
+        "CritChance": 0.18,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Impact": 22.4,
+          "Puncture": 112,
+          "Slash": 89.6
+        },
+        "Disposition": 1.2,
+        "Multi": {
+          "OneHanded": {
+            "Base": 1,
+            "Leap": 2,
+            "Slide": 2.142857,
+            "Wall": 4
+          },
+          "TwoHanded": {
+            "Base": 1.09,
+            "Leap": 2,
+            "Slide": 2.222222,
+            "Wall": 1.666667
+          }
+        },
+        "Name": "Dehtat",
+        "Speed": 0.083,
+        "StatusChance": 0.18,
+        "Type": {
+          "OneHanded": "Rapier",
+          "TwoHanded": "Polearm"
+        }
+      },
+      "Dokrahm": {
+        "CritChance": 0.18,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Impact": 46.4,
+          "Puncture": 108.1,
+          "Slash": 154.5
+        },
+        "Disposition": 0.75,
+        "Multi": {
+          "OneHanded": {
+            "Base": 1,
+            "Leap": 2,
+            "Slide": 2,
+            "Wall": 2
+          },
+          "TwoHanded": {
+            "Base": 0.93,
+            "Leap": 2,
+            "Slide": 2,
+            "Wall": 2
+          }
+        },
+        "Name": "Dokrahm",
+        "Speed": 0.083,
+        "StatusChance": 0.18,
+        "Type": {
+          "OneHanded": "Scythe",
+          "TwoHanded": "Heavy Blade"
+        }
+      },
+      "Kronsh": {
+        "CritChance": 0.18,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Impact": 163.8,
+          "Slash": 70.2
+        },
+        "Disposition": 1.3,
+        "Multi": {
+          "OneHanded": {
+            "Base": 1,
+            "Leap": 2,
+            "Slide": 3,
+            "Wall": 4
+          },
+          "TwoHanded": {
+            "Base": 1.07,
+            "Leap": 2,
+            "Slide": 2.222222,
+            "Wall": 1.666667
+          }
+        },
+        "Name": "Kronsh",
+        "Speed": -0.067,
+        "StatusChance": 0.18,
+        "Type": {
+          "OneHanded": "Machete",
+          "TwoHanded": "Polearm"
+        }
+      },
+      "Mewan": {
+        "CritChance": 0.18,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Impact": 56,
+          "Puncture": 78.4,
+          "Slash": 89.6
+        },
+        "Disposition": 1.1,
+        "Multi": {
+          "OneHanded": {
+            "Base": 1,
+            "Leap": 2,
+            "Slide": 2.142857,
+            "Wall": 4
+          },
+          "TwoHanded": {
+            "Base": 1.09,
+            "Leap": 2,
+            "Slide": 2.222222,
+            "Wall": 1.666667
+          }
+        },
+        "Name": "Mewan",
+        "Speed": -0.067,
+        "StatusChance": 0.18,
+        "Type": {
+          "OneHanded": "Sword",
+          "TwoHanded": "Polearm"
+        }
+      },
+      "Ooltha": {
+        "CritChance": 0.18,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Impact": 22.4,
+          "Puncture": 89.6,
+          "Slash": 112
+        },
+        "Disposition": 1.25,
+        "Multi": {
+          "OneHanded": {
+            "Base": 1,
+            "Leap": 2,
+            "Slide": 2.142857,
+            "Wall": 4
+          },
+          "TwoHanded": {
+            "Base": 1,
+            "Leap": 2,
+            "Slide": 2.142857,
+            "Wall": 1.666667
+          }
+        },
+        "Name": "Ooltha",
+        "Speed": 0,
+        "StatusChance": 0.18,
+        "Type": {
+          "OneHanded": "Sword",
+          "TwoHanded": "Staff"
+        }
+      },
+      "Plague Keewar": {
+        "CritChance": 0.18,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Impact": 88,
+          "Puncture": 57,
+          "Slash": 91,
+          "Viral": 70
+        },
+        "Disposition": 0.75,
+        "Multi": {
+          "OneHanded": {
+            "Base": 1,
+            "Leap": 2,
+            "Slide": 2,
+            "Wall": 2
+          },
+          "TwoHanded": {
+            "Base": 0.85,
+            "Leap": 2,
+            "Slide": 2.142857,
+            "Wall": 1.666667
+          }
+        },
+        "Name": "Plague Keewar",
+        "Speed": -0.033,
+        "StatusChance": 0.22,
+        "Type": {
+          "OneHanded": "Scythe",
+          "TwoHanded": "Staff"
+        }
+      },
+      "Plague Kripath": {
+        "CritChance": 0.22,
+        "CritMultiplier": 2.2,
+        "Damage": {
+          "Impact": 30,
+          "Puncture": 70,
+          "Slash": 49,
+          "Viral": 64
+        },
+        "Disposition": 0.65,
+        "Multi": {
+          "OneHanded": {
+            "Base": 1,
+            "Leap": 2,
+            "Slide": 2.142857,
+            "Wall": 4
+          },
+          "TwoHanded": {
+            "Base": 1.08,
+            "Leap": 2,
+            "Slide": 2.222222,
+            "Wall": 1.666667
+          }
+        },
+        "Name": "Plague Kripath",
+        "Speed": 0.033,
+        "StatusChance": 0.18,
+        "Type": {
+          "OneHanded": "Rapier",
+          "TwoHanded": "Polearm"
+        }
+      },
+      "Rabvee": {
+        "CritChance": 0.18,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Impact": 140.4,
+          "Puncture": 11.7,
+          "Slash": 81.9
+        },
+        "Disposition": 1.3,
+        "Multi": {
+          "OneHanded": {
+            "Base": 1,
+            "Leap": 2,
+            "Slide": 3,
+            "Wall": 4
+          },
+          "TwoHanded": {
+            "Base": 1.08,
+            "Leap": 2,
+            "Slide": 2,
+            "Wall": 2
+          }
+        },
+        "Name": "Rabvee",
+        "Speed": -0.067,
+        "StatusChance": 0.18,
+        "Type": {
+          "OneHanded": "Machete",
+          "TwoHanded": "Hammer"
+        }
+      },
+      "Sepfahn": {
+        "CritChance": 0.2,
+        "CritMultiplier": 2,
+        "Damage": {
+          "Impact": 22.6,
+          "Puncture": 56.5,
+          "Slash": 146.9
+        },
+        "Disposition": 0.7,
+        "Multi": {
+          "OneHanded": {
+            "Base": 1,
+            "Leap": 2,
+            "Slide": 2.142857,
+            "Wall": 2.142857
+          },
+          "TwoHanded": {
+            "Base": 1,
+            "Leap": 2,
+            "Slide": 2.142857,
+            "Wall": 1.666667
+          }
+        },
+        "Name": "Sepfahn",
+        "Speed": 0,
+        "StatusChance": 0.2,
+        "Type": {
+          "OneHanded": "Nikana",
+          "TwoHanded": "Staff"
+        }
+      }
+    }
+  }
+}

@@ -8,7 +8,8 @@ import requests
 from timeloop import Timeloop
 from datetime import timedelta, datetime
 
-from config import DOWNLOAD_URLS, ROTATIONS, FIRST_WEEK, NEW_DOWNLOAD_URLS, CHECKSUMS
+from config import DOWNLOAD_URLS, ROTATIONS, FIRST_WEEK,\
+    NEW_DOWNLOAD_URLS, CHECKSUMS, WFCD
 
 class RedisManager(object):
     def __init__(self):
@@ -113,5 +114,45 @@ def refill_wiki_data_v2():
             else:
                 print(f"[refill_wiki_data][{time.ctime()}]:\t[Downloading not succesful for '{key}'data retrieved: {data}. Retrying...({retries})]")
 
+
+@tl.job(interval=timedelta(hours=24))
+def refill_github_data():
+    for key, url in WFCD:
+        retries = 0
+        ready = False
+
+        while not ready and retries < 100:
+            retries += 1
+            print(f"[refill_github_data][{time.ctime()}]:\t[Downloading data for '{key}'...]")
+            try:
+                res = requests.get(url=url)
+            except:
+                print(f"[refill_github_data][{time.ctime()}]:\t[Downloading failed '{key}'{chr(10)}]")
+                continue
+            
+            return_data = res.json()
+            checksum = hashlib.md5(bytes(res.text)).hexdigest()
+            cached = False
+            ready = True
+            # check if we have data cached
+            old_checksum = ""
+            if cache.cache.exists(CHECKSUMS[key]):
+                cached = True
+                old_checksum = cache.cache.get(CHECKSUMS[key])
+                
+            if checksum == old_checksum:
+                # create a new checksum
+                if not cached:
+                    cache.cache.set(key, return_data)
+                    # save checksum
+                    cache.cache.set(CHECKSUMS[key], checksum)
+                    print(f"[refill_github_data][{time.ctime()}]:\t[{key} data ready on redis!']")
+                else:
+                    print(f"[refill_github_data][{time.ctime()}]:\t[No new data for {key}! Skipping']")
+            else:
+                cache.cache.set(key, return_data)
+                cache.cache.set(CHECKSUMS[key], checksum)
+                print(f"[refill_github_data][{time.ctime()}]:\t[{key} data ready on redis!']")
+                break
 
 tl.start(block=True)

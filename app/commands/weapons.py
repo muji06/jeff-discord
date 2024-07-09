@@ -215,7 +215,7 @@ class weapon(commands.Cog):
         if snekw['Slot'] != 'Melee':
             description +=(f"Class: {snekw['Slot']}{chr(10)}"+
                             f"Type: {snekw['Class']}{chr(10)}"+
-                            f"Mastery: {snekw['Mastery']}{chr(10)}"+
+                            f"Mastery: {snekw.get('Mastery','-')}{chr(10)}"+
                             f"Ammo: {snekw['AmmoMax'] if 'AmmoMax' in snekw else '∞'}{chr(10)}"+
                             f"Ammo Pickup: {snekw['AmmoPickup'] if 'AmmoPickup' in snekw else ''}{chr(10) if 'AmmoPickup' in snekw else ''}" +
                             f"Magazine: {snekw['Magazine']}{chr(10)}"+
@@ -233,7 +233,7 @@ class weapon(commands.Cog):
         else:
             description +=(f"Class: {snekw['Slot']}{chr(10)}"+
             f"Type: {snekw['Class']}{chr(10)}"+
-            f"Mastery: {snekw['Mastery']}{chr(10)}"+
+            f"Mastery: {snekw.get('Mastery','-')}{chr(10)}"+
             f"Attack Speed: {snekw['Attacks'][0]['FireRate']}{chr(10)}"+
             f"Combo Duration: {snekw['ComboDur']}{chr(10)}"+
             f"Range: {snekw['MeleeRange']}{chr(10)}"+
