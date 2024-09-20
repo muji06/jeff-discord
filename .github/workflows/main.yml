@@ -36,6 +36,7 @@ jobs:
       with:
         host: ${{ secrets.LOCAL_PI }}
         username: ${{ secrets.REMOTE_USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
         port: 22
         script: |
           cd ~/github/jeff-discord
