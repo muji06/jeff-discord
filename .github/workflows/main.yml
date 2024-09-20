@@ -32,15 +32,13 @@ jobs:
         tags: tag:server
 
     - name: SSH login and deploy
-      uses: appleboy/ssh-action@v0.1.5
+      uses: appleboy/ssh-action@v1.0.3
       with:
         host: ${{ secrets.LOCAL_PI }}
         username: ${{ secrets.REMOTE_USERNAME }}
-        password: ${{ secrets.REMOTE_PASS }}
         port: 22
         script: |
-
-          cd /home/pi/github/jeff-discord
+          cd ~/github/jeff-discord
           git pull
           docker compose down
           docker compose build 
