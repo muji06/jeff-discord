@@ -20,13 +20,13 @@ class eda(commands.Cog):
         data = res.json()
 
         # data is currently stored on temp var
-        temp = json.loads(data['Tmp']).get('lqo9')
+        temp = json.loads(data['Tmp']).get('lqo27')
         if not temp:
             return await ctx.send(f"No data found!")
         try:
             missions = [split_words(miss) for miss in temp["mt"]]
             modifiers = [[split_words(mod) for mod in mod_group] for mod_group in temp["c"]] 
-            elite_modifiers = [split_words(miss) for miss in temp["mv"]]
+            deviations = [split_words(dev) for dev in temp["mv"]]
             confitions = [split_words(cond) for cond in temp["fv"]]
 
             embed = discord.Embed(
@@ -36,9 +36,9 @@ class eda(commands.Cog):
             
             embed.add_field(name=f"Conditions", value=f"- {f'{chr(10)}- '.join(confitions)}", inline=False)
 
-            for i,group in enumerate(zip(missions, modifiers, elite_modifiers)):
-                mission, modifier, elite_modifier = group
-                embed.add_field(name=f"{i+1} - {mission}", value=f"Modifiers:\n- {f'{chr(10)}- '.join(modifier)}\n- **{elite_modifier}**\n", inline=False)
+            for i,group in enumerate(zip(missions, modifiers, deviations)):
+                mission, modifier, deviation = group
+                embed.add_field(name=f"{i+1} - {mission}", value=f"Modifiers:\n- {deviation}\n- {modifier[0]}\n- **{modifier[1]}**\n", inline=False)
 
 
             await ctx.send(embed=embed)

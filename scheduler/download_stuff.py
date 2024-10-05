@@ -112,7 +112,7 @@ def refill_wiki_data_v2():
 
                 break
             else:
-                print(f"[refill_wiki_data][{time.ctime()}]:\t[Downloading not succesful for '{key}'data retrieved: {data}. Retrying...({retries})]")
+                print(f"[refill_wiki_data][{time.ctime()}]:\t[Downloading not succesful for '{key}'data retrieved: {return_data}. Retrying...({retries})]")
 
 
 @tl.job(interval=timedelta(hours=24))
