@@ -2,8 +2,7 @@ from discord.ext import commands
 from datetime import datetime
 import discord
 import requests
-import asyncio
-from funcs import find_internal_companion_name, find_internal_skin_name, find_internal_warframe_name, find_internal_ability_name
+from funcs import find_internal_warframe_name, find_internal_ability_name
 from redis_manager import cache
 
 class profile(commands.Cog):
@@ -12,13 +11,20 @@ class profile(commands.Cog):
 
     @commands.hybrid_command(name="profile", with_app_command=True, description="Get warframe user profile stats")
     # @app_commands.guilds(discord.Object(id=992897664087760979))
-    async def profile(self, ctx: commands.Context, profile_name: str=None): 
+    async def profile(self, ctx: commands.Context, *, profile_name: str=None, prefix: str=None):
         if not profile_name:
             await ctx.send("Please enter a profile name.")
             return
-        
+        platform = ""
+        if prefix in ["switch","ns","swi"]:
+            platform = "-swi"
+        elif prefix in ["ps","playstation","ps4","ps5"]:
+            platform = "-ps4"
+        elif prefix in ["xb1","xb","xbox"]:
+            platform = "-xb1"
+
         try:
-            profile_data = ProfileData(profile_name)
+            profile_data = ProfileData(profile_name, platform)
         except Exception as e:
             await ctx.send(f"No profile found")
             return
@@ -70,8 +76,8 @@ class ProfileView(discord.ui.View):
         
 class ProfileData():
     wf_status_url = "https://api.warframestat.us/profile/"
-    wf_official_url = "https://content.warframe.com/dynamic/getProfileViewingData.php"
-    def __init__(self, username):
+    def __init__(self, username, platform):
+        self.wf_official_url = f"https://content{platform}.warframe.com/dynamic/getProfileViewingData.php"
         # self.wf_status = requests.get(f"{self.wf_status_url}{username}").json()
         self.wf_official = requests.get(f"{self.wf_official_url}?n={username}").json()
 
