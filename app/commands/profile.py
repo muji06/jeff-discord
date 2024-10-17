@@ -5,26 +5,55 @@ import requests
 from funcs import find_internal_warframe_name, find_internal_ability_name
 from redis_manager import cache
 
+PLATFORMS = {
+    "pc" : ["pc"],
+    "switch" : ["switch","ns","swi"],
+    "xbox" : ["xb1","xb","xbox"],
+    "ps4" : ["ps","playstation","ps4","ps5"],
+    "ios" : ["ios"]
+}
+
 class profile(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
     @commands.hybrid_command(name="profile", with_app_command=True, description="Get warframe user profile stats")
     # @app_commands.guilds(discord.Object(id=992897664087760979))
-    async def profile(self, ctx: commands.Context, *, profile_name: str=None, prefix: str=None):
-        if not profile_name:
+    async def profile(self, ctx: commands.Context, *, message: str=None, platform: str=None):
+        if not message:
             await ctx.send("Please enter a profile name.")
             return
-        platform = ""
-        if prefix in ["switch","ns","swi"]:
-            platform = "-swi"
-        elif prefix in ["ps","playstation","ps4","ps5"]:
-            platform = "-ps4"
-        elif prefix in ["xb1","xb","xbox"]:
-            platform = "-xb1"
+        
+        if not platform:
+            args_parts = message.split(" ")
+            profile_name = " ".join(args_parts)
+            platform = None
+
+            if len(args_parts) > 1:
+                *profile_name_parts, potential_platform = args_parts
+                valid_platforms = [item for row in PLATFORMS.values() for item in row] # flatten
+                if potential_platform in valid_platforms:
+                    profile_name = " ".join(profile_name_parts)
+                    platform = potential_platform
+            else:
+                profile_name = args_parts[0]
+                platform = None
+
+            if platform in PLATFORMS["switch"]:
+                prefix = "-swi"
+            elif platform in PLATFORMS["ps4"]:
+                prefix = "-ps4"
+            elif platform in PLATFORMS["xbox"]:
+                prefix = "-xb1"
+            elif platform in PLATFORMS["ios"] or platform in PLATFORMS["pc"]:
+                prefix = ""
+            else:
+                prefix = ""
+        else: # use platform directly if going through slash command
+            profile_name = message
 
         try:
-            profile_data = ProfileData(profile_name, platform)
+            profile_data = ProfileData(profile_name, prefix)
         except Exception as e:
             await ctx.send(f"No profile found")
             return
