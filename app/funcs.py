@@ -76,15 +76,17 @@ def optimized_find(string: str, output_dict: dict, output_key):
     if 'forma' in string.lower():
         output_dict[output_key] = ''
         return
-        
-    arr = pricecheck(string)
-    for i,x in enumerate(arr):
-        if x == 10000:
-            arr[i] = "N/A"
-            
-    text = f"({arr[2]} , {arr[1]} , {arr[0]})<:Platinum:992917150358589550>"
-    output_dict[output_key] = text
-    return
+    try:
+        arr = pricecheck(string)
+        for i,x in enumerate(arr):
+            if x == 10000:
+                arr[i] = "N/A"
+                
+        text = f"({arr[2]} , {arr[1]} , {arr[0]})<:Platinum:992917150358589550>"
+        output_dict[output_key] = text
+    except Exception as e:
+        print(f"[optimized_find] error. {e=}")
+        output_dict[output_key] = "Failed"
 
 # call function above to create the final string
 def find(string: str, rank: int = None):

@@ -40,6 +40,7 @@ class mod(commands.Cog):
             download_start = time.time()
              # check if we have data cached
             if cache.cache.exists("mod:2"):
+                cached = True
                 cached_mods = json.loads(cache.cache.get("mod:2"))
                 snekw = cached_mods['Mods']
             else:
