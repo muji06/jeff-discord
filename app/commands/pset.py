@@ -75,18 +75,25 @@ class pset(commands.Cog):
             # text += f"{part}: {find(trade_name)}{chr(10)}"
         
         # download set price on separate thread
-        set_name = f"{item} set"
-        set_thread = Thread(target=optimized_find, args=(set_name, returns, 'set'))
-        set_thread.start()
         # now we join 1 by 1
         for part in prime_dict["Parts"]:
             threads[part].join()
             text += f"{part}: {returns[part]}{chr(10)}"
-        print(returns)
-        
-        set_thread.join()
-        set_price = f"Full set: {returns['set']}"
-        
+
+        try:
+            set_name = f"{item} set"
+            set_thread = Thread(target=optimized_find, args=(set_name, returns, 'set'))
+            set_thread.start()
+            set_thread.join()
+            set_price = returns['set']
+        except KeyError: # try again without set suffix
+            set_thread = Thread(target=optimized_find, args=(item, returns, 'set'))
+            set_thread.start()
+            set_thread.join()
+            set_price = returns['set']
+
+        set_price = f"Full set: {set_price}"
+    
         download_timer = time.time() - download_start
         
         set_embed = discord.Embed(
