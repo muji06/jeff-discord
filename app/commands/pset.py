@@ -80,13 +80,12 @@ class pset(commands.Cog):
             threads[part].join()
             text += f"{part}: {returns[part]}{chr(10)}"
 
-        try:
-            set_name = f"{item} set"
-            set_thread = Thread(target=optimized_find, args=(set_name, returns, 'set'))
-            set_thread.start()
-            set_thread.join()
-            set_price = returns['set']
-        except KeyError: # try again without set suffix
+        set_name = f"{item} set"
+        set_thread = Thread(target=optimized_find, args=(set_name, returns, 'set'))
+        set_thread.start()
+        set_thread.join()
+        set_price = returns['set']
+        if "Failed" in set_price: # try again without set suffix
             set_thread = Thread(target=optimized_find, args=(item, returns, 'set'))
             set_thread.start()
             set_thread.join()
