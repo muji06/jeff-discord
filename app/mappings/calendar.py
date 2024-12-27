@@ -57,6 +57,11 @@ EVENTS = {
                 "uniqueName": "/Lotus/Types/Challenges/Calendar1999/CalendarDestroyPropsHard",
                 "name": "STARVE THE BEAST",
                 "description": "Destroy 300 Containers",
+            },
+            {
+                "uniqueName": "/Lotus/Types/Challenges/Calendar1999/CalendarKillTechrotEnemiesEasy",
+                "name": "PURGE THE INFECTION",
+                "description": "Kill 250 Techrot",
             }
         ]
     },
@@ -176,6 +181,11 @@ EVENTS = {
                 "description": "Emerald Archon Shard",
             },
             {
+                "uniqueName": "/Lotus/StoreItems/Types/Gameplay/NarmerSorties/ArchonCrystalBoreal",
+                "name": "Azure Archon Shard",
+                "description": "Azure Archon Shard",
+            },
+            {
                 "uniqueName": "/Lotus/StoreItems/Types/Recipes/Components/WeaponUtilityUnlockerBlueprint",
                 "name": "Exilus Weapon Adapter Blueprint",
                 "description": "Exilus Weapon Adapter Blueprint",
@@ -229,6 +239,11 @@ EVENTS = {
                 "uniqueName": "/Lotus/Types/StoreItems/Boosters/ModDropChanceBooster3DayStoreItem",
                 "name": "3 Day Mod Drop Chance Booster",
                 "description": "3 Day Mod Drop Chance Booster",
+            },
+            {
+                "uniqueName": "/Lotus/Types/StoreItems/Packages/Calendar/CalendarVosforPack",
+                "name": "Vosfor Cache",
+                "description": "Vosfor Cache (200)",
             }
         ]
     },
