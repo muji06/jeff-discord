@@ -5,7 +5,7 @@ SEASON = {
     "CST_WINTER": "Winter",
     "CST_SPRING": "Spring",
     "CST_SUMMER": "Summer",
-    "CST_FALL": "Fall",
+    "CST_FALL": "Autumn",
 }
 
 EVENTS = {
@@ -62,6 +62,26 @@ EVENTS = {
                 "uniqueName": "/Lotus/Types/Challenges/Calendar1999/CalendarKillTechrotEnemiesEasy",
                 "name": "PURGE THE INFECTION",
                 "description": "Kill 250 Techrot",
+            },
+            {
+                "uniqueName": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeEasy",
+                "name": "BY THE BLADE",
+                "description": "Kill 150 Enemies with Melee Weapons",
+            },
+            {
+                "uniqueName": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEximusMedium",
+                "name": "EX-EXIMUS",
+                "description": "Kill 20 Eximus",
+            },
+            {
+                "uniqueName": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesMedium",
+                "name": "EVEN THE ODDS",
+                "description": "Kill 500 Enemies",
+            },
+            {
+                "uniqueName": "/Lotus/Types/Challenges/Calendar1999/CalendarKillTankHard",
+                "name": "TANKLESS WORK",
+                "description": "Destroy 1 Tank",
             }
         ]
     },
@@ -121,6 +141,7 @@ EVENTS = {
                 "uniqueName": "/Lotus/Upgrades/Calendar/CompanionDamage",
                 "name": "Got your Back",
                 "description": "Specters and Companions gain +250% Damage",
+                "for": "Eleanor",
             },
             {
                 "uniqueName": "/Lotus/Upgrades/Calendar/ElectricStatusDamageAndChance",
@@ -163,6 +184,30 @@ EVENTS = {
                 "name": "Practiced Precision",
                 "description": "+20% melee crit chance",
                 "for": "Arthur",
+            },
+            {
+                "uniqueName": "/Lotus/Upgrades/Calendar/PowerStrengthAndEfficiencyPerEnergySpent",
+                "name": "Overpower",
+                "description": "On ability cast, increase strength by 2% and efficiency by -1% per unit of energy used by ability, for 5s",
+                "for": "Aoi",
+            },
+            {
+                "uniqueName": "/Lotus/Upgrades/Calendar/ElectricalDamageOnBulletJump",
+                "name": "Dynamo Jump",
+                "description": "+50% Electric Damage for 5 seconds after landing from bullet jump",
+                "for": "Amir",
+            },
+            {
+                "uniqueName": "/Lotus/Upgrades/Calendar/MeleeSlideFowardMomentumOnEnemyHit",
+                "name": "Slice & Dice",
+                "description": "On melee slide attack, increase slide attack crit chance by 5%, slide speed by 20% and reduce friction by 10% for 10s (max 10 stacks)",
+                "for": "Arthur",
+            },
+            {
+                "uniqueName": "/Lotus/Upgrades/Calendar/RadiationProcOnTakeDamage",
+                "name": "Psionic Feedback",
+                "description": "On melee slide attack, increase slide attack crit chance by 5%, slide speed by 20% and reduce friction by 10% for 10s (max 10 stacks)",
+                "for": "Eleanor",
             }
         ]
     },
@@ -244,6 +289,16 @@ EVENTS = {
                 "uniqueName": "/Lotus/Types/StoreItems/Packages/Calendar/CalendarVosforPack",
                 "name": "Vosfor Cache",
                 "description": "Vosfor Cache (200)",
+            },
+            {
+                "uniqueName": "/Lotus/StoreItems/Types/Items/MiscItems/WeaponPrimaryArcaneUnlocker",
+                "name": "Primary Arcane Adapter",
+                "description": "Primary Arcane Adapter",
+            },
+            {
+                "uniqueName": "/Lotus/StoreItems/Types/Items/MiscItems/FormaAura",
+                "name": "Aura Forma",
+                "description": "Aura Forma",
             }
         ]
     },
@@ -254,11 +309,37 @@ EVENTS = {
                 "uniqueName": "/Lotus/Types/Gameplay/1999Wf/Dialogue/LettieDialogue_rom.dialogue",
                 "name": "BIRTHDAY",
                 "description": "Lettie's Birthday",
+                "day": "February 14th"
             },
             {
                 "uniqueName": "/Lotus/Types/Gameplay/1999Wf/Dialogue/JabirDialogue_rom.dialogue",
                 "name": "BIRTHDAY",
                 "description": "Amir's Birthday",
+                "day": "May 23rd"
+            },
+            {
+                "uniqueName": "/Lotus/Types/Gameplay/1999Wf/Dialogue/AoiDialogue_rom.dialogue",
+                "name": "BIRTHDAY",
+                "description": "Aoi's Birthday",
+                "day": "July 10th"
+            },
+            {
+                "uniqueName": "/Lotus/Types/Gameplay/1999Wf/Dialogue/EleanorDialogue_rom.dialogue",
+                "name": "BIRTHDAY",
+                "description": "Eleanor's Birthday",
+                "day": "November 2nd"
+            },
+            {
+                "uniqueName": "/Lotus/Types/Gameplay/1999Wf/Dialogue/ArthurDialogue_rom.dialogue",
+                "name": "BIRTHDAY",
+                "description": "Arthur's Birthday",
+                "day": "November 3rd"
+            },
+            {
+                "uniqueName": "/Lotus/Types/Gameplay/1999Wf/Dialogue/QuincyDialogue_rom.dialogue",
+                "name": "BIRTHDAY",
+                "description": "Quincy's Birthday",
+                "day": "December 4th"
             }
         ]
     },
