@@ -39,7 +39,7 @@ class Calendar(commands.Cog):
                     unique_name = event[event_key]
 
                     event_dict = find_event_by_unique_name(EVENTS, unique_name)
-                    if not event:
+                    if not event_dict:
                         description = unique_name.split("/")[-1]
                     else:
                         description = event_dict['description']
@@ -49,6 +49,8 @@ class Calendar(commands.Cog):
                     elif event_type == "CET_REWARD":
                         rewards[day['day']].append(description)
                     elif event_type == "CET_PLOT":
+                        if event_dict:
+                            description += f" ({event_dict['day']})"
                         birthdays.append(description)
                     elif event_type == "CET_UPGRADE":
                         overrides[day['day']].append([description, event_dict.get("for", "")])
@@ -113,4 +115,4 @@ def find_event_by_unique_name(events, unique_name):
         for event in event_data["mappings"]:
             if event["uniqueName"] == unique_name:
                 return event
-    return None
+    return {}
