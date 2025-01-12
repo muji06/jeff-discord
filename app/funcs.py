@@ -60,12 +60,12 @@ def pricecheck(name:str, rank:int = None):
     lowest = [10000, 10000, 10000]
     for trade in trades:
         if 'mod_rank' in trade:
-            if trade['user']['status'] == 'ingame' and trade['order_type'] == 'sell' and trade['mod_rank'] == rank and trade['platform'] == 'pc':
+            if trade['user']['status'] == 'ingame' and trade['order_type'] == 'sell' and trade['mod_rank'] == rank and trade['user']['platform'] != 'switch':
                 if trade['platinum'] < lowest[0] :
                     lowest[0] = trade['platinum']
                     lowest.sort(reverse=True)
         else:
-            if trade['user']['status'] == 'ingame' and trade['order_type'] == 'sell' and trade['platform'] == 'pc':
+            if trade['user']['status'] == 'ingame' and trade['order_type'] == 'sell' and trade['user']['platform'] != 'switch':
                 if trade['platinum'] < lowest[0] :
                     lowest[0] = trade['platinum']
                     lowest.sort(reverse=True)
@@ -85,22 +85,26 @@ def optimized_find(string: str, output_dict: dict, output_key):
         text = f"({arr[2]} , {arr[1]} , {arr[0]})<:Platinum:992917150358589550>"
         output_dict[output_key] = text
     except Exception as e:
-        print(f"[optimized_find] error. {e=}")
+        print(f"[optimized_find({string})] error. {e=}")
         output_dict[output_key] = "Failed"
 
 # call function above to create the final string
 def find(string: str, rank: int = None):
     if('forma' in string.lower()):
         return ''
-    if int is None:
-        arr = pricecheck(string)
-    else:
-        arr = pricecheck(string,rank)
+    try:
+        if int is None:
+            arr = pricecheck(string)
+        else:
+            arr = pricecheck(string,rank)
 
-    for i,x in enumerate(arr):
-        if x == 10000:
-            arr[i] = "N/A"
-    return f"({arr[2]} , {arr[1]} , {arr[0]})<:Platinum:992917150358589550>"
+        for i,x in enumerate(arr):
+            if x == 10000:
+                arr[i] = "N/A"
+        return f"({arr[2]} , {arr[1]} , {arr[0]})<:Platinum:992917150358589550>"
+    except Exception as e:
+        print(f"[find({string=}, {rank=})] error. {e=}")
+        return "Failed"
 
 
 
