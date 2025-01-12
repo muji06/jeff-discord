@@ -13,7 +13,7 @@ class Calendar(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name='calendar', description="Get the weekly 1999 Calendar", aliases=['hex'])
+    @commands.hybrid_command(name="calendar", with_app_command=True, description="Get the weekly 1999 Calendar")
     async def calendar(self, ctx):
         try:
             res = requests.get("https://content.warframe.com/dynamic/worldState.php")
