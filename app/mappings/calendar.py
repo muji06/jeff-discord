@@ -86,7 +86,7 @@ EVENTS = {
             {
                 "uniqueName": "/Lotus/Types/Challenges/Calendar1999/CalendarDestroyPropsEasy",
                 "name": "STARVE THE BEAST",
-                "description": "Destroy 75 Containers",c
+                "description": "Destroy 75 Containers",
             },
             {
                 "uniqueName": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeMedium",
