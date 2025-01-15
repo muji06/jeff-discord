@@ -82,6 +82,36 @@ EVENTS = {
                 "uniqueName": "/Lotus/Types/Challenges/Calendar1999/CalendarKillTankHard",
                 "name": "TANKLESS WORK",
                 "description": "Destroy 1 Tank",
+            },
+            {
+                "uniqueName": "/Lotus/Types/Challenges/Calendar1999/CalendarDestroyPropsEasy",
+                "name": "STARVE THE BEAST",
+                "description": "Destroy 75 Containers",c
+            },
+            {
+                "uniqueName": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeMedium",
+                "name": "BY THE BLADE",
+                "description": "Kill 300 Enemies with Melee Weapons",
+            },
+            {
+                "uniqueName": "/Lotus/Types/Challenges/Calendar1999/CalendarKillTechrotEnemiesMedium",
+                "name": "PURGE THE INFECTION",
+                "description": "Kill 500 Techrot",
+            },
+            {
+                "uniqueName": "/Lotus/Types/Challenges/Calendar1999/CalendarKillScaldraEnemiesMedium",
+                "name": "PUNISH SCALDRA",
+                "description": "Kill 500 Scaldra Troops",
+            },
+            {
+                "uniqueName": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEximusHard",
+                "name": "EX-EXIMUS",
+                "description": "Kill 30 Eximus",
+            },
+            {
+                "uniqueName": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithAbilitiesHard",
+                "name": "DEMONSTRATION OF POWER",
+                "description": "Kill 500 Enemies with Abilities",
             }
         ]
     },
@@ -93,13 +123,13 @@ EVENTS = {
                 "uniqueName": "/Lotus/Upgrades/Calendar/MagazineCapacity",
                 "name": "Heavy Mags",
                 "description": "Increase magazine capacity by 25%",
-                "for": "",
+                "for": "Quincy",
             },
             {
                 "uniqueName": "/Lotus/Upgrades/Calendar/Armor",
                 "name": "Thick Skin",
                 "description": "Gain +250 Armor",
-                "for": "",
+                "for": "Eleanor",
             },
             {
                 "uniqueName": "/Lotus/Upgrades/Calendar/EnergyRestoration",
@@ -117,7 +147,7 @@ EVENTS = {
                 "uniqueName": "/Lotus/Upgrades/Calendar/OrbsDuplicateOnPickup",
                 "name": "Targeted Medicine",
                 "description": "Shoot Health Orbs to pick them up. 25% chance to duplicate on pickup",
-                "for": "",
+                "for": "Lettie",
             },
             {
                 "uniqueName": "/Lotus/Upgrades/Calendar/FinisherChancePerComboMultiplier",
@@ -134,7 +164,7 @@ EVENTS = {
             {
                 "uniqueName": "/Lotus/Upgrades/Calendar/MeleeAttackSpeed",
                 "name": "No Quarter",
-                "description": "+25 Attack Speed",
+                "description": "+25% Attack Speed",
                 "for": "Arthur",
             },
             {
@@ -208,6 +238,24 @@ EVENTS = {
                 "name": "Psionic Feedback",
                 "description": "On melee slide attack, increase slide attack crit chance by 5%, slide speed by 20% and reduce friction by 10% for 10s (max 10 stacks)",
                 "for": "Eleanor",
+            },
+            {
+                "uniqueName": "/Lotus/Upgrades/Calendar/MagnetStatusPull",
+                "name": "Force of Attraction",
+                "description": "Magnetic status effects pull enemies towards the target, 1m range per stack",
+                "for": "Aoi",
+            },
+            {
+                "uniqueName": "/Lotus/Upgrades/Calendar/StatusChancePerAmmoSpent",
+                "name": "Cumulative Catridges",
+                "description": "1% status chance per shot until reload",
+                "for": "Quincy",
+            },
+            {
+                "uniqueName": "/Lotus/Upgrades/Calendar/PunchToPrimary",
+                "name": "Punchcard",
+                "description": "Adds 1.5 punchthrough to primary weapons",
+                "for": "Quincy",
             }
         ]
     },
@@ -218,7 +266,7 @@ EVENTS = {
             {
                 "uniqueName": "/Lotus/StoreItems/Types/BoosterPacks/CalendarMajorArtifactPack",
                 "name": "Arcane Enhancements: Double Pack",
-                "description": "Receive 2 random Arcanes",
+                "description": "Random Arcane x2",
             },
             {
                 "uniqueName": "/Lotus/StoreItems/Types/Gameplay/NarmerSorties/ArchonCrystalGreen",
@@ -248,7 +296,7 @@ EVENTS = {
             {
                 "uniqueName": "/Lotus/StoreItems/Types/BoosterPacks/CalendarArtifactPack",
                 "name": "Arcane Enhancements",
-                "description": "Receive a random Arcane",
+                "description": "Random Arcane",
             },
             {
                 "uniqueName": "/Lotus/StoreItems/Types/Items/MiscItems/WeaponSecondaryArcaneUnlocker",
@@ -263,7 +311,7 @@ EVENTS = {
             {
                 "uniqueName": "/Lotus/StoreItems/Types/Recipes/Components/OrokinReactorBlueprint",
                 "name": "Orokin Reactor Blueprint",
-                "description": "Orkin Reactor Blueprint",
+                "description": "Orokin Reactor Blueprint",
             },
             {
                 "uniqueName": "/Lotus/StoreItems/Types/Items/MiscItems/WeaponUtilityUnlocker",
@@ -299,6 +347,26 @@ EVENTS = {
                 "uniqueName": "/Lotus/StoreItems/Types/Items/MiscItems/FormaAura",
                 "name": "Aura Forma",
                 "description": "Aura Forma",
+            },
+            {
+                "uniqueName": "/Lotus/StoreItems/Types/Recipes/Components/FormaBlueprint",
+                "name": "Forma Blueprint",
+                "description": "Forma Blueprint",
+            },
+            {
+                "uniqueName": "/Lotus/StoreItems/Types/Gameplay/NarmerSorties/ArchonCrystalOrange",
+                "name": "Topaz Archon Shard",
+                "description": "Topaz Archon Shard",
+            },
+            {
+                "uniqueName": "/Lotus/StoreItems/Types/BoosterPacks/CalendarRivenPack",
+                "name": "Random Riven Mod",
+                "description": "Random Riven Mod",
+            },
+            {
+                "uniqueName": "/Lotus/Types/StoreItems/Packages/Calendar/CalendarKuvaBundleLarge",
+                "name": "6000 x Kuva",
+                "description": "6000 x Kuva",
             }
         ]
     },
