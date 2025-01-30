@@ -34,7 +34,7 @@ jobs:
     - name: SSH login and deploy
       uses: appleboy/ssh-action@v1.0.3
       with:
-        host: ${{ secrets.LOCAL_PI }}
+        host: ${{ secrets.REMOTE_HOST }}
         username: ${{ secrets.REMOTE_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         port: 22
