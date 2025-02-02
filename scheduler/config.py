@@ -31,6 +31,109 @@ NEW_DOWNLOAD_URLS = {
     "weapon:2": "https://warframe.fandom.com/api.php?action=scribunto-console&format=json&title=Module%3AWeapons&content=return%20require(%27Module%3ALuaSerializer%27)._serialize(%27Weapons%2Fdata%27)&question=%3Dp&clear=1",
 }  
 
+NEW_WIKI_URL_BASE = "https://wiki.warframe.com/api.php"
+NEW_WIKI_MODULE_URLS = {
+    "ability:3": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:Ability",
+        "content": "return require('Module:Ability/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+    "arcane:3": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:Arcane",
+        "content": "return require('Module:Arcane/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+    "blueprint:3": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:Blueprints",
+        "content": "return require('Module:Blueprints/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+    "companion:3": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:Companions",
+        "content": "return require('Module:Companions/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+    "enemy:3": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:Enemies",
+        "content": "return require('Module:Enemies/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+    "mod:3": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:Mods",
+        "content": "return require('Module:Mods/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+    "tennogen:3": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:TennoGen",
+        "content": "return require('Module:TennoGen/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+    "void:3": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:Void",
+        "content": "return require('Module:Void/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+    "warframe:3": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:Warframes",
+        "content": "return require('Module:Warframes/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+    "weapon:3": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:Weapons",
+        "content": "return require('Module:Weapons/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+}
 # Pulled from community developer github repo
 WFCD = {
     "skins:2" : "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/json/Skins.json",

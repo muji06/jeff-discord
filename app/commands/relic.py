@@ -6,6 +6,10 @@ from requests import get
 import time
 from funcs import optimized_find, relic_finder
 from threading import Thread
+from funcs import dispo, update_cache
+import time
+from redis_manager import cache
+
 
 class relic(commands.Cog):
     def __init__(self, bot):
@@ -28,8 +32,16 @@ class relic(commands.Cog):
         start = time.time()
         relic = relic.title()
 
-        res = get('https://wf.snekw.com/void-wiki')
-        data = json.loads(res.text)['data']['RelicData']
+        # check if we have data cached
+        cached = True
+        if cache.cache.exists("void:1"):
+            cached_void = json.loads(cache.cache.get("void:1"))
+        else:
+            cached = False
+            update_cache("void:1",cache)
+            cached_void = json.loads(cache.cache.get("void:1"))
+
+        data =cached_void['RelicData']
         if relic not in data:
             error = discord.Embed(
                 description="This relic doesn't exist! \nCheck if you typed it correctly."
@@ -50,15 +62,7 @@ class relic(commands.Cog):
                 color=discord.Colour.random(),
                 description=f"{price}\nAlso showing the 3 lowest warframe.market prices."
             )
-            # print(f"Bronze:")
-            # print(f"{drop[0]['Item']} {drop[0]['Part']}")
-            # print(f"{drop[1]['Item']} {drop[1]['Part']}")
-            # print(f"{drop[2]['Item']} {drop[2]['Part']}")
-            # print(f"Silver:")
-            # print(f"{drop[3]['Item']} {drop[3]['Part']}")
-            # print(f"{drop[4]['Item']} {drop[4]['Part']}")
-            # print(f"Gold")
-            # print(f"{drop[5]['Item']} {drop[5]['Part']}")
+
             threads = {}
             returns = {}
             for x in range(6):

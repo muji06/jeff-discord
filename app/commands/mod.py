@@ -39,22 +39,20 @@ class mod(commands.Cog):
         else:
             download_start = time.time()
              # check if we have data cached
-            if cache.cache.exists("mod:2"):
+            if cache.cache.exists("mod:1"):
                 cached = True
-                cached_mods = json.loads(cache.cache.get("mod:2"))
+                cached_mods = json.loads(cache.cache.get("mod:1"))
                 snekw = cached_mods['Mods']
             else:
                 cached = False
-                update_cache("mod:2",cache)
-                cached_mods = json.loads(cache.cache.get("mod:2"))
+                update_cache("mod:1",cache)
+                cached_mods = json.loads(cache.cache.get("mod:1"))
                 snekw = cached_mods['Mods']
 
             download_timer += time.time() - download_start
             snekw_mod = None
             for x in snekw:
-                # print(f"{data['name']} vs {snekw[x]['Name']}")
                 if data['name'].lower() == snekw[x]['Name'].lower():
-                    # print('Found mod!!!!!!!!!!!!!!!!!!!!!')
                     snekw_mod = snekw[x]
                     break
 
@@ -71,8 +69,6 @@ class mod(commands.Cog):
             market_timer = time.time() - market_start
 
             if 'wikiaThumbnail' in data:
-                
-
                 embed = discord.Embed(
                     color=discord.Colour.random(),
 

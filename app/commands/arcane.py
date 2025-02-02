@@ -31,14 +31,14 @@ class arcane(commands.Cog):
         donwload_start = time.time()
         cached = True
         # check if we have data cached
-        if cache.cache.exists("arcane:2"):
-            cached_arcanes = json.loads(cache.cache.get("arcane:2"))
+        if cache.cache.exists("arcane:1"):
+            cached_arcanes = json.loads(cache.cache.get("arcane:1"))
             snekw = cached_arcanes['Arcanes']
         else:
             cached = False
-            update_cache("arcane:2",cache)
+            update_cache("arcane:1",cache)
             try:
-                cached_arcanes = json.loads(cache.cache.get("arcane:2"))
+                cached_arcanes = json.loads(cache.cache.get("arcane:1"))
                 snekw = cached_arcanes['Arcanes']
             except KeyError:
                 error = discord.Embed(
