@@ -2,9 +2,9 @@ version: '3'
 services:
   redis:
     restart: unless-stopped
-    image: redis:buster
+    image: redis:bookworm
     container_name: redis_jeff
-    command: redis-server --port 6378 --appendonly yes
+    command: redis-server --port 6378 --save "3600 1"
     volumes:
       - redis-data:/data
     ports:
@@ -22,16 +22,6 @@ services:
     networks:
       - connect
   
-  scheduler:
-    container_name: scheduler_jeff
-    restart: unless-stopped
-    build:
-      context: ./scheduler
-    depends_on:
-      - redis
-    networks:
-      - connect
-
 networks:
   connect:
     driver: bridge
