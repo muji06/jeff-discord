@@ -17,7 +17,7 @@ class Scheduler(commands.Cog):
         self.refill_github_data.cancel()
 
     @tasks.loop(hours=1)
-    def refill_wiki_data():
+    async def refill_wiki_data(self):
         for key, params in WIKI_MODULE_BODY.items():
             ready = False
             retries = 0
@@ -25,7 +25,7 @@ class Scheduler(commands.Cog):
                 retries += 1
                 print(f"[refill_wiki_data][{time.ctime()}]:\t[Downloading data for '{key}'...]")
                 try:
-                    res = requests.get(url=WIKI_URL_BASE, data=params)
+                    res = requests.post(url=WIKI_URL_BASE, data=params)
                 except:
                     print(f"[refill_wiki_data][{time.ctime()}]:\t[Downloading failed '{key}'{chr(10)}]")
                     continue
@@ -67,8 +67,8 @@ class Scheduler(commands.Cog):
                     print(f"[refill_wiki_data][{time.ctime()}]:\t[Downloading not succesful for '{key}'data retrieved: {return_data}. Retrying...({retries})]")
 
     @tasks.loop(hours=1)
-    def refill_github_data():
-        for key, url in WFCD:
+    async def refill_github_data(selfc):
+        for key, url in WFCD.items():
             retries = 0
             ready = False
 
@@ -82,7 +82,7 @@ class Scheduler(commands.Cog):
                     continue
                 
                 return_data = res.json()
-                checksum = hashlib.md5(bytes(res.text)).hexdigest()
+                checksum = hashlib.md5(bytes(json.dumps(res.text),encoding="utf-8")).hexdigest()
                 cached = False
                 ready = True
                 # check if we have data cached
@@ -94,14 +94,16 @@ class Scheduler(commands.Cog):
                 if checksum == old_checksum:
                     # create a new checksum
                     if not cached:
-                        cache.cache.set(key, return_data)
+                        text = json.dumps(return_data)
+                        cache.cache.set(key, text)
                         # save checksum
                         cache.cache.set(CHECKSUMS[key], checksum)
                         print(f"[refill_github_data][{time.ctime()}]:\t[{key} data ready on redis!']")
                     else:
                         print(f"[refill_github_data][{time.ctime()}]:\t[No new data for {key}! Skipping']")
                 else:
-                    cache.cache.set(key, return_data)
+                    text = json.dumps(return_data)
+                    cache.cache.set(key, text)
                     cache.cache.set(CHECKSUMS[key], checksum)
                 print(f"[refill_github_data][{time.ctime()}]:\t[{key} data ready on redis!']")
                 break

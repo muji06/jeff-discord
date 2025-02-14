@@ -1,13 +1,12 @@
+import re
 import discord
 
+from requests import get
 from datetime import datetime, timedelta
 from discord.ext import commands
 
-from redis_manager import cache
-from funcs import FIRST_WEEK, ROTATIONS
+from funcs import FIRST_WEEK
 
-import re
-from requests import get
 
 class circuit(commands.Cog):
     def __init__(self, bot):

@@ -180,6 +180,8 @@ def get_shard(archon: str):
     else:
         return ""
     
+## TODO: Remove this
+FIRST_WEEK = 1682899200
 
 WIKI_URL_BASE = "https://wiki.warframe.com/api.php"
 # Pulled from warframe wiki fandom page
@@ -318,7 +320,7 @@ def update_cache(data_key:str, redis_cache: RedisManager):
         retries += 1
         print(f"[refill_wiki_data][{time.ctime()}]:\t[Downloading data for '{data_key}'...]")
         try:
-            res = requests.get(url=WIKI_URL_BASE, data=WIKI_MODULE_BODY[data_key])
+            res = requests.post(url=WIKI_URL_BASE, data=WIKI_MODULE_BODY[data_key])
         except:
             print(f"[refill_wiki_data][{time.ctime()}]:\t[Downloading failed '{data_key}'{chr(10)}]")
             continue
