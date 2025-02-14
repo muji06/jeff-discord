@@ -1,8 +1,8 @@
+import requests
+import discord
+
 from discord.ext import commands
 from datetime import datetime, timedelta
-import discord
-import json
-import requests
 
 
 CYCLES = [

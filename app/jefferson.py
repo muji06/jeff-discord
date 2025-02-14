@@ -12,7 +12,7 @@ token = os.getenv('TOKEN')
 
 intents = discord.Intents.default()
 intents.message_content = True
-bot = commands.Bot(command_prefix='-', intents=intents)
+bot = commands.Bot(command_prefix='-', intents=intents, help_command=None)
 
 async def load():
     for file in os.listdir('./commands'):
@@ -35,7 +35,6 @@ async def func(interaction: discord.Interaction):
 
 @bot.event
 async def on_ready():
-    bot.remove_command('help')
     await load()
     # await bot.tree.sync()
 

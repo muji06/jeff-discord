@@ -38,13 +38,13 @@ class prime(commands.Cog):
         download_start = time.time()
         # check if we have data cached
         cached = True
-        if cache.cache.exists("void:2"):
-            cached_void = json.loads(cache.cache.get("void:2"))
+        if cache.cache.exists("void:1"):
+            cached_void = json.loads(cache.cache.get("void:1"))
             data = cached_void
         else:
             cached = False
-            update_cache("void:2",cache)
-            cached_void = json.loads(cache.cache.get("void:2"))
+            update_cache("void:1",cache)
+            cached_void = json.loads(cache.cache.get("void:1"))
             data = cached_void
             
         download_timer = time.time() - download_start

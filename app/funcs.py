@@ -136,11 +136,6 @@ def relic_finder(string: str):
     
     return text[:-1]
 
-
-
-
-
-
 # func for mod polarity emotes
 def polarity(name:str):
     text = name.lower()
@@ -185,49 +180,131 @@ def get_shard(archon: str):
     else:
         return ""
     
-
+## TODO: Remove this
 FIRST_WEEK = 1682899200
 
-ROTATIONS = [
-    ["Braton", "Lato", "Skana", "Paris", "Kunai"],
-    ["Bo", "Latron", "Furis", "Furax", "Strun"],
-    ["Lex", "Magistar", "Boltor", "Bronco", "Ceramic Dagger"],
-    ["Torid", "Dual Toxocyst", "Dual Ichor", "Miter", "Atomos"],
-    ["Arc & Brunt", "Soma", "Vasto", "Nami Solo", "Burston"],
-    ["Zylok", "Sibear", "Dread", "Despair", "Hate"]
-]
-
+WIKI_URL_BASE = "https://wiki.warframe.com/api.php"
 # Pulled from warframe wiki fandom page
-NEW_DOWNLOAD_URLS = {
-    "ability:2" : "https://warframe.fandom.com/api.php?action=scribunto-console&format=json&title=Module%3AAbility&content=return%20require(%27Module%3ALuaSerializer%27)._serialize(%27Ability%2Fdata%27)&question=%3Dp&clear=1",
-    "arcane:2": "https://warframe.fandom.com/api.php?action=scribunto-console&format=json&title=Module%3AArcane&content=return%20require(%27Module%3ALuaSerializer%27)._serialize(%27Arcane%2Fdata%27)&question=%3Dp&clear=1",
-    "blueprint:2" : "https://warframe.fandom.com/api.php?action=scribunto-console&format=json&title=Module%3ABlueprints&content=return%20require('Module%3ALuaSerializer')._serialize('Blueprints%2Fdata')&question=%3Dp&clear=1",
-    "companion:2" : "https://warframe.fandom.com/api.php?action=scribunto-console&format=json&title=Module%3ACompanions&content=return%20require('Module%3ALuaSerializer')._serialize('Companions%2Fdata')&question=%3Dp&clear=1",
-    "enemy:2" : "https://warframe.fandom.com/api.php?action=scribunto-console&format=json&title=Module%3AEnemies&content=return%20require('Module%3ALuaSerializer')._serialize('Enemies%2Fdata')&question=%3Dp&clear=1",
-    "mod:2":   "https://warframe.fandom.com/api.php?action=scribunto-console&format=json&title=Module%3AMods&content=return%20require(%27Module%3ALuaSerializer%27)._serialize(%27Mods%2Fdata%27)&question=%3Dp&clear=1",
-    "tennogen:2" : "https://warframe.fandom.com/api.php?action=scribunto-console&format=json&title=Module%3ATennoGen&content=return%20require('Module%3ALuaSerializer')._serialize('TennoGen%2Fdata')&question=%3Dp&clear=1",
-    "void:2":  "https://warframe.fandom.com/api.php?action=scribunto-console&format=json&title=Module%3AVoid&content=return%20require(%27Module%3ALuaSerializer%27)._serialize(%27Void%2Fdata%27)&question=%3Dp&clear=1",
-    "warframe:2" : "https://warframe.fandom.com/api.php?action=scribunto-console&format=json&title=Module%3AWarframes&content=return%20require('Module%3ALuaSerializer')._serialize('Warframes%2Fdata')&question=%3Dp&clear=1",
-    "weapon:2": "https://warframe.fandom.com/api.php?action=scribunto-console&format=json&title=Module%3AWeapons&content=return%20require(%27Module%3ALuaSerializer%27)._serialize(%27Weapons%2Fdata%27)&question=%3Dp&clear=1",
-}  
+WIKI_MODULE_BODY = {
+    "ability:1": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:Ability",
+        "content": "return require('Module:LuaSerializer')._serialize('Ability/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+    "arcane:1": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:Arcane",
+        "content": "return require('Module:LuaSerializer')._serialize('Arcane/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+    "blueprint:1": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:Blueprints",
+        "content": "return require('Module:LuaSerializer')._serialize('Blueprints/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+    "companion:1": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:Companions",
+        "content": "return require('Module:LuaSerializer')._serialize('Companions/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+    "enemy:1": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:Enemies",
+        "content": "return require('Module:LuaSerializer')._serialize('Enemies/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+    "mod:1": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:Mods",
+        "content": "return require('Module:LuaSerializer')._serialize('Mods/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+    "tennogen:1": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:TennoGen",
+        "content": "return require('Module:LuaSerializer')._serialize('TennoGen/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+    "void:1": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:Void",
+        "content": "return require('Module:LuaSerializer')._serialize('Void/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+    "warframe:1": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:Warframes",
+        "content": "return require('Module:LuaSerializer')._serialize('Warframes/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+    "weapon:1": {
+        "action": "scribunto-console",
+        "format": "json",
+        "title": "Module:Weapons",
+        "content": "return require('Module:LuaSerializer')._serialize('Weapons/data')",
+        "question": "=p",
+        "clear": 1,
+        "token": "+\\",
+        "formatversion": "2"
+    },
+}
 
 # Pulled from community developer github repo
 WFCD = {
-    "skins:2" : "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/json/Skins.json",
+    "skins:1" : "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/json/Skins.json",
 }
 
 CHECKSUMS = {
-    "ability:2": "ability:checksum:1",
-    "arcane:2": "arcane:checksum:1",
-    "blueprint:2": "blueprint:checksum:1",
-    "companion:2": "companion:checksum:1",
-    "enemy:2": "enemy:checksum:1",
-    "mod:2": "mod:checksum:1",
-    "skins:2": "skins:checksum:1",
-    "tennogen:2": "tennogen:checksum:1",
-    "void:2": "void:checksum:1",
-    "warframe:2": "warframe:checksum:1",
-    "weapon:2": "weapon:checksum:1",
+    "ability:1": "ability:checksum:1",
+    "arcane:1": "arcane:checksum:1",
+    "blueprint:1": "blueprint:checksum:1",
+    "companion:1": "companion:checksum:1",
+    "enemy:1": "enemy:checksum:1",
+    "mod:1": "mod:checksum:1",
+    "skins:1": "skins:checksum:1",
+    "tennogen:1": "tennogen:checksum:1",
+    "void:1": "void:checksum:1",
+    "warframe:1": "warframe:checksum:1",
+    "weapon:1": "weapon:checksum:1",
 }
 
 def unserialize_lua_table(lua_table: str)-> dict:
@@ -243,7 +320,7 @@ def update_cache(data_key:str, redis_cache: RedisManager):
         retries += 1
         print(f"[refill_wiki_data][{time.ctime()}]:\t[Downloading data for '{data_key}'...]")
         try:
-            res = requests.get(url=NEW_DOWNLOAD_URLS[data_key])
+            res = requests.post(url=WIKI_URL_BASE, data=WIKI_MODULE_BODY[data_key])
         except:
             print(f"[refill_wiki_data][{time.ctime()}]:\t[Downloading failed '{data_key}'{chr(10)}]")
             continue
@@ -286,10 +363,10 @@ def update_cache(data_key:str, redis_cache: RedisManager):
 
 @cache
 def find_internal_warframe_name(internal_name: str, redis_cache: RedisManager)-> str|None:
-    if not redis_cache.cache.exists("warframe:2"):
-        update_cache("warframe:2", redis_cache)
+    if not redis_cache.cache.exists("warframe:1"):
+        update_cache("warframe:1", redis_cache)
 
-    data = json.loads(redis_cache.cache.get("warframe:2"))['Warframes']
+    data = json.loads(redis_cache.cache.get("warframe:1"))['Warframes']
     for name, object in data.items():
         if object.get('InternalName') == internal_name:
             return name
@@ -298,10 +375,10 @@ def find_internal_warframe_name(internal_name: str, redis_cache: RedisManager)->
 
 @cache
 def find_internal_skin_name(internal_name: str, redis_cache: RedisManager)-> str|None:
-    if not redis_cache.cache.exists("skin:2"):
-        update_cache("skin:2", redis_cache)
+    if not redis_cache.cache.exists("skin:1"):
+        update_cache("skin:1", redis_cache)
 
-    data = json.loads(redis_cache.cache.get("skin:2"))
+    data = json.loads(redis_cache.cache.get("skin:1"))
     for object in data:
         if object.get('uniqueName') == internal_name:
             return object.get('name')
@@ -310,10 +387,10 @@ def find_internal_skin_name(internal_name: str, redis_cache: RedisManager)-> str
 
 @cache
 def find_internal_companion_name(internal_name: str, redis_cache: RedisManager)-> str|None:
-    if not redis_cache.cache.exists("companion:2"):
-        update_cache("companion:2", redis_cache)
+    if not redis_cache.cache.exists("companion:1"):
+        update_cache("companion:1", redis_cache)
 
-    data = json.loads(redis_cache.cache.get("companion:2"))['Companions']
+    data = json.loads(redis_cache.cache.get("companion:1"))['Companions']
     for name, object in data.items():
         if object.get('InternalName') == internal_name:
             return name
@@ -322,10 +399,10 @@ def find_internal_companion_name(internal_name: str, redis_cache: RedisManager)-
 
 @cache
 def find_internal_ability_name(internal_name: str, redis_cache: RedisManager)-> str|None:
-    if not redis_cache.cache.exists("ability:2"):
-        update_cache("ability:2", redis_cache)
+    if not redis_cache.cache.exists("ability:1"):
+        update_cache("ability:1", redis_cache)
 
-    data = json.loads(redis_cache.cache.get("ability:2"))['Ability']
+    data = json.loads(redis_cache.cache.get("ability:1"))['Ability']
     for name, object in data.items():
         if object.get('InternalName') == internal_name:
             return f"{object.get('Powersuit')}: {name}"

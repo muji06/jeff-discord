@@ -1,9 +1,7 @@
-from discord.ext import commands
-from discord import app_commands
-import discord
 import json
 import requests
-from redis_manager import cache
+import discord
+from discord.ext import commands
 
 class darvo(commands.Cog):
     def __init__(self, bot):

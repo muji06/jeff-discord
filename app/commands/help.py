@@ -22,7 +22,7 @@ class help(commands.Cog):
         "**-arbie**: Data about current arbitration\n\n"+\
         "**[ALPHA]-baro**: Show current baro status and his inventory\n\n"+\
         "**[BETA]-bounty <place>**: Data about currently running bounties on <place>\n\n"+\
-        "**-calendar**: 1999 Calendar\n\n"+\
+        "**[BETA]-calendar**: 1999 Calendar\n\n"+\
         "**-darvo**: Daily Darvo deal\n\n"+\
         "**-duviri**: Current Duviri rotation\n\n"+\
         "**-circuit**: List the current rotation of incarnon genesis\n\n"+\
