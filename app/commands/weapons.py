@@ -165,7 +165,7 @@ class weapon(commands.Cog):
         """
         self.get_weapon(ctx, message)
 
-    def autocomplete(self, interaction: discord.Interaction, current: str) -> list[discord.app_commands.Choice[str]]:
+    async def autocomplete(self, interaction: discord.Interaction, current: str) -> list[discord.app_commands.Choice[str]]:
         if cache.cache.exists("weapon:1"):
             cached_weapons = json.loads(cache.cache.get("weapon:1"))
             data = cached_weapons
