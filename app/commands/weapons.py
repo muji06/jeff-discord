@@ -174,7 +174,7 @@ class weapon(commands.Cog):
             cached_weapons = json.loads(cache.cache.get("weapon:1"))
             data = cached_weapons
 
-        return [discord.app_commands.Choice(weapon) for weapon in data if current.lower() in weapon.lower()]
+        return [discord.app_commands.Choice(name=weapon, value=weapon) for weapon in data.keys() if current.lower() in weapon.lower()]
 
 
     @discord.app_commands.command(name='weapon', description="Find the stats of certain weapon")
