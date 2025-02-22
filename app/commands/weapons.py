@@ -163,7 +163,7 @@ class weapon(commands.Cog):
         Usage: -weapon <weapon-name>\n
         Find the stats of certain weapon
         """
-        self.get_weapon(ctx, message)
+        await self.get_weapon(ctx, message)
 
     async def autocomplete(self, interaction: discord.Interaction, current: str) -> list[discord.app_commands.Choice[str]]:
         if cache.cache.exists("weapon:1"):
