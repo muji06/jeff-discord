@@ -11,7 +11,7 @@ class weapon(commands.Cog):
         self.bot = bot
 
 
-    async def get_weapon(self, ctx: commands.Context, weapon:str):
+    async def get_weapon(self, ctx: commands.Context, message:str):
         start = time.time()
         if message is None:
             error = discord.Embed(description="Usage: !weapon <weapon-name>")
