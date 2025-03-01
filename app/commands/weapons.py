@@ -85,7 +85,7 @@ class weapon(commands.Cog):
             f"Type: {snekw['Class']}{chr(10)}"+
             f"Mastery: {snekw.get('Mastery','-')}{chr(10)}"+
             f"Attack Speed: {snekw['Attacks'][0]['FireRate']}{chr(10)}"+
-            f"Combo Duration: {snekw['ComboDur']}{chr(10)}"+
+            f"Combo Duration: {snekw.get("ComboDur","∞")}{chr(10)}"+
             f"Range: {snekw['MeleeRange']}{chr(10)}"+
             f"Disposition: {snekw['Disposition']}  ({dispo(float(snekw['Disposition']))}){chr(10)}{chr(10)}"
             )
