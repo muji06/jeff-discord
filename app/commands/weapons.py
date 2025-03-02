@@ -93,7 +93,7 @@ class weapon(commands.Cog):
         wepembed = discord.Embed(
             title=snekw['Name'],
             description=description,
-            url=f"https://warframe.fandom.com/wiki/{'_'.join(snekw['Name'].split(' '))}",
+            url=f"https://wiki.warframe.com/w/{'_'.join(snekw['Name'].split(' '))}",
             color=discord.Colour.random())
 
         for x in snekw['Attacks']:

@@ -1,0 +1,300 @@
+{
+    "Acceltra Prime": {
+        "Accuracy": 23.5,
+        "AmmoMax": 96,
+        "AmmoPickup": 40,
+        "AmmoType": "Primary",
+        "Attacks": [
+            {
+                "AmmoCost": 1,
+                "AttackName": "Rocket Impact",
+                "CritChance": 0.34,
+                "CritMultiplier": 3,
+                "Damage": {
+                    "Impact": 44
+                },
+                "FireRate": 10,
+                "ForcedProcs": [
+                    "Impact"
+                ],
+                "IsSilent": false,
+                "MaxSpread": 7,
+                "MinSpread": 1.5,
+                "Multishot": 1,
+                "PunchThrough": 0,
+                "ShotSpeed": 70,
+                "ShotType": "Projectile",
+                "StatusChance": 0.18
+            },
+            {
+                "AttackName": "Rocket Explosion",
+                "CritChance": 0.34,
+                "CritMultiplier": 3,
+                "Damage": {
+                    "Puncture": 42.4,
+                    "Slash": 10.6
+                },
+                "Falloff": {
+                    "EndRange": 5,
+                    "Reduction": 0.5,
+                    "StartRange": 0
+                },
+                "FireRate": 10,
+                "IsSilent": false,
+                "Multishot": 1,
+                "PunchThrough": 0,
+                "Range": 5,
+                "ShotType": "AoE",
+                "StatusChance": 0.18
+            }
+        ],
+        "Class": "Rifle",
+        "CompatibilityTags": [
+            "PROJECTILE",
+            "AOE",
+            "ASSAULT_AMMO"
+        ],
+        "Disposition": 0.55,
+        "ExilusPolarity": "Madurai",
+        "Family": "Acceltra",
+        "Image": "AcceltraPrime.png",
+        "InternalName": "/Lotus/Weapons/Tenno/LongGuns/PrimeAcceltra/PrimeAcceltraWeapon",
+        "Introduced": "35.0.9",
+        "Link": "Acceltra Prime",
+        "Magazine": 48,
+        "Mastery": 14,
+        "MaxRank": 30,
+        "Name": "Acceltra Prime",
+        "Polarities": [
+            "Bar",
+            "V"
+        ],
+        "Reload": 1.6,
+        "SellPrice": 7500,
+        "Slot": "Primary",
+        "Tradable": 2,
+        "Traits": [
+            "Tenno",
+            "Prime"
+        ],
+        "Trigger": "Auto"
+    },
+    "Aegrit": {
+        "Accuracy": 100,
+        "AmmoMax": 4,
+        "AmmoPickup": 1,
+        "AmmoType": "Secondary",
+        "Attacks": [
+            {
+                "AmmoCost": 1,
+                "AttackName": "Direct Hit",
+                "CritChance": 0.37,
+                "CritMultiplier": 1.9,
+                "Damage": {
+                    "Impact": 4.5,
+                    "Puncture": 1.8,
+                    "Slash": 2.7
+                },
+                "FireRate": 2,
+                "IsSilent": true,
+                "MaxSpread": 0,
+                "MinSpread": 0,
+                "Multishot": 1,
+                "PunchThrough": 0,
+                "ShotSpeed": 30,
+                "ShotType": "Projectile",
+                "StatusChance": 0.19
+            },
+            {
+                "AttackName": "Detonation",
+                "CritChance": 0.37,
+                "CritMultiplier": 2,
+                "Damage": {
+                    "Blast": 797
+                },
+                "Falloff": {
+                    "EndRange": 9,
+                    "Reduction": 0.7,
+                    "StartRange": 0
+                },
+                "FireRate": 2,
+                "IsSilent": false,
+                "Multishot": 1,
+                "PunchThrough": 0,
+                "Range": 9,
+                "ShotType": "AoE",
+                "StatusChance": 0.19
+            }
+        ],
+        "Class": "Thrown",
+        "CompatibilityTags": [
+            "PROJECTILE",
+            "THROWN",
+            "AOE"
+        ],
+        "Conclave": false,
+        "Disposition": 0.9,
+        "ExilusPolarity": "Naramon",
+        "Family": "Aegrit",
+        "Image": "Aegrit.png",
+        "InternalName": "/Lotus/Weapons/Grineer/ThrowingWeapons/GrnVorStickyBomb/GrnVorStickyBomb",
+        "Introduced": "32",
+        "Link": "Aegrit",
+        "Magazine": 2,
+        "Mastery": 11,
+        "MaxRank": 30,
+        "Name": "Aegrit",
+        "Polarities": [
+            "V",
+            "V",
+            "V"
+        ],
+        "Reload": 1.3,
+        "SellPrice": 5000,
+        "Slot": "Secondary",
+        "Traits": [
+            "Grineer"
+        ],
+        "Trigger": "Active"
+    },
+    "Dual Zoren": {
+        "Attacks": [
+            {
+                "AttackName": "Normal Attack",
+                "CritChance": 0.25,
+                "CritMultiplier": 3,
+                "Damage": {
+                    "Impact": 3.5,
+                    "Puncture": 3.5,
+                    "Slash": 63
+                },
+                "FireRate": 1.17,
+                "IsSilent": true,
+                "StatusChance": 0.05
+            }
+        ],
+        "BlockAngle": 60,
+        "Class": "Dual Swords",
+        "ComboDur": 5,
+        "Conclave": true,
+        "Disposition": 1.44,
+        "Family": "Dual Zoren",
+        "FollowThrough": 0.5,
+        "HeavyAttack": 280,
+        "HeavySlamAttack": 210,
+        "HeavySlamElement": "Blast",
+        "HeavySlamForcedProcs": [
+            "Lifted"
+        ],
+        "HeavySlamRadius": 9,
+        "Image": "DualZoren.png",
+        "InternalName": "/Lotus/Weapons/Tenno/Melee/Axe/DualAxeWeapon",
+        "Introduced": "6.0",
+        "Link": "Dual Zoren",
+        "Mastery": 2,
+        "MaxRank": 30,
+        "MeleeRange": 2.3,
+        "Name": "Dual Zoren",
+        "Polarities": [
+            "D"
+        ],
+        "SellPrice": 5000,
+        "SlamAttack": 140,
+        "SlamElement": "Impact",
+        "SlamForcedProcs": [
+            "Impact"
+        ],
+        "SlamRadius": 8,
+        "SlideAttack": 140,
+        "Slot": "Melee",
+        "StancePolarity": "Zenurik",
+        "SweepRadius": 0.25,
+        "Traits": [
+            "Tenno"
+        ],
+        "WindUp": 0.7
+    },
+    "Redeemer": {
+        "Attacks": [
+            {
+                "AttackName": "Normal Attack",
+                "CritChance": 0.1,
+                "CritMultiplier": 1.8,
+                "Damage": {
+                    "Impact": 18,
+                    "Puncture": 36,
+                    "Slash": 126
+                },
+                "FireRate": 0.833,
+                "IsSilent": true,
+                "Multishot": 1,
+                "StatusChance": 0.22
+            },
+            {
+                "Accuracy": 6.7,
+                "AttackName": "Ranged Attack",
+                "ChargeTime": 0.39,
+                "CritChance": 0.1,
+                "CritMultiplier": 1.8,
+                "Damage": {
+                    "Blast": 30
+                },
+                "Falloff": {
+                    "EndRange": 20,
+                    "Reduction": 0.8333,
+                    "StartRange": 10
+                },
+                "FireRate": 1,
+                "ForcedProcs": [
+                    "Impact"
+                ],
+                "IsSilent": false,
+                "MaxSpread": 20,
+                "MinSpread": 10,
+                "Multishot": 10,
+                "PunchThrough": 1,
+                "Range": 300,
+                "ShotType": "Hit-Scan",
+                "StatusChance": 0.066,
+                "Trigger": "Charge"
+            }
+        ],
+        "BlockAngle": 55,
+        "Class": "Gunblade",
+        "ComboDur": 5,
+        "Conclave": true,
+        "Disposition": 1.05,
+        "Family": "Redeemer",
+        "FollowThrough": 0.5,
+        "HeavyAttack": 900,
+        "HeavySlamAttack": 540,
+        "HeavySlamElement": "Blast",
+        "HeavySlamForcedProcs": [
+            "Lifted"
+        ],
+        "HeavySlamRadius": 6,
+        "Image": "Redeemer.png",
+        "InternalName": "/Lotus/Weapons/Tenno/Melee/Gunblade/TnoGunblade",
+        "Introduced": "15.5",
+        "Link": "Redeemer",
+        "Mastery": 4,
+        "MaxRank": 30,
+        "MeleeRange": 2,
+        "Name": "Redeemer",
+        "SellPrice": 5000,
+        "SlamAttack": 360,
+        "SlamElement": "Impact",
+        "SlamForcedProcs": [
+            "Impact"
+        ],
+        "SlamRadius": 5,
+        "SlideAttack": 360,
+        "Slot": "Melee",
+        "StancePolarity": "Madurai",
+        "SweepRadius": 0.25,
+        "Traits": [
+            "Tenno"
+        ],
+        "WindUp": 0.4
+    }
+}
