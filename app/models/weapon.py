@@ -1,15 +1,129 @@
 import json
-from typing import dict, List, Any, Optional, Union
+from typing import Any
+from dataclasses import dataclass
+
+@dataclass
+class Slot:
+    """What slot the weapon occupies"""
+    PRIMARY = "Primary"
+    SECONDARY = "Secondary"
+    MELEE = "Melee"
+    AMP = "Amp"
+    # Archguns when used in space
+    ARCHGUN = "Archgun"
+    # Archguns when summoned
+    ARCHGUN_ATMOSPHERE = "Archgun (Atmosphere)"
+    ARCHMELEE = "Archmelee"
+    # Rampart, used by grineer
+    EMPLACEMENT = "Emplacement"
+    # Fishing spears
+    GEAR = "Gear"
+    HOUND = "Hound"
+    # Pugil (unarmed)
+    NECH_MELEE = "Nech-Melee"
+    RAILJACK_ORDNANCE = "Railjack Ordnance"
+    RAILJACK_TURRET = "Railjack Turret"
+    ROBOTIC = "Robotic"
+    # Parazon, Razorflies, Soaktron, Unarmed
+    UNIQUE = "Unique"
+    # Dargyn
+    VEHICLE = "Vehicle"
+
+
+@dataclass
+class ShotType:
+    """The type of shot the attack uses"""
+    AOE = ("AoE")
+    DOT = ("DoT")
+    HIT_SCAN = ("Hit-Scan","Hitscan")
+    PROJECTILE = ("Projectile")
+    THROWN = ("Thrown")
+
+
+class Damage:
+    """Represents damage attributes of an attack"""
+    emote ={
+        #TODO: Add the actual emotes
+        "impact": "<:Impact:891464869494646036>",
+        "puncture": "<:Puncture:891464869494646036>",
+        "slash": "<:Slash:891464869494646036>",
+        "heat": "<:Heat:891464869494646036>",
+        "cold": "<:Cold:891464869494646036>",
+        "electricity": "<:Electricity:891464869494646036>",
+        "toxin": "<:Toxin:891464869494646036>",
+        "blast": "<:Blast:891464869494646036>",
+        "corrosive": "<:Corrosive:891464869494646036>",
+        "gas": "<:Gas:891464869494646036>",
+        "magnetic": "<:Magnetic:891464869494646036>",
+        "radiation": "<:Radiation:891464869494646036>",
+        "viral": "<:Viral:891464869494646036>",
+        "void": "<:Void:891464869494646036>"
+    }
+    
+    def __init__(self, damage_data: dict[str, float]):
+        # Physical types
+        self.impact = damage_data.get("Impact")
+        self.puncture = damage_data.get("Puncture")
+        self.slash = damage_data.get("Slash")
+
+        # Single element types
+        self.heat = damage_data.get("Heat")
+        self.cold = damage_data.get("Cold")
+        self.electricity = damage_data.get("Electricity")
+        self.toxin = damage_data.get("Toxin")
+
+        # Combined element types
+        self.blast = damage_data.get("Blast")
+        self.corrosive = damage_data.get("Corrosive")
+        self.gas = damage_data.get("Gas")
+        self.magnetic = damage_data.get("Magnetic")
+        self.radiation = damage_data.get("Radiation")
+        self.viral = damage_data.get("Viral")
+
+        # Special damage types
+        self.void = damage_data.get("Void")
+
+    @property
+    def used(self) -> dict[str, float]:
+        """Return the damage types used in the attack"""
+        return {key:value for key, value in self.__dict__.items() if value is not None}
+    
+    @property
+    def total(self) -> float:
+        """Calculate the total damage of an attack"""
+        return sum(self.used.values())
+    
+    @property
+    def most_used(self) -> tuple[str, float]:
+        """Return the most used damage type in the attack and its percentage
+
+        Returns:
+            tuple[str, float]: The most used damage type and its percentage
+        """
+        if not self.used:
+            raise ValueError("No damage types found")
+        damage_type = max(self.used, key=self.used.get)
+        percentage = self.used[damage_type]/self.total * 100
+        return damage_type, percentage
+    
+    def __str__(self) -> str:
+        damage_text = ""
+        damage_text += "- " + "\n- ".join([f"{key.capitalize()}: {value}" for key, value in self.used.items()])
+
+        most_used_type, most_used_percent = self.most_used
+        damage_text += f"\n\nTotal: {self.total:.2f} ({most_used_percent:.2f}%{most_used_type.capitalize()})"
+        return damage_text
+
 
 class Attack:
     """Represents a weapon attack with its properties"""
     
     def __init__(self, attack_data: dict[str, Any]):
         # Common attack properties
-        self.attack_name = attack_data.get("AttackName")
+        self.attack_name = attack_data.get("AttackName", "Normal Attack")
         self.crit_chance = attack_data.get("CritChance")
         self.crit_multiplier = attack_data.get("CritMultiplier")
-        self.damage = attack_data.get("Damage", {})
+        self.damage = Damage(attack_data.get("Damage", {}))
         self.fire_rate = attack_data.get("FireRate")
         self.is_silent = attack_data.get("IsSilent", False)
         self.status_chance = attack_data.get("StatusChance")
@@ -32,9 +146,74 @@ class Attack:
         self.forced_procs = attack_data.get("ForcedProcs", [])
         self.charge_time = attack_data.get("ChargeTime")
         self.trigger = attack_data.get("Trigger")
-        
+    
+    def __repr__(self):
+        return f"<Attack: {self.attack_name}-{self.shot_type}>"
+    
+    @property
+    def important_properties(self) -> dict[str, Any]:
+        """Return the important properties of the attack"""
+        return {
+            "Crit Chance": self.crit_chance,
+            "Crit Multiplier": self.crit_multiplier,
+            "Damage": self.damage.total,
+            "Fire Rate": self.fire_rate,
+            "Status Chance": self.status_chance,
+            "Multishot": self.multishot
+        }
+    
+    @property
+    def title(self):
+        text = f"***Attack Mode***: {self.attack_name}"
+        if self.shot_type:
+            text += f"\n***Type***: {self.shot_type}"
+        return text
+    
     def __str__(self) -> str:
-        return f"{self.attack_name} (Crit: {self.crit_chance}, Status: {self.status_chance})"
+        text = ""
+        # Common attack properties
+        pass
+            # total = 0
+            # max = ''
+            # percentmax = 0
+            # damagestring = ''
+            # damage = x['Damage']
+            # for type in damage:
+            #     damagestring += f"{type.capitalize()}: {damage[type]}{chr(10)}"
+            #     total += damage[type]
+            #     if damage[type] >= percentmax:
+            #         percentmax = damage[type]
+            #         max = type.capitalize()
+
+
+            # if snekw['Slot'] != 'Melee':
+            #     wepembed.add_field(
+            #         value=f"{'Critical Chance: '+str(round(x['CritChance']*100))+'%'+chr(10) if 'CritChance' in x else ''}"+
+            #         f"{'Critical Damage: '+ str(x['CritMultiplier'])+'x'+chr(10) if 'CritMultiplier' in x else ''}"+
+            #         f"{'Status Chance: '+ str(round(x['StatusChance']*100))+'%'+chr(10) if 'StatusChance' in x else '' }"+
+            #         f"Multishot: {x['Multishot'] if 'Multishot' in x else '1'}{chr(10)}"+
+            #         f"{'Charge Time: '+ str(x['FireRate'])+'s'+chr(10) if 'ShotType' in x and x['ShotType'] == 'Charged Shot' else 'Firerate: '+str(x['FireRate'])+chr(10) if 'FireRate' in x else ''}"+
+            #         f"{'AoE Radius: '+str(x['Radius'])+'m'+chr(10) if 'Radius' in x and 'ShotType' in x and x['ShotType'] == 'AoE' else 'AoE Radius: '+str(x['Falloff']['EndRange'])+'m'+chr(10) if 'Falloff' in x and 'ShotType' in x and x['ShotType'] == 'AoE' else '' }"+
+            #         f"{'Falloff: '+(str(round(x['Falloff']['Reduction'] * 100))+'%' if 'Reduction'in x['Falloff'] else '')+'('+str(x['Falloff']['StartRange'])+' - '+str(x['Falloff']['EndRange'])+'m)'+chr(10) if 'Falloff' in x else ''}"+
+            #         f"{'Punchthrough: '+str(x['PunchThrough'])+chr(10) if 'PunchThrough' in x else ''}"+
+            #         f"**Damage**:{chr(10)}"+
+            #         damagestring + chr(10)+
+            #         f"{'Total: '+'{0:.2f} ({1:.2f}%{2})'.format(total * x.get('Multishot',1),percentmax*100/total,max)}",
+            #         inline=True
+            #     )
+            # else:
+            #     wepembed.add_field(
+            #         value=f"{'Critical Chance: '+str(round(x['CritChance']*100))+'%'+chr(10) if 'CritChance' in x else ''}"+
+            #         f"{'Critical Damage: '+ str(x['CritMultiplier'])+'x'+chr(10) if 'CritMultiplier' in x else ''}"+
+            #         f"{'Status Chance: '+ str(round(x['StatusChance']*100))+'%'+chr(10) if 'StatusChance' in x else '' }"+
+            #         multishot(x) +
+            #         f"{'AoE Radius: '+str(x['Radius'])+'m'+chr(10) if 'Radius' in x and 'ShotType' in x and x['ShotType'] == 'AoE' else 'AoE Radius: '+str(x['Falloff']['EndRange'])+'m'+chr(10) if 'Falloff' in x else '' }"+
+            #         f"{'Falloff: '+str(round(x['Falloff']['Reduction']) * 100)+'%('+str(x['Falloff']['StartRange'])+' - '+str(x['Falloff']['EndRange'])+'m'+chr(10) if 'Falloff' in x else ''}"+
+            #         f"**Damage**:{chr(10)}"+
+            #         damagestring + chr(10)+
+            #         f"{'Total: '+'{0:.2f} ({1:.2f}%{2})'.format(total * x.get('Multishot',1),percentmax*100/total,max)}",
+            #         inline=True
+            #     )
 
 
 class Weapon:
@@ -53,7 +232,7 @@ class Weapon:
         self.family = weapon_data.get("Family")
         self.mastery = weapon_data.get("Mastery")
         self.max_rank = weapon_data.get("MaxRank", 30)
-        self.disposition = weapon_data.get("Disposition")
+        self.disposition = self.parse_disposition(weapon_data.get("Disposition", 0.5))
         self.sell_price = weapon_data.get("SellPrice")
         self.introduced = weapon_data.get("Introduced")
         self.conclave = weapon_data.get("Conclave", False)
@@ -66,13 +245,26 @@ class Weapon:
     def __str__(self) -> str:
         return f"{self.name} ({self.class_})"
     
+    def parse_disposition(self, disposition: float) -> str:
+        """Parse disposition value to a string"""
+        if disposition >= 0.5 and disposition <=0.69:
+            return '●○○○○'
+        elif disposition >= 0.7 and disposition <=0.89:
+            return '●●○○○'
+        elif disposition >= 0.9 and disposition <=1.1:
+            return '●●●○○'
+        elif disposition >= 1.11 and disposition <=1.3:
+            return '●●●●○'
+        elif disposition >= 1.31 and disposition <=1.55:
+            return '●●●●●'
+
     @classmethod
     def from_dict(cls, name:str, data: dict[str, Any]) -> dict[str, 'Weapon']:
         """Create weapon objects from dict data"""
         weapon_slot = data.get("Slot", "")
-        if weapon_slot == "Primary" or weapon_slot == "Secondary":
+        if weapon_slot == Slot.PRIMARY or weapon_slot == Slot.SECONDARY:
             return RangedWeapon(name, data)
-        elif weapon_slot == "Melee":
+        elif weapon_slot == Slot.MELEE:
             return MeleeWeapon(name, data)
         else:
             return Weapon(name, data)
@@ -84,7 +276,8 @@ class Weapon:
         description += f"Class: {self.slot}\n"
         description += f"Type: {self.class_}\n"
         description += f"Mastery: {self.mastery if self.mastery is not None else '-'}\n"
-        
+        description += f"Disposition: {self.disposition}\n"
+
         return description
 
 
@@ -119,8 +312,8 @@ class RangedWeapon(Weapon):
         
         # Handle zoom options if present
         if hasattr(self, 'zoom') and self.zoom:
-            description += "**Zoom**:\n"
-            description += '\n'.join([str(zoom_option) for zoom_option in self.zoom])
+            description += "**Zoom**:\n- "
+            description += '\n- '.join([str(zoom_option) for zoom_option in self.zoom])
             description += '\n'
             
         return description
