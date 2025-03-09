@@ -111,7 +111,7 @@ class Damage:
         damage_text += "- " + "\n- ".join([f"{key.capitalize()}: {value}" for key, value in self.used.items()])
 
         most_used_type, most_used_percent = self.most_used
-        damage_text += f"\n\nTotal: {self.total:.2f} ({most_used_percent:.2f}%{most_used_type.capitalize()})"
+        damage_text += f"\n\nTotal: {round(self.total,2)} ({round(most_used_percent,2)}%{most_used_type.capitalize()})"
         return damage_text
 
 
@@ -151,17 +151,37 @@ class Attack:
         return f"<Attack: {self.attack_name}-{self.shot_type}>"
     
     @property
+    def parsed_falloff(self) -> str:
+        """Return the parsed falloff range"""
+        if self.falloff:
+            if 'Reduction' in self.falloff:
+                return f"{str(round(self.falloff['Reduction'] * 100))}% ({self.falloff['StartRange']} - {self.falloff['EndRange']}m)"
+        return None
+    
+    @property
     def important_properties(self) -> dict[str, Any]:
         """Return the important properties of the attack"""
-        return {
-            "Crit Chance": self.crit_chance,
-            "Crit Multiplier": self.crit_multiplier,
-            "Damage": self.damage.total,
-            "Fire Rate": self.fire_rate,
-            "Status Chance": self.status_chance,
-            "Multishot": self.multishot
-        }
-    
+        dictionary = {}
+        dictionary["Crit Chance"]= f"{self.crit_chance * 100}%"
+        dictionary["Crit Multiplier"]= f"{self.crit_multiplier}x"
+        dictionary["Status Chance"]= f"{round(self.status_chance * 100, 2)}%"
+
+        if self.shot_type != "Normal Attack":
+            dictionary["Multishot"]= self.multishot
+            dictionary["Fire Rate"]= self.fire_rate
+
+        if self.range:
+            if self.shot_type == "AoE":
+                dictionary["AoE Radius"]= f"{self.range}m"
+            else:
+                dictionary["Range"]= f"{self.range}m"
+
+        if self.parsed_falloff:
+            dictionary["Falloff"]= self.parsed_falloff,
+        dictionary["**Damage**"] = f"\n{str(self.damage)}"
+
+        return dictionary
+
     @property
     def title(self):
         text = f"***Attack Mode***: {self.attack_name}"
@@ -169,52 +189,13 @@ class Attack:
             text += f"\n***Type***: {self.shot_type}"
         return text
     
-    def __str__(self) -> str:
+    def __str__(self):
         text = ""
-        # Common attack properties
-        pass
-            # total = 0
-            # max = ''
-            # percentmax = 0
-            # damagestring = ''
-            # damage = x['Damage']
-            # for type in damage:
-            #     damagestring += f"{type.capitalize()}: {damage[type]}{chr(10)}"
-            #     total += damage[type]
-            #     if damage[type] >= percentmax:
-            #         percentmax = damage[type]
-            #         max = type.capitalize()
-
-
-            # if snekw['Slot'] != 'Melee':
-            #     wepembed.add_field(
-            #         value=f"{'Critical Chance: '+str(round(x['CritChance']*100))+'%'+chr(10) if 'CritChance' in x else ''}"+
-            #         f"{'Critical Damage: '+ str(x['CritMultiplier'])+'x'+chr(10) if 'CritMultiplier' in x else ''}"+
-            #         f"{'Status Chance: '+ str(round(x['StatusChance']*100))+'%'+chr(10) if 'StatusChance' in x else '' }"+
-            #         f"Multishot: {x['Multishot'] if 'Multishot' in x else '1'}{chr(10)}"+
-            #         f"{'Charge Time: '+ str(x['FireRate'])+'s'+chr(10) if 'ShotType' in x and x['ShotType'] == 'Charged Shot' else 'Firerate: '+str(x['FireRate'])+chr(10) if 'FireRate' in x else ''}"+
-            #         f"{'AoE Radius: '+str(x['Radius'])+'m'+chr(10) if 'Radius' in x and 'ShotType' in x and x['ShotType'] == 'AoE' else 'AoE Radius: '+str(x['Falloff']['EndRange'])+'m'+chr(10) if 'Falloff' in x and 'ShotType' in x and x['ShotType'] == 'AoE' else '' }"+
-            #         f"{'Falloff: '+(str(round(x['Falloff']['Reduction'] * 100))+'%' if 'Reduction'in x['Falloff'] else '')+'('+str(x['Falloff']['StartRange'])+' - '+str(x['Falloff']['EndRange'])+'m)'+chr(10) if 'Falloff' in x else ''}"+
-            #         f"{'Punchthrough: '+str(x['PunchThrough'])+chr(10) if 'PunchThrough' in x else ''}"+
-            #         f"**Damage**:{chr(10)}"+
-            #         damagestring + chr(10)+
-            #         f"{'Total: '+'{0:.2f} ({1:.2f}%{2})'.format(total * x.get('Multishot',1),percentmax*100/total,max)}",
-            #         inline=True
-            #     )
-            # else:
-            #     wepembed.add_field(
-            #         value=f"{'Critical Chance: '+str(round(x['CritChance']*100))+'%'+chr(10) if 'CritChance' in x else ''}"+
-            #         f"{'Critical Damage: '+ str(x['CritMultiplier'])+'x'+chr(10) if 'CritMultiplier' in x else ''}"+
-            #         f"{'Status Chance: '+ str(round(x['StatusChance']*100))+'%'+chr(10) if 'StatusChance' in x else '' }"+
-            #         multishot(x) +
-            #         f"{'AoE Radius: '+str(x['Radius'])+'m'+chr(10) if 'Radius' in x and 'ShotType' in x and x['ShotType'] == 'AoE' else 'AoE Radius: '+str(x['Falloff']['EndRange'])+'m'+chr(10) if 'Falloff' in x else '' }"+
-            #         f"{'Falloff: '+str(round(x['Falloff']['Reduction']) * 100)+'%('+str(x['Falloff']['StartRange'])+' - '+str(x['Falloff']['EndRange'])+'m'+chr(10) if 'Falloff' in x else ''}"+
-            #         f"**Damage**:{chr(10)}"+
-            #         damagestring + chr(10)+
-            #         f"{'Total: '+'{0:.2f} ({1:.2f}%{2})'.format(total * x.get('Multishot',1),percentmax*100/total,max)}",
-            #         inline=True
-            #     )
-
+        for key, value in self.important_properties.items():
+            if value is not None:
+                text += f"{key}: {value}\n"
+        return text
+    
 
 class Weapon:
     """Base class for all weapons"""
@@ -259,7 +240,7 @@ class Weapon:
             return '●●●●●'
 
     @classmethod
-    def from_dict(cls, name:str, data: dict[str, Any]) -> dict[str, 'Weapon']:
+    def from_dict(cls, name:str, data: dict[str, Any]) -> 'Weapon':
         """Create weapon objects from dict data"""
         weapon_slot = data.get("Slot", "")
         if weapon_slot == Slot.PRIMARY or weapon_slot == Slot.SECONDARY:
@@ -279,8 +260,8 @@ class Weapon:
         description += f"Disposition: {self.disposition}\n"
 
         return description
-
-
+    
+    
 class RangedWeapon(Weapon):
     """Class for ranged weapons (Primary and Secondary)"""
     
@@ -318,6 +299,7 @@ class RangedWeapon(Weapon):
             
         return description
 
+
 class MeleeWeapon(Weapon):
     """Class for melee weapons"""
     
@@ -326,12 +308,15 @@ class MeleeWeapon(Weapon):
         
         # Melee weapon specific attributes
         self.block_angle = weapon_data.get("BlockAngle")
-        self.combo_dur = weapon_data.get("ComboDur")
+        self.combo_dur = weapon_data.get("ComboDur", "∞")
         self.follow_through = weapon_data.get("FollowThrough")
         self.melee_range = weapon_data.get("MeleeRange")
         self.stance_polarity = weapon_data.get("StancePolarity")
         self.sweep_radius = weapon_data.get("SweepRadius")
         self.wind_up = weapon_data.get("WindUp")
+
+        # Derived from attack
+        self.attack_speed = self.attacks[0].fire_rate
         
         # Special attacks
         self.heavy_attack = weapon_data.get("HeavyAttack")
@@ -357,6 +342,7 @@ class MeleeWeapon(Weapon):
             description += f"Block Angle: {self.block_angle}\n"
         description += f"Combo Duration: {self.combo_dur}\n"
         description += f"Follow Through: {self.follow_through}\n"
-        description += f"Range: {self.melee_range}\n"
+        description += f"Attack Speed: {self.attack_speed}\n"
+        description += f"Range: {self.melee_range}m\n"
         
         return description

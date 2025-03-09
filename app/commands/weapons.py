@@ -3,6 +3,7 @@ import discord
 import json
 from requests import get
 from funcs import dispo, update_cache
+from models.weapon import Weapon
 import time
 from redis_manager import cache
 
@@ -32,20 +33,18 @@ class weapon(commands.Cog):
 
         download_timer = time.time() - download_start
 
-        wiki_data = data
-        snekw = ""
         # first we test if we have weapon on wiki
         message = message.lower()
         wiki_wep = ""
         # test with full text first
-        for x in wiki_data:
+        for x in data:
             if message == x.lower():
                 wiki_wep = x
                 break
             
         # if not full word then partial    
         if wiki_wep == "":
-            for x in wiki_data:
+            for x in data:
                 if message in x.lower():
                     wiki_wep = x
                     break
@@ -54,97 +53,20 @@ class weapon(commands.Cog):
             error = discord.Embed(description="Be sure to write the right weapon name")
             await ctx.send(embed=error)
             return
-        snekw = wiki_data[wiki_wep]
+        
+        weapon_instance = Weapon.from_dict(wiki_wep, data[wiki_wep])
 
         calculaton_start = time.time()
-        if len(snekw) == 0:
-            error = discord.Embed(description="Be sure to write the right weapon name")
-            await ctx.send(embed=error)
-            return
-        description = ''
-        if snekw['Slot'] != 'Melee':
-            description +=(f"Class: {snekw['Slot']}{chr(10)}"+
-                            f"Type: {snekw['Class']}{chr(10)}"+
-                            f"Mastery: {snekw.get('Mastery','-')}{chr(10)}"+
-                            f"Ammo: {snekw['AmmoMax'] if 'AmmoMax' in snekw else '∞'}{chr(10)}"+
-                            f"Ammo Pickup: {snekw['AmmoPickup'] if 'AmmoPickup' in snekw else ''}{chr(10) if 'AmmoPickup' in snekw else ''}" +
-                            f"Magazine: {snekw['Magazine']}{chr(10)}"+
-                            f"Reload: {snekw['Reload']}{chr(10)}"+
-                            f"Trigger: {snekw['Trigger']}{chr(10)}"
-                            # f"{'**Zoom**:'+{chr(10)}+ chr(10).join([str(zoom_option) for zoom_option in snekw['Zoom']]) if 'Zoom' in snekw else ''}{chr(10)}"
-                            )
-
-            if 'Zoom' in snekw:
-                description += '**Zoom**:\n'
-                description += '\n'.join([str(zoom_option) for zoom_option in snekw['Zoom']])
-                description += '\n'
-
-            description +=f"Disposition: {snekw['Disposition']}  ({dispo(float(snekw['Disposition']))}){chr(10)}{chr(10)}"
-        else:
-            description +=(f"Class: {snekw['Slot']}{chr(10)}"+
-            f"Type: {snekw['Class']}{chr(10)}"+
-            f"Mastery: {snekw.get('Mastery','-')}{chr(10)}"+
-            f"Attack Speed: {snekw['Attacks'][0]['FireRate']}{chr(10)}"+
-            f"Combo Duration: {snekw.get("ComboDur","∞")}{chr(10)}"+
-            f"Range: {snekw['MeleeRange']}{chr(10)}"+
-            f"Disposition: {snekw['Disposition']}  ({dispo(float(snekw['Disposition']))}){chr(10)}{chr(10)}"
-            )
 
         wepembed = discord.Embed(
-            title=snekw['Name'],
-            description=description,
-            url=f"https://wiki.warframe.com/w/{'_'.join(snekw['Name'].split(' '))}",
+            title=weapon_instance.name,
+            description=weapon_instance.get_description(),
+            url=f"https://wiki.warframe.com/w/{'_'.join(weapon_instance.name.split(' '))}",
             color=discord.Colour.random())
 
-        for x in snekw['Attacks']:
-            total = 0
-            max = ''
-            percentmax = 0
-            damagestring = ''
-            damage = x['Damage']
-            for type in damage:
-                damagestring += f"{type.capitalize()}: {damage[type]}{chr(10)}"
-                total += damage[type]
-                if damage[type] >= percentmax:
-                    percentmax = damage[type]
-                    max = type.capitalize()
+        for attack in weapon_instance.attacks:
+            wepembed.add_field(name=attack.title, value=str(attack), inline=True)
 
-
-            if snekw['Slot'] != 'Melee':
-                wepembed.add_field(
-                    name=f"***Attack Mode***: {x['AttackName'] if 'AttackName' in x else 'Normal Attack' }{chr(10)}"+
-                    f"Type: {x['ShotType'] if 'ShotType' in x else '-'}",
-                    value=f"{'Critical Chance: '+str(round(x['CritChance']*100))+'%'+chr(10) if 'CritChance' in x else ''}"+
-                    f"{'Critical Damage: '+ str(x['CritMultiplier'])+'x'+chr(10) if 'CritMultiplier' in x else ''}"+
-                    f"{'Status Chance: '+ str(round(x['StatusChance']*100))+'%'+chr(10) if 'StatusChance' in x else '' }"+
-                    f"Multishot: {x['Multishot'] if 'Multishot' in x else '1'}{chr(10)}"+
-                    f"{'Charge Time: '+ str(x['FireRate'])+'s'+chr(10) if 'ShotType' in x and x['ShotType'] == 'Charged Shot' else 'Firerate: '+str(x['FireRate'])+chr(10) if 'FireRate' in x else ''}"+
-                    f"{'AoE Radius: '+str(x['Radius'])+'m'+chr(10) if 'Radius' in x and 'ShotType' in x and x['ShotType'] == 'AoE' else 'AoE Radius: '+str(x['Falloff']['EndRange'])+'m'+chr(10) if 'Falloff' in x and 'ShotType' in x and x['ShotType'] == 'AoE' else '' }"+
-                    f"{'Falloff: '+(str(round(x['Falloff']['Reduction'] * 100))+'%' if 'Reduction'in x['Falloff'] else '')+'('+str(x['Falloff']['StartRange'])+' - '+str(x['Falloff']['EndRange'])+'m)'+chr(10) if 'Falloff' in x else ''}"+
-                    f"{'Punchthrough: '+str(x['PunchThrough'])+chr(10) if 'PunchThrough' in x else ''}"+
-                    f"**Damage**:{chr(10)}"+
-                    damagestring + chr(10)+
-                    f"{'Total: '+'{0:.2f} ({1:.2f}%{2})'.format(total * x.get('Multishot',1),percentmax*100/total,max)}",
-                    inline=True
-                )
-            else:
-                wepembed.add_field(
-                    name=f"***Attack Mode***: {x['AttackName'] if 'AttackName' in x else 'Normal Attack' }{chr(10)}"+
-                    f"{'Type: '+x['ShotType'] if 'ShotType' in x else ''}",
-                    value=f"{'Critical Chance: '+str(round(x['CritChance']*100))+'%'+chr(10) if 'CritChance' in x else ''}"+
-                    f"{'Critical Damage: '+ str(x['CritMultiplier'])+'x'+chr(10) if 'CritMultiplier' in x else ''}"+
-                    f"{'Status Chance: '+ str(round(x['StatusChance']*100))+'%'+chr(10) if 'StatusChance' in x else '' }"+
-                    multishot(x) +
-                    # f"{ '' if 'Multishot' not in x else 'Multishot: '+str(x['Multishot'])+chr(10)}"+
-                    # f"{'Charge Time: '+ x['ChargeTime']+'{chr(10)}' if 'ChargeTime' in x and 'AttackName' not in x else 'Firerate: '+x['FireRate']+'{chr(10)}' if 'FireRate' in x else ''}"+
-                    f"{'AoE Radius: '+str(x['Radius'])+'m'+chr(10) if 'Radius' in x and 'ShotType' in x and x['ShotType'] == 'AoE' else 'AoE Radius: '+str(x['Falloff']['EndRange'])+'m'+chr(10) if 'Falloff' in x else '' }"+
-                    f"{'Falloff: '+str(round(x['Falloff']['Reduction']) * 100)+'%('+str(x['Falloff']['StartRange'])+' - '+str(x['Falloff']['EndRange'])+'m'+chr(10) if 'Falloff' in x else ''}"+
-                    # f"{'Punchthrough: '+x['PunchThrough']+'{chr(10)}' if 'PunchThrough' in x else ''}"+
-                    f"**Damage**:{chr(10)}"+
-                    damagestring + chr(10)+
-                    f"{'Total: '+'{0:.2f} ({1:.2f}%{2})'.format(total * x.get('Multishot',1),percentmax*100/total,max)}",
-                    inline=True
-                )
         calculaton_timer = time.time() - calculaton_start
         if cached:
             wepembed.set_footer(
