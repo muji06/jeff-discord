@@ -116,7 +116,7 @@ def relic_pricecheck(string: str):
     trades = data['payload']['orders']
     lowest = [[10000,0],[10000,0],[10000,0]]
     for trade in trades:
-        if trade['user']['status'] == 'ingame' and trade['order_type'] == 'sell' and trade['platform'] == 'pc':
+        if trade['user']['status'] == 'ingame' and trade['order_type'] == 'sell' and trade['user']['platform'] != 'switch':
             if trade['platinum'] <lowest[0][0]:
                 lowest[0] = [trade['platinum'],trade['quantity']]
                 lowest.sort(key=lambda x: x[0])
