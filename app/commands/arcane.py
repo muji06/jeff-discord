@@ -1,11 +1,11 @@
 from discord.ext import commands
 import discord
 import json
-from requests import get
-from funcs import find, update_cache
+from funcs import update_cache
 import time
 import re
 from redis_manager import cache
+from models.wfm import PriceCheck
 
 class arcane(commands.Cog):
     def __init__(self, bot):
@@ -42,7 +42,7 @@ class arcane(commands.Cog):
                 snekw = cached_arcanes['Arcanes']
             except KeyError:
                 error = discord.Embed(
-                    description="[BROKEN FOR NOW] Arcane names could not be pulled from warframe wiki"
+                    description="Arcane names could not be pulled from warframe wiki"
                 )
                 await ctx.send(embed=error)
                 return
@@ -63,13 +63,14 @@ class arcane(commands.Cog):
             await ctx.send(embed=error)
             return
         market_start = time.time()
-        price_unranked = find(data['Name'],0)
-        price_ranked = find(data['Name'],data['MaxRank'])
+        price_check = PriceCheck(data.get('Name'))
+        price_unranked = price_check.check(rank=0)
+        price_ranked = price_check.check(rank=data.get('MaxRank'))
         market_timer = time.time() - market_start
         criteria = ""
         if data['Criteria']:
             criteria = f"{data['Criteria']}:{chr(10)}"
-        stats = f"{criteria}"+re.sub('<br \/>',chr(10),str(data['Description']))
+        stats = f"{criteria}"+re.sub('<br />',chr(10),str(data['Description']))
         arcane_embed = discord.Embed(
             title=f"{data['Name']} | {data['Rarity']}",
             description=f"***At maximum rank ({data['MaxRank']})***{chr(10)}{chr(10)}{stats}{chr(10)}{chr(10)}Unranked: {price_unranked}{chr(10)}Rank {data['MaxRank']}: {price_ranked}"
