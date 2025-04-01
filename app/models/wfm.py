@@ -28,7 +28,7 @@ class WarframeMarket:
             charges: int=0,
             amber_stars: int=0,
             cyan_stars: int=0,
-            subtype: ItemSubtype=ItemSubtype.BLUEPRINT,
+            subtype: ItemSubtype|None=None,
             top_5: bool=False,
         ) -> dict: 
         endpoint = f"/orders/item/{slug}"
@@ -40,9 +40,11 @@ class WarframeMarket:
             "rank": rank,
             "charges": charges,
             "amberStars": amber_stars,
-            "cyanStars": cyan_stars,
-            "subtype": subtype.value
+            "cyanStars": cyan_stars
         }
+
+        if subtype:
+            params["subtype"] = subtype.value
 
         data = self.session.get(f"{self.base_url}{endpoint}",params=params)
         data.raise_for_status()
@@ -89,7 +91,7 @@ class PriceCheck:
     @property
     def slug(self):
         name = self.item.lower()
-        if not (name.endswith("prime blueprint") or name.endswith("collar blueprint")):
+        if name.endswith("collar blueprint"):
             name = name.lower().replace(" blueprint","")
         if "-" in name:
             name = " ".join(name.split("-"))
@@ -102,30 +104,42 @@ class PriceCheck:
     
     def check(self,
         rank: int=0,
-        charges: int=3):
-        orders = [order["platinum"] for order in self.client.get_orders(slug=self.slug,rank=rank,charges=charges,top_5=True).get("sell")]
+        charges: int=3,
+        subtype: ItemSubtype|None=None,
+        ):
+        orders = [order["platinum"] for order in self.client.get_orders(slug=self.slug,rank=rank,charges=charges,top_5=True,subtype=subtype).get("sell")]
         # if less than 5 orders, fill the rest with N/A
-        orders += ["N/A"] * (5 - len(orders))
-
+        # orders += ["N/A"] * (5 - len(orders))
+        if len(orders) == 0:
+            return "(N/A)"
+        
         text = f"({", ".join([str(x) for x in orders])}){self.platinum}"
         return text
     
     async def check_async(self,
         rank: int=0,
-        charges: int=3):
-        orders = [order["platinum"] for order in self.client.get_orders(slug=self.slug,rank=rank,charges=charges,top_5=True).get("sell")]
+        charges: int=3,
+        subtype: ItemSubtype|None=None,
+        ):
+        orders = [order["platinum"] for order in self.client.get_orders(slug=self.slug,rank=rank,charges=charges,top_5=True,subtype=subtype).get("sell")]
         # if less than 5 orders, fill the rest with N/A
-        orders += ["N/A"] * (5 - len(orders))
+        # orders += ["N/A"] * (5 - len(orders))
+        if len(orders) == 0:
+            return "(N/A)"
 
         text = f"({", ".join([str(x) for x in orders])}){self.platinum}"
         return text
     
     def check_with_quantity(self
         ,rank: int=0,
-        charges: int=3):
-        orders = [f"{order["platinum"]} ({order["quantity"]})" for order in self.client.get_orders(slug=self.slug,rank=rank,charges=charges,top_5=True).get("sell")]
+        charges: int=3,
+        subtype: ItemSubtype|None=None,
+        ):
+        orders = [f"{order["platinum"]}{self.platinum} ({order["quantity"]})" for order in self.client.get_orders(slug=self.slug,rank=rank,charges=charges,top_5=True,subtype=subtype).get("sell")]
         # if less than 5 orders, fill the rest with N/A
-        orders += ["N/A"] * (5 - len(orders))
-
-        text = f"({'|'.join([str(x) for x in orders])}){self.platinum}"
+        # orders += ["N/A"] * (5 - len(orders))
+        if len(orders) == 0:
+            return "N/A"
+        
+        text = f"{'| '.join([str(x) for x in orders])}"
         return text

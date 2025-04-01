@@ -2,9 +2,7 @@ from discord.ext import commands
 import discord
 import json
 import time
-from funcs import optimized_find, relic_finder
 import asyncio
-from threading import Thread
 import time
 from redis_manager import cache
 from models.wfm import PriceCheck
@@ -41,7 +39,7 @@ class relic(commands.Cog):
             drop = data[relic]['Drops']
 
             info = ''
-            relic_check = PriceCheck(item=relic)
+            relic_check = PriceCheck(item=relic+" relic")
             price = relic_check.check_with_quantity()   
             if 'IsBaro' in relic and relic['IsBaro']:
                 info = '(B)'
@@ -51,7 +49,7 @@ class relic(commands.Cog):
             embed = discord.Embed(
                 title=f"{info} {relic}\n",
                 color=discord.Colour.random(),
-                description=f"{price}"
+                description=f"Price (Quantity): {price}"
             )
 
             # download the stuff
@@ -94,7 +92,7 @@ class relic(commands.Cog):
             result = await price_checker.check_async()
             returns_dict[key] = result
         except Exception as e:
-            returns_dict[key] = f"(error)"
+            returns_dict[key] = f"(failed)"
 
 
 async def setup(bot):

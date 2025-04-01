@@ -4,7 +4,7 @@ import time
 import asyncio
 from discord.ext import commands
 from redis_manager import cache
-from models.wfm import PriceCheck
+from models.wfm import PriceCheck, ItemSubtype
 
 class pset(commands.Cog):
     def __init__(self, bot):
@@ -54,7 +54,7 @@ class pset(commands.Cog):
         returns = {}
         tasks = []
         for part in prime_dict["Parts"]:
-            trade_name = f"{item} {part if len(part.split(' ')) == 1 else part.replace('blueprint','').strip()}"
+            trade_name = f"{item} {part if part.lower().endswith('blueprint') else part+' blueprint'}"
             price_checker = PriceCheck(item=trade_name)
             task = asyncio.create_task(self.fetch_price(price_checker, part, returns))
             tasks.append(task)
@@ -92,9 +92,10 @@ class pset(commands.Cog):
     async def fetch_price(self, price_checker: PriceCheck, part_key: str, returns_dict: dict):
         """Helper method to fetch price for a part and store it in the returns dictionary"""
         try:
-            result = await price_checker.check_async()
+            result = await price_checker.check_async(subtype=ItemSubtype.BLUEPRINT)
             returns_dict[part_key] = result
         except Exception as e:
+            print(e)
             returns_dict[part_key] = f"(error)"
 
 
