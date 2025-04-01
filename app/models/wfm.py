@@ -1,91 +1,145 @@
 import requests
+import aiohttp
+from enum import Enum
 
-class WarframeMarketAPI:
+class ItemSubtype(Enum):
+    CRAFTED = "crafted"
+    BLUEPRINT = "blueprint"
+
+
+class WarframeMarket:
     def __init__(self, base_url="https://api.warframe.market/v2", headers=None):
         self.base_url = base_url
         self.session = requests.Session()
         self._items = None  
         self.session.headers.update({
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "Language": "en",
+            "Platform": "pc",
+            "Crossplay": "true"
         })
         if headers:
             self.session.headers.update(headers)
 
-    def get_item(self, item_name):
-        """
-        Retrieve item details by name, including its URL name for API requests
+    def get_orders(self,       
+            slug: str="",
+            rank: int=0,
+            charges: int=0,
+            amber_stars: int=0,
+            cyan_stars: int=0,
+            subtype: ItemSubtype|None=None,
+            top_5: bool=False,
+        ) -> dict: 
+        endpoint = f"/orders/item/{slug}"
+
+        if top_5:
+            endpoint += "/top"
         
-        Args:
-            item_name (str): The display name of the item to search for
-            
-        Returns:
-            dict: Item information including id, url_name, and other details
-            
-        Raises:
-            ValueError: If item is not found
-            HTTPError: For API request failures
-        """
-        if self._items is None:
-            self._fetch_all_items()
-            
-        lower_name = item_name.lower()
-        for item in self._items:
-            if item['item_name'].lower() == lower_name:
-                return item
-            
-        raise ValueError(f"Item '{item_name}' not found")
-
-    def _fetch_all_items(self):
-        """Internal method to fetch and cache all items from the API"""
-        response = self.session.get(f"{self.base_url}/items")
-        response.raise_for_status()
-        self._items = response.json()['payload']['items']
-
-    def get_orders(self, item_name=None, url_name=None, order_type=None, platform='pc', include_profile=False):
-        """
-        Retrieve market orders for a specific item
-        
-        Args:
-            item_name (str): Display name of the item (either this or url_name required)
-            url_name (str): URL-friendly name of the item (either this or item_name required)
-            order_type (str): 'buy' or 'sell' to filter order type
-            platform (str): Platform to check (pc, ps4, xbox, switch)
-            include_profile (bool): Whether to include profile information
-            
-        Returns:
-            list: A list of order dictionaries
-            
-        Raises:
-            ValueError: For invalid parameters or missing item
-            HTTPError: For API request failures
-        """
-        if not (item_name or url_name):
-            raise ValueError("Either item_name or url_name must be provided")
-        if item_name and url_name:
-            raise ValueError("Provide either item_name or url_name, not both")
-
-        if item_name:
-            item = self.get_item(item_name)
-            url_name = item['url_name']
-
         params = {
-            'platform': platform.lower()
+            "rank": rank,
+            "charges": charges,
+            "amberStars": amber_stars,
+            "cyanStars": cyan_stars
         }
-        
-        if order_type:
-            order_type = order_type.lower()
-            if order_type not in ('buy', 'sell'):
-                raise ValueError("order_type must be 'buy' or 'sell'")
-            params['type'] = order_type
-            
-        if include_profile:
-            params['include'] = 'profile'
 
-        response = self.session.get(
-            f"{self.base_url}/items/{url_name}/orders",
-            params=params
-        )
-        response.raise_for_status()
+        if subtype:
+            params["subtype"] = subtype.value
+
+        data = self.session.get(f"{self.base_url}{endpoint}",params=params)
+        data.raise_for_status()
+        return data.json().get("data")
+    
+    async def get_orders_async(self,
+            slug: str="",
+            rank: int=0,
+            charges: int=0,
+            amber_stars: int=0,
+            cyan_stars: int=0,
+            subtype: ItemSubtype=ItemSubtype.BLUEPRINT,
+            top_5: bool=False,
+        ) -> dict: 
+        endpoint = f"/orders/item/{slug}"
+
+        if top_5:
+            endpoint += "/top"
         
-        return response.json()['payload']['orders']
+        params = {
+            "rank": rank,
+            "charges": charges,
+            "amberStars": amber_stars,
+            "cyanStars": cyan_stars,
+            "subtype": subtype.value
+        }
+
+        async with aiohttp.ClientSession() as session:
+            async with session.get(f"{self.base_url}{endpoint}",params=params) as response:
+                data = await response.json()
+                return data.get("data")
+
+
+class PriceCheck:
+    """
+    Utility class to check prices of items on Warframe Market
+    """
+    platinum = "<:Platinum:992917150358589550>"
+
+    def __init__(self, client: WarframeMarket=None, item: str=None):
+        self.client = client if isinstance(client, WarframeMarket) else WarframeMarket()
+        self.item = item
+
+    @property
+    def slug(self):
+        name = self.item.lower()
+        if name.endswith("collar blueprint"):
+            name = name.lower().replace(" blueprint","")
+        if "-" in name:
+            name = " ".join(name.split("-"))
+        if "&" in name:
+            name = name.replace("&","and")
+        if "\'" in name:
+            name = name.replace("\'","")
+        
+        return "_".join(name.split(" "))
+    
+    def check(self,
+        rank: int=0,
+        charges: int=3,
+        subtype: ItemSubtype|None=None,
+        ):
+        orders = [order["platinum"] for order in self.client.get_orders(slug=self.slug,rank=rank,charges=charges,top_5=True,subtype=subtype).get("sell")]
+        # if less than 5 orders, fill the rest with N/A
+        # orders += ["N/A"] * (5 - len(orders))
+        if len(orders) == 0:
+            return "(N/A)"
+        
+        text = f"({", ".join([str(x) for x in orders])}){self.platinum}"
+        return text
+    
+    async def check_async(self,
+        rank: int=0,
+        charges: int=3,
+        subtype: ItemSubtype|None=None,
+        ):
+        orders = [order["platinum"] for order in self.client.get_orders(slug=self.slug,rank=rank,charges=charges,top_5=True,subtype=subtype).get("sell")]
+        # if less than 5 orders, fill the rest with N/A
+        # orders += ["N/A"] * (5 - len(orders))
+        if len(orders) == 0:
+            return "(N/A)"
+
+        text = f"({", ".join([str(x) for x in orders])}){self.platinum}"
+        return text
+    
+    def check_with_quantity(self
+        ,rank: int=0,
+        charges: int=3,
+        subtype: ItemSubtype|None=None,
+        ):
+        orders = [f"{order["platinum"]}{self.platinum} ({order["quantity"]})" for order in self.client.get_orders(slug=self.slug,rank=rank,charges=charges,top_5=True,subtype=subtype).get("sell")]
+        # if less than 5 orders, fill the rest with N/A
+        # orders += ["N/A"] * (5 - len(orders))
+        if len(orders) == 0:
+            return "N/A"
+        
+        text = f"{'| '.join([str(x) for x in orders])}"
+        return text

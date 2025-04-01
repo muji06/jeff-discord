@@ -1,13 +1,10 @@
-from discord.ext import commands
-from discord import app_commands
 import discord
 import json
 import time
-from requests import get
+import asyncio
+from discord.ext import commands
 from redis_manager import cache
-from funcs import optimized_find, update_cache
-from threading import Thread
-
+from models.wfm import PriceCheck, ItemSubtype
 
 class pset(commands.Cog):
     def __init__(self, bot):
@@ -31,20 +28,8 @@ class pset(commands.Cog):
             return
         
         download_start = time.time()
-        # metadata = get('https://wf.snekw.com/void-wiki/meta').json()
         
-        # check if we have data cached
-        cached = True
-        if cache.cache.exists("void:1"):
-            cached_void = json.loads(cache.cache.get("void:1"))
-            data = cached_void
-        else:
-            cached = False
-            update_cache("void:1",cache)
-            cached_void = json.loads(cache.cache.get("void:1"))
-            data = cached_void
-
-        primes = data['PrimeData']
+        primes = json.loads(cache.get("void:1"))['PrimeData']
         item_name = prime_set.lower()
         text = ''
         item = ''
@@ -66,29 +51,27 @@ class pset(commands.Cog):
             return
         
         # download the stuff
-        threads = {}
         returns = {}
+        tasks = []
         for part in prime_dict["Parts"]:
-            trade_name = f"{item} {part if len(part.split(' ')) == 1 else part.replace('blueprint','').strip()}"
-            threads[part] = Thread(target=optimized_find, args=(trade_name, returns, part))
-            threads[part].start()
-            # text += f"{part}: {find(trade_name)}{chr(10)}"
+            trade_name = f"{item} {part if part.lower().endswith('blueprint') else part+' blueprint'}"
+            price_checker = PriceCheck(item=trade_name)
+            task = asyncio.create_task(self.fetch_price(price_checker, part, returns))
+            tasks.append(task)
         
-        # download set price on separate thread
-        # now we join 1 by 1
+        await asyncio.gather(*tasks)
+
         for part in prime_dict["Parts"]:
-            threads[part].join()
-            text += f"{part}: {returns[part]}{chr(10)}"
+            text += f"{part}: {returns[part]}\n"
 
         set_name = f"{item} set"
-        set_thread = Thread(target=optimized_find, args=(set_name, returns, 'set'))
-        set_thread.start()
-        set_thread.join()
+        set_price_checker = PriceCheck(item=set_name)
+        await self.fetch_price(set_price_checker, 'set', returns)
+        
         set_price = returns['set']
-        if "Failed" in set_price: # try again without set suffix
-            set_thread = Thread(target=optimized_find, args=(item, returns, 'set'))
-            set_thread.start()
-            set_thread.join()
+        if "Failed" in set_price or "N/A" in set_price:  # try again without set suffix
+            set_price_checker = PriceCheck(item=item)
+            await self.fetch_price(set_price_checker, 'set', returns)
             set_price = returns['set']
 
         set_price = f"Full set: {set_price}"
@@ -99,17 +82,21 @@ class pset(commands.Cog):
             description=set_price+"\n\n"+text,
             title=item
         )
-        if cached:
-            set_embed.set_footer(
-                text=f"Total Latency: {round((time.time() - start)*1000)}ms{chr(10)}Cached Latency: {round(download_timer*1000)}ms{chr(10)}"
-            )
-        else:
-            set_embed.set_footer(
-                text=f"Total Latency: {round((time.time() - start)*1000)}ms{chr(10)}Download Latency: {round(download_timer*1000)}ms{chr(10)}"
-            )  
+
+        set_embed.set_footer(
+            text=f"Total Latency: {round((time.time() - start)*1000)}ms\nDownload Latency: {round(download_timer*1000)}ms\n"
+        )  
         
         await ctx.send(embed=set_embed)
 
+    async def fetch_price(self, price_checker: PriceCheck, part_key: str, returns_dict: dict):
+        """Helper method to fetch price for a part and store it in the returns dictionary"""
+        try:
+            result = await price_checker.check_async(subtype=ItemSubtype.BLUEPRINT)
+            returns_dict[part_key] = result
+        except Exception as e:
+            print(e)
+            returns_dict[part_key] = f"(error)"
 
 
 async def setup(bot):
